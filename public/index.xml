@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>0907 WORLD</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 0907 WORLD</description>
+    <image>
+      <title>0907 WORLD</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.146.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UESTC 简介</title>
+      <link>http://localhost:1313/uestc/intro/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uestc/intro/</guid>
+      <description>&lt;h2 id=&#34;编程学习&#34;&gt;编程学习&lt;/h2&gt;
+&lt;p&gt;在大学期间，我主要学习了以下编程语言和技术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt;：用于数据分析、脚本自动化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java&lt;/strong&gt;：面向对象设计和大型项目开发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C/C++&lt;/strong&gt;：系统编程和算法实现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web 开发&lt;/strong&gt;：HTML、CSS、JavaScript，搭建个人项目网站&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目实践&#34;&gt;项目实践&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Web3 实验项目&lt;/strong&gt;：使用区块链相关技术实现简单的去中心化应用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据分析项目&lt;/strong&gt;：Python + Pandas 对实验数据进行处理与可视化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;课设与实验&lt;/strong&gt;：团队协作完成 Java 和 C++ 项目，积累版本控制经验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学习心得&#34;&gt;学习心得&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;理论学习和实践结合，动手做项目才能加深理解&lt;/li&gt;
+&lt;li&gt;学会利用 Git/GitHub 进行版本控制和协作&lt;/li&gt;
+&lt;li&gt;多做笔记，记录学习过程中的问题与解决方案&lt;/li&gt;
+&lt;li&gt;关注新技术动态，例如 Web3、AI、云计算等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;技术分享计划&#34;&gt;技术分享计划&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;定期在博客发布学习笔记与项目总结&lt;/li&gt;
+&lt;li&gt;分享代码示例和实验教程，便于同学参考&lt;/li&gt;
+&lt;li&gt;持续更新技术栈，记录成长过程&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Web3 简介</title>
+      <link>http://localhost:1313/web3/intro/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/intro/</guid>
+      <description>&lt;h1 id=&#34;welcome-to-web3&#34;&gt;Welcome to Web3!&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>Toolkits 简介</title>
+      <link>http://localhost:1313/toolkits/intro/</link>
+      <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/intro/</guid>
+      <description>分享我在项目中使用的开发工具、库及技巧，帮助提高开发效率</description>
+    </item>
+    <item>
+      <title>Vector 日志采集与处理</title>
+      <link>http://localhost:1313/toolkits/vector/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/vector/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Vector 是一个高性能日志与指标采集代理，它从各种 source 收集数据，经过 transform 处理后发送到 sink（如 Loki、ClickHouse、Kafka、Elasticsearch 等）&lt;br&gt;
+它的特点是高吞吐、低延迟、无需依赖 JVM、轻量好部署，非常适合边缘节点和容器环境
+本文主要讲述 &lt;code&gt;Events&lt;/code&gt; 和 &lt;code&gt;Compnents&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-配置结构概览&#34;&gt;1. 配置结构概览&lt;/h2&gt;
+&lt;p&gt;Vector 有两种数据模型 (Data Model), 又称事件(Events):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Logs&lt;/strong&gt;: 用于表示结构化或非结构化日志数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;metrics&lt;/strong&gt;: 用于表示指标数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vector 的配置由三个核心部分 (Compnets) 组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;sources&lt;/strong&gt;：数据采集源&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;transforms&lt;/strong&gt;：数据处理与解析&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sinks&lt;/strong&gt;：输出目标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-data-modelevents&#34;&gt;2. Data model(events)&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/vector/Data_model.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;log-events&#34;&gt;Log events&lt;/h3&gt;
+&lt;p&gt;Here’s an example representation of a log event (as JSON):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;{
+  &amp;#34;log&amp;#34;: {
+    &amp;#34;custom&amp;#34;: &amp;#34;field&amp;#34;,
+    &amp;#34;host&amp;#34;: &amp;#34;my.host.com&amp;#34;,
+    &amp;#34;message&amp;#34;: &amp;#34;Hello world&amp;#34;,
+    &amp;#34;timestamp&amp;#34;: &amp;#34;2020-11-01T21:15:47+00:00&amp;#34;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;metric-event&#34;&gt;Metric event&lt;/h3&gt;
+&lt;p&gt;此处留给以后撰写&lt;/p&gt;
+&lt;h2 id=&#34;3-compnents&#34;&gt;3. Compnents&lt;/h2&gt;
+&lt;h3 id=&#34;31-source&#34;&gt;3.1 source&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;详细配置请见 👉 &lt;a href=&#34;https://vector.dev/docs/reference/configuration/sources/&#34;&gt;Sources reference&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ClickHouse 高性能数据库</title>
+      <link>http://localhost:1313/toolkits/clickhouse/</link>
+      <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/clickhouse/</guid>
+      <description>&lt;h1 id=&#34;clickhouse-高性能数据库&#34;&gt;ClickHouse 高性能数据库&lt;/h1&gt;
+&lt;p&gt;ClickHouse 是一款 &lt;strong&gt;开源、高性能的列式数据库&lt;/strong&gt;，主要用于 &lt;strong&gt;大规模数据分析 (OLAP)&lt;/strong&gt; 和 &lt;strong&gt;实时查询&lt;/strong&gt;。它的特点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;列式存储，读取指定列非常快&lt;/li&gt;
+&lt;li&gt;支持高并发写入和查询&lt;/li&gt;
+&lt;li&gt;强大的聚合功能，适合报表和日志分析&lt;/li&gt;
+&lt;li&gt;支持 SQL 查询，易上手&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-安装与快速开始&#34;&gt;1️. 安装与快速开始&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以参考官方文档或社区教程 👉&lt;a href=&#34;https://clickhouse.com/docs/&#34;&gt;ClickHouse 官方文档&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;11-安装&#34;&gt;1.1 安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://clickhouse.com/ &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./clickhouse install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;12-运行&#34;&gt;1.2 运行&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ clickhouse-client --host server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ClickHouse client version 24.12.2.29 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;official build&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connecting to server:9000 as user default.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Connected to ClickHouse server version 24.12.2.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Specify additional connection details as necessary:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Option&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;--port &amp;lt;port&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;The port ClickHouse server is accepting connections on. The default ports are 9440 (TLS) and 9000 (no TLS). Note that ClickHouse Client uses the native protocol and not HTTP(S).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;-s [--secure]&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Whether to use TLS (usually autodetected).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;-u [--user] &amp;lt;username&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;The database user to connect as. Connects as the default user by default.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;--password &amp;lt;password&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;The password of the database user. You can also specify the password for a connection in the configuration file. If you do not specify the password, the client will ask for it.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;-c [--config] &amp;lt;path-to-file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;The location of the configuration file for ClickHouse Client, if it is not at one of the default locations. See Configuration Files.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;13-退出&#34;&gt;1.3 退出&lt;/h3&gt;
+&lt;p&gt;To exit the client, press Ctrl+D, or enter one of the following instead of a query:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

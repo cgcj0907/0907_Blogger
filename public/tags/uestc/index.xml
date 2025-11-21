@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UESTC on 0907 WORLD</title>
+    <link>http://localhost:1313/tags/uestc/</link>
+    <description>Recent content in UESTC on 0907 WORLD</description>
+    <image>
+      <title>0907 WORLD</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.146.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/uestc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UESTC 简介</title>
+      <link>http://localhost:1313/uestc/intro/</link>
+      <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uestc/intro/</guid>
+      <description>&lt;h2 id=&#34;编程学习&#34;&gt;编程学习&lt;/h2&gt;
+&lt;p&gt;在大学期间，我主要学习了以下编程语言和技术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt;：用于数据分析、脚本自动化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java&lt;/strong&gt;：面向对象设计和大型项目开发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C/C++&lt;/strong&gt;：系统编程和算法实现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web 开发&lt;/strong&gt;：HTML、CSS、JavaScript，搭建个人项目网站&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;项目实践&#34;&gt;项目实践&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Web3 实验项目&lt;/strong&gt;：使用区块链相关技术实现简单的去中心化应用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据分析项目&lt;/strong&gt;：Python + Pandas 对实验数据进行处理与可视化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;课设与实验&lt;/strong&gt;：团队协作完成 Java 和 C++ 项目，积累版本控制经验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学习心得&#34;&gt;学习心得&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;理论学习和实践结合，动手做项目才能加深理解&lt;/li&gt;
+&lt;li&gt;学会利用 Git/GitHub 进行版本控制和协作&lt;/li&gt;
+&lt;li&gt;多做笔记，记录学习过程中的问题与解决方案&lt;/li&gt;
+&lt;li&gt;关注新技术动态，例如 Web3、AI、云计算等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;技术分享计划&#34;&gt;技术分享计划&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;定期在博客发布学习笔记与项目总结&lt;/li&gt;
+&lt;li&gt;分享代码示例和实验教程，便于同学参考&lt;/li&gt;
+&lt;li&gt;持续更新技术栈，记录成长过程&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>
