@@ -23,6 +23,6 @@ jobs:
             git clean -fd
             git pull origin main
             rm -rf public || true
-            hugo --baseURL=http://43.143.10.120/
+            hugo --baseURL=http://uestc.0907world.cn/
 
 
