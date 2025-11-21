@@ -24,7 +24,7 @@ jobs:
           hugo-version: "latest"
 
       - name: Build with custom baseURL
-        run: hugo --minify --baseURL="https://cgcj0907.github.io/0907_Blogger/"
+        run: hugo --baseURL="https://cgcj0907.github.io/0907_Blogger/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
