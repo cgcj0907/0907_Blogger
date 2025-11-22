@@ -26,7 +26,7 @@ Vector 的配置由三个核心部分 (Compnets) 组成：
 - **sinks**：输出目标  
 
 ## 2. Data model(events)
-![Data model](/Toolkits/vector/Data_model.png)
+![Data model](/Toolkits/vector/Data_model.webp)
 ### Log events
 Here’s an example representation of a log event (as JSON):
 ```log

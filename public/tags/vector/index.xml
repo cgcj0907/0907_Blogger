@@ -36,7 +36,7 @@
 &lt;li&gt;&lt;strong&gt;sinks&lt;/strong&gt;：输出目标&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-data-modelevents&#34;&gt;2. Data model(events)&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/vector/Data_model.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;log-events&#34;&gt;Log events&lt;/h3&gt;
 &lt;p&gt;Here’s an example representation of a log event (as JSON):&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;{

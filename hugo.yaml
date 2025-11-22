@@ -45,15 +45,15 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "/images/0907world_icon.png"
-    favicon16x16: "/images/0907world_icon.png"
-    favicon32x32: "/images/0907world_icon.png"
-    apple_touch_icon: "/images/0907world_icon.png"
-    safari_pinned_tab: "/images/0907world_icon.png"
+    favicon: "/images/0907world_icon.webp"
+    favicon16x16: "/images/0907world_icon.webp"
+    favicon32x32: "/images/0907world_icon.webp"
+    apple_touch_icon: "/images/0907world_icon.webp"
+    safari_pinned_tab: "/images/0907world_icon.webp"
 
   label:
     text: "0907 WORLD"
-    icon: /images/0907world_icon.png
+    icon: /images/0907world_icon.webp
     iconHeight: 35
 
   # profile-mode
@@ -61,7 +61,7 @@ params:
     enabled: true # needs to be explicitly set
     title: 0907 WORLD 
     subtitle: "Welcome to 0907 world"
-    imageUrl: "/images/0907_avatar.png"
+    imageUrl: "/images/0907_avatar.webp"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image

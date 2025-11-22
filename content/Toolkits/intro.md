@@ -8,7 +8,7 @@ tags: ["简介"]
 summary: "分享我在项目中使用的开发工具、库及技巧，帮助提高开发效率"
 
 cover:
-  image: "/covers/Toolkits_cover.png"  
+  image: "/covers/Toolkits_cover.webp"  
   relative: false
 ShowToc: true             
 ---
@@ -51,7 +51,7 @@ ShowToc: true
 
 
 ## 运维开发  
-和生产环境运维相关的工具集。
+
 
 ### 日志管理  
 - **Loki**：分布式日志系统  

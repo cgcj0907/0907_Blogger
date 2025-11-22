@@ -6,7 +6,7 @@ weight: 1
 draft: false          # false 表示发布文章
 tags: ["UESTC"]
 cover:
-  image: "/covers/UESTC_cover.jpg"   
+  image: "/covers/UESTC_cover.webp"   
   relative: false
 ShowToc: true            
 ---

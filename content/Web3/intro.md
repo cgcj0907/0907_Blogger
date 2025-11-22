@@ -7,7 +7,7 @@ draft: false           # false 表示发布文章
 tags: ["Web3"]
 featured: true       
 cover:
-  image: "/covers/Web3_cover.jpg"   
+  image: "/covers/Web3_cover.webp"   
   relative: false     
 ---
 
