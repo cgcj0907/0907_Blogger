@@ -99,8 +99,8 @@ params:
 
   editPost:
     URL: "https://github.com/cgcj0907/0907_Blogger/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: false # to append file path to Edit link
+    Text: "0907 Blogger's github" # edit text
+    appendFilePath: true # to append file path to Edit link
 
   # for search
   # https://fusejs.io/api/options.html
