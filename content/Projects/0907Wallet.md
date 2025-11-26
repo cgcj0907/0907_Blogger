@@ -8,13 +8,14 @@ cover:
   relative: false
 ShowToc: true
 ---
-# 1. 项目简介
+# 项目简介
 
 - **项目名称**：0907 Wallet
     
 - **系统类型**：基于浏览器的 Web3 去中心化钱包
     
 - **系统定位**：轻量化、本地化、自托管的钱包系统
+- **系统代码框架**: React + Next.js
     
 - **核心目标**
     
@@ -34,6 +35,79 @@ ShowToc: true
 
 
 ---
+
+## **1. 代码命名规范**
+
+### **1.1 组件命名**
+
+* **规则**：大驼峰（PascalCase）
+* **适用范围**：React
+* **示例**：
+
+  ```ts
+  // 前端组件
+  export default function UserCard() { ... }
+
+  // 后端类
+  class WalletService { ... }
+  ```
+
+---
+
+### **1.2 接口/类型命名**
+
+* **规则**：大驼峰（PascalCase）
+* **适用范围**：TypeScript `interface`、`type`、枚举（enum）
+* **示例**：
+
+  ```ts
+  interface UserInfo {
+    id: number;
+    name: string;
+    email: string;
+  }
+
+  type NetworkType = "ethereum" | "goerli" | "sepolia";
+
+  enum WalletStatus {
+    ACTIVE,
+    INACTIVE
+  }
+  ```
+
+---
+
+### **1.3 系统常量（const）**
+
+* **规则**：全部大写，用下划线分隔单词（SNAKE_CASE）
+* **适用范围**：全局常量、配置值、枚举值（非类型枚举）
+* **示例**：
+
+  ```ts
+  const API_BASE_URL = "https://api.example.com";
+  const DEFAULT_NETWORK = "ethereum";
+  const MAX_RETRY_COUNT = 5;
+  ```
+
+---
+
+### **1.4 其他变量命名**
+
+* **规则**：小驼峰（camelCase）
+* **适用范围**：局部变量、函数名、对象属性、数组等
+* **示例**：
+
+  ```ts
+  let userName = "Alice";
+  const walletAddress = "0x1234...abcd";
+
+  function getUserBalance(address: string) { ... }
+
+  const networkList = ["ethereum", "goerli", "sepolia"];
+  ```
+
+---
+
 
 ## 2. 系统功能范围（Scope）
 
@@ -74,7 +148,7 @@ ShowToc: true
 
 ### 3.0 系统公用模块
 
-
+👉 [详细：0907 Wallet 系统公用层设计](/projects/0907wallet/public)
 
 ### 3.1 用户管理模块
 

@@ -11,7 +11,154 @@
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0907 Wallet</title>
+      <link>http://localhost:1313/projects/0907wallet/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/0907wallet/</guid>
+      <description>&lt;h1 id=&#34;项目简介&#34;&gt;项目简介&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;项目名称&lt;/strong&gt;：0907 Wallet&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;系统类型&lt;/strong&gt;：基于浏览器的 Web3 去中心化钱包&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;系统定位&lt;/strong&gt;：轻量化、本地化、自托管的钱包系统&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;核心目标&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提供安全可靠的钱包账户生成与管理能力&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持基本的转账、消息签名与资产查看功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实现完整的本地化存储，全流程不上传私钥&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;非目标说明（可选）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;不构建链下后端服务&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不提供中心化账户体系&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不托管任何用户资产&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-系统功能范围scope&#34;&gt;2. 系统功能范围（Scope）&lt;/h2&gt;
+&lt;h3 id=&#34;21-基础功能&#34;&gt;2.1 基础功能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用户密码创建与验证&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;助记词生成与展示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;私钥生成与导入&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多账户管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链上资产（ETH）余额查询&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交易发送（转账）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基本消息签名功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;22-扩展功能可选&#34;&gt;2.2 扩展功能（可选）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;多语言支持（中/英文）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;钱包锁定 / 解锁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;钱包数据导出（助记词 / 私钥）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;友好的错误反馈与基础校验&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-系统整体结构system-overview&#34;&gt;3. 系统整体结构（System Overview）&lt;/h2&gt;
+&lt;p&gt;系统整体由以下四个主要模块组成，各模块职责清晰、边界明确，通过标准化接口进行协作：&lt;/p&gt;
+&lt;h3 id=&#34;30-系统公用模块&#34;&gt;3.0 系统公用模块&lt;/h3&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/Projects/0907Wallet/public&#34;&gt;详细设计见：0907 Wallet 系统公用层设计&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;31-用户管理模块&#34;&gt;3.1 用户管理模块&lt;/h3&gt;
+&lt;h3 id=&#34;32-钱包管理模块&#34;&gt;3.2 钱包管理模块&lt;/h3&gt;
+&lt;h3 id=&#34;33-区块链交互模块&#34;&gt;3.3 区块链交互模块&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-安全策略概述&#34;&gt;4. 安全策略概述&lt;/h2&gt;
+&lt;h3 id=&#34;41-数据处理原则&#34;&gt;4.1 数据处理原则&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;所有敏感数据仅存储在浏览器本地&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统不会上传、备份或托管任何私钥信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;42-密码策略&#34;&gt;4.2 密码策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用户密码仅在本地生效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;密码用于控制钱包解锁与私钥访问权限&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;43-交互安全性&#34;&gt;4.3 交互安全性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引导用户及时备份助记词&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;转账等敏感操作需进行确认提示&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-前端界面与使用流程概述&#34;&gt;5. 前端界面与使用流程概述&lt;/h2&gt;
+&lt;h3 id=&#34;51-页面结构&#34;&gt;5.1 页面结构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;欢迎 / 初始页面&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>0907 Wallet 系统公用层设计</title>
+      <link>http://localhost:1313/projects/0907wallet/public/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/0907wallet/public/</guid>
+      <description>&lt;h1 id=&#34;概况&#34;&gt;概况&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;公用库( lib )&lt;/li&gt;
+&lt;li&gt;auth&lt;/li&gt;
+&lt;li&gt;hash&lt;/li&gt;
+&lt;li&gt;storage&lt;/li&gt;
+&lt;li&gt;公用组件( components )&lt;/li&gt;
+&lt;li&gt;AuthGuard&lt;/li&gt;
+&lt;li&gt;Initialer&lt;/li&gt;
+&lt;li&gt;Logo&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
   </channel>
 </rss>
