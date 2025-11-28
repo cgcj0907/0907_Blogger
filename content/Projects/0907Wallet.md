@@ -36,77 +36,142 @@ ShowToc: true
 
 ---
 
-## **1. 代码命名规范**
+# 1. 代码规范
 
-### **1.1 组件命名**
+## 1.1 代码命名规范
 
-* **规则**：大驼峰（PascalCase）
-* **适用范围**：React
-* **示例**：
-
+### 1.1.1 组件命名（React 组件、页面）
+- **规则**：大驼峰（PascalCase）
+- **文件命名**：同名 `.tsx` 文件也必须 PascalCase
+- **示例**：
   ```ts
-  // 前端组件
-  export default function UserCard() { ... }
-
-  // 后端类
-  class WalletService { ... }
+  AccountCard.tsx        → 正确
+  UserProfile.tsx        → 正确
+  account-card.tsx       → 错误
   ```
 
----
-
-### **1.2 接口/类型命名**
-
-* **规则**：大驼峰（PascalCase）
-* **适用范围**：TypeScript `interface`、`type`、枚举（enum）
-* **示例**：
-
+### 1.1.2 接口、类型、枚举命名
+- **规则**：大驼峰（PascalCase）
+- **建议**：接口可加 `I` 前缀（团队统一即可），类型可加 `T` 前缀（可选）
+- **示例**：
   ```ts
-  interface UserInfo {
-    id: number;
-    name: string;
-    email: string;
-  }
-
-  type NetworkType = "ethereum" | "goerli" | "sepolia";
-
-  enum WalletStatus {
-    ACTIVE,
-    INACTIVE
-  }
+  interface UserInfo { ... }
+  interface IUserInfo { ... }      // 也可
+  type NetworkConfig = { ... }
+  type TResponse<T> = { ... }
+  enum ChainId { Ethereum = 1, Sepolia = 11155111 }
   ```
 
----
-
-### **1.3 系统常量（const）**
-
-* **规则**：全部大写，用下划线分隔单词（SNAKE_CASE）
-* **适用范围**：全局常量、配置值、枚举值（非类型枚举）
-* **示例**：
-
+### 1.1.3 常量命名（全局配置、魔法值）
+- **规则**：全大写 + 下划线分隔（SCREAMING_SNAKE_CASE）
+- **示例**：
   ```ts
-  const API_BASE_URL = "https://api.example.com";
-  const DEFAULT_NETWORK = "ethereum";
+  const API_BASE_URL = "https://api.0907wallet.com";
+  const DEFAULT_CHAIN_ID = 1;
   const MAX_RETRY_COUNT = 5;
+  const SUPPORTED_CHAINS = [1, 5, 11155111];
   ```
 
----
-
-### **1.4 其他变量命名**
-
-* **规则**：小驼峰（camelCase）
-* **适用范围**：局部变量、函数名、对象属性、数组等
-* **示例**：
-
+### 1.1.4 普通变量、函数、属性命名
+- **规则**：小驼峰（camelCase）
+- **布尔值建议**：以 `is`、`has`、`should`、`can` 开头
+- **示例**：
   ```ts
-  let userName = "Alice";
   const walletAddress = "0x1234...abcd";
-
-  function getUserBalance(address: string) { ... }
-
-  const networkList = ["ethereum", "goerli", "sepolia"];
+  let isConnected = false;
+  const hasBalance = balance > 0;
+  
+  function connectWallet() { ... }
+  async function fetchUserInfo() { ... }
   ```
 
+### 1.1.5 文件与文件夹命名
+| 类型           | 命名规则           | 示例                              |
+|----------------|---------------------|-----------------------------------|
+| 组件 / 页面    | PascalCase          | `AccountCard.tsx`、`settings/page.tsx` |
+| 工具函数       | kebab-case 或 camelCase | `storage.ts`、`format-address.ts` |
+| hooks          | 以 `use` 开头       | `useWallet.ts`、`useDebounce.ts`  |
+| 样式           | 与组件同名          | `AccountCard.module.css`          |
+| 常量/配置      | kebab-case          | `chains.config.ts`                |
+
 ---
+
+## 1.2 代码注释规范
+
+### 1.2.1 文件头注释（每个文件必须）
+```ts
+/**
+ * @file 文件简要描述（一句话）
+ * @description 更详细说明（可选）
+ * @author 张三（github: zhangsan）
+ * @date 2025-04-05
+ */
+```
+
+### 1.2.2 导出函数 / 组件 / Hook 必须写 JSDoc
+```ts
+/**
+ * 初始化 IndexedDB 数据库（支持自动按需建表）
+ *
+ * @returns IndexedDB 实例
+ * @example const db = await initDB();
+ */
+export async function initDB(): Promise<IDBPDatabase> { ... }
+
+/**
+ * 账户卡片组件（带悬停复制动画）
+ *
+ * @param address - 钱包地址（0x...）
+ * @param name    - 可选账户别名
+ */
+export default function AccountCard({ 
+  address, 
+  name 
+}: { 
+  address: string;
+  name?: string;
+}) { ... }
+```
+
+### 1.2.3 复杂逻辑必须解释「为什么」
+```ts
+// 为什么关闭再升级？
+// IndexedDB 只有在 versionchange 事务中才能创建 objectStore，
+// 当前连接无法创建新表，必须关闭后以新版本重新打开
+db.close();
+```
+
+### 1.2.4 TODO / FIXME 统一格式
+```ts
+// TODO: [高] 支持多签钱包（@李四，2025-07-01）
+// FIXME: 快速移入移出会导致多个 setTimeout 残留
+```
+
+### 1.2.5 禁止的注释（直接打回）
+```ts
+// 错误示例（解释「做什么」而不是「为什么」）
+const a = 1;           // 定义变量 a
+setLoading(true);      // 设置 loading 为 true
+
+// 错误：过时注释
+const MAX_RETRY = 3;   // 最大重试次数 5 次（实际是 3）
+```
+
+---
+
+## 1.3 其他强制规范（快速记忆版）
+
+| 项目              | 要求                                               |
+|-------------------|----------------------------------------------------|
+| 类型优先          | 能用 TypeScript 解决的绝不写注释                   |
+| props 类型        | 必须显式声明 interface/type，禁止 any              |
+| 自定义 Hook       | 必须以 `use` 开头，文件名也必须是 `useXxx.ts`      |
+| async 函数        | 必须 try-catch 或返回错误状态                      |
+| console.log       | 上线前必须删除或改为 logger                        |
+| 魔法值            | 全部提取为常量（参考 1.1.3）                       |
+
+---
+
 
 
 ## 2. 系统功能范围（Scope）
