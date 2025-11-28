@@ -94,6 +94,7 @@ export async function hashPassword(password: string): Promise<string> {}
 ```
 
 ### storage.ts
+👉 [关于 IndexedDB 的使用方法请见：IndexedDB 浏览器数据库](/toolkits/indexedDB)
 ```ts
 // app/lib/storage.ts
 /**
