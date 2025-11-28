@@ -6,7 +6,21 @@ tags: ["Projects", "0907Wallet"]
 ShowToc: true
 ---
 
-# 概况
+# 模块概览
+
+```bash
+app
+├── components
+│   ├── AuthGuard.tsx
+│   ├── InitProvider.tsx
+│   └── Logo.tsx
+├── globals.css
+├── layout.tsx
+├── lib
+    ├── auth.ts
+    ├── storage.ts
+    └── transform.ts
+```
 
 * 公用库( lib )
     * auth
