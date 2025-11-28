@@ -2,6 +2,7 @@
 title: "0907 Wallet"
 date: 2025-08-16
 draft: false
+weight: 1
 tags: ["Projects", "0907Wallet"]
 cover:
   image: "/covers/0907Wallet.webp"  
