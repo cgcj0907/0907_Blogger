@@ -1,5 +1,5 @@
 ---
-title: "Promise 与 Event Loop 的对比与理解"
+title: "Promise 与 Event Loop 的联系与理解"
 date: 2025-11-29
 tags: ["JavaScript", "异步", "事件循环"]
 draft: false
