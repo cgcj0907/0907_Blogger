@@ -132,5 +132,12 @@
 &lt;p&gt;本文档总结了在 &lt;strong&gt;Hugo + PaperMod 主题&lt;/strong&gt; 下自定义博客模板的配置方法，包括静态资源优化、Nginx 部署、缓存策略和图片加速技巧&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
+    <item>
+      <title>IndexedDB 浏览器数据库</title>
+      <link>http://localhost:1313/toolkits/indexeddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/indexeddb/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

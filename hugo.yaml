@@ -30,7 +30,7 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -96,6 +96,7 @@ params:
     hidden: false # hide everywhere but not in structured data
     hiddenInList: false # hide on list pages and home
     hiddenInSingle: false # hide on single page
+    linkFullImages: true
 
   editPost:
     URL: "https://github.com/cgcj0907/0907_Blogger/tree/main/content"
@@ -159,3 +160,9 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

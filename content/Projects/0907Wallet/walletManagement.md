@@ -20,7 +20,7 @@ ShowToc: true
 
 ## 目录结构与文件职责
 
-```
+```cosole
 app/walletManagement/
 ├── components
 │   └── GenerateWallet.tsx

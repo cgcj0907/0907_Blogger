@@ -11,8 +11,43 @@
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>事件循环</title>
+      <link>http://localhost:1313/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>异步</title>
+      <link>http://localhost:1313/tags/%E5%BC%82%E6%AD%A5/</link>
+      <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E5%BC%82%E6%AD%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>0907Wallet</title>
+      <link>http://localhost:1313/tags/0907wallet/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/0907wallet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/tags/projects/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/projects/</guid>
+      <description></description>
+    </item>
     <item>
       <title>前端安全</title>
       <link>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/</link>
@@ -46,20 +81,6 @@
       <link>http://localhost:1313/tags/web3/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/web3/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>0907Wallet</title>
-      <link>http://localhost:1313/tags/0907wallet/</link>
-      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/0907wallet/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/tags/projects/</link>
-      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/projects/</guid>
       <description></description>
     </item>
     <item>
