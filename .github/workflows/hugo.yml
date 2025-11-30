@@ -47,7 +47,8 @@ jobs:
       # 5. 构建站点
       - name: Build with Hugo
         run: |
-          hugo --minify --gc --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo --minify --gc --ignoreCache \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       # 6. 上传 public 文件夹
       - name: Upload artifact
