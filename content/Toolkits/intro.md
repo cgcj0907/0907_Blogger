@@ -5,8 +5,6 @@ weight: 1
 draft: false               
 tags: ["简介"]
 
-summary: "分享我在项目中使用的开发工具、库及技巧，帮助提高开发效率"
-
 cover:
   image: "/covers/Toolkits_cover.webp"  
   relative: false

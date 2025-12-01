@@ -23,10 +23,12 @@ ShowToc: true
 ```cosole
 app/walletManagement/
 ├── components
-│   └── GenerateWallet.tsx
+│   ├── GenerateWallet.tsx
+|   ├── ImportWallet.tsx
 ├── lib
 │   ├── cryptoWallet.ts
 │   ├── generateWallet.ts
+|   ├── importWallet.ts
 │   ├── saveAddress.ts
 │   └── saveWallet.ts
 ├── page.tsx
@@ -42,6 +44,7 @@ app/walletManagement/
 | `lib/saveWallet.ts`             | IndexedDB 封装：对 `Wallets` 表（或 store）进行保存/读取/删除/列出                         |
 | `lib/saveAddress.ts`            | IndexedDB 封装：对 `Addresses` 表保存地址记录、读取、删除、列出                              |
 | `test-cryptoWallet.ts`          | 单元测试：验证加密/解密、密钥派生一致性、异常场景（解密失败、篡改检测）                                     |
+| `lib/importWallet.ts`           | 使用 bip39 和 ethers 从英文或中文助记词导入 HDNodeWallet（中文先转换为英文助记词再导入）                |
 
 ---
 
@@ -56,17 +59,19 @@ app/walletManagement/
    * 若无用户记录：重定向到 `/userManagement` 要求先设置本地密码（首次初始化）
    * 若有用户记录：继续显示生成钱包流程（需用户输入本地密码用于验证）
 
-### 1.2 钱包生成流程
+### 1.2 钱包生成与导入流程
 
-1. 用户输入本地密码并点击「生成钱包」。
-2. 客户端先对输入密码做哈希/验证（`hashPassword()`），与本地 `userRecord.passwordHash` 比对
-3. 验证通过后调用 `generateWallet()`：
-
-   * 返回 `WalletResult`（包含 HDNodeWallet、英文助记词、中文助记词）
-4. 使用 `encryptWallet(wallet, password)` 将 HDNodeWallet 加密为 `IEncryptedWallet`
-5. `saveWallet(encryptedWallet)` 将加密数据保存到 `Wallets` 表，返回保存的 `key`（数字）
-6. 构建 `AddressRecord`（包含 `wallet: { type, KeyPath }` 与 `address`），调用 `saveAddress(addressRecord)` 保存到 `Addresses` 表
-7. 展示成功提示，并显示助记词（用户需手动备份）。组件提供「查看/收起助记词」与复制友好 UI
+| 步骤 | 生成钱包（Generate）                                   | 导入钱包（Import）                                       |
+|------|------------------------------------------------------|--------------------------------------------------------|
+| 1    | 用户输入本地密码 → 点击「生成钱包」                         | 用户输入本地密码 → 填写/粘贴助记词 → 点击「导入钱包」            |
+| 2    | 客户端对密码进行 SHA-256 哈希，与本地 `userRecord.passwordHash` 比对 | 同左，完全一致的密码校验逻辑                                 |
+| 3    | 校验通过 → 调用 `generateWallet()`<br>→ 使用 `crypto.getRandomValues` 生成随机熵<br>→ 同时生成英文 + 中文助记词<br>→ 返回 `WalletResult`（含 `HDNodeWallet`、英文助记词、中文助记词） | 校验通过 → 读取用户填写的助记词（支持 12/24 词、自动识别中英文）<br>→ 调用 `importWallet_en()` 或 `importWallet_zh()`（中文会先转熵再转英文）<br>→ 得到等价的 `HDNodeWallet` 实例 |
+| 4    | 调用 `encryptWallet(wallet, password)`<br>→ PBKDF2 派生密钥 + AES-256-GCM 加密整个钱包对象 | 完全相同：`encryptWallet(wallet, password)`（代码复用 100%） |
+| 5    | 并行执行：<br>• `countWallet()` 查询已有钱包数量<br>• 加密钱包 | 同左：并行执行 `encryptWallet()` 与 `countWallet()`           |
+| 6    | 根据数量决定 `keyPath`：<br>0 个 → `'0'`，其余 → `crypto.randomUUID()` | 完全一致的 keyPath 策略                                 |
+| 7    | 并行保存：<br>• `saveWallet(keyPath, encryptedWallet)`<br>• `saveAddress(addressRecord)` | 完全相同的并行写入逻辑（Wallets + Addresses 表）            |
+| 8    | 清理内存中的明文助记词与私钥<br>显示「生成成功」<br>提供可切换的英文/中文助记词展示（仅用于备份） | 清理输入框<br>显示「导入成功」<br>提供相同的助记词核对界面（英文 ↔ 中文可切换） |
+| 9    | 用户手动备份助记词 → 点击「回到主页」                       | 用户核对助记词无误 → 点击「回到主页」或「前往登录」               |
 
 ### 1.3 异常/边界场景
 
