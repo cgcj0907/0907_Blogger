@@ -53,7 +53,7 @@ ShowToc: true
 
 ### 日志管理  
 - **Loki**：分布式日志系统  
-- **Vector**：日志采集与处理  👉 [相关笔记：Vector 日志采集与处理](/toolkits/vector/)
+- **Vector**：日志采集与处理  👉 [相关笔记：Vector 日志采集与处理](/toolkits/vector)
 - **LogstashEncoder**：结构化 JSON 日志  
 
 ### 系统监控  
@@ -67,7 +67,7 @@ ShowToc: true
 ### 数据存储
 
 - **ClickHouse**: 高性能列式数据库
-👉 [相关笔记：ClickHouse 高性能数据库](/toolkits/clickhouse/)
+👉 [相关笔记：ClickHouse 高性能数据库](/toolkits/clickhouse)
 
 ## 学习与效率工具  
 帮助知识管理、项目整理与写作
