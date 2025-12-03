@@ -22,10 +22,10 @@
 &lt;h1 id=&#34;promise-与-event-loop分步深入指南&#34;&gt;Promise 与 Event Loop：分步深入指南&lt;/h1&gt;
 &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;JavaScript 是单线程语言，却要处理大量异步操作（如网络请求、定时器、用户交互等）。为了既不阻塞主线程、又能保证回调按预期顺序执行，语言和运行时共同提供了两套核心机制：&lt;/p&gt;
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Promise&lt;/strong&gt; —— 代表一个“未来会结束”的异步操作，提供了状态管理、链式调用、错误传播等语义，是现代异步编程的基石&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Event Loop（事件循环）&lt;/strong&gt; —— JavaScript 运行时真正的调度中心，它决定了同步代码、Promise 回调（微任务）、setTimeout/IO 等（宏任务）到底在什么时机被推入调用栈执行&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;p&gt;这两者紧密协作：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Promise 的 &lt;code&gt;.then&lt;/code&gt; / &lt;code&gt;.catch&lt;/code&gt; / &lt;code&gt;await&lt;/code&gt; 后续全部属于&lt;strong&gt;微任务（microtask）&lt;/strong&gt;&lt;/li&gt;
@@ -33,37 +33,46 @@
 &lt;/ul&gt;
 &lt;p&gt;掌握 Promise 的状态机细节 + Event Loop 的微/宏任务执行顺序，就等于拿到了 JavaScript 异步世界的完整“时序地图”&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-promise&#34;&gt;1 Promise&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;表示&lt;strong&gt;未来某个时刻&lt;/strong&gt;可用的值或失败原因&lt;/li&gt;
-&lt;li&gt;三个状态：&lt;code&gt;pending&lt;/code&gt;（挂起） → &lt;code&gt;fulfilled&lt;/code&gt;（成功） 或 &lt;code&gt;rejected&lt;/code&gt;（失败）&lt;/li&gt;
-&lt;li&gt;构造器形式：&lt;code&gt;new Promise(executor)&lt;/code&gt;，返回立即可用的 Promise 对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;简短代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// executor 同步运行
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;err&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;2-逐步引入从同步到微任务&#34;&gt;2 逐步引入：从同步到微任务&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;同步执行&lt;/strong&gt;：普通函数、直接 &lt;code&gt;console.log&lt;/code&gt;，在调用栈中执行完才会继续&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;创建 Promise&lt;/strong&gt;：构造器里的 &lt;code&gt;executor&lt;/code&gt; 在创建时&lt;strong&gt;同步执行&lt;/strong&gt;；但 &lt;code&gt;resolve/reject&lt;/code&gt; 会&lt;strong&gt;把后续回调放到微任务队列&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;注册回调（then/catch）&lt;/strong&gt;：回调不会立刻执行，而是进入 &lt;strong&gt;microtask&lt;/strong&gt;（微任务）队列&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;宏任务（setTimeout 等）&lt;/strong&gt;：在微任务全部清空后才会执行下一个宏任务&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;await&lt;/strong&gt;：本质上是 &lt;code&gt;Promise.then&lt;/code&gt; 的语法糖，&lt;code&gt;await&lt;/code&gt; 后续继续执行排入 microtask&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;执行顺序表&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;执行顺序&lt;/th&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;典型代表&lt;/th&gt;
+          &lt;th&gt;触发时机&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;同步代码(包含Promise executor)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;console.log&lt;/code&gt;、变量赋值、函数调用&lt;/td&gt;
+          &lt;td&gt;立即执行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;微任务（microtask）&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.then/.catch&lt;/code&gt;、&lt;code&gt;await&lt;/code&gt; 后续、&lt;code&gt;queueMicrotask&lt;/code&gt;、&lt;code&gt;MutationObserver&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;当前宏任务结束后、渲染前全部清空&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;渲染（浏览器）&lt;/td&gt;
+          &lt;td&gt;页面重绘、布局&lt;/td&gt;
+          &lt;td&gt;微任务清空后（可能跳过）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;宏任务（macrotask）&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;setTimeout&lt;/code&gt;、&lt;code&gt;setInterval&lt;/code&gt;、&lt;code&gt;I/O&lt;/code&gt;、&lt;code&gt;UI 事件&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;每轮 Event Loop 执行一个&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-executor&#34;&gt;3 executor&lt;/h2&gt;
-&lt;h3 id=&#34;31-executor-是同步执行的&#34;&gt;3.1 executor 是同步执行的&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;executor start&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 同步代码
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;executor end&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出会有 &lt;code&gt;executor start&lt;/code&gt;、&lt;code&gt;executor end&lt;/code&gt; 在 Promise 构造时立即打印&lt;/p&gt;</description>
+&lt;p&gt;Promise 核心机制&lt;/p&gt;
+&lt;p&gt;Promise 的三个状态&lt;/p&gt;</description>
     </item>
     <item>
       <title>SHA256、Base64 与 Uint8Array 的对比与理解</title>

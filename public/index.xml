@@ -465,6 +465,205 @@ ERC只是EIP的应用层子集&lt;br&gt;
 每一篇都是以太坊进化史的真实注脚&lt;/p&gt;</description>
     </item>
     <item>
+      <title>EIP-4337</title>
+      <link>http://localhost:1313/web3/eip/eip-4337/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
+      <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引入 UserOperation：一种高层“伪交易对象”，替代直接在共识层提交交易&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户将 UserOperation 发送到单独的 mempool&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bundler 将多个 UserOperation 打包，通过 handleOps 调用 EntryPoint 合约，再打包进区块&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目标是在不修改以太坊底层协议的情况下，实现账户抽象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现账户抽象&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;允许使用智能合约账户作为主账户，支持任意验证逻辑。&lt;/li&gt;
+&lt;li&gt;用户无需拥有外部账户（EOA）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;去中心化与开放参与&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任何 bundler 都可参与交易打包。&lt;/li&gt;
+&lt;li&gt;依赖公共 mempool，无需用户直接知晓 bundler 地址。&lt;/li&gt;
+&lt;li&gt;不增加信任假设。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;无需共识层修改&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免协议层改动，提高快速部署的可能性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;支持更多应用场景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隐私保护型应用&lt;/li&gt;
+&lt;li&gt;原子多操作&lt;/li&gt;
+&lt;li&gt;使用 ERC-20 代币支付手续费或开发者代付&lt;/li&gt;
+&lt;li&gt;灵活的验证逻辑（不同签名方案、多签、恢复方案）&lt;/li&gt;
+&lt;li&gt;灵活的手续费支付（第三方支付、跨链支付）&lt;/li&gt;
+&lt;li&gt;批量操作与打包执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：该提案通过 UserOperation、Bundler 和 EntryPoint 合约实现智能合约账户的完全抽象化，支持多签、代付和批量操作，同时无需修改以太坊共识层&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
+&lt;h3 id=&#34;术语定义&#34;&gt;术语定义&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;术语&lt;/th&gt;
+          &lt;th&gt;定义&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;UserOperation&lt;/td&gt;
+          &lt;td&gt;一种描述“代表用户发起一笔交易”的数据结构。为避免与原生交易混淆，特意不叫“transaction”。像交易一样，它包含 to、calldata、maxFeePerGas、maxPriorityFeePerGas、nonce、signature。不像交易，它包含以下所述的几个其他字段。特别注意，signature 字段的使用不由协议定义，而是由智能合约账户实现定义&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sender&lt;/td&gt;
+          &lt;td&gt;发起 UserOperation 的智能合约账户&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EntryPoint&lt;/td&gt;
+          &lt;td&gt;用于执行 UserOperation 批次的单例合约。Bundler 应白名单支持的 EntryPoint&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bundler&lt;/td&gt;
+          &lt;td&gt;一个节点（区块构建者），它能处理 UserOperation、创建有效的 entryPoint.handleOps() 交易，并在交易仍有效时将其添加到区块中。这可以通过多种方式实现：Bundler 可以自己充当区块构建者。如果 bundler 不是区块构建者，它应通过 mev-boost 等基础设施或其他提议者-构建者分离机制与区块构建者合作&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Paymaster&lt;/td&gt;
+          &lt;td&gt;同意代替 sender 支付交易费用的辅助合约&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Factory&lt;/td&gt;
+          &lt;td&gt;必要时负责部署新 sender 合约的辅助合约&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Aggregator&lt;/td&gt;
+          &lt;td&gt;也称为“授权合约” - 一个允许多个 UserOperation 共享一次验证的合约。此类合约的完整设计超出本提案范围&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Canonical UserOperation mempool&lt;/td&gt;
+          &lt;td&gt;一个去中心化、无许可的 P2P 网络，bundler 在其中交换符合同一套共享验证规则的合法 UserOperation。具体规则的完整规范超出本提案范围&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Alternative UserOperation mempool&lt;/td&gt;
+          &lt;td&gt;任何其他 P2P 内存池，其中 UserOperation 的有效性由不同于共享规则的规则决定，这些规则以任何方式应用于验证代码&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Deposit&lt;/td&gt;
+          &lt;td&gt;Sender 或 Paymaster 合约向 EntryPoint 合约转入的一笔以太币（或任何 L2 原生货币），用于支付未来 UserOperation 的 gas 费用&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;useroperation-结构定义&#34;&gt;&lt;code&gt;UserOperation&lt;/code&gt; 结构定义&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;字段&lt;/th&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;sender&lt;/td&gt;
+          &lt;td&gt;address&lt;/td&gt;
+          &lt;td&gt;发起 UserOperation 的账户&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;nonce&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;防重放参数（详见“半抽象 Nonce 支持”）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;factory&lt;/td&gt;
+          &lt;td&gt;address&lt;/td&gt;
+          &lt;td&gt;新账户的账户工厂 OR 0x7702 标志用于 EIP-7702 账户，否则 address(0)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;factoryData&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;如果提供 factory，则为账户工厂的数据 OR EIP-7702 初始化数据，或空数组&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;callData&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;在主要执行调用期间传递给 sender 的数据&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;callGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为主要执行调用分配的 gas 量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;verificationGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为验证步骤分配的 gas 量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;preVerificationGas&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;额外 gas 用于支付 bundler&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;maxFeePerGas&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;最大 gas 费（类似于 EIP-1559 max_fee_per_gas）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;maxPriorityFeePerGas&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;最大优先费（类似于 EIP-1559 max_priority_fee_per_gas）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymaster&lt;/td&gt;
+          &lt;td&gt;address&lt;/td&gt;
+          &lt;td&gt;paymaster 合约地址（或空，如果 sender 自己支付 gas）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymasterVerificationGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为 paymaster 验证代码分配的 gas 量（仅当 paymaster 存在时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymasterPostOpGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为 paymaster 后操作代码分配的 gas 量（仅当 paymaster 存在时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymasterData&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;paymaster 的数据（仅当 paymaster 存在时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;signature&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;传入 sender 以验证授权的数据&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上链时部分字段会被打包，转变成 &lt;code&gt;PackedUserOperation&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Promise 与 Event Loop 的联系与理解</title>
       <link>http://localhost:1313/findings/promisetoeventloop/</link>
       <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
@@ -473,10 +672,10 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;h1 id=&#34;promise-与-event-loop分步深入指南&#34;&gt;Promise 与 Event Loop：分步深入指南&lt;/h1&gt;
 &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;JavaScript 是单线程语言，却要处理大量异步操作（如网络请求、定时器、用户交互等）。为了既不阻塞主线程、又能保证回调按预期顺序执行，语言和运行时共同提供了两套核心机制：&lt;/p&gt;
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Promise&lt;/strong&gt; —— 代表一个“未来会结束”的异步操作，提供了状态管理、链式调用、错误传播等语义，是现代异步编程的基石&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Event Loop（事件循环）&lt;/strong&gt; —— JavaScript 运行时真正的调度中心，它决定了同步代码、Promise 回调（微任务）、setTimeout/IO 等（宏任务）到底在什么时机被推入调用栈执行&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;p&gt;这两者紧密协作：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Promise 的 &lt;code&gt;.then&lt;/code&gt; / &lt;code&gt;.catch&lt;/code&gt; / &lt;code&gt;await&lt;/code&gt; 后续全部属于&lt;strong&gt;微任务（microtask）&lt;/strong&gt;&lt;/li&gt;
@@ -484,37 +683,46 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/ul&gt;
 &lt;p&gt;掌握 Promise 的状态机细节 + Event Loop 的微/宏任务执行顺序，就等于拿到了 JavaScript 异步世界的完整“时序地图”&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-promise&#34;&gt;1 Promise&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;表示&lt;strong&gt;未来某个时刻&lt;/strong&gt;可用的值或失败原因&lt;/li&gt;
-&lt;li&gt;三个状态：&lt;code&gt;pending&lt;/code&gt;（挂起） → &lt;code&gt;fulfilled&lt;/code&gt;（成功） 或 &lt;code&gt;rejected&lt;/code&gt;（失败）&lt;/li&gt;
-&lt;li&gt;构造器形式：&lt;code&gt;new Promise(executor)&lt;/code&gt;，返回立即可用的 Promise 对象&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;简短代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// executor 同步运行
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;err&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;2-逐步引入从同步到微任务&#34;&gt;2 逐步引入：从同步到微任务&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;同步执行&lt;/strong&gt;：普通函数、直接 &lt;code&gt;console.log&lt;/code&gt;，在调用栈中执行完才会继续&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;创建 Promise&lt;/strong&gt;：构造器里的 &lt;code&gt;executor&lt;/code&gt; 在创建时&lt;strong&gt;同步执行&lt;/strong&gt;；但 &lt;code&gt;resolve/reject&lt;/code&gt; 会&lt;strong&gt;把后续回调放到微任务队列&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;注册回调（then/catch）&lt;/strong&gt;：回调不会立刻执行，而是进入 &lt;strong&gt;microtask&lt;/strong&gt;（微任务）队列&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;宏任务（setTimeout 等）&lt;/strong&gt;：在微任务全部清空后才会执行下一个宏任务&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;await&lt;/strong&gt;：本质上是 &lt;code&gt;Promise.then&lt;/code&gt; 的语法糖，&lt;code&gt;await&lt;/code&gt; 后续继续执行排入 microtask&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;执行顺序表&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;执行顺序&lt;/th&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;典型代表&lt;/th&gt;
+          &lt;th&gt;触发时机&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;同步代码(包含Promise executor)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;console.log&lt;/code&gt;、变量赋值、函数调用&lt;/td&gt;
+          &lt;td&gt;立即执行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;微任务（microtask）&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;.then/.catch&lt;/code&gt;、&lt;code&gt;await&lt;/code&gt; 后续、&lt;code&gt;queueMicrotask&lt;/code&gt;、&lt;code&gt;MutationObserver&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;当前宏任务结束后、渲染前全部清空&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;渲染（浏览器）&lt;/td&gt;
+          &lt;td&gt;页面重绘、布局&lt;/td&gt;
+          &lt;td&gt;微任务清空后（可能跳过）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;宏任务（macrotask）&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;setTimeout&lt;/code&gt;、&lt;code&gt;setInterval&lt;/code&gt;、&lt;code&gt;I/O&lt;/code&gt;、&lt;code&gt;UI 事件&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;每轮 Event Loop 执行一个&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-executor&#34;&gt;3 executor&lt;/h2&gt;
-&lt;h3 id=&#34;31-executor-是同步执行的&#34;&gt;3.1 executor 是同步执行的&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;reject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;executor start&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;// 同步代码
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;resolve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;executor end&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出会有 &lt;code&gt;executor start&lt;/code&gt;、&lt;code&gt;executor end&lt;/code&gt; 在 Promise 构造时立即打印&lt;/p&gt;</description>
+&lt;p&gt;Promise 核心机制&lt;/p&gt;
+&lt;p&gt;Promise 的三个状态&lt;/p&gt;</description>
     </item>
     <item>
       <title>0907 Wallet 钱包管理模块设计</title>
@@ -1101,13 +1309,6 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;本文档总结了在 &lt;strong&gt;Hugo + PaperMod 主题&lt;/strong&gt; 下自定义博客模板的配置方法，包括静态资源优化、Nginx 部署、缓存策略和图片加速技巧&lt;/p&gt;
 &lt;hr&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/web3/eip/eip-4337/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
-      <description></description>
     </item>
     <item>
       <title>IndexedDB 浏览器数据库</title>
