@@ -272,10 +272,12 @@
 &lt;h2 id=&#34;目录结构与文件职责&#34;&gt;目录结构与文件职责&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cosole&#34; data-lang=&#34;cosole&#34;&gt;app/walletManagement/
 ├── components
-│   └── GenerateWallet.tsx
+│   ├── GenerateWallet.tsx
+|   ├── ImportWallet.tsx
 ├── lib
 │   ├── cryptoWallet.ts
 │   ├── generateWallet.ts
+|   ├── importWallet.ts
 │   ├── saveAddress.ts
 │   └── saveWallet.ts
 ├── page.tsx
@@ -315,6 +317,10 @@
       &lt;tr&gt;
           &lt;td&gt;&lt;code&gt;test-cryptoWallet.ts&lt;/code&gt;&lt;/td&gt;
           &lt;td&gt;单元测试：验证加密/解密、密钥派生一致性、异常场景（解密失败、篡改检测）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;lib/importWallet.ts&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;使用 bip39 和 ethers 从英文或中文助记词导入 HDNodeWallet（中文先转换为英文助记词再导入）&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

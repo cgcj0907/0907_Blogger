@@ -18,7 +18,66 @@
       <link>http://localhost:1313/toolkits/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/toolkits/intro/</guid>
-      <description>分享我在项目中使用的开发工具、库及技巧，帮助提高开发效率</description>
+      <description>&lt;h2 id=&#34;ide&#34;&gt;IDE&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Integrated Development Environment（集成开发环境）&lt;br&gt;
+常用的开发与调试工具&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt;：轻量级通用编辑器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IntelliJ IDEA&lt;/strong&gt;：Java 项目开发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PyCharm&lt;/strong&gt;：Python 项目开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;版本控制&#34;&gt;版本控制&lt;/h2&gt;
+&lt;p&gt;用于代码协作、历史管理与自动化流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Git / GitHub&lt;/strong&gt;：分布式版本控制与协作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Actions&lt;/strong&gt;：自动化 CI/CD 工作流&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitKraken&lt;/strong&gt;：可视化 Git 操作客户端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;容器部署&#34;&gt;容器部署&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker&lt;/strong&gt;：应用容器化与环境一致性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt;：多容器开发环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kubernetes（可选）&lt;/strong&gt;：应用编排与大规模部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;前端开发&#34;&gt;前端开发&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node.js / npm / pnpm&lt;/strong&gt;：前端构建环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vue / React&lt;/strong&gt;：常用前端框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vite&lt;/strong&gt;：快速构建工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TailwindCSS&lt;/strong&gt;：实用化 CSS 框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后端开发&#34;&gt;后端开发&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;：现代化 Java 后端开发框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MyBatis / JPA&lt;/strong&gt;：数据库 ORM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redis&lt;/strong&gt;：缓存中间件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAPI / Swagger&lt;/strong&gt;：接口文档生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;运维开发&#34;&gt;运维开发&lt;/h2&gt;
+&lt;h3 id=&#34;日志管理&#34;&gt;日志管理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Loki&lt;/strong&gt;：分布式日志系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:1313/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LogstashEncoder&lt;/strong&gt;：结构化 JSON 日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统监控&#34;&gt;系统监控&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prometheus&lt;/strong&gt;：时序监控与报警&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Grafana&lt;/strong&gt;：可视化监控面板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用测试&#34;&gt;应用测试&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Postman&lt;/strong&gt;：接口测试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JMeter&lt;/strong&gt;：压测工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据存储&#34;&gt;数据存储&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;: 高性能列式数据库
+👉 &lt;a href=&#34;http://localhost:1313/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学习与效率工具&#34;&gt;学习与效率工具&lt;/h2&gt;
+&lt;p&gt;帮助知识管理、项目整理与写作&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

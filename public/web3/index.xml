@@ -11,14 +11,144 @@
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/web3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web3 简介</title>
       <link>http://localhost:1313/web3/intro/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/intro/</guid>
-      <description>&lt;h1 id=&#34;welcome-to-web3&#34;&gt;Welcome to Web3!&lt;/h1&gt;</description>
+      <description>&lt;h1 id=&#34;welcome-to-web3&#34;&gt;Welcome to Web3!&lt;/h1&gt;
+&lt;p&gt;Web3代表互联网下一个时代以区块链为核心实现去中心化用户掌控数据和资产通过智能合约自动化交互摆脱中心化平台控制&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
+&lt;p&gt;Web3安全聚焦预防黑客攻击和漏洞利用&lt;br&gt;
+采用多层防御策略包括智能合约审计访问控制实时监控&lt;br&gt;
+使用Slither Mythril检测重入攻击整数溢出权限问题&lt;br&gt;
+最佳实践强调私钥管理多签名钱包紧急暂停机制&lt;br&gt;
+2025年主要威胁包括闪贷治理攻击跨链桥漏洞钓鱼攻击&lt;br&gt;
+强调安全即代码从设计阶段整合形式验证AI驱动监控&lt;br&gt;
+开源库OpenZeppelin提供安全合约模板减少常见错误&lt;br&gt;
+机构级项目需持续审计漏洞赏金计划构建信任&lt;/p&gt;
+&lt;h2 id=&#34;wallet&#34;&gt;wallet&lt;/h2&gt;
+&lt;p&gt;钱包是Web3入口管理私钥和资产交互&lt;br&gt;
+分为热钱包和冷钱包&lt;br&gt;
+热钱包如MetaMask浏览器扩展方便dApp连接但易受网络攻击&lt;br&gt;
+冷钱包包括Ledger硬件钱包和纸钱包离线存储更安全适合大额持有&lt;br&gt;
+非托管钱包用户完全控制密钥&lt;br&gt;
+托管钱包如Coinbase简化但依赖平台&lt;br&gt;
+ERC-4337账户抽象提升用户体验支持社交恢复气体赞助&lt;br&gt;
+多链钱包如Rainbow支持Layer2降低费用&lt;br&gt;
+安全提示必须使用硬件签名绝不泄露种子短语定期备份&lt;/p&gt;
+&lt;h2 id=&#34;eip&#34;&gt;eip&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/eip/intro&#34;&gt;EIP 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;EIP是以太坊改进提案标准化平台变更&lt;br&gt;
+涵盖核心协议客户端API合约规范&lt;br&gt;
+任何人可提交草案经社区讨论编辑审查进入最终状态&lt;br&gt;
+核心EIP需全网共识可能引发硬分叉&lt;br&gt;
+如EIP-1559引入基础费市场&lt;br&gt;
+ERC是EIP子集专注应用层标准&lt;br&gt;
+EIP过程确保透明包容&lt;br&gt;
+从草稿到最后调用再到最终实施&lt;br&gt;
+EIP-4844引入blob数据大幅降低Layer2成本&lt;br&gt;
+未来EIP聚焦可扩展性隐私如Verkle树&lt;/p&gt;
+&lt;h2 id=&#34;erc&#34;&gt;erc&lt;/h2&gt;
+&lt;p&gt;ERC是以太坊请求评论定义代币和应用标准&lt;br&gt;
+ERC20用于可互换代币如USDT支持转移批准余额查询&lt;br&gt;
+ERC721创建非同质化代币NFT唯一标识所有权如CryptoKitties&lt;br&gt;
+ERC1155多代币标准单一合约管理可互换非同质化半同质化资产&lt;br&gt;
+高效批量转移节省气体适用于游戏物品票务&lt;br&gt;
+这些标准确保全生态互操作性&lt;br&gt;
+开发者可直接构建兼容项目&lt;br&gt;
+ERC20主导DeFi&lt;br&gt;
+ERC721推动NFT市场&lt;br&gt;
+ERC1155优化复杂用例&lt;/p&gt;
+&lt;h2 id=&#34;codelanuage&#34;&gt;codeLanuage&lt;/h2&gt;
+&lt;p&gt;智能合约语言最终编译为EVM字节码&lt;br&gt;
+Solidity主流类JavaScript支持继承修饰符库生态最丰富&lt;br&gt;
+Vyper Python风格故意去除继承无限循环提升可审计性安全性&lt;br&gt;
+Yul中间语言用于精细气体优化&lt;br&gt;
+Rust主要用于Solana非EVM链&lt;br&gt;
+Ethereum生态仍以Solidity和Vyper为主&lt;br&gt;
+学习Solidity推荐从Remix IDE开始&lt;br&gt;
+Vyper强调人类可读代码减少攻击面&lt;br&gt;
+选择语言取决于项目复杂度和安全优先级&lt;/p&gt;
+&lt;h2 id=&#34;evm&#34;&gt;evm&lt;/h2&gt;
+&lt;p&gt;EVM是以太坊虚拟机去中心化计算引擎&lt;br&gt;
+执行智能合约字节码采用栈基架构深度1024&lt;br&gt;
+每操作码消耗气体防止滥用&lt;br&gt;
+Turing完备支持任意逻辑但有气体上限避免无限循环&lt;br&gt;
+EVM负责状态转换更新账户余额存储&lt;br&gt;
+所有节点一致执行保证确定性隔离&lt;br&gt;
+兼容链如Polygon Arbitrum共享EVM实现无缝移植&lt;br&gt;
+未来升级EOF引入容器化代码提升效率&lt;br&gt;
+EVM是整个以太坊生态的计算核心&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EIP 笔记合集</title>
+      <link>http://localhost:1313/web3/eip/intro/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/intro/</guid>
+      <description>&lt;h1 id=&#34;eip-索引总览&#34;&gt;EIP 索引总览&lt;/h1&gt;
+&lt;p&gt;这里收录所有值得单独成文的里程碑级EIP&lt;br&gt;
+每篇深度拆解一份EIP的诞生背景技术细节安全影响落地历程社区争议及后续演进&lt;br&gt;
+点击标题直达对应专文&lt;/p&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;EIP（Ethereum Improvement Proposal）是以太坊改进提案&lt;br&gt;
+任何人都能提交的标准化文档&lt;br&gt;
+驱动以太坊从创世区块到今天的唯一正式机制&lt;br&gt;
+ERC只是EIP的应用层子集&lt;br&gt;
+所有硬分叉升级Layer2变革账户抽象都源于EIP&lt;/p&gt;
+&lt;h2 id=&#34;账户抽象时代&#34;&gt;账户抽象时代&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/web3/eip/eip-4337&#34;&gt;EIP-4337 无私钥账户抽象：2023年真正落地版本（已完稿）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-3074&#34;&gt;EIP-3074 AUTH与AUTHCALL：被废弃的账户抽象先驱（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5003&#34;&gt;EIP-5003 代码注入式账户抽象（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7702&#34;&gt;EIP-7702 新账户抽象终极方案（2025进行中）（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;费用市场与通缩&#34;&gt;费用市场与通缩&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-1559&#34;&gt;EIP-1559 基础费燃烧：让ETH成为超声波货币（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4844&#34;&gt;EIP-4844 Proto-Danksharding：Rollup费用暴跌90%（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7514&#34;&gt;EIP-7514 减缓质押增长：保护去中心化（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;质押与提款&#34;&gt;质押与提款&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4895&#34;&gt;EIP-4895 质押提款：上海升级核心（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7002&#34;&gt;EIP-7002 部分提款与主动退出（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6110&#34;&gt;EIP-6110 链上质押存款（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;evm与执行层未来&#34;&gt;EVM与执行层未来&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7691&#34;&gt;EIP-7691 EOF：EVM容器化革命（2026目标）（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7623&#34;&gt;EIP-7623 提高CALLDATA成本为Danksharding铺路（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4444&#34;&gt;EIP-4444 历史数据过期机制（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5656&#34;&gt;EIP-5656 MCOPY指令：降低内存拷贝成本（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数据可用性与layer2&#34;&gt;数据可用性与Layer2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4844&#34;&gt;EIP-4844 Blob交易与Danksharding路线图（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7594&#34;&gt;EIP-7594 PeerDAS：对等数据可用性采样（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6465&#34;&gt;EIP-6465/6466 Blob历史过期方案（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他正在关注的eip&#34;&gt;其他正在关注的EIP&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7732&#34;&gt;EIP-7732 EIP-7702+ERC-7730安全增强版（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-2537&#34;&gt;EIP-2537 BLS预编译：加速零知识证明（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5920&#34;&gt;EIP-5920 PAY opcode：原生转账新方式（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6780&#34;&gt;EIP-6780 自毁仅限创建交易：提升状态管理（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多EIP专文持续更新中&lt;br&gt;
+目前仅EIP-4337已完稿，其余陆续放出&lt;br&gt;
+每一篇都是以太坊进化史的真实注脚&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/eip/eip-4337/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

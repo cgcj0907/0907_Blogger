@@ -18,7 +18,66 @@
       <link>http://localhost:1313/toolkits/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/toolkits/intro/</guid>
-      <description>分享我在项目中使用的开发工具、库及技巧，帮助提高开发效率</description>
+      <description>&lt;h2 id=&#34;ide&#34;&gt;IDE&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Integrated Development Environment（集成开发环境）&lt;br&gt;
+常用的开发与调试工具&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt;：轻量级通用编辑器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IntelliJ IDEA&lt;/strong&gt;：Java 项目开发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PyCharm&lt;/strong&gt;：Python 项目开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;版本控制&#34;&gt;版本控制&lt;/h2&gt;
+&lt;p&gt;用于代码协作、历史管理与自动化流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Git / GitHub&lt;/strong&gt;：分布式版本控制与协作&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Actions&lt;/strong&gt;：自动化 CI/CD 工作流&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitKraken&lt;/strong&gt;：可视化 Git 操作客户端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;容器部署&#34;&gt;容器部署&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker&lt;/strong&gt;：应用容器化与环境一致性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt;：多容器开发环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kubernetes（可选）&lt;/strong&gt;：应用编排与大规模部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;前端开发&#34;&gt;前端开发&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node.js / npm / pnpm&lt;/strong&gt;：前端构建环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vue / React&lt;/strong&gt;：常用前端框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vite&lt;/strong&gt;：快速构建工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TailwindCSS&lt;/strong&gt;：实用化 CSS 框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后端开发&#34;&gt;后端开发&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;：现代化 Java 后端开发框架&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MyBatis / JPA&lt;/strong&gt;：数据库 ORM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redis&lt;/strong&gt;：缓存中间件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAPI / Swagger&lt;/strong&gt;：接口文档生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;运维开发&#34;&gt;运维开发&lt;/h2&gt;
+&lt;h3 id=&#34;日志管理&#34;&gt;日志管理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Loki&lt;/strong&gt;：分布式日志系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:1313/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LogstashEncoder&lt;/strong&gt;：结构化 JSON 日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;系统监控&#34;&gt;系统监控&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Prometheus&lt;/strong&gt;：时序监控与报警&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Grafana&lt;/strong&gt;：可视化监控面板&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用测试&#34;&gt;应用测试&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Postman&lt;/strong&gt;：接口测试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JMeter&lt;/strong&gt;：压测工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据存储&#34;&gt;数据存储&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;: 高性能列式数据库
+👉 &lt;a href=&#34;http://localhost:1313/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学习与效率工具&#34;&gt;学习与效率工具&lt;/h2&gt;
+&lt;p&gt;帮助知识管理、项目整理与写作&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vector 日志采集与处理</title>
@@ -122,6 +181,85 @@
 &lt;/table&gt;
 &lt;h3 id=&#34;13-退出&#34;&gt;1.3 退出&lt;/h3&gt;
 &lt;p&gt;To exit the client, press Ctrl+D, or enter one of the following instead of a query:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QR Scanner 使用指南</title>
+      <link>http://localhost:1313/toolkits/qr-scanner/</link>
+      <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/qr-scanner/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;qr-scanner&lt;/code&gt; 是一款纯前端、零依赖的 JavaScript 二维码扫描库，完全在浏览器端运行，无需后端配合。它同时支持：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;摄像头实时扫码&lt;/li&gt;
+&lt;li&gt;静态图片/文件离线扫码（支持 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;、File、Blob 等多种来源）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;底层使用 WebAssembly 加速解码，识别速度快、准确率高，在手机端表现尤为优秀，是目前最推荐的前端二维码扫描方案&lt;/p&gt;
+&lt;p&gt;本文以 &lt;code&gt;React + Next.js&lt;/code&gt; 框架为例&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-安装&#34;&gt;1. 安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install qr-scanner
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或使用 yarn：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn add qr-scanner
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：已不再推荐直接用 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; 标签引入，现代项目请通过包管理器安装&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-基本引入方式&#34;&gt;2. 基本引入方式&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;QrScanner&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;qr-scanner&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;3-核心类qrscanner&#34;&gt;3. 核心类：QrScanner&lt;/h2&gt;
+&lt;h3 id=&#34;31-摄像头实时扫码&#34;&gt;3.1 摄像头实时扫码&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;videoElement&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementById&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;video&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;HTMLVideoElement&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;QrScanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;videoElement&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;扫码成功:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// result.cornerPoints 可用来做边框动画
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;returnDetailedScanResult&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 返回完整对象而非仅字符串
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;highlightScanRegion&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// 显示扫描区域遮罩
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;highlightCodeOutline&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;// 高亮二维码轮廓
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 启动摄像头
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 停止扫描
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;常用配置项&#34;&gt;常用配置项&lt;/h4&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;参数&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;returnDetailedScanResult&lt;/td&gt;
+          &lt;td&gt;true 时返回 { data, cornerPoints } 对象&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;highlightScanRegion&lt;/td&gt;
+          &lt;td&gt;显示半透明扫描区域框&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;highlightCodeOutline&lt;/td&gt;
+          &lt;td&gt;实时绘制二维码四角轮廓&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;32-离线扫描图片文件&#34;&gt;3.2 离线扫描图片文件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;File&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;文件输入框&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;QrScanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scanImage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;returnDetailedScanResult&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;二维码内容:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;支持所有图片源：File、Blob、HTMLImageElement、HTMLCanvasElement、URL 等&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo-PaperMod 自定义博客模板</title>
