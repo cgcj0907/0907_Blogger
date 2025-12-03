@@ -6,9 +6,7 @@ weight: 3
 draft: false
 tags: ["Web3", "EIP"]
 featured: true
-cover:
-  image: "/covers/eip_index_cover.webp"
-  relative: false
+showToc: true
 ---
 
 # EIP 索引总览
