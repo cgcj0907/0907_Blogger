@@ -1,7 +1,6 @@
 ---
 title: "EIP 笔记合集"
-date: 2025-12-01
-lastmod: 2025-12-01
+date: 2025-08-16
 weight: 3
 draft: false
 tags: ["Web3", "EIP"]

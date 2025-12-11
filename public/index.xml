@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UESTC 简介</title>
@@ -407,9 +407,104 @@ EVM是整个以太坊生态的计算核心&lt;/p&gt;</description>
 &lt;p&gt;帮助知识管理、项目整理与写作&lt;/p&gt;</description>
     </item>
     <item>
+      <title>安全审计 笔记合集</title>
+      <link>http://localhost:1313/web3/security/intro/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/intro/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的&lt;/p&gt;
+&lt;p&gt;然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，&lt;strong&gt;“安全前置”&lt;/strong&gt; 的理念在这里被提升到了前所未有的高度&lt;/p&gt;
+&lt;p&gt;安全审计（Security Audit）正是在这种严苛环境下应运而生的核心质量保障手段。它不再是一种可选的成本，而是智能合约开发生命周期中不可或缺的、防御性的关键环节。一个严谨、深入的审计过程，是项目对自身代码负责、对用户资产负责的最重要体现&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;高层概述--什么是安全审计智能合约审计-&#34;&gt;高层概述 ( 什么是安全审计/智能合约审计？ )&lt;/h2&gt;
+&lt;p&gt;当人们提到&amp;quot;审计&amp;quot;时，通常指的是&lt;strong&gt;安全审查（Security Review）&lt;/strong&gt;。这是对智能合约代码进行系统性、专业性的安全检查过程，旨在识别潜在的安全漏洞、逻辑错误和设计缺陷。&lt;/p&gt;
+&lt;h2 id=&#34;审计的局限性&#34;&gt;审计的局限性&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;There is no silver bullet ( 感兴趣的同学可以去搜一下该词的意思 ) to auditing&lt;/strong&gt;：需要明确的是，审计并非万能的解决方案。即使经过最严格的审计，智能合约仍可能存在：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未被发现的复杂逻辑漏洞&lt;/li&gt;
+&lt;li&gt;经济模型的长尾风险&lt;/li&gt;
+&lt;li&gt;与外部协议集成时的未知交互风险&lt;/li&gt;
+&lt;li&gt;编译器或区块链底层本身的潜在问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一次审计只能提供特定时间点的安全快照，无法保证永久的绝对安全。&lt;/p&gt;
+&lt;h2 id=&#34;安全审计的三个阶段&#34;&gt;安全审计的三个阶段&lt;/h2&gt;
+&lt;h3 id=&#34;第一阶段初步审查initial-review&#34;&gt;第一阶段：初步审查（Initial Review）&lt;/h3&gt;
+&lt;h4 id=&#34;1-范围界定scoping&#34;&gt;1. 范围界定（Scoping）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;确定审计的具体范围：哪些合约、哪些功能&lt;/li&gt;
+&lt;li&gt;明确审计目标、时间线和交付物&lt;/li&gt;
+&lt;li&gt;了解协议的业务逻辑和设计意图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-侦察reconnaissance&#34;&gt;2. 侦察（Reconnaissance）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;初步代码阅读和理解架构&lt;/li&gt;
+&lt;li&gt;识别关键组件和依赖关系&lt;/li&gt;
+&lt;li&gt;梳理权限模型和资金流向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-漏洞识别vulnerability-identification&#34;&gt;3. 漏洞识别（Vulnerability Identification）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;系统性检查各类安全漏洞&lt;/li&gt;
+&lt;li&gt;结合自动化工具和人工审查&lt;/li&gt;
+&lt;li&gt;从攻击者角度思考可能的攻击向量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-报告reporting&#34;&gt;4. 报告（Reporting）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;详细记录发现的每个问题&lt;/li&gt;
+&lt;li&gt;按严重程度分类（危急、高危、中危、低危）&lt;/li&gt;
+&lt;li&gt;提供具体的修复建议和代码示例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第二阶段协议修复与验证&#34;&gt;第二阶段：协议修复与验证&lt;/h3&gt;
+&lt;h4 id=&#34;1-修复问题protocol-fixes&#34;&gt;1. 修复问题（Protocol Fixes）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;开发团队根据审计报告修复漏洞&lt;/li&gt;
+&lt;li&gt;可能需要重新设计部分逻辑&lt;/li&gt;
+&lt;li&gt;确保修复方案不引入新的问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-重新测试与添加测试retests-and-adds-tests&#34;&gt;2. 重新测试与添加测试（Retests and Adds Tests）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;审计团队验证修复的有效性&lt;/li&gt;
+&lt;li&gt;为修复的部分添加专门的测试用例&lt;/li&gt;
+&lt;li&gt;确保修复后的代码仍能满足业务需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;第三阶段缓解措施审查mitigation-review&#34;&gt;第三阶段：缓解措施审查（Mitigation Review）&lt;/h3&gt;
+&lt;h4 id=&#34;1-侦察reconnaissance&#34;&gt;1. 侦察（Reconnaissance）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;审查所有修复的代码变更&lt;/li&gt;
+&lt;li&gt;理解修复方案的安全影响&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-漏洞识别vulnerability-identification&#34;&gt;2. 漏洞识别（Vulnerability Identification）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;确认原始漏洞已被彻底修复&lt;/li&gt;
+&lt;li&gt;检查修复是否引入了新的攻击面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-报告reporting&#34;&gt;3. 报告（Reporting）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;提供最终的审计结论&lt;/li&gt;
+&lt;li&gt;确认所有高风险问题已解决&lt;/li&gt;
+&lt;li&gt;给出部署前的最终建议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;智能合约开发生命周期&#34;&gt;智能合约开发生命周期&lt;/h2&gt;
+&lt;h3 id=&#34;1-规划与设计plan--design&#34;&gt;1. 规划与设计（Plan &amp;amp; Design）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;需求分析和功能规划&lt;/li&gt;
+&lt;li&gt;架构设计和模式选择&lt;/li&gt;
+&lt;li&gt;安全考虑融入设计阶段（Security by Design）&lt;/li&gt;
+&lt;li&gt;经济模型和激励机制的数学验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-开发与测试develop--test&#34;&gt;2. 开发与测试（Develop &amp;amp; Test）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;编写合约代码和单元测试&lt;/li&gt;
+&lt;li&gt;集成测试和端到端测试&lt;/li&gt;
+&lt;li&gt;模糊测试（Fuzzing）和差异化测试&lt;/li&gt;
+&lt;li&gt;测试网部署和模拟攻击&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-智能合约审计与部署后规划&#34;&gt;3. 智能合约审计与部署后规划&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;这不仅仅是一个步骤&lt;/strong&gt;，而是一个包含多个子阶段的综合过程（类似于传统软件开发生命周期&lt;a href=&#34;https://aws.amazon.com/what-is/sdlc/&#34;&gt;SDLC&lt;/a&gt;，但具有区块链特有的安全考量）：&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>EIP 笔记合集</title>
       <link>http://localhost:1313/web3/eip/intro/</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/eip/intro/</guid>
       <description>&lt;h1 id=&#34;eip-索引总览&#34;&gt;EIP 索引总览&lt;/h1&gt;
 &lt;p&gt;这里收录所有值得单独成文的里程碑级EIP&lt;br&gt;
@@ -423,9 +518,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 所有硬分叉升级Layer2变革账户抽象都源于EIP&lt;/p&gt;
 &lt;h2 id=&#34;账户抽象时代&#34;&gt;账户抽象时代&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/web3/eip/eip-4337&#34;&gt;EIP-4337 无私钥账户抽象：2023年真正落地版本（已完稿）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-3074&#34;&gt;EIP-3074 AUTH与AUTHCALL：被废弃的账户抽象先驱（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5003&#34;&gt;EIP-5003 代码注入式账户抽象（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/web3/eip/eip-4337&#34;&gt;EIP-4337 智能合约账户&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7702&#34;&gt;EIP-7702 新账户抽象终极方案（2025进行中）（待撰写）&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;费用市场与通缩&#34;&gt;费用市场与通缩&lt;/h2&gt;
@@ -456,212 +549,15 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;h2 id=&#34;其他正在关注的eip&#34;&gt;其他正在关注的EIP&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7732&#34;&gt;EIP-7732 EIP-7702+ERC-7730安全增强版（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-712&#34;&gt;EIP-712 类型化结构化数据签名：链上安全签名的金标准（待撰写）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-2537&#34;&gt;EIP-2537 BLS预编译：加速零知识证明（待撰写）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5920&#34;&gt;EIP-5920 PAY opcode：原生转账新方式（待撰写）&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6780&#34;&gt;EIP-6780 自毁仅限创建交易：提升状态管理（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-2612&#34;&gt;EIP-2612 Permit：ERC20 的无gas授权革命（待撰写）&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;更多EIP专文持续更新中&lt;br&gt;
 目前仅EIP-4337已完稿，其余陆续放出&lt;br&gt;
 每一篇都是以太坊进化史的真实注脚&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EIP-4337</title>
-      <link>http://localhost:1313/web3/eip/eip-4337/</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
-      <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;引入 UserOperation：一种高层“伪交易对象”，替代直接在共识层提交交易&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;用户将 UserOperation 发送到单独的 mempool&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Bundler 将多个 UserOperation 打包，通过 handleOps 调用 EntryPoint 合约，再打包进区块&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;目标是在不修改以太坊底层协议的情况下，实现账户抽象&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;实现账户抽象&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;允许使用智能合约账户作为主账户，支持任意验证逻辑。&lt;/li&gt;
-&lt;li&gt;用户无需拥有外部账户（EOA）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;去中心化与开放参与&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;任何 bundler 都可参与交易打包。&lt;/li&gt;
-&lt;li&gt;依赖公共 mempool，无需用户直接知晓 bundler 地址。&lt;/li&gt;
-&lt;li&gt;不增加信任假设。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;无需共识层修改&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;避免协议层改动，提高快速部署的可能性。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;支持更多应用场景&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;隐私保护型应用&lt;/li&gt;
-&lt;li&gt;原子多操作&lt;/li&gt;
-&lt;li&gt;使用 ERC-20 代币支付手续费或开发者代付&lt;/li&gt;
-&lt;li&gt;灵活的验证逻辑（不同签名方案、多签、恢复方案）&lt;/li&gt;
-&lt;li&gt;灵活的手续费支付（第三方支付、跨链支付）&lt;/li&gt;
-&lt;li&gt;批量操作与打包执行&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：该提案通过 UserOperation、Bundler 和 EntryPoint 合约实现智能合约账户的完全抽象化，支持多签、代付和批量操作，同时无需修改以太坊共识层&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
-&lt;h3 id=&#34;术语定义&#34;&gt;术语定义&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;术语&lt;/th&gt;
-          &lt;th&gt;定义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;UserOperation&lt;/td&gt;
-          &lt;td&gt;一种描述“代表用户发起一笔交易”的数据结构。为避免与原生交易混淆，特意不叫“transaction”。像交易一样，它包含 to、calldata、maxFeePerGas、maxPriorityFeePerGas、nonce、signature。不像交易，它包含以下所述的几个其他字段。特别注意，signature 字段的使用不由协议定义，而是由智能合约账户实现定义&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Sender&lt;/td&gt;
-          &lt;td&gt;发起 UserOperation 的智能合约账户&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;EntryPoint&lt;/td&gt;
-          &lt;td&gt;用于执行 UserOperation 批次的单例合约。Bundler 应白名单支持的 EntryPoint&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Bundler&lt;/td&gt;
-          &lt;td&gt;一个节点（区块构建者），它能处理 UserOperation、创建有效的 entryPoint.handleOps() 交易，并在交易仍有效时将其添加到区块中。这可以通过多种方式实现：Bundler 可以自己充当区块构建者。如果 bundler 不是区块构建者，它应通过 mev-boost 等基础设施或其他提议者-构建者分离机制与区块构建者合作&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Paymaster&lt;/td&gt;
-          &lt;td&gt;同意代替 sender 支付交易费用的辅助合约&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Factory&lt;/td&gt;
-          &lt;td&gt;必要时负责部署新 sender 合约的辅助合约&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Aggregator&lt;/td&gt;
-          &lt;td&gt;也称为“授权合约” - 一个允许多个 UserOperation 共享一次验证的合约。此类合约的完整设计超出本提案范围&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Canonical UserOperation mempool&lt;/td&gt;
-          &lt;td&gt;一个去中心化、无许可的 P2P 网络，bundler 在其中交换符合同一套共享验证规则的合法 UserOperation。具体规则的完整规范超出本提案范围&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Alternative UserOperation mempool&lt;/td&gt;
-          &lt;td&gt;任何其他 P2P 内存池，其中 UserOperation 的有效性由不同于共享规则的规则决定，这些规则以任何方式应用于验证代码&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Deposit&lt;/td&gt;
-          &lt;td&gt;Sender 或 Paymaster 合约向 EntryPoint 合约转入的一笔以太币（或任何 L2 原生货币），用于支付未来 UserOperation 的 gas 费用&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;useroperation-结构定义&#34;&gt;&lt;code&gt;UserOperation&lt;/code&gt; 结构定义&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;字段&lt;/th&gt;
-          &lt;th&gt;类型&lt;/th&gt;
-          &lt;th&gt;描述&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;sender&lt;/td&gt;
-          &lt;td&gt;address&lt;/td&gt;
-          &lt;td&gt;发起 UserOperation 的账户&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;nonce&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;防重放参数（详见“半抽象 Nonce 支持”）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;factory&lt;/td&gt;
-          &lt;td&gt;address&lt;/td&gt;
-          &lt;td&gt;新账户的账户工厂 OR 0x7702 标志用于 EIP-7702 账户，否则 address(0)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;factoryData&lt;/td&gt;
-          &lt;td&gt;bytes&lt;/td&gt;
-          &lt;td&gt;如果提供 factory，则为账户工厂的数据 OR EIP-7702 初始化数据，或空数组&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;callData&lt;/td&gt;
-          &lt;td&gt;bytes&lt;/td&gt;
-          &lt;td&gt;在主要执行调用期间传递给 sender 的数据&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;callGasLimit&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;为主要执行调用分配的 gas 量&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;verificationGasLimit&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;为验证步骤分配的 gas 量&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;preVerificationGas&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;额外 gas 用于支付 bundler&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;maxFeePerGas&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;最大 gas 费（类似于 EIP-1559 max_fee_per_gas）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;maxPriorityFeePerGas&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;最大优先费（类似于 EIP-1559 max_priority_fee_per_gas）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;paymaster&lt;/td&gt;
-          &lt;td&gt;address&lt;/td&gt;
-          &lt;td&gt;paymaster 合约地址（或空，如果 sender 自己支付 gas）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;paymasterVerificationGasLimit&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;为 paymaster 验证代码分配的 gas 量（仅当 paymaster 存在时）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;paymasterPostOpGasLimit&lt;/td&gt;
-          &lt;td&gt;uint256&lt;/td&gt;
-          &lt;td&gt;为 paymaster 后操作代码分配的 gas 量（仅当 paymaster 存在时）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;paymasterData&lt;/td&gt;
-          &lt;td&gt;bytes&lt;/td&gt;
-          &lt;td&gt;paymaster 的数据（仅当 paymaster 存在时）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;signature&lt;/td&gt;
-          &lt;td&gt;bytes&lt;/td&gt;
-          &lt;td&gt;传入 sender 以验证授权的数据&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;上链时部分字段会被打包，转变成 &lt;code&gt;PackedUserOperation&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Promise 与 Event Loop 的联系与理解</title>
@@ -1120,6 +1016,243 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/toolkits/indexedDB&#34;&gt;关于 IndexedDB 的使用方法请见：IndexedDB 浏览器数据库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>审计辅助工具</title>
+      <link>http://localhost:1313/web3/security/auxiliarytools/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/auxiliarytools/</guid>
+      <description>&lt;h2 id=&#34;ether&#34;&gt;Ether&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>EIP-2612</title>
+      <link>http://localhost:1313/web3/eip/eip-2612/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-2612/</guid>
+      <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;EIP-2612&lt;/code&gt;（又称 &lt;code&gt;ERC-2612&lt;/code&gt; / &lt;em&gt;Permit extension for EIP-20&lt;/em&gt;）在 EIP-20 基础上新增 &lt;code&gt;permit&lt;/code&gt; 接口，允许通过 &lt;strong&gt;EIP-712 typed signatures&lt;/strong&gt;（secp256k1）来更改 &lt;code&gt;allowance&lt;/code&gt;，从而无需由 &lt;code&gt;msg.sender&lt;/code&gt; 发起 &lt;code&gt;approve&lt;/code&gt; 交易
+该扩展目的是最小化对现有 ERC-20 生态的入侵，同时解决用户必须持有 ETH 并且需发两笔交易（approve + action）的体验问题&lt;/p&gt;
+&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;传统 ERC-20 的 &lt;code&gt;approve&lt;/code&gt; 以 &lt;code&gt;msg.sender&lt;/code&gt; 为准，要求用户必须用 EOA 发起第一次交互（或使用合约钱包）。&lt;/li&gt;
+&lt;li&gt;当用户要与智能合约交互（例如 deposit、swap 等），往往需要先 &lt;code&gt;approve&lt;/code&gt;，再由合约调用 &lt;code&gt;transferFrom&lt;/code&gt;：导致&lt;strong&gt;至少两笔链上交易、两次 gas 支付&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;目标是引入最小、通用且兼容的解决方案，使用户能通过&lt;strong&gt;离线签名&lt;/strong&gt;完成授权，从而可在不持有 ETH 的情况下参与某些操作或把批准与主动作合并成单笔链上交易（例如 &lt;code&gt;depositWithPermit&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：合约钱包（contract wallets）也能解决部分问题，但在生态中采纳度较低且需要额外的 UI 适配；permit 方案能在不改动现有 UI 的前提下带来多数好处&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
+&lt;p&gt;合规的实现需要在 ERC-20 基础上实现三项额外函数：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-solidity&#34; data-lang=&#34;solidity&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;permit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;owner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spender&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deadline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint8&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;nonces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;owner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;returns&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;DOMAIN_SEPARATOR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;returns&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;语义&lt;/strong&gt;（permit 的成功条件）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当前区块时间 &lt;code&gt;block.timestamp&lt;/code&gt; 必须 ≤ &lt;code&gt;deadline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;owner&lt;/code&gt; ≠ &lt;code&gt;address(0)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nonces[owner]&lt;/code&gt;（permit 调用前）必须等于消息里包含的 &lt;code&gt;nonce&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;v, r, s&lt;/code&gt; 必须构成来自 &lt;code&gt;owner&lt;/code&gt; 的有效 secp256k1 签名（签名的数据按 EIP-712 的 &lt;code&gt;DOMAIN_SEPARATOR&lt;/code&gt; 与 &lt;code&gt;Permit&lt;/code&gt; 类型哈希构造）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果以上任一不满足，&lt;code&gt;permit&lt;/code&gt; 必须 revert。成功时应执行：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EIP-4337</title>
+      <link>http://localhost:1313/web3/eip/eip-4337/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
+      <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;引入 UserOperation：一种高层“伪交易对象”，替代直接在共识层提交交易&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户将 UserOperation 发送到单独的 mempool&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bundler 将多个 UserOperation 打包，通过 handleOps 调用 EntryPoint 合约，再打包进区块&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目标是在不修改以太坊底层协议的情况下，实现账户抽象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现账户抽象&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;允许使用智能合约账户作为主账户，支持任意验证逻辑。&lt;/li&gt;
+&lt;li&gt;用户无需拥有外部账户（EOA）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;去中心化与开放参与&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任何 bundler 都可参与交易打包。&lt;/li&gt;
+&lt;li&gt;依赖公共 mempool，无需用户直接知晓 bundler 地址。&lt;/li&gt;
+&lt;li&gt;不增加信任假设。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;无需共识层修改&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免协议层改动，提高快速部署的可能性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;支持更多应用场景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隐私保护型应用&lt;/li&gt;
+&lt;li&gt;原子多操作&lt;/li&gt;
+&lt;li&gt;使用 ERC-20 代币支付手续费或开发者代付&lt;/li&gt;
+&lt;li&gt;灵活的验证逻辑（不同签名方案、多签、恢复方案）&lt;/li&gt;
+&lt;li&gt;灵活的手续费支付（第三方支付、跨链支付）&lt;/li&gt;
+&lt;li&gt;批量操作与打包执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：该提案通过 UserOperation、Bundler 和 EntryPoint 合约实现智能合约账户的完全抽象化，支持多签、代付和批量操作，同时无需修改以太坊共识层&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
+&lt;h3 id=&#34;术语定义&#34;&gt;术语定义&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;术语&lt;/th&gt;
+          &lt;th&gt;定义&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;UserOperation&lt;/td&gt;
+          &lt;td&gt;一种描述“代表用户发起一笔交易”的数据结构。为避免与原生交易混淆，特意不叫“transaction”。像交易一样，它包含 to、calldata、maxFeePerGas、maxPriorityFeePerGas、nonce、signature。不像交易，它包含以下所述的几个其他字段。特别注意，signature 字段的使用不由协议定义，而是由智能合约账户实现定义&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Sender&lt;/td&gt;
+          &lt;td&gt;发起 UserOperation 的智能合约账户&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;EntryPoint&lt;/td&gt;
+          &lt;td&gt;用于执行 UserOperation 批次的单例合约。Bundler 应白名单支持的 EntryPoint&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Bundler&lt;/td&gt;
+          &lt;td&gt;一个节点（区块构建者），它能处理 UserOperation、创建有效的 entryPoint.handleOps() 交易，并在交易仍有效时将其添加到区块中。这可以通过多种方式实现：Bundler 可以自己充当区块构建者。如果 bundler 不是区块构建者，它应通过 mev-boost 等基础设施或其他提议者-构建者分离机制与区块构建者合作&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Paymaster&lt;/td&gt;
+          &lt;td&gt;同意代替 sender 支付交易费用的辅助合约&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Factory&lt;/td&gt;
+          &lt;td&gt;必要时负责部署新 sender 合约的辅助合约&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Aggregator&lt;/td&gt;
+          &lt;td&gt;也称为“授权合约” - 一个允许多个 UserOperation 共享一次验证的合约。此类合约的完整设计超出本提案范围&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Canonical UserOperation mempool&lt;/td&gt;
+          &lt;td&gt;一个去中心化、无许可的 P2P 网络，bundler 在其中交换符合同一套共享验证规则的合法 UserOperation。具体规则的完整规范超出本提案范围&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Alternative UserOperation mempool&lt;/td&gt;
+          &lt;td&gt;任何其他 P2P 内存池，其中 UserOperation 的有效性由不同于共享规则的规则决定，这些规则以任何方式应用于验证代码&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Deposit&lt;/td&gt;
+          &lt;td&gt;Sender 或 Paymaster 合约向 EntryPoint 合约转入的一笔以太币（或任何 L2 原生货币），用于支付未来 UserOperation 的 gas 费用&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;useroperation-结构定义&#34;&gt;&lt;code&gt;UserOperation&lt;/code&gt; 结构定义&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;字段&lt;/th&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;sender&lt;/td&gt;
+          &lt;td&gt;address&lt;/td&gt;
+          &lt;td&gt;发起 UserOperation 的账户&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;nonce&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;防重放参数（详见“半抽象 Nonce 支持”）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;factory&lt;/td&gt;
+          &lt;td&gt;address&lt;/td&gt;
+          &lt;td&gt;新账户的账户工厂 OR 0x7702 标志用于 EIP-7702 账户，否则 address(0)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;factoryData&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;如果提供 factory，则为账户工厂的数据 OR EIP-7702 初始化数据，或空数组&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;callData&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;在主要执行调用期间传递给 sender 的数据&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;callGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为主要执行调用分配的 gas 量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;verificationGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为验证步骤分配的 gas 量&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;preVerificationGas&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;额外 gas 用于支付 bundler&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;maxFeePerGas&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;最大 gas 费（类似于 EIP-1559 max_fee_per_gas）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;maxPriorityFeePerGas&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;最大优先费（类似于 EIP-1559 max_priority_fee_per_gas）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymaster&lt;/td&gt;
+          &lt;td&gt;address&lt;/td&gt;
+          &lt;td&gt;paymaster 合约地址（或空，如果 sender 自己支付 gas）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymasterVerificationGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为 paymaster 验证代码分配的 gas 量（仅当 paymaster 存在时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymasterPostOpGasLimit&lt;/td&gt;
+          &lt;td&gt;uint256&lt;/td&gt;
+          &lt;td&gt;为 paymaster 后操作代码分配的 gas 量（仅当 paymaster 存在时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;paymasterData&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;paymaster 的数据（仅当 paymaster 存在时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;signature&lt;/td&gt;
+          &lt;td&gt;bytes&lt;/td&gt;
+          &lt;td&gt;传入 sender 以验证授权的数据&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上链时部分字段会被打包，转变成 &lt;code&gt;PackedUserOperation&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Vector 日志采集与处理</title>
       <link>http://localhost:1313/toolkits/vector/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
@@ -1309,6 +1442,34 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;本文档总结了在 &lt;strong&gt;Hugo + PaperMod 主题&lt;/strong&gt; 下自定义博客模板的配置方法，包括静态资源优化、Nginx 部署、缓存策略和图片加速技巧&lt;/p&gt;
 &lt;hr&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/eip/eip-4626/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-4626/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/eip/eip-712/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-712/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/eip/eip-721/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-721/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/eip/eip-7702/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-7702/</guid>
+      <description></description>
     </item>
     <item>
       <title>IndexedDB 浏览器数据库</title>
