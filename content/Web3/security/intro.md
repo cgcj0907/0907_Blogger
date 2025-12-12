@@ -146,19 +146,20 @@ Web3，作为一个以去中心化为核心理念的新一代互联网范式，�
 
 
 ## 辅助工具推荐
-> 👉 [审计辅助工具](/web3/security/auxiliarytools)
+> 👉 [审计辅助工具](/web3/security/tool/auxiliarytools)
 
 ## 审计工具推荐
 
 ### 静态分析工具
-- **Slither**：全面的静态分析框架，支持自定义检测器。  
-- **Mythril**：基于符号执行，发现复杂路径条件。  
-- **Semgrep**：代码模式匹配，适合快速规则化检查。
+> 👉 [审计辅助工具](/web3/security/tool/staticAnalysisTools)
+- **Slither**：全面的静态分析框架，支持自定义检测器  
+- **Mythril**：基于符号执行，发现复杂路径条件 
+- **Semgrep**：代码模式匹配，适合快速规则化检查
 
 ### 动态测试工具
-- **Foundry（forge）**：本地开发、测试与模糊测试一体化工具，速度快且广泛被采用。  
-- **Hardhat**：插件生态丰富，便于与现有工具链集成。  
-- **Echidna**：属性驱动的模糊测试工具。
+- **Foundry（forge）**：本地开发、测试与模糊测试一体化工具，速度快且广泛被采用
+- **Hardhat**：插件生态丰富，便于与现有工具链集成
+- **Echidna**：属性驱动的模糊测试工具
 
 ### 形式化验证
 - **Certora**：成熟的形式化验证工具，支持复杂规约（Certora Prover & CVL）。  
@@ -173,13 +174,15 @@ Web3，作为一个以去中心化为核心理念的新一代互联网范式，�
 ---
 
 ## 漏洞等级划分
-> 👉 [漏洞等级划分标准](/web3/security/severity)
+> 👉 [漏洞等级划分标准](/web3/security/vulnerability/severity)
 
 ## 经典漏洞
-> 👉 [低级漏洞合集](/web3/security/simple)
+> 👉 [低级漏洞合集](/web3/security/vulnerability/simple)
+
+> 👉 [Info / Gas 漏洞合集](/web3/security/vulnerability/infogas)
 
 ### 1. 编译级审计相关漏洞 ( CLV - Compiler-level vulnerability )
-> 👉 [编译级漏洞合集](/web3/security/clv)
+> 👉 [编译级漏洞合集](/web3/security/vulnerability/clv)
 
 #### 1.1 构造函数可见性错误（Constructor Visibility）
 **问题描述**: 在较早的 Solidity 版本中，构造函数与合约同名；错误实现或版本不匹配可能导致构造函数被外部调用，从而让攻击者获取所有权。  
@@ -195,44 +198,45 @@ Web3，作为一个以去中心化为核心理念的新一代互联网范式，�
 
 ---
 
-### 2. 测试级审计相关漏洞 ( TLV - Test-Level Vulnerabilities)
-> 👉 [测试级漏洞合集](/web3/security/tlv)
-#### 2.1 重入攻击（Reentrancy）
-**问题描述**: 在外部调用（例如发送资金）后未先更新合约状态，恶意合约通过回调重复进入导致资金被多次提取。  
-**防护模式**: 使用 Checks-Effects-Interactions 模式、重入锁（`ReentrancyGuard`）以及尽量使用 `transfer`/`call` 的正确模式并检查返回值。
-
-#### 2.2 拒绝服务（Denial of Service）
-**问题描述**: 攻击者通过特殊手段使合约功能不可用（如占满 Gas、在回调中 revert、或恶意填充数据使循环耗尽 Gas）。  
-**审计要点**: 识别可能被外部控制的数据驱动循环，检查循环与资源消耗边界，设计退避/分页机制。
-
-#### 2.3 前端运行攻击（Front-running / MEV）
-**问题描述**: 攻击者在 mempool 中发现有利交易，并通过提高 Gas 或操纵交易顺序来获利。  
-**缓解方案**: 提交-揭示、链下批处理、使用隐私交易或原生抵御 MEV 的设计（如闪电套利保护、时间加密机制）。
-
----
-
-### 3. 静态审计相关漏洞 ( SAV- Static Analysis Vulnerabilities )
-> 👉 [静态分析漏洞合集](/web3/security/sav)
-#### 3.1 访问控制缺失（Missing Access Control）
+### 2. 静态分析相关漏洞 ( SAV- Static Analysis Vulnerabilities )
+> 👉 [静态分析漏洞合集](/web3/security/vulnerability/sav)
+#### 2.1 访问控制缺失（Missing Access Control）
 **问题描述**: 关键函数没有合适权限校验或权限逻辑存在漏洞（例如误用 `tx.origin`）。  
 **审计要点**: 检查所有关键操作、管理入口、升级入口是否严格受限并有事件记录。
 
-#### 3.2 整数溢出/下溢（Integer Overflow/Underflow）
+#### 2.2 整数溢出/下溢（Integer Overflow/Underflow）
 **问题描述**: 在 Solidity 0.8.0 之前，算术不会自动 revert，导致溢出/下溢。  
 **防护**: 使用 Solidity 0.8+ 的内置溢出检查，或显式边界校验。
 
-#### 3.3 未检查的外部调用返回值
+#### 2.3 未检查的外部调用返回值
 **问题描述**: 某些代币合约（历史上如 USDT）采用非规范返回值（返回 bool 为 false），若不检查会误判成功。  
 **最佳实践**: 使用 `safeTransfer`、检查 `call` 返回值并处理错误。
 
-#### 3.4 delegatecall 风险
+#### 2.4 delegatecall 风险
 **问题描述**: `delegatecall` 在调用目标合约时使用调用者的存储布局，若目标合约未受信任或被替换，会带来极大风险。  
 **审计要点**: 确保 delegatecall 目标的源可信并且 storage 布局严格匹配。
 
 ---
 
+### 3. 测试级审计相关漏洞 ( TLV - Test-Level Vulnerabilities)
+> 👉 [测试级漏洞合集](/web3/security/vulnerability/tlv)
+#### 3.1 重入攻击（Reentrancy）
+**问题描述**: 在外部调用（例如发送资金）后未先更新合约状态，恶意合约通过回调重复进入导致资金被多次提取。  
+**防护模式**: 使用 Checks-Effects-Interactions 模式、重入锁（`ReentrancyGuard`）以及尽量使用 `transfer`/`call` 的正确模式并检查返回值。
+
+#### 3.2 拒绝服务（Denial of Service）
+**问题描述**: 攻击者通过特殊手段使合约功能不可用（如占满 Gas、在回调中 revert、或恶意填充数据使循环耗尽 Gas）。  
+**审计要点**: 识别可能被外部控制的数据驱动循环，检查循环与资源消耗边界，设计退避/分页机制。
+
+#### 3.3 前端运行攻击（Front-running / MEV）
+**问题描述**: 攻击者在 mempool 中发现有利交易，并通过提高 Gas 或操纵交易顺序来获利。  
+**缓解方案**: 提交-揭示、链下批处理、使用隐私交易或原生抵御 MEV 的设计（如闪电套利保护、时间加密机制）。
+
+---
+
+
 ### 4. 数学 & 经济模型相关漏洞 ( M&EMV - Mathematical & Economic-model vulnerabilities )
-> 👉 [数学 & 经济模型漏洞合集](/web3/security/memv)
+> 👉 [数学 & 经济模型漏洞合集](/web3/security/vulnerability/memv)
 #### 4.1 价格操纵攻击（Price Manipulation）
 **问题描述**: 通过操纵预言机或 DEX 池子来改变价格，进而触发清算或套利。  
 **典型场景**: 闪电贷操纵、预言机延迟、低流动性池被操控。  
