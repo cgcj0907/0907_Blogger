@@ -91,14 +91,13 @@ EVM是整个以太坊生态的计算核心&lt;/p&gt;</description>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/security/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;p&gt;Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的。&lt;/p&gt;
-&lt;p&gt;然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，&lt;strong&gt;“安全前置”&lt;/strong&gt; 的理念在这里被提升到了前所未有的高度。&lt;/p&gt;
-&lt;p&gt;安全审计（Security Audit）正是在这种严苛环境下应运而生的核心质量保障手段。它不再是一种可选的成本，而是智能合约开发生命周期中不可或缺的、防御性的关键环节。一个严谨、深入的审计过程，是项目对自身代码负责、对用户资产负责的最重要体现。&lt;/p&gt;
-&lt;p&gt;为了系统性地剖析和应对以太坊生态中的安全挑战，本笔记合集将从五个关键维度构建审计与安全分析的知识框架，并罗列常见的漏洞与防护要点。&lt;/p&gt;
+&lt;p&gt;Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的&lt;/p&gt;
+&lt;p&gt;然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，&lt;strong&gt;“安全前置”&lt;/strong&gt; 的理念在这里被提升到了前所未有的高度&lt;/p&gt;
+&lt;p&gt;安全审计（Security Audit）正是在这种严苛环境下应运而生的核心质量保障手段。它不再是一种可选的成本，而是智能合约开发生命周期中不可或缺的、防御性的关键环节。一个严谨、深入的审计过程，是项目对自身代码负责、对用户资产负责的最重要体现&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;高层概述--什么是安全审计智能合约审计-&#34;&gt;高层概述 ( 什么是安全审计/智能合约审计？ )&lt;/h2&gt;
 &lt;p&gt;当人们提到&amp;quot;审计&amp;quot;时，通常指的是&lt;strong&gt;安全审查（Security Review）&lt;/strong&gt;。这是对智能合约代码进行系统性、专业性的安全检查过程，旨在识别潜在的安全漏洞、逻辑错误和设计缺陷。&lt;/p&gt;
-&lt;h3 id=&#34;审计的局限性&#34;&gt;审计的局限性&lt;/h3&gt;
+&lt;h2 id=&#34;审计的局限性&#34;&gt;审计的局限性&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;There is no silver bullet ( 感兴趣的同学可以去搜一下该词的意思 ) to auditing&lt;/strong&gt;：需要明确的是，审计并非万能的解决方案。即使经过最严格的审计，智能合约仍可能存在：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;未被发现的复杂逻辑漏洞&lt;/li&gt;
@@ -240,11 +239,50 @@ ERC只是EIP的应用层子集&lt;br&gt;
 每一篇都是以太坊进化史的真实注脚&lt;/p&gt;</description>
     </item>
     <item>
-      <title>安全审计 笔记合集</title>
+      <title>审计辅助工具</title>
       <link>http://localhost:1313/web3/security/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/security/auxiliarytools/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
+&lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
+在审计过程中可用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查合约部署地址及交易历史&lt;/li&gt;
+&lt;li&gt;验证合约源代码与链上字节码一致性&lt;/li&gt;
+&lt;li&gt;查询 ERC-20/ERC-721 代币持有人和转账记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloc&#34;&gt;&lt;a href=&#34;https://github.com/AlDanial/cloc&#34;&gt;cloc&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;统计代码行数的工具，可用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;了解代码规模&lt;/li&gt;
+&lt;li&gt;比较不同版本的代码变化&lt;/li&gt;
+&lt;li&gt;支持多种语言，包括 Solidity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notion&#34;&gt;&lt;a href=&#34;https://www.notion.so/&#34;&gt;notion&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;可用于汇总和管理审计过程中的资料、笔记和报告：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以建立审计任务列表&lt;/li&gt;
+&lt;li&gt;追踪漏洞修复进度&lt;/li&gt;
+&lt;li&gt;整合团队协作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;documentation--需求方提供-&#34;&gt;Documentation ( 需求方提供 )&lt;/h2&gt;
+&lt;p&gt;审计文档部分通常包含以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Roles&lt;/strong&gt;：合约中涉及的角色定义，例如 &lt;code&gt;Owner&lt;/code&gt;、&lt;code&gt;Admin&lt;/code&gt;、&lt;code&gt;User&lt;/code&gt; 等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scope&lt;/strong&gt;：审计范围，包括智能合约模块、外部依赖、第三方库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit Hash (github repository)&lt;/strong&gt;：记录审计所使用的代码版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Known Issues&lt;/strong&gt;：已知问题或潜在风险列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solidity-metrics--vscode-扩展-&#34;&gt;Solidity Metrics ( vscode 扩展 )&lt;/h2&gt;
+&lt;p&gt;Solidity 代码度量工具，用于评估合约复杂度和安全性&lt;/p&gt;
+&lt;h2 id=&#34;notemd--自己撰写-&#34;&gt;Note.md ( 自己撰写 )&lt;/h2&gt;
+&lt;p&gt;审计笔记记录，可包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;潜在漏洞说明&lt;/li&gt;
+&lt;li&gt;安全优化建议&lt;/li&gt;
+&lt;li&gt;审计过程中发现的异常行为&lt;/li&gt;
+&lt;li&gt;链上交互测试结果&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>EIP-2612</title>

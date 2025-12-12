@@ -1,0 +1,158 @@
+---
+title: "低级漏洞合集"
+date: 2025-08-16
+draft: false
+tags: ["Web3", "security", "vulnerability", "beginner"]
+showToc: true
+---
+
+# 简介
+
+此章节主要整理一些智能合约开发中的低级漏洞，适合初学者了解和防范。这些漏洞虽然"低级"，但在实际项目中仍然频繁出现，可能导致严重的安全问题
+
+## 不正确的 NatSpec 注释
+
+### 什么是 NatSpec
+NatSpec（Ethereum Natural Language Specification Format）是 Solidity 的文档格式标准，用于生成用户文档和开发者文档。
+
+### 常见问题
+```solidity
+// ❌ 错误示例：缺少参数说明和返回值说明
+/// @dev 转账函数
+function transfer(address to, uint amount);
+
+// ✅ 正确示例：完整的 NatSpec 注释
+/// @title 代币转账函数
+/// @notice 将代币从调用者地址转移到指定地址
+/// @dev 内部调用 _transfer 函数实现实际转账
+/// @param to 接收代币的地址
+/// @param amount 转账的代币数量
+/// @return success 转账是否成功
+function transfer(address to, uint amount) external returns (bool success);
+```
+
+### NatSpec 标签说明
+- `@title`：合约或函数的标题
+- `@author`：作者信息
+- `@notice`：给最终用户看的说明
+- `@dev`：给开发者看的详细说明
+- `@param`：参数说明
+- `@return`：返回值说明
+- `@inheritdoc`：继承父合约的文档
+
+## 将隐私信息存于链上
+
+### 问题描述
+开发者误以为将变量声明为 `private` 就能保护数据隐私。
+
+### 原理分析
+- 区块链上的所有数据都是公开的，包括合约的存储状态
+- `private` 修饰符仅限制其他合约的直接访问，无法阻止外部读取
+- 通过访问 EVM 存储槽（storage slots）可以读取任意数据
+- 即使合约未开源，也可以通过反编译工具解析字节码
+
+### 示例代码
+```solidity
+// ❌ 错误示例：误以为 private 能保护隐私
+contract PrivateData {
+    address private owner;
+    string private secret;
+    
+    function setSecret(string memory _secret) public {
+        secret = _secret;
+    }
+}
+```
+
+### 防范措施
+- **绝不**在链上存储敏感信息（密码、私钥、API密钥等）
+- 如需存储加密数据，确保用户了解数据是公开的
+- 考虑使用加密哈希而非原始数据
+
+## 早期编译版本差异
+
+### Constructor 构造函数命名问题
+
+#### Solidity 0.4.22 之前
+```solidity
+// 旧版本：构造函数与合约同名
+contract MyContract {
+    function MyContract() public {
+        // 构造函数
+    }
+}
+```
+
+#### Solidity 0.4.22 之后
+```solidity
+// 新版本：使用 constructor 关键字
+contract MyContract {
+    constructor() public {
+        // 构造函数
+    }
+}
+```
+
+#### 风险
+- 如果使用旧语法，当合约重命名时，构造函数会变成普通函数
+- 任何人都可能调用这个"构造函数"，重新初始化合约状态
+
+### 其他版本差异
+- **函数可见性默认值**：早期版本默认为 `public`，现在需要显式声明
+- **fallback 函数**：语法从 `function()` 变为 `fallback() external payable`
+- **构造函数可见性**：旧版本需要，新版本不需要
+
+## 控制权管理缺失
+
+### 缺少权限检查
+```solidity
+// ❌ 错误示例：任何人都可以提取资金
+contract VulnerableWallet {
+    address payable owner;
+    uint256 public balance;
+    
+    function withdrawAll() public {
+        owner.transfer(address(this).balance);
+    }
+}
+
+// ✅ 正确示例：添加权限检查
+contract SecureWallet {
+    address payable owner;
+    uint256 public balance;
+    
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not owner");
+        _;
+    }
+    
+    function withdrawAll() public onlyOwner {
+        owner.transfer(address(this).balance);
+    }
+}
+```
+
+### 构造函数中设置所有者
+```solidity
+// ✅ 正确示例：在构造函数中初始化
+contract Ownable {
+    address public owner;
+    
+    constructor() {
+        owner = msg.sender;
+    }
+    
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not owner");
+        _;
+    }
+    
+    function transferOwnership(address newOwner) public onlyOwner {
+        owner = newOwner;
+    }
+}
+```
+
+
+
+

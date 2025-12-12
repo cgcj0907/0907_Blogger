@@ -94,6 +94,10 @@ EVM是整个以太坊生态的计算核心&lt;/p&gt;</description>
 &lt;p&gt;Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的&lt;/p&gt;
 &lt;p&gt;然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，&lt;strong&gt;“安全前置”&lt;/strong&gt; 的理念在这里被提升到了前所未有的高度&lt;/p&gt;
 &lt;p&gt;安全审计（Security Audit）正是在这种严苛环境下应运而生的核心质量保障手段。它不再是一种可选的成本，而是智能合约开发生命周期中不可或缺的、防御性的关键环节。一个严谨、深入的审计过程，是项目对自身代码负责、对用户资产负责的最重要体现&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;https://github.com/cgcj0907/audit_template&#34;&gt;0907 审计模板仓库&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;https://github.com/cgcj0907/0907_audit_reports&#34;&gt;0907 审计报告仓库&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;高层概述--什么是安全审计智能合约审计-&#34;&gt;高层概述 ( 什么是安全审计/智能合约审计？ )&lt;/h2&gt;
 &lt;p&gt;当人们提到&amp;quot;审计&amp;quot;时，通常指的是&lt;strong&gt;安全审查（Security Review）&lt;/strong&gt;。这是对智能合约代码进行系统性、专业性的安全检查过程，旨在识别潜在的安全漏洞、逻辑错误和设计缺陷。&lt;/p&gt;
@@ -239,11 +243,74 @@ ERC只是EIP的应用层子集&lt;br&gt;
 每一篇都是以太坊进化史的真实注脚&lt;/p&gt;</description>
     </item>
     <item>
+      <title>低级漏洞合集</title>
+      <link>http://localhost:1313/web3/security/simple/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/simple/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;此章节主要整理一些低级漏洞, 适合初学者观看&lt;/p&gt;
+&lt;h2 id=&#34;将隐私信息存于链上&#34;&gt;将隐私信息存于链上&lt;/h2&gt;
+&lt;p&gt;链上的信息无论是private 还是 public,都可以通过访问evm的存储读到,只要找到对应的slot(这并不困难,因为链上代码大多数是公开的,即使不公开也有反编译工具解析字节码)&lt;/p&gt;
+&lt;h2 id=&#34;早期编译版本差异&#34;&gt;早期编译版本差异&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;constructor&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;控制权管理&#34;&gt;控制权管理&lt;/h2&gt;
+&lt;h2 id=&#34;不正确的-natspec&#34;&gt;不正确的 NatSpec&lt;/h2&gt;</description>
+    </item>
+    <item>
       <title>审计辅助工具</title>
       <link>http://localhost:1313/web3/security/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/security/auxiliarytools/</guid>
-      <description>&lt;h2 id=&#34;ether&#34;&gt;Ether&lt;/h2&gt;</description>
+      <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
+&lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
+在审计过程中可用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查合约部署地址及交易历史&lt;/li&gt;
+&lt;li&gt;验证合约源代码与链上字节码一致性&lt;/li&gt;
+&lt;li&gt;查询 ERC-20/ERC-721 代币持有人和转账记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloc&#34;&gt;&lt;a href=&#34;https://github.com/AlDanial/cloc&#34;&gt;cloc&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;统计代码行数的工具，可用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;了解代码规模&lt;/li&gt;
+&lt;li&gt;比较不同版本的代码变化&lt;/li&gt;
+&lt;li&gt;支持多种语言，包括 Solidity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notion&#34;&gt;&lt;a href=&#34;https://www.notion.so/&#34;&gt;notion&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;可用于汇总和管理审计过程中的资料、笔记和报告：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以建立审计任务列表&lt;/li&gt;
+&lt;li&gt;追踪漏洞修复进度&lt;/li&gt;
+&lt;li&gt;整合团队协作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;documentation--需求方提供-&#34;&gt;Documentation ( 需求方提供 )&lt;/h2&gt;
+&lt;p&gt;审计文档部分通常包含以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Roles&lt;/strong&gt;：合约中涉及的角色定义，例如 &lt;code&gt;Owner&lt;/code&gt;、&lt;code&gt;Admin&lt;/code&gt;、&lt;code&gt;User&lt;/code&gt; 等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scope&lt;/strong&gt;：审计范围，包括智能合约模块、外部依赖、第三方库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit Hash (github repository)&lt;/strong&gt;：记录审计所使用的代码版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Known Issues&lt;/strong&gt;：已知问题或潜在风险列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solidity-metrics--vscode-扩展-&#34;&gt;Solidity Metrics ( vscode 扩展 )&lt;/h2&gt;
+&lt;p&gt;Solidity 代码度量工具，用于评估合约复杂度和安全性&lt;/p&gt;
+&lt;h2 id=&#34;notemd--自己撰写-&#34;&gt;Note.md ( 自己撰写 )&lt;/h2&gt;
+&lt;p&gt;审计笔记记录，可包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;潜在漏洞说明&lt;/li&gt;
+&lt;li&gt;安全优化建议&lt;/li&gt;
+&lt;li&gt;审计过程中发现的异常行为&lt;/li&gt;
+&lt;li&gt;链上交互测试结果&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>审计辅助工具</title>
+      <link>http://localhost:1313/web3/security/memv/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/memv/</guid>
+      <description></description>
     </item>
     <item>
       <title>EIP-2612</title>
@@ -501,6 +568,122 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <link>http://localhost:1313/web3/eip/eip-7702/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/eip/eip-7702/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/security/clv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/clv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/security/sav/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/sav/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/security/severity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/severity/</guid>
+      <description>&lt;h1 id=&#34;如何评估漏洞严重性&#34;&gt;如何评估漏洞严重性&lt;/h1&gt;
+&lt;p&gt;在识别代码库中的漏洞时，评估其潜在影响与风险至关重要。漏洞（finding）通常分为三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;High（高危）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Medium（中危）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Low（低危）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些严重性等级帮助利益相关者对问题进行优先级排序并采取相应措施。对于审计人员来说，发现更高严重性的漏洞会提高他们在竞赛排行榜中的排名并增加 &lt;a href=&#34;payouts.md&#34;&gt;payouts.md&lt;/a&gt; 中的奖励。&lt;/p&gt;
+&lt;h3 id=&#34;如何评估漏洞严重性-1&#34;&gt;如何评估漏洞严重性&lt;/h3&gt;
+&lt;p&gt;漏洞的严重性可被归类为 &lt;strong&gt;High（高）&lt;/strong&gt;、&lt;strong&gt;Medium（中）&lt;/strong&gt; 或 &lt;strong&gt;Low（低）&lt;/strong&gt;，其判定基于多个因素：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;对协议的影响（Impact）&lt;/strong&gt;：如果漏洞被利用，会造成多严重的损害？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;被利用的可能性（Likelihood）&lt;/strong&gt;：攻击者利用该漏洞的概率有多大？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;评审/协议主观性程度（Degree of judge/protocol subjectivity）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面用矩阵给出一个结构化参考：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;影响（Impact）&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;&lt;/th&gt;
+          &lt;th style=&#34;text-align: right&#34;&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;strong&gt;High&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;strong&gt;Medium&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;strong&gt;Low&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;High&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;H&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;H/M&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;M&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;strong&gt;可能性（Likelihood）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Medium&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;H/M&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;M&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;M/L&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;Low&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;M&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;M/L&lt;/td&gt;
+          &lt;td style=&#34;text-align: right&#34;&gt;L&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;{% hint style=&amp;ldquo;warning&amp;rdquo; %}
+&lt;strong&gt;分类的主观性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;虽然“影响 × 可能性”矩阵提供了结构化方法，但分类仍然带有一定主观性，判断者（judge）的裁量权在最终分类中起关键作用。&lt;/p&gt;
+&lt;p&gt;如果被审计的协议有明确的判定标准，则应以协议规定为判定基准。
+{% endhint %}&lt;/p&gt;
+&lt;h4 id=&#34;如何评估漏洞的影响impact&#34;&gt;如何评估漏洞的影响（Impact）&lt;/h4&gt;
+&lt;p&gt;Impact 指漏洞被利用后对用户或协议造成的潜在损害或后果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;High（高影响）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资金直接或几乎直接处于风险中。&lt;/li&gt;
+&lt;li&gt;协议功能或可用性发生严重中断。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Medium（中影响）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资金间接处于风险中。&lt;/li&gt;
+&lt;li&gt;对协议功能或可用性造成一定程度的中断或异常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Low（低影响）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资金不处于风险中。&lt;/li&gt;
+&lt;li&gt;可能存在功能不正确、状态处理不当等问题，但不会导致直接资金损失。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;如何评估漏洞被利用的可能性likelihood&#34;&gt;如何评估漏洞被利用的&lt;strong&gt;可能性（Likelihood）&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Likelihood 表示由于漏洞而导致影响发生的概率。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/web3/security/tlv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/tlv/</guid>
       <description></description>
     </item>
   </channel>

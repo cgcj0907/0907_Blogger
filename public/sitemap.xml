@@ -157,6 +157,14 @@
   </url><url>
     <loc>http://localhost:1313/web3/eip/eip-7702/</loc>
   </url><url>
+    <loc>http://localhost:1313/web3/security/clv/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web3/security/memv/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web3/security/sav/</loc>
+  </url><url>
+    <loc>http://localhost:1313/web3/security/tlv/</loc>
+  </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>

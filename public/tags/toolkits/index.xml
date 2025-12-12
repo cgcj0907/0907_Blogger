@@ -14,11 +14,50 @@
     <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/toolkits/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>安全审计 笔记合集</title>
+      <title>审计辅助工具</title>
       <link>http://localhost:1313/web3/security/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/security/auxiliarytools/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
+&lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
+在审计过程中可用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检查合约部署地址及交易历史&lt;/li&gt;
+&lt;li&gt;验证合约源代码与链上字节码一致性&lt;/li&gt;
+&lt;li&gt;查询 ERC-20/ERC-721 代币持有人和转账记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloc&#34;&gt;&lt;a href=&#34;https://github.com/AlDanial/cloc&#34;&gt;cloc&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;统计代码行数的工具，可用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;了解代码规模&lt;/li&gt;
+&lt;li&gt;比较不同版本的代码变化&lt;/li&gt;
+&lt;li&gt;支持多种语言，包括 Solidity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;notion&#34;&gt;&lt;a href=&#34;https://www.notion.so/&#34;&gt;notion&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;可用于汇总和管理审计过程中的资料、笔记和报告：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以建立审计任务列表&lt;/li&gt;
+&lt;li&gt;追踪漏洞修复进度&lt;/li&gt;
+&lt;li&gt;整合团队协作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;documentation--需求方提供-&#34;&gt;Documentation ( 需求方提供 )&lt;/h2&gt;
+&lt;p&gt;审计文档部分通常包含以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Roles&lt;/strong&gt;：合约中涉及的角色定义，例如 &lt;code&gt;Owner&lt;/code&gt;、&lt;code&gt;Admin&lt;/code&gt;、&lt;code&gt;User&lt;/code&gt; 等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scope&lt;/strong&gt;：审计范围，包括智能合约模块、外部依赖、第三方库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit Hash (github repository)&lt;/strong&gt;：记录审计所使用的代码版本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Known Issues&lt;/strong&gt;：已知问题或潜在风险列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;solidity-metrics--vscode-扩展-&#34;&gt;Solidity Metrics ( vscode 扩展 )&lt;/h2&gt;
+&lt;p&gt;Solidity 代码度量工具，用于评估合约复杂度和安全性&lt;/p&gt;
+&lt;h2 id=&#34;notemd--自己撰写-&#34;&gt;Note.md ( 自己撰写 )&lt;/h2&gt;
+&lt;p&gt;审计笔记记录，可包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;潜在漏洞说明&lt;/li&gt;
+&lt;li&gt;安全优化建议&lt;/li&gt;
+&lt;li&gt;审计过程中发现的异常行为&lt;/li&gt;
+&lt;li&gt;链上交互测试结果&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Vector 日志采集与处理</title>
