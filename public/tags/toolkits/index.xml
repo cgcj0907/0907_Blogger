@@ -15,9 +15,9 @@
     <atom:link href="http://localhost:1313/tags/toolkits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>审计辅助工具</title>
-      <link>http://localhost:1313/web3/security/auxiliarytools/</link>
+      <link>http://localhost:1313/web3/security/tool/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/auxiliarytools/</guid>
+      <guid>http://localhost:1313/web3/security/tool/auxiliarytools/</guid>
       <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
 &lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
 在审计过程中可用于：&lt;/p&gt;
@@ -58,6 +58,88 @@
 &lt;li&gt;审计过程中发现的异常行为&lt;/li&gt;
 &lt;li&gt;链上交互测试结果&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>审计辅助工具</title>
+      <link>http://localhost:1313/web3/security/vulnerability/memv/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/vulnerability/memv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>静态分析工具</title>
+      <link>http://localhost:1313/web3/security/tool/staticanalysistools/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/security/tool/staticanalysistools/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率。&lt;/p&gt;
+&lt;h1 id=&#34;主要静态分析工具对比&#34;&gt;主要静态分析工具对比&lt;/h1&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;工具名称&lt;/th&gt;
+          &lt;th&gt;语言支持&lt;/th&gt;
+          &lt;th&gt;分析类型&lt;/th&gt;
+          &lt;th&gt;特点&lt;/th&gt;
+          &lt;th&gt;适用场景&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Slither&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Solidity&lt;/td&gt;
+          &lt;td&gt;源代码分析&lt;/td&gt;
+          &lt;td&gt;快速、检测种类多、可定制规则&lt;/td&gt;
+          &lt;td&gt;常规安全审计、开发中检查&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Mythril&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;EVM字节码&lt;/td&gt;
+          &lt;td&gt;符号执行&lt;/td&gt;
+          &lt;td&gt;深度分析、路径覆盖广&lt;/td&gt;
+          &lt;td&gt;复杂逻辑漏洞、重入攻击检测&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Aderyn&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Solidity&lt;/td&gt;
+          &lt;td&gt;源代码分析&lt;/td&gt;
+          &lt;td&gt;专注于Rust实现、速度快&lt;/td&gt;
+          &lt;td&gt;Rust开发者、性能敏感场景&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Semgrep&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;多语言&lt;/td&gt;
+          &lt;td&gt;模式匹配&lt;/td&gt;
+          &lt;td&gt;简单规则、学习曲线低&lt;/td&gt;
+          &lt;td&gt;团队编码规范检查&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;slither&#34;&gt;&lt;a href=&#34;https://github.com/crytic/slither&#34;&gt;Slither&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;p&gt;Slither 是由 Trail of Bits 开发的 Solidity 静态分析框架，速度快、检测能力强，支持自定义检测规则。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;python3 -m pip install slither-analyzer
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;升级&#34;&gt;升级&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;python3 -m pip install --upgrade slither-analyzer
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;基本使用&#34;&gt;基本使用&lt;/h2&gt;
+&lt;h3 id=&#34;扫描当前目录&#34;&gt;扫描当前目录&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither .
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;扫描特定文件&#34;&gt;扫描特定文件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither tests/uninitialized.sol
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;检测器选择&#34;&gt;检测器选择&lt;/h2&gt;
+&lt;p&gt;Slither 默认会运行 所有内置检测器&lt;/p&gt;
+&lt;h3 id=&#34;指定检测器&#34;&gt;指定检测器&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither file.sol --detect arbitrary-send,pragma
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;排除指定检测器&#34;&gt;排除指定检测器&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither file.sol --exclude naming-convention,unused-state,suicidal
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;排除全部-informational--low-级别的检测器&#34;&gt;排除全部 informational / low 级别的检测器&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither file.sol --exclude-informational
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither file.sol --exclude-low
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;查看所有可用检测器&#34;&gt;查看所有可用检测器&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;go&#34;&gt;slither --list-detectors
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;打印器&#34;&gt;打印器&lt;/h2&gt;
+&lt;p&gt;默认情况下，所有 printers 都不会运行&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vector 日志采集与处理</title>
