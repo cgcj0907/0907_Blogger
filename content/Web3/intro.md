@@ -40,7 +40,7 @@ ERC-4337账户抽象提升用户体验支持社交恢复气体赞助
 多链钱包如Rainbow支持Layer2降低费用  
 安全提示必须使用硬件签名绝不泄露种子短语定期备份
 
-## eip
+## EIP
 
 > 👉 [EIP 笔记合集](/web3/eip/intro)
 
@@ -55,18 +55,7 @@ EIP过程确保透明包容
 EIP-4844引入blob数据大幅降低Layer2成本  
 未来EIP聚焦可扩展性隐私如Verkle树
 
-## erc
 
-ERC是以太坊请求评论定义代币和应用标准  
-ERC20用于可互换代币如USDT支持转移批准余额查询  
-ERC721创建非同质化代币NFT唯一标识所有权如CryptoKitties  
-ERC1155多代币标准单一合约管理可互换非同质化半同质化资产  
-高效批量转移节省气体适用于游戏物品票务  
-这些标准确保全生态互操作性  
-开发者可直接构建兼容项目  
-ERC20主导DeFi  
-ERC721推动NFT市场  
-ERC1155优化复杂用例
 
 ## codeLanuage
 
@@ -80,7 +69,7 @@ Ethereum生态仍以Solidity和Vyper为主
 Vyper强调人类可读代码减少攻击面  
 选择语言取决于项目复杂度和安全优先级
 
-## evm
+## EVM
 
 EVM是以太坊虚拟机去中心化计算引擎  
 执行智能合约字节码采用栈基架构深度1024  
@@ -92,7 +81,7 @@ EVM负责状态转换更新账户余额存储
 未来升级EOF引入容器化代码提升效率  
 EVM是整个以太坊生态的计算核心
 
-## framework(项目框架)
+## framework
 
 Web3开发框架大幅简化合约构建测试部署  
 Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js  
@@ -103,3 +92,5 @@ Hardhat灵活度最高
 Truffle最适合教学  
 Foundry性能极致适合高级开发者  
 搭配VS Code Solidity扩展开发体验最佳
+
+## DeFi

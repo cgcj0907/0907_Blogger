@@ -60,19 +60,13 @@
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>审计辅助工具</title>
-      <link>http://localhost:1313/web3/security/vulnerability/memv/</link>
-      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/vulnerability/memv/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>静态分析工具</title>
       <link>http://localhost:1313/web3/security/tool/staticanalysistools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/security/tool/staticanalysistools/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率。&lt;/p&gt;
+&lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;主要静态分析工具对比&#34;&gt;主要静态分析工具对比&lt;/h1&gt;
 &lt;table&gt;
   &lt;thead&gt;

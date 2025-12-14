@@ -18,7 +18,7 @@ wallet 钱包是Web3入口管理私钥和资产交互
 ERC-4337账户抽象提升用户体验支持社交恢复气体赞助
 多链钱包如Rainbow支持Layer2降低费用
 安全提示必须使用硬件签名绝不泄露种子短语定期备份
-eip 👉 EIP 笔记合集
+EIP 👉 EIP 笔记合集
 EIP是以太坊改进提案标准化平台变更
 涵盖核心协议客户端API合约规范
 任何人可提交草案经社区讨论编辑审查进入最终状态
@@ -29,16 +29,6 @@ EIP过程确保透明包容
 从草稿到最后调用再到最终实施
 EIP-4844引入blob数据大幅降低Layer2成本
 未来EIP聚焦可扩展性隐私如Verkle树
-erc ERC是以太坊请求评论定义代币和应用标准
-ERC20用于可互换代币如USDT支持转移批准余额查询
-ERC721创建非同质化代币NFT唯一标识所有权如CryptoKitties
-ERC1155多代币标准单一合约管理可互换非同质化半同质化资产
-高效批量转移节省气体适用于游戏物品票务
-这些标准确保全生态互操作性
-开发者可直接构建兼容项目
-ERC20主导DeFi
-ERC721推动NFT市场
-ERC1155优化复杂用例
 codeLanuage 智能合约语言最终编译为EVM字节码
 Solidity主流类JavaScript支持继承修饰符库生态最丰富
 Vyper Python风格故意去除继承无限循环提升可审计性安全性
@@ -48,7 +38,7 @@ Ethereum生态仍以Solidity和Vyper为主
 学习Solidity推荐从Remix IDE开始
 Vyper强调人类可读代码减少攻击面
 选择语言取决于项目复杂度和安全优先级
-evm EVM是以太坊虚拟机去中心化计算引擎
+EVM EVM是以太坊虚拟机去中心化计算引擎
 执行智能合约字节码采用栈基架构深度1024
 每操作码消耗气体防止滥用
 Turing完备支持任意逻辑但有气体上限避免无限循环
@@ -57,7 +47,38 @@ EVM负责状态转换更新账户余额存储
 兼容链如Polygon Arbitrum共享EVM实现无缝移植
 未来升级EOF引入容器化代码提升效率
 EVM是整个以太坊生态的计算核心
-...</p></div><footer class=entry-footer><span title='2025-11-20 00:00:00 +0000 UTC'>November 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>86 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to Web3 简介" href=http://localhost:1313/web3/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>安全审计 笔记合集</h2></header><div class=entry-content><p>简介 Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的
+framework Web3开发框架大幅简化合约构建测试部署
+Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js
+Truffle老牌套件自带Ganache本地链Mocha测试适合新手
+Foundry Rust编写超快编译铸造Anvil分叉主网用Solidity写测试支持模糊测试
+当前主流选择
+Hardhat灵活度最高
+Truffle最适合教学
+Foundry性能极致适合高级开发者
+搭配VS Code Solidity扩展开发体验最佳
+...</p></div><footer class=entry-footer><span title='2025-11-20 00:00:00 +0000 UTC'>November 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>76 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to Web3 简介" href=http://localhost:1313/web3/intro/></a></article><article class=post-entry><figure class=entry-cover><img loading=lazy src=http://localhost:1313/covers/EVM.webp alt></figure><header class=entry-header><h2 class=entry-hint-parent>EVM 笔记合集</h2></header><div class=entry-content><p>简介 以太坊虚拟机（Ethereum Virtual Machine，EVM）是一个去中心化的、跨节点一致的执行环境，负责在所有以太坊节点上安全地执行智能合约代码。节点运行 EVM 来处理交易、执行合约逻辑，并通过消耗 Gas（燃料） 来度量并限制计算资源，从而保障网络的效率与安全
+前提知识 要快速理解 EVM，建议具备以下基础：
+计算机科学常用术语：字节（byte）、内存（memory）、堆栈（stack）等 密码学与区块链基础：哈希函数（如 Keccak-256）、默克尔树（Merkle Tree / Patricia Trie）等概念 智能合约开发的基本流程（编译后生成字节码、部署到链上、通过交易触发执行）会帮助理解细节 从账本到状态机：概念上的迁移 与比特币常被比作“分布式账本”不同，以太坊更适合被看作一个分布式状态机。除了记录账号与余额之外，以太坊还维护一个可随交易变化的机器状态，并能在状态变更时执行任意机器代码（即智能合约）。这些状态变更的规则由 EVM 明确定义
+数学上可以把以太坊的状态转换描述为一个确定性的函数：
+Y ( S , T ) = S ' 给定旧的有效状态 S 与一组新的有效交易 T，状态转换函数 Y(S, T) 产出新的有效状态 S'
+状态（State） 以太坊的全局状态由一种称为 改进版 Merkle–Patricia Trie 的巨大数据结构保存。该结构将所有账户（包括外部拥有账户和合约账户）及其关联的数据通过哈希组织起来，最终回溯到区块链上的单一根哈希（state root）。这种设计保证了状态可证明性与高效性（例如轻客户端验证）
+交易（Transactions） 交易是由账户发起并经密码学签名的指令，分为两类：
+消息调用交易（Message Call）：调用现有合约或向外部账户发送 ETH 合约创建交易（Contract Creation）：将已编译的智能合约字节码部署为一个新的合约账户。部署后，合约字节码存储在该合约账户中；每当有交易/消息调用该合约时，EVM 会读取并执行这些字节码 EVM 的工作方式 堆栈机（Stack machine） EVM 是一个基于堆栈的虚拟机：
+...</p></div><footer class=entry-footer><span title='2025-01-11 00:00:00 +0000 UTC'>January 11, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>163 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to EVM 笔记合集" href=http://localhost:1313/web3/evm/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>EIP 笔记合集</h2></header><div class=entry-content><p>简介 EIP（Ethereum Improvement Proposal）是以太坊改进提案
+任何人都能提交的标准化文档
+驱动以太坊从创世区块到今天的唯一正式机制
+ERC只是EIP的应用层子集
+所有硬分叉升级Layer2变革账户抽象都源于EIP 好的，下面是不含任何表情、按 EIP 状态与类型分类整理的中文笔记版，适合课堂笔记、复习或写作使用。
+EIP 状态 EIP（Ethereum Improvement Proposal，以太坊改进提案）在提出、讨论和落地过程中，会经历以下生命周期状态
+Idea（想法阶段）
+处于预草案阶段，仅是初步构想 不会被记录在官方 EIP 仓库中 通常在论坛、Issue 或社区中进行非正式讨论 Draft（草案阶段）
+正式进入 EIP 生命周期的第一个阶段 按 EIP 模板规范化后，由 EIP Editor 合并进仓库 处于持续开发和修改中 Review（评审阶段）
+作者认为提案已较为成熟 主动请求社区或同行进行技术评审 重点关注规范完整性、可行性与兼容性 Last Call（最终审查阶段）
+进入最终审查窗口，通常为 14 天 由 EIP Editor 指定并设置 last-call-deadline 若发现需要进行规范性修改，将退回 Review 状态 Final（最终状态）
+成为正式标准 进入终态，不再进行实质性修改 仅允许修正勘误或补充非规范性说明 Stagnant（停滞状态）
+Draft 或 Review 状态下，连续 6 个月无实质进展 会被标记为停滞 作者或 Editor 可重新激活并移回 Draft Withdrawn（撤回）
+作者主动撤回提案 该状态具有终结性 EIP 编号不可再次使用，重新提出需新编号 Living（持续更新）
+...</p></div><footer class=entry-footer><span title='2024-08-16 00:00:00 +0000 UTC'>August 16, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>280 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to EIP 笔记合集" href=http://localhost:1313/web3/eip/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>安全审计 笔记合集</h2></header><div class=entry-content><p>简介 Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的
 然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，“安全前置” 的理念在这里被提升到了前所未有的高度
 安全审计（Security Audit）正是在这种严苛环境下应运而生的核心质量保障手段。它不再是一种可选的成本，而是智能合约开发生命周期中不可或缺的、防御性的关键环节。一个严谨、深入的审计过程，是项目对自身代码负责、对用户资产负责的最重要体现
 👉 0907 审计模板仓库
@@ -66,22 +87,12 @@ EVM是整个以太坊生态的计算核心
 审计的局限性 There is no silver bullet ( 感兴趣的同学可以去搜一下该词的意思 ) to auditing：需要明确的是，审计并非万能的解决方案。即使经过最严格的审计，智能合约仍可能存在：
 未被发现的复杂逻辑漏洞 经济模型的长尾风险 与外部协议集成时的未知交互风险 编译器或区块链底层本身的潜在问题 一次审计只能提供特定时间点的安全快照，无法保证永久的绝对安全。
 安全审计的三个阶段 第一阶段：初步审查（Initial Review） 1. 范围界定（Scoping） 确定审计的具体范围：哪些合约、哪些功能 明确审计目标、时间线和交付物 了解协议的业务逻辑和设计意图 2. 侦察（Reconnaissance） 初步代码阅读和理解架构 识别关键组件和依赖关系 梳理权限模型和资金流向 3. 漏洞识别（Vulnerability Identification） 系统性检查各类安全漏洞 结合自动化工具和人工审查 从攻击者角度思考可能的攻击向量 4. 报告（Reporting） 详细记录发现的每个问题 按严重程度分类（危急、高危、中危、低危） 提供具体的修复建议和代码示例 第二阶段：协议修复与验证 1. 修复问题（Protocol Fixes） 开发团队根据审计报告修复漏洞 可能需要重新设计部分逻辑 确保修复方案不引入新的问题 2. 重新测试与添加测试（Retests and Adds Tests） 审计团队验证修复的有效性 为修复的部分添加专门的测试用例 确保修复后的代码仍能满足业务需求 第三阶段：缓解措施审查（Mitigation Review） 1. 侦察（Reconnaissance） 审查所有修复的代码变更 理解修复方案的安全影响 2. 漏洞识别（Vulnerability Identification） 确认原始漏洞已被彻底修复 检查修复是否引入了新的攻击面 3. 报告（Reporting） 提供最终的审计结论 确认所有高风险问题已解决 给出部署前的最终建议 智能合约开发生命周期 1. 规划与设计（Plan & Design） 需求分析和功能规划 架构设计和模式选择 安全考虑融入设计阶段（Security by Design） 经济模型和激励机制的数学验证 2. 开发与测试（Develop & Test） 编写合约代码和单元测试 集成测试和端到端测试 模糊测试（Fuzzing）和差异化测试 测试网部署和模拟攻击 3. 智能合约审计与部署后规划 这不仅仅是一个步骤，而是一个包含多个子阶段的综合过程（类似于传统软件开发生命周期SDLC，但具有区块链特有的安全考量）：
-...</p></div><footer class=entry-footer><span title='2025-08-16 00:00:00 +0000 UTC'>August 16, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>431 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to 安全审计 笔记合集" href=http://localhost:1313/web3/security/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>EIP 笔记合集</h2></header><div class=entry-content><p>EIP 索引总览 这里收录所有值得单独成文的里程碑级EIP
-每篇深度拆解一份EIP的诞生背景技术细节安全影响落地历程社区争议及后续演进
-点击标题直达对应专文
-简介 EIP（Ethereum Improvement Proposal）是以太坊改进提案
-任何人都能提交的标准化文档
-驱动以太坊从创世区块到今天的唯一正式机制
-ERC只是EIP的应用层子集
-所有硬分叉升级Layer2变革账户抽象都源于EIP
-账户抽象时代 EIP-4337 智能合约账户 EIP-7702 新账户抽象终极方案（2025进行中）（待撰写） 费用市场与通缩 EIP-1559 基础费燃烧：让ETH成为超声波货币（待撰写） EIP-4844 Proto-Danksharding：Rollup费用暴跌90%（待撰写） EIP-7514 减缓质押增长：保护去中心化（待撰写） 质押与提款 EIP-4895 质押提款：上海升级核心（待撰写） EIP-7002 部分提款与主动退出（待撰写） EIP-6110 链上质押存款（待撰写） EVM与执行层未来 EIP-7691 EOF：EVM容器化革命（2026目标）（待撰写） EIP-7623 提高CALLDATA成本为Danksharding铺路（待撰写） EIP-4444 历史数据过期机制（待撰写） EIP-5656 MCOPY指令：降低内存拷贝成本（待撰写） 数据可用性与Layer2 EIP-4844 Blob交易与Danksharding路线图（待撰写） EIP-7594 PeerDAS：对等数据可用性采样（待撰写） EIP-6465/6466 Blob历史过期方案（待撰写） 其他正在关注的EIP EIP-7732 EIP-7702+ERC-7730安全增强版（待撰写） EIP-712 类型化结构化数据签名：链上安全签名的金标准（待撰写） EIP-2537 BLS预编译：加速零知识证明（待撰写） EIP-5920 PAY opcode：原生转账新方式（待撰写） EIP-6780 自毁仅限创建交易：提升状态管理（待撰写） EIP-2612 Permit：ERC20 的无gas授权革命（待撰写） 更多EIP专文持续更新中
-目前仅EIP-4337已完稿，其余陆续放出
-每一篇都是以太坊进化史的真实注脚</p></div><footer class=entry-footer><span title='2024-08-16 00:00:00 +0000 UTC'>August 16, 2024</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>66 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to EIP 笔记合集" href=http://localhost:1313/web3/eip/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>DeFi 笔记合集</h2></header><div class=entry-content><p>简介 去中心化金融旨在通过区块链与智能合约，构建一个开放、透明、可组合的金融服务生态系统。本合集从核心协议原理出发，系统梳理各赛道的运行机制、风险模型与演进趋势。
+...</p></div><footer class=entry-footer><span title='2025-08-16 00:00:00 +0000 UTC'>August 16, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>431 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to 安全审计 笔记合集" href=http://localhost:1313/web3/security/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Web3 开发框架合集</h2></header><div class=entry-content><p>简介 foundry 👉 foundry 使用指南
+hardhat</p></div><footer class=entry-footer><span title='2025-08-18 00:00:00 +0000 UTC'>August 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>6 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to Web3 开发框架合集" href=http://localhost:1313/web3/framework/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>DeFi 笔记合集</h2></header><div class=entry-content><p>简介 去中心化金融旨在通过区块链与智能合约，构建一个开放、透明、可组合的金融服务生态系统。本合集从核心协议原理出发，系统梳理各赛道的运行机制、风险模型与演进趋势。
 Lending DeFi借贷协议允许用户无需中介即可存入资产获取收益，或超额抵押资产借出其他资产。其核心机制包括资金池、利率模型、清算机制以及治理代币经济学
 Flash Loan 👉 Flash Loan 闪电贷 Liquid Staking 流动性质押协议允许用户在参与区块链共识（如质押ETH）的同时，获得代表质押头寸的流动性衍生代币（如stETH），从而解决质押资产流动性锁定的问题
 DEX 👉 DEX 经典概念 去中心化交易所（DEX）通过自动做市商机制，允许用户直接在链上交易加密资产。核心在于流动性池、恒定乘积等定价公式、手续费激励以及无常损失管理
-RWA 现实世界资产旨在将传统金融资产（如国债、信贷、不动产）通过代币化引入区块链，为DeFi生态系统提供具有实际价值支撑的收益资产，并面临合规、托管与法律映射等独特挑战</p></div><footer class=entry-footer><span title='2025-08-16 00:00:00 +0000 UTC'>August 16, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>20 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to DeFi 笔记合集" href=http://localhost:1313/web3/defi/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>Web3 开发框架合集</h2></header><div class=entry-content><p>简介 foundry 👉 foundry 使用指南
-hardhat</p></div><footer class=entry-footer><span title='2025-08-18 00:00:00 +0000 UTC'>August 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>6 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to Web3 开发框架合集" href=http://localhost:1313/web3/framework/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>DEX 经典概念</h2></header><div class=entry-content><p>简介 AMM（Automated Market Maker，自动做市商）是一类无需订单簿、无需对手方撮合就能完成资产交换的机制。它通过一条数学定价曲线（例如最经典的恒定乘积公式 x * y = k）来确定池中两种资产的价格与兑换比例
+RWA 现实世界资产旨在将传统金融资产（如国债、信贷、不动产）通过代币化引入区块链，为DeFi生态系统提供具有实际价值支撑的收益资产，并面临合规、托管与法律映射等独特挑战</p></div><footer class=entry-footer><span title='2025-08-16 00:00:00 +0000 UTC'>August 16, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>20 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to DeFi 笔记合集" href=http://localhost:1313/web3/defi/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>DEX 经典概念</h2></header><div class=entry-content><p>简介 AMM（Automated Market Maker，自动做市商）是一类无需订单簿、无需对手方撮合就能完成资产交换的机制。它通过一条数学定价曲线（例如最经典的恒定乘积公式 x * y = k）来确定池中两种资产的价格与兑换比例
 交易者与 AMM 交互时，并不是与某个具体对手方进行买卖，而是与池子本身交易：
 当交易者往池子中加入一种资产时，池子的储备量发生变化 定价曲线根据新储备自动给出另一种资产能取出的数量 由此实现“自动化报价”和“自动化执行” 1. 基本概念与不变式 AMM 的核心思想：用一个自动化的数学不变式替代传统的订单簿，以池内储备（reserves）决定交易价格与数量。 最经典的不变式（恒定乘积）为： x y = k 其中 x、y 为池内两种资产的数量（reserve of X, reserve of Y），k 为常数（在无手续费的理想情况下保持不变）。
 交易通过改变 x 或 y 的值来完成，新的 x 和 y 必须满足不变式（考虑手续费时，换入量先扣手续费再作用于不变式） 2. 交易定价与交换公式（恒定乘积，含手续费） 设池初始为 x（Token X）与 y（Token Y），不变式 k = x * y。有交易者向池中放入 Δx（交易量），手续费比例为 f（例如 0.003 = 0.3%）。实际用于保持不变式的增量为：
@@ -107,15 +118,7 @@ Cast 👉 foundry Cast 使用指南
 Anvil 👉 foundry Anvil 使用指南
 Chisel 👉 foundry Chisel 使用指南
 Configuration 👉 foundry 配置指南
-Cheatcode 👉 foundry Cheatcode 使用指南</p></div><footer class=entry-footer><span title='2025-08-20 00:00:00 +0000 UTC'>August 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>34 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to foundry 使用指南" href=http://localhost:1313/web3/framework/foundry/intro/></a></article><article class=post-entry><header class=entry-header><h2 class=entry-hint-parent>测试级漏洞合集</h2></header><div class=entry-content><p>简介 拒绝服务 ( Dos - Denial of Service ) 简要概述 DoS 攻击在智能合约中常出现于以下场景：
-攻击者通过让某个必要操作持续失败，从而阻止整个合约继续执行关键流程（如奖励分发、批量提款、循环遍历列表等）。
-典型示例： 合约在循环中向所有参与者发送 ETH，攻击者故意将自己的 fallback/receive 函数设计为 永远 revert，导致程序在遍历到攻击者地址时整个交易回滚，进而导致奖励分发/提款功能长期瘫痪
-易受攻击模式：
-function distribute() external { for (uint256 i = 0; i &lt; participants.length; i++) { address user = participants[i]; uint256 amount = rewards[user]; // 任意一次 transfer 失败，整个分发流程就会 revert payable(user).transfer(amount); } } 攻击者只需在列表中占据一个位置，即可长期阻塞整个流程。
-改进方法 使用 Pull Payment 不再向用户“发送奖励”，而是让用户自己来“领取奖励”，这样单个用户的失败不会影响其他用户
-function claim() external { uint256 amount = rewards[msg.sender]; require(amount > 0, "no reward"); // Effects（先修改状态） rewards[msg.sender] = 0; // Interactions（再转账） (bool ok, ) = payable(msg.sender).call{value: amount}(""); require(ok, "send failed"); } CEI 说明：
-Checks：检查 reward 是否大于 0 Effects：先清零 reward 防止重入 Interactions：最后转账，不会阻塞其他用户 在必须 push 的场景中采用“非阻塞式分发” 避免因为某个地址转账失败而导致整个循环回滚
-...</p></div><footer class=entry-footer><span title='2025-08-20 00:00:00 +0000 UTC'>August 20, 2025</span>&nbsp;·&nbsp;<span>7 min</span>&nbsp;·&nbsp;<span>1356 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to 测试级漏洞合集" href=http://localhost:1313/web3/security/vulnerability/tlv/></a></article><footer class=page-footer><nav class=pagination><a class=next href=http://localhost:1313/web3/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2025 <a href=http://localhost:1313/>0907 WORLD</a></span> ·
+Cheatcode 👉 foundry Cheatcode 使用指南</p></div><footer class=entry-footer><span title='2025-08-20 00:00:00 +0000 UTC'>August 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>34 words</span>&nbsp;·&nbsp;<span>Guangyang Zhong</span></footer><a class=entry-link aria-label="post link to foundry 使用指南" href=http://localhost:1313/web3/framework/foundry/intro/></a></article><footer class=page-footer><nav class=pagination><a class=next href=http://localhost:1313/web3/page/2/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2025 <a href=http://localhost:1313/>0907 WORLD</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>

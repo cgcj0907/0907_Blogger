@@ -40,7 +40,7 @@
 ERC-4337账户抽象提升用户体验支持社交恢复气体赞助&lt;br&gt;
 多链钱包如Rainbow支持Layer2降低费用&lt;br&gt;
 安全提示必须使用硬件签名绝不泄露种子短语定期备份&lt;/p&gt;
-&lt;h2 id=&#34;eip&#34;&gt;eip&lt;/h2&gt;
+&lt;h2 id=&#34;eip&#34;&gt;EIP&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/eip/intro&#34;&gt;EIP 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;EIP是以太坊改进提案标准化平台变更&lt;br&gt;
@@ -53,17 +53,6 @@ EIP过程确保透明包容&lt;br&gt;
 从草稿到最后调用再到最终实施&lt;br&gt;
 EIP-4844引入blob数据大幅降低Layer2成本&lt;br&gt;
 未来EIP聚焦可扩展性隐私如Verkle树&lt;/p&gt;
-&lt;h2 id=&#34;erc&#34;&gt;erc&lt;/h2&gt;
-&lt;p&gt;ERC是以太坊请求评论定义代币和应用标准&lt;br&gt;
-ERC20用于可互换代币如USDT支持转移批准余额查询&lt;br&gt;
-ERC721创建非同质化代币NFT唯一标识所有权如CryptoKitties&lt;br&gt;
-ERC1155多代币标准单一合约管理可互换非同质化半同质化资产&lt;br&gt;
-高效批量转移节省气体适用于游戏物品票务&lt;br&gt;
-这些标准确保全生态互操作性&lt;br&gt;
-开发者可直接构建兼容项目&lt;br&gt;
-ERC20主导DeFi&lt;br&gt;
-ERC721推动NFT市场&lt;br&gt;
-ERC1155优化复杂用例&lt;/p&gt;
 &lt;h2 id=&#34;codelanuage&#34;&gt;codeLanuage&lt;/h2&gt;
 &lt;p&gt;智能合约语言最终编译为EVM字节码&lt;br&gt;
 Solidity主流类JavaScript支持继承修饰符库生态最丰富&lt;br&gt;
@@ -74,7 +63,7 @@ Ethereum生态仍以Solidity和Vyper为主&lt;br&gt;
 学习Solidity推荐从Remix IDE开始&lt;br&gt;
 Vyper强调人类可读代码减少攻击面&lt;br&gt;
 选择语言取决于项目复杂度和安全优先级&lt;/p&gt;
-&lt;h2 id=&#34;evm&#34;&gt;evm&lt;/h2&gt;
+&lt;h2 id=&#34;evm&#34;&gt;EVM&lt;/h2&gt;
 &lt;p&gt;EVM是以太坊虚拟机去中心化计算引擎&lt;br&gt;
 执行智能合约字节码采用栈基架构深度1024&lt;br&gt;
 每操作码消耗气体防止滥用&lt;br&gt;
@@ -83,7 +72,17 @@ EVM负责状态转换更新账户余额存储&lt;br&gt;
 所有节点一致执行保证确定性隔离&lt;br&gt;
 兼容链如Polygon Arbitrum共享EVM实现无缝移植&lt;br&gt;
 未来升级EOF引入容器化代码提升效率&lt;br&gt;
-EVM是整个以太坊生态的计算核心&lt;/p&gt;</description>
+EVM是整个以太坊生态的计算核心&lt;/p&gt;
+&lt;h2 id=&#34;framework&#34;&gt;framework&lt;/h2&gt;
+&lt;p&gt;Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
+Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js&lt;br&gt;
+Truffle老牌套件自带Ganache本地链Mocha测试适合新手&lt;br&gt;
+Foundry Rust编写超快编译铸造Anvil分叉主网用Solidity写测试支持模糊测试&lt;br&gt;
+当前主流选择&lt;br&gt;
+Hardhat灵活度最高&lt;br&gt;
+Truffle最适合教学&lt;br&gt;
+Foundry性能极致适合高级开发者&lt;br&gt;
+搭配VS Code Solidity扩展开发体验最佳&lt;/p&gt;</description>
     </item>
     <item>
       <title>安全审计 笔记合集</title>
@@ -189,58 +188,130 @@ EVM是整个以太坊生态的计算核心&lt;/p&gt;</description>
       <link>http://localhost:1313/web3/eip/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/eip/intro/</guid>
-      <description>&lt;h1 id=&#34;eip-索引总览&#34;&gt;EIP 索引总览&lt;/h1&gt;
-&lt;p&gt;这里收录所有值得单独成文的里程碑级EIP&lt;br&gt;
-每篇深度拆解一份EIP的诞生背景技术细节安全影响落地历程社区争议及后续演进&lt;br&gt;
-点击标题直达对应专文&lt;/p&gt;
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;EIP（Ethereum Improvement Proposal）是以太坊改进提案&lt;br&gt;
 任何人都能提交的标准化文档&lt;br&gt;
 驱动以太坊从创世区块到今天的唯一正式机制&lt;br&gt;
 ERC只是EIP的应用层子集&lt;br&gt;
-所有硬分叉升级Layer2变革账户抽象都源于EIP&lt;/p&gt;
-&lt;h2 id=&#34;账户抽象时代&#34;&gt;账户抽象时代&lt;/h2&gt;
+所有硬分叉升级Layer2变革账户抽象都源于EIP
+好的，下面是不含任何表情、&lt;strong&gt;按 EIP 状态与类型分类整理的中文笔记版&lt;/strong&gt;，适合课堂笔记、复习或写作使用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;eip-状态&#34;&gt;EIP 状态&lt;/h2&gt;
+&lt;p&gt;EIP（Ethereum Improvement Proposal，以太坊改进提案）在提出、讨论和落地过程中，会经历以下生命周期状态&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Idea&lt;/code&gt;&lt;/strong&gt;（想法阶段）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/web3/eip/eip-4337&#34;&gt;EIP-4337 智能合约账户&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7702&#34;&gt;EIP-7702 新账户抽象终极方案（2025进行中）（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;处于预草案阶段，仅是初步构想&lt;/li&gt;
+&lt;li&gt;不会被记录在官方 EIP 仓库中&lt;/li&gt;
+&lt;li&gt;通常在论坛、Issue 或社区中进行非正式讨论&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;费用市场与通缩&#34;&gt;费用市场与通缩&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Draft&lt;/code&gt;&lt;/strong&gt;（草案阶段）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-1559&#34;&gt;EIP-1559 基础费燃烧：让ETH成为超声波货币（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4844&#34;&gt;EIP-4844 Proto-Danksharding：Rollup费用暴跌90%（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7514&#34;&gt;EIP-7514 减缓质押增长：保护去中心化（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;正式进入 EIP 生命周期的第一个阶段&lt;/li&gt;
+&lt;li&gt;按 EIP 模板规范化后，由 EIP Editor 合并进仓库&lt;/li&gt;
+&lt;li&gt;处于持续开发和修改中&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;质押与提款&#34;&gt;质押与提款&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Review&lt;/code&gt;&lt;/strong&gt;（评审阶段）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4895&#34;&gt;EIP-4895 质押提款：上海升级核心（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7002&#34;&gt;EIP-7002 部分提款与主动退出（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6110&#34;&gt;EIP-6110 链上质押存款（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;作者认为提案已较为成熟&lt;/li&gt;
+&lt;li&gt;主动请求社区或同行进行技术评审&lt;/li&gt;
+&lt;li&gt;重点关注规范完整性、可行性与兼容性&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;evm与执行层未来&#34;&gt;EVM与执行层未来&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Last Call&lt;/code&gt;&lt;/strong&gt;（最终审查阶段）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7691&#34;&gt;EIP-7691 EOF：EVM容器化革命（2026目标）（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7623&#34;&gt;EIP-7623 提高CALLDATA成本为Danksharding铺路（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4444&#34;&gt;EIP-4444 历史数据过期机制（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5656&#34;&gt;EIP-5656 MCOPY指令：降低内存拷贝成本（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;进入最终审查窗口，通常为 14 天&lt;/li&gt;
+&lt;li&gt;由 EIP Editor 指定并设置 &lt;code&gt;last-call-deadline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;若发现需要进行规范性修改，将退回 Review 状态&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;数据可用性与layer2&#34;&gt;数据可用性与Layer2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Final&lt;/code&gt;&lt;/strong&gt;（最终状态）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-4844&#34;&gt;EIP-4844 Blob交易与Danksharding路线图（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7594&#34;&gt;EIP-7594 PeerDAS：对等数据可用性采样（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6465&#34;&gt;EIP-6465/6466 Blob历史过期方案（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;成为正式标准&lt;/li&gt;
+&lt;li&gt;进入终态，不再进行实质性修改&lt;/li&gt;
+&lt;li&gt;仅允许修正勘误或补充非规范性说明&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;其他正在关注的eip&#34;&gt;其他正在关注的EIP&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Stagnant&lt;/code&gt;&lt;/strong&gt;（停滞状态）&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-7732&#34;&gt;EIP-7732 EIP-7702+ERC-7730安全增强版（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-712&#34;&gt;EIP-712 类型化结构化数据签名：链上安全签名的金标准（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-2537&#34;&gt;EIP-2537 BLS预编译：加速零知识证明（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-5920&#34;&gt;EIP-5920 PAY opcode：原生转账新方式（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-6780&#34;&gt;EIP-6780 自毁仅限创建交易：提升状态管理（待撰写）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/eips/eip-2612&#34;&gt;EIP-2612 Permit：ERC20 的无gas授权革命（待撰写）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Draft 或 Review 状态下，连续 6 个月无实质进展&lt;/li&gt;
+&lt;li&gt;会被标记为停滞&lt;/li&gt;
+&lt;li&gt;作者或 Editor 可重新激活并移回 Draft&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;更多EIP专文持续更新中&lt;br&gt;
-目前仅EIP-4337已完稿，其余陆续放出&lt;br&gt;
-每一篇都是以太坊进化史的真实注脚&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Withdrawn&lt;/code&gt;&lt;/strong&gt;（撤回）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作者主动撤回提案&lt;/li&gt;
+&lt;li&gt;该状态具有终结性&lt;/li&gt;
+&lt;li&gt;EIP 编号不可再次使用，重新提出需新编号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Living&lt;/code&gt;&lt;/strong&gt;（持续更新）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EVM 笔记合集</title>
+      <link>http://localhost:1313/web3/evm/intro/</link>
+      <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/evm/intro/</guid>
+      <description>&lt;hr&gt;
+&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;以太坊虚拟机（Ethereum Virtual Machine，EVM）是一个去中心化的、跨节点一致的执行环境，负责在所有以太坊节点上安全地执行智能合约代码。节点运行 EVM 来处理交易、执行合约逻辑，并通过消耗 &lt;strong&gt;Gas（燃料）&lt;/strong&gt; 来度量并限制计算资源，从而保障网络的效率与安全&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;前提知识&#34;&gt;前提知识&lt;/h2&gt;
+&lt;p&gt;要快速理解 EVM，建议具备以下基础：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机科学常用术语：字节（byte）、内存（memory）、堆栈（stack）等&lt;/li&gt;
+&lt;li&gt;密码学与区块链基础：哈希函数（如 Keccak-256）、默克尔树（Merkle Tree / Patricia Trie）等概念&lt;/li&gt;
+&lt;li&gt;智能合约开发的基本流程（编译后生成字节码、部署到链上、通过交易触发执行）会帮助理解细节&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;从账本到状态机概念上的迁移&#34;&gt;从账本到状态机：概念上的迁移&lt;/h2&gt;
+&lt;p&gt;与比特币常被比作“分布式账本”不同，以太坊更适合被看作一个&lt;strong&gt;分布式状态机&lt;/strong&gt;。除了记录账号与余额之外，以太坊还维护一个可随交易变化的&lt;strong&gt;机器状态&lt;/strong&gt;，并能在状态变更时执行任意机器代码（即智能合约）。这些状态变更的规则由 EVM 明确定义&lt;/p&gt;
+&lt;p&gt;数学上可以把以太坊的状态转换描述为一个确定性的函数：&lt;/p&gt;
+
+
+
+&lt;div class=&#34;goat svg-container &#34;&gt;
+  
+    &lt;svg
+      xmlns=&#34;http://www.w3.org/2000/svg&#34;
+      font-family=&#34;Menlo,Lucida Console,monospace&#34;
+      
+        viewBox=&#34;0 0 104 25&#34;
+      &gt;
+      &lt;g transform=&#39;translate(8,16)&#39;&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;0&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;Y&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;8&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;(&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;16&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;S&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;24&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;,&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;40&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;T&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;48&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;)&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;64&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;=&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;80&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;S&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;88&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;&#39;&lt;/text&gt;
+&lt;/g&gt;
+
+    &lt;/svg&gt;
+  
+&lt;/div&gt;
+&lt;p&gt;给定旧的有效状态 &lt;code&gt;S&lt;/code&gt; 与一组新的有效交易 &lt;code&gt;T&lt;/code&gt;，状态转换函数 &lt;code&gt;Y(S, T)&lt;/code&gt; 产出新的有效状态 &lt;code&gt;S&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;状态state&#34;&gt;状态（State）&lt;/h2&gt;
+&lt;p&gt;以太坊的全局状态由一种称为 &lt;strong&gt;改进版 Merkle–Patricia Trie&lt;/strong&gt; 的巨大数据结构保存。该结构将所有账户（包括外部拥有账户和合约账户）及其关联的数据通过哈希组织起来，最终回溯到区块链上的单一根哈希（state root）。这种设计保证了状态可证明性与高效性（例如轻客户端验证）&lt;/p&gt;
+&lt;h2 id=&#34;交易transactions&#34;&gt;交易（Transactions）&lt;/h2&gt;
+&lt;p&gt;交易是由账户发起并经密码学签名的指令，分为两类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;消息调用交易（Message Call）&lt;/strong&gt;：调用现有合约或向外部账户发送 ETH&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合约创建交易（Contract Creation）&lt;/strong&gt;：将已编译的智能合约字节码部署为一个新的合约账户。部署后，合约字节码存储在该合约账户中；每当有交易/消息调用该合约时，EVM 会读取并执行这些字节码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;evm-的工作方式&#34;&gt;EVM 的工作方式&lt;/h2&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;堆栈机stack-machine&#34;&gt;堆栈机（Stack machine）&lt;/h3&gt;
+&lt;p&gt;EVM 是一个基于堆栈的虚拟机：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web3 开发框架合集</title>
+      <link>http://localhost:1313/web3/framework/intro/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/framework/intro/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;foundry&#34;&gt;&lt;a href=&#34;https://getfoundry.sh/introduction/getting-started/&#34;&gt;foundry&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;hardhat&#34;&gt;&lt;a href=&#34;https://hardhat.org/docs/getting-started&#34;&gt;hardhat&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     <item>
       <title>DeFi 笔记合集</title>
@@ -249,6 +320,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <guid>http://localhost:1313/web3/defi/intro/</guid>
       <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;去中心化金融旨在通过区块链与智能合约，构建一个开放、透明、可组合的金融服务生态系统。本合集从核心协议原理出发，系统梳理各赛道的运行机制、风险模型与演进趋势。&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;lending&#34;&gt;Lending&lt;/h2&gt;
 &lt;p&gt;DeFi借贷协议允许用户无需中介即可存入资产获取收益，或超额抵押资产借出其他资产。其核心机制包括资金池、利率模型、清算机制以及治理代币经济学&lt;/p&gt;
 &lt;ul&gt;
@@ -264,17 +336,6 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;去中心化交易所（DEX）通过自动做市商机制，允许用户直接在链上交易加密资产。核心在于流动性池、恒定乘积等定价公式、手续费激励以及无常损失管理&lt;/p&gt;
 &lt;h2 id=&#34;rwa&#34;&gt;RWA&lt;/h2&gt;
 &lt;p&gt;现实世界资产旨在将传统金融资产（如国债、信贷、不动产）通过代币化引入区块链，为DeFi生态系统提供具有实际价值支撑的收益资产，并面临合规、托管与法律映射等独特挑战&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Web3 开发框架合集</title>
-      <link>http://localhost:1313/web3/framework/intro/</link>
-      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/framework/intro/</guid>
-      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;h2 id=&#34;foundry&#34;&gt;&lt;a href=&#34;https://getfoundry.sh/introduction/getting-started/&#34;&gt;foundry&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;hardhat&#34;&gt;&lt;a href=&#34;https://hardhat.org/docs/getting-started&#34;&gt;hardhat&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     <item>
       <title>DEX 经典概念</title>
@@ -782,7 +843,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;攻击者传入&amp;gt;255的值，转换截断成小值，导致实际提取远超预期（但余额扣除完整值）&lt;/p&gt;</description>
     </item>
     <item>
-      <title>EIP-2612</title>
+      <title>EIP-7702</title>
       <link>http://localhost:1313/web3/eip/eip-7702/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/eip/eip-7702/</guid>
@@ -795,6 +856,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;赞助&lt;/strong&gt;：账户X代表账户Y支付交易费用&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;权限降级&lt;/strong&gt;：用户可以签署子密钥并赋予其特定权限&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
 &lt;h3 id=&#34;参数&#34;&gt;参数&lt;/h3&gt;
 &lt;table&gt;
@@ -1028,6 +1090,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <guid>http://localhost:1313/web3/security/vulnerability/simple/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;此章节主要整理一些智能合约开发中的低级漏洞，适合初学者了解和防范。这些漏洞虽然&amp;quot;低级&amp;quot;，但在实际项目中仍然频繁出现，可能导致严重的安全问题&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;不正确的-natspec-注释&#34;&gt;不正确的 NatSpec 注释&lt;/h2&gt;
 &lt;h3 id=&#34;什么是-natspec&#34;&gt;什么是 NatSpec&lt;/h3&gt;
 &lt;p&gt;NatSpec（Ethereum Natural Language Specification Format）是 Solidity 的文档格式标准，用于生成用户文档和开发者文档&lt;/p&gt;
@@ -1115,13 +1178,6 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>审计辅助工具</title>
-      <link>http://localhost:1313/web3/security/vulnerability/memv/</link>
-      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/vulnerability/memv/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>漏洞等级划分标准</title>
       <link>http://localhost:1313/web3/security/vulnerability/severity/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
@@ -1193,7 +1249,8 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/web3/security/tool/staticanalysistools/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率。&lt;/p&gt;
+&lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;主要静态分析工具对比&#34;&gt;主要静态分析工具对比&lt;/h1&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -1275,6 +1332,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;一个典型的例子是区块浏览器。最终用户希望与底层逻辑合约交互，而不是代理本身。拥有从代理检索逻辑合约地址的通用方法，允许区块浏览器展示逻辑合约的 ABI 而非代理的 ABI。浏览器通过检查合约在特定存储槽的内容来判断它是否是一个代理，如果是，则同时展示代理和逻辑合约的信息。例如，Etherscan 上对地址 &lt;code&gt;0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&lt;/code&gt; 的展示就是如此
 &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-1967/Sample-proxy-on-etherscan.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;另一个例子是那些明确知晓自身正被代理的逻辑合约。这使得它们可以基于此事实，在其逻辑中触发代码更新。一个通用的存储槽使得这些用例可以独立于所使用的具体代理实现&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
 &lt;p&gt;对代理的监控对许多应用的安全至关重要。因此，必须能够跟踪实现槽和管理员槽的变更。遗憾的是，跟踪存储槽的变更并不容易。因此，&lt;strong&gt;建议&lt;/strong&gt;任何改变这些槽位的函数&lt;strong&gt;都应当&lt;/strong&gt; 同时发出相应的事件。这包括从 &lt;code&gt;0x0&lt;/code&gt; 到第一个非零值的初始化&lt;/p&gt;
 &lt;p&gt;以下是提议的用于存储代理特定信息的存储槽。后续可以根据需要通过其他 ERC 添加更多槽位&lt;/p&gt;
@@ -1345,37 +1403,6 @@ ERC只是EIP的应用层子集&lt;br&gt;
   
 &lt;/div&gt;
 &lt;p&gt;基于信标的代理合约不使用逻辑合约地址槽。相反，它们使用信标合约地址槽来存储它们所连接的信标地址。为了了解信标代理所使用的逻辑合约，客户端&lt;strong&gt;应当&lt;/strong&gt;：&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EIP-2612</title>
-      <link>http://localhost:1313/web3/eip/eip-2612/</link>
-      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-2612/</guid>
-      <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;EIP-2612&lt;/code&gt;（又称 &lt;code&gt;ERC-2612&lt;/code&gt; / &lt;em&gt;Permit extension for EIP-20&lt;/em&gt;）在 EIP-20 基础上新增 &lt;code&gt;permit&lt;/code&gt; 接口，允许通过 &lt;strong&gt;EIP-712 typed signatures&lt;/strong&gt;（secp256k1）来更改 &lt;code&gt;allowance&lt;/code&gt;，从而无需由 &lt;code&gt;msg.sender&lt;/code&gt; 发起 &lt;code&gt;approve&lt;/code&gt; 交易
-该扩展目的是最小化对现有 ERC-20 生态的入侵，同时解决用户必须持有 ETH 并且需发两笔交易（approve + action）的体验问题&lt;/p&gt;
-&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;传统 ERC-20 的 &lt;code&gt;approve&lt;/code&gt; 以 &lt;code&gt;msg.sender&lt;/code&gt; 为准，要求用户必须用 EOA 发起第一次交互（或使用合约钱包）。&lt;/li&gt;
-&lt;li&gt;当用户要与智能合约交互（例如 deposit、swap 等），往往需要先 &lt;code&gt;approve&lt;/code&gt;，再由合约调用 &lt;code&gt;transferFrom&lt;/code&gt;：导致&lt;strong&gt;至少两笔链上交易、两次 gas 支付&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;目标是引入最小、通用且兼容的解决方案，使用户能通过&lt;strong&gt;离线签名&lt;/strong&gt;完成授权，从而可在不持有 ETH 的情况下参与某些操作或把批准与主动作合并成单笔链上交易（例如 &lt;code&gt;depositWithPermit&lt;/code&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注意：合约钱包（contract wallets）也能解决部分问题，但在生态中采纳度较低且需要额外的 UI 适配；permit 方案能在不改动现有 UI 的前提下带来多数好处&lt;/p&gt;&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
-&lt;p&gt;合规的实现需要在 ERC-20 基础上实现三项额外函数：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-solidity&#34; data-lang=&#34;solidity&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;permit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;owner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spender&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deadline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint8&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;nonces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;owner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;returns&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;DOMAIN_SEPARATOR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;returns&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;permit 的成功条件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当前区块时间 &lt;code&gt;block.timestamp&lt;/code&gt; 必须 ≤ &lt;code&gt;deadline&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;owner&lt;/code&gt; ≠ &lt;code&gt;address(0)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;nonces[owner]&lt;/code&gt;（permit 调用前）必须等于消息里包含的 &lt;code&gt;nonce&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;v, r, s&lt;/code&gt; 必须构成来自 &lt;code&gt;owner&lt;/code&gt; 的有效 secp256k1 签名（签名的数据按 EIP-712 的 &lt;code&gt;DOMAIN_SEPARATOR&lt;/code&gt; 与 &lt;code&gt;Permit&lt;/code&gt; 类型哈希构造）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果以上任一不满足，&lt;code&gt;permit&lt;/code&gt; 必须 revert。成功时应执行：&lt;/p&gt;</description>
     </item>
     <item>
       <title>EIP-4337</title>
@@ -1577,6 +1604,37 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;上链时部分字段会被打包，转变成 &lt;code&gt;PackedUserOperation&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>EIP-2612</title>
+      <link>http://localhost:1313/web3/eip/eip-2612/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/eip-2612/</guid>
+      <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;EIP-2612&lt;/code&gt;（又称 &lt;code&gt;ERC-2612&lt;/code&gt; / &lt;em&gt;Permit extension for EIP-20&lt;/em&gt;）在 EIP-20 基础上新增 &lt;code&gt;permit&lt;/code&gt; 接口，允许通过 &lt;strong&gt;EIP-712 typed signatures&lt;/strong&gt;（secp256k1）来更改 &lt;code&gt;allowance&lt;/code&gt;，从而无需由 &lt;code&gt;msg.sender&lt;/code&gt; 发起 &lt;code&gt;approve&lt;/code&gt; 交易
+该扩展目的是最小化对现有 ERC-20 生态的入侵，同时解决用户必须持有 ETH 并且需发两笔交易（approve + action）的体验问题&lt;/p&gt;
+&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;传统 ERC-20 的 &lt;code&gt;approve&lt;/code&gt; 以 &lt;code&gt;msg.sender&lt;/code&gt; 为准，要求用户必须用 EOA 发起第一次交互（或使用合约钱包）。&lt;/li&gt;
+&lt;li&gt;当用户要与智能合约交互（例如 deposit、swap 等），往往需要先 &lt;code&gt;approve&lt;/code&gt;，再由合约调用 &lt;code&gt;transferFrom&lt;/code&gt;：导致&lt;strong&gt;至少两笔链上交易、两次 gas 支付&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;目标是引入最小、通用且兼容的解决方案，使用户能通过&lt;strong&gt;离线签名&lt;/strong&gt;完成授权，从而可在不持有 ETH 的情况下参与某些操作或把批准与主动作合并成单笔链上交易（例如 &lt;code&gt;depositWithPermit&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：合约钱包（contract wallets）也能解决部分问题，但在生态中采纳度较低且需要额外的 UI 适配；permit 方案能在不改动现有 UI 的前提下带来多数好处&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
+&lt;p&gt;合规的实现需要在 ERC-20 基础上实现三项额外函数：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-solidity&#34; data-lang=&#34;solidity&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;permit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;owner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spender&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deadline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint8&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;nonces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;owner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;returns&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;uint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;DOMAIN_SEPARATOR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;external&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;view&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;returns&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;bytes32&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;permit 的成功条件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当前区块时间 &lt;code&gt;block.timestamp&lt;/code&gt; 必须 ≤ &lt;code&gt;deadline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;owner&lt;/code&gt; ≠ &lt;code&gt;address(0)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nonces[owner]&lt;/code&gt;（permit 调用前）必须等于消息里包含的 &lt;code&gt;nonce&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;v, r, s&lt;/code&gt; 必须构成来自 &lt;code&gt;owner&lt;/code&gt; 的有效 secp256k1 签名（签名的数据按 EIP-712 的 &lt;code&gt;DOMAIN_SEPARATOR&lt;/code&gt; 与 &lt;code&gt;Permit&lt;/code&gt; 类型哈希构造）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果以上任一不满足，&lt;code&gt;permit&lt;/code&gt; 必须 revert。成功时应执行：&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>EIP-2718</title>
       <link>http://localhost:1313/web3/eip/eip-2718/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
@@ -1587,7 +1645,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;&lt;code&gt;TransactionType&lt;/code&gt; 标识交易格式&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;*Payload&lt;/code&gt; 是交易/收据内容，由未来的EIP定义&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;
+&lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
 &lt;p&gt;过去，当我们想要添加新的交易类型时，必须确保它们与所有其他交易向后兼容，这意味着只能根据编码后的有效载荷来区分它们，并且不可能存在匹配两种类型的交易。这在EIP-155中可以看到，新值被位打包到其中一个编码字段中&lt;/p&gt;
 &lt;p&gt;当前有多个提案正在讨论中，它们定义了新的交易类型，例如：&lt;/p&gt;
 &lt;ul&gt;
@@ -1597,6 +1655,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/ul&gt;
 &lt;p&gt;所有这些都需要以相互兼容的方式定义，这很快成为EIP作者和客户端的负担，因为他们现在必须遵循复杂的规则来区分交易类型&lt;/p&gt;
 &lt;p&gt;通过引入信封交易类型，我们只需要确保与现有交易的向后兼容性，之后我们只需要解决确保TransactionType之间没有编号冲突这个更简单的问题&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
 &lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
 &lt;ul&gt;
@@ -1640,6 +1699,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
       <guid>http://localhost:1313/web3/eip/eip-20/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;本标准允许在智能合约中实现一个标准化的代币API。它提供了转账代币的基本功能，并允许批准代币以便可以被其他链上第三方花费。&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
 &lt;p&gt;一个标准化的接口允许以太坊上的任何代币被其他应用程序重复使用：从钱包到去中心化交易所&lt;/p&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
@@ -1720,6 +1780,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-712/eth_sign.webp&#34;&gt;
 &lt;strong&gt;本协议提出后的签名样式&lt;/strong&gt;
 &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-712/eth_signTypedData.webp&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
 &lt;p&gt;明白，你是&lt;strong&gt;要 Markdown 语法的笔记&lt;/strong&gt;，但内容保持学术/规范风格，不要花里胡哨。下面是 &lt;strong&gt;纯 Markdown、可直接粘到笔记里的版本&lt;/strong&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;可签名消息集合的扩展&#34;&gt;可签名消息集合的扩展&lt;/h3&gt;

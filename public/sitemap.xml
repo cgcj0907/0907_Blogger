@@ -20,11 +20,14 @@
     <loc>http://localhost:1313/web3/eip/intro/</loc>
     <lastmod>2024-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/web3/defi/intro/</loc>
-    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/web3/evm/intro/</loc>
+    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/web3/framework/intro/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/defi/intro/</loc>
+    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2025-11-29T00:00:00+00:00</lastmod>
@@ -134,9 +137,6 @@
     <loc>http://localhost:1313/web3/security/tool/auxiliarytools/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/web3/security/vulnerability/memv/</loc>
-    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/web3/security/vulnerability/severity/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -146,11 +146,14 @@
     <loc>http://localhost:1313/web3/eip/eip-1967/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/web3/eip/eip-2612/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/web3/eip/eip-4337/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/eip/eip-2612/</loc>
+    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/evm/</loc>
+    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/web3/eip/eip-2718/</loc>
     <lastmod>2025-01-01T00:00:00+00:00</lastmod>
@@ -215,15 +218,7 @@
     <loc>http://localhost:1313/tags/%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2023-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/web3/eip/eip-191/</loc>
-  </url><url>
-    <loc>http://localhost:1313/web3/eip/eip-4626/</loc>
-  </url><url>
     <loc>http://localhost:1313/web3/eip/eip-721/</loc>
-  </url><url>
-    <loc>http://localhost:1313/web3/security/vulnerability/clv/</loc>
-  </url><url>
-    <loc>http://localhost:1313/web3/security/vulnerability/infogas/</loc>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
