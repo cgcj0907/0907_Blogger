@@ -18,6 +18,7 @@ Web3代表互联网下一个时代以区块链为核心实现去中心化用户�
 ---
 
 ## security
+> 👉 [安全审计 笔记合集](/web3/security/intro)
 
 Web3安全聚焦预防黑客攻击和漏洞利用  
 采用多层防御策略包括智能合约审计访问控制实时监控  
@@ -58,6 +59,7 @@ EIP-4844引入blob数据大幅降低Layer2成本
 
 
 ## codeLanuage
+> 👉 [合约语言 笔记合集](/web3/codelanguage/intro)
 
 智能合约语言最终编译为EVM字节码  
 Solidity主流类JavaScript支持继承修饰符库生态最丰富  
@@ -82,7 +84,7 @@ EVM负责状态转换更新账户余额存储
 EVM是整个以太坊生态的计算核心
 
 ## framework
-
+> 👉 [Web3 开发框架合集](/web3/framework/intro)
 Web3开发框架大幅简化合约构建测试部署  
 Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js  
 Truffle老牌套件自带Ganache本地链Mocha测试适合新手  
@@ -94,3 +96,8 @@ Foundry性能极致适合高级开发者
 搭配VS Code Solidity扩展开发体验最佳
 
 ## DeFi
+> 👉 [DeFi 笔记合集](/web3/defi/intro)
+DeFi（Decentralized Finance，去中心化金融）是构建在区块链之上的开放式金融体系，
+通过智能合约实现无需信任中介的金融服务
+Uniswap基于 AMM 机制的去中心化交易所，通过流动性池实现无需订单簿的代币兑换
+Aave去中心化借贷协议，用户可存入资产赚取利息，或通过超额抵押进行借贷并支持闪电贷
