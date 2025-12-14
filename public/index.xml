@@ -55,6 +55,8 @@
 &lt;p&gt;Web3代表互联网下一个时代以区块链为核心实现去中心化用户掌控数据和资产通过智能合约自动化交互摆脱中心化平台控制&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/security/intro&#34;&gt;安全审计 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Web3安全聚焦预防黑客攻击和漏洞利用&lt;br&gt;
 采用多层防御策略包括智能合约审计访问控制实时监控&lt;br&gt;
 使用Slither Mythril检测重入攻击整数溢出权限问题&lt;br&gt;
@@ -87,6 +89,8 @@ EIP过程确保透明包容&lt;br&gt;
 EIP-4844引入blob数据大幅降低Layer2成本&lt;br&gt;
 未来EIP聚焦可扩展性隐私如Verkle树&lt;/p&gt;
 &lt;h2 id=&#34;codelanuage&#34;&gt;codeLanuage&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanguage/intro&#34;&gt;合约语言 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;智能合约语言最终编译为EVM字节码&lt;br&gt;
 Solidity主流类JavaScript支持继承修饰符库生态最丰富&lt;br&gt;
 Vyper Python风格故意去除继承无限循环提升可审计性安全性&lt;br&gt;
@@ -97,7 +101,9 @@ Ethereum生态仍以Solidity和Vyper为主&lt;br&gt;
 Vyper强调人类可读代码减少攻击面&lt;br&gt;
 选择语言取决于项目复杂度和安全优先级&lt;/p&gt;
 &lt;h2 id=&#34;evm&#34;&gt;EVM&lt;/h2&gt;
-&lt;p&gt;EVM是以太坊虚拟机去中心化计算引擎&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/evm/intro&#34;&gt;EVM 笔记合集&lt;/a&gt;
+EVM是以太坊虚拟机去中心化计算引擎&lt;br&gt;
 执行智能合约字节码采用栈基架构深度1024&lt;br&gt;
 每操作码消耗气体防止滥用&lt;br&gt;
 Turing完备支持任意逻辑但有气体上限避免无限循环&lt;br&gt;
@@ -105,9 +111,11 @@ EVM负责状态转换更新账户余额存储&lt;br&gt;
 所有节点一致执行保证确定性隔离&lt;br&gt;
 兼容链如Polygon Arbitrum共享EVM实现无缝移植&lt;br&gt;
 未来升级EOF引入容器化代码提升效率&lt;br&gt;
-EVM是整个以太坊生态的计算核心&lt;/p&gt;
+EVM是整个以太坊生态的计算核心&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;framework&#34;&gt;framework&lt;/h2&gt;
-&lt;p&gt;Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/intro&#34;&gt;Web3 开发框架合集&lt;/a&gt;
+Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
 Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js&lt;br&gt;
 Truffle老牌套件自带Ganache本地链Mocha测试适合新手&lt;br&gt;
 Foundry Rust编写超快编译铸造Anvil分叉主网用Solidity写测试支持模糊测试&lt;br&gt;
@@ -633,6 +641,83 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;blockquote&gt;
 &lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;hardhat&#34;&gt;&lt;a href=&#34;https://hardhat.org/docs/getting-started&#34;&gt;hardhat&lt;/a&gt;&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>合约语言 笔记合集</title>
+      <link>http://localhost:1313/web3/codelanguage/intro/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/intro/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;本文件为 Code Language 的简要说明，面向 Web3 开发者与学习者，概述 Solana 与 Ethereum 两大生态中常见的合约语言及其基本用途与特点。内容以技术介绍为主，强调实际开发中的可理解性与参考价值，适合作为项目仓库或学习笔记中的快速查阅文档&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ethereum&#34;&gt;Ethereum&lt;/h2&gt;
+&lt;p&gt;以太坊生态的合约开发语言丰富，从高级语言到中间/低级语言都有对应工具链。下面按常见度与用途列出&lt;/p&gt;
+&lt;h3 id=&#34;solidity&#34;&gt;Solidity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：以太坊主流高级语言（类似 JS/Java 风格），最广泛使用的智能合约语言&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面向合约、支持继承、接口、事件、ABI 自动化&lt;/li&gt;
+&lt;li&gt;丰富生态（Truffle/Hardhat/Foundry 等工具链）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开发门槛低、资料与示例丰富、主网项目多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-solidity&#34; data-lang=&#34;solidity&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// SPDX-License-Identifier: MIT
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pragma solidity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;contract&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Counter&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;uint256&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;inc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vyper&#34;&gt;Vyper&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：以 Python 风格设计的以太坊合约语言，追求简洁与安全性（避免复杂特性）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法更接近 Python，但只用于合约开发（不是通用 Python）&lt;/li&gt;
+&lt;li&gt;有意减少语言特性以降低易错面（例如限制继承、复杂抽象）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更可预测、审计面更小，适合对安全性要求高的合约。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例（概念）&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uint256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@external&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;inc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;yul&#34;&gt;Yul&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/yul/yul&#34;&gt; Yul 使用指南 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：EVM 的中间表示（IR），Solidity 等编译器可输出 Yul，用于更精细的优化与跨 EVM 后端（例如 EVM + ewasm）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;</description>
     </item>
     <item>
       <title>DeFi 笔记合集</title>
@@ -2381,6 +2466,142 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;上链时部分字段会被打包，转变成 &lt;code&gt;PackedUserOperation&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Huff CLI</title>
+      <link>http://localhost:1313/web3/codelanguage/huff/cli/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/huff/cli/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;虽然多数时候您会在Foundry项目中使用foundry-huff库来编译Huff合约，但编译器自带的CLI提供了一些额外的配置选项和有用的工具&lt;/p&gt;
+&lt;h2 id=&#34;选项&#34;&gt;选项&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;huffc 0.3.0&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;用纯Rust构建的Huff语言编译器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;使用格式：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;huffc &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;选项&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;路径&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;子命令&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;参数：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&amp;lt;路径&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 要编译的合约（一个或多个）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;选项：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-a&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--artifacts&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 是否生成产物文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-b&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--bytecode&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 生成并记录字节码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-c&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--constants &amp;lt;常量&amp;gt;...&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 为编译环境覆盖/设置常量
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-d&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--output-directory &amp;lt;输出目录&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 输出目录 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;默认: ./artifacts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-g&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--interface &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&amp;lt;接口&amp;gt;...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 为Huff产物文件生成Solidity接口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-h&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--help&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 打印帮助信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-i&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--inputs &amp;lt;输入参数&amp;gt;...&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 构造函数输入参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-n&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--interactive&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 交互式输入构造函数参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-o&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--output &amp;lt;输出&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 输出文件路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-r&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--bin-runtime&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 生成并记录运行时字节码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-s&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--source-path &amp;lt;源路径&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 合约的源路径 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;默认: ./contracts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-v&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--verbose&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 详细输出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-V&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--version&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 打印版本信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-z&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--optimize&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 优化编译 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;开发中&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;子命令：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 打印此信息或给定子命令的帮助信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 测试子命令
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-a-生成产物文件&#34;&gt;&lt;code&gt;-a&lt;/code&gt; 生成产物文件&lt;/h3&gt;
+&lt;p&gt;传递 &lt;code&gt;-a&lt;/code&gt; 标志将在 &lt;code&gt;./artifacts&lt;/code&gt; 目录或 &lt;code&gt;-d&lt;/code&gt; 标志指定的位置生成产物JSON文件。该JSON文件包含以下信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File（文件名）&lt;/li&gt;
+&lt;li&gt;Path（路径）&lt;/li&gt;
+&lt;li&gt;Source（源代码）&lt;/li&gt;
+&lt;li&gt;Dependencies（依赖项）&lt;/li&gt;
+&lt;li&gt;Bytecode（字节码）&lt;/li&gt;
+&lt;li&gt;Runtime Bytecode（运行时字节码）&lt;/li&gt;
+&lt;li&gt;Contract ABI（合约ABI）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Huff 使用指南</title>
+      <link>http://localhost:1313/web3/codelanguage/huff/huff/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/huff/huff/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Huff 是一种低级编程语言，专为在以太坊虚拟机（EVM）上开发高性能、优化程度极高的智能合约而设计。Huff 不隐藏 EVM 的内部机制，而是将其编程堆栈暴露给开发者，以便进行手动操作和精细控制&lt;/p&gt;
+&lt;p&gt;Huff 最初由 Aztec Protocol 团队创建，用于编写 Weierstrudel，这是一个链上椭圆曲线算术库，要求代码极度优化，而 Solidity 和 Yul 都无法满足这种性能需求&lt;/p&gt;
+&lt;p&gt;虽然 EVM 专家可以使用 Huff 编写适用于生产环境的高效智能合约，但它也可以作为初学者学习 EVM 工作原理的一种方式&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/huff/example&#34;&gt;Huff 详细使用示例&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;Huff 编译器是用 &lt;strong&gt;Rust&lt;/strong&gt; 开发的，旨在提供高性能的 Huff 代码编译体验&lt;/p&gt;
+&lt;p&gt;安装方式与 &lt;strong&gt;Foundry&lt;/strong&gt; 类似&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;运行命令安装 Huffup：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L get.huff.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;注意事项：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;该命令会安装 &lt;code&gt;huffup&lt;/code&gt; 可执行文件，但不一定会自动添加到系统路径&lt;/li&gt;
+&lt;li&gt;如果出现以下错误：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huffup: command not found
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;请执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc    &lt;span class=&#34;c1&#34;&gt;# 或者&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;或者直接打开一个新的终端窗口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装完成并在路径中可用后，运行：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huffup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可安装最新稳定版本的 &lt;strong&gt;huffc&lt;/strong&gt;（Huff 编译器）&lt;/p&gt;
+&lt;h3 id=&#34;windows-用户从源码构建&#34;&gt;Windows 用户：从源码构建&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 Rust 工具链：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;下载并运行 &lt;a href=&#34;https://rustup.rs&#34;&gt;rustup-init&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;会在控制台启动安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;如果遇到错误，可能缺少 &lt;strong&gt;VS Build Tools&lt;/strong&gt;，请下载安装&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Huff 详细使用示例</title>
+      <link>http://localhost:1313/web3/codelanguage/huff/example/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/huff/example/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Huff by Example&lt;/strong&gt; 旨在详细解释 Huff 语言的各项特性，并通过代码示例说明每个特性的使用方法、使用时机、使用场景以及设计目的。文中的代码片段附有丰富注释，但本节假设读者对 &lt;strong&gt;EVM&lt;/strong&gt; 有一定基础&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;定义接口-defining-your-interface&#34;&gt;定义接口 (Defining your Interface)&lt;/h2&gt;
+&lt;p&gt;在 Huff 中定义接口不是必需的步骤，但可以为以下两个目的使用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;作为 &lt;code&gt;__FUNC_SIG&lt;/code&gt; 和 &lt;code&gt;__EVENT_HASH&lt;/code&gt; 内置函数的参数&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生成 Solidity 接口 / 合约 ABI&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;函数类型&lt;/strong&gt;：可以是 &lt;code&gt;view&lt;/code&gt;、&lt;code&gt;pure&lt;/code&gt;、&lt;code&gt;payable&lt;/code&gt; 或 &lt;code&gt;nonpayable&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;函数接口&lt;/strong&gt;：仅建议为外部可调用函数定义&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件（Events）&lt;/strong&gt;：可以包含索引值（indexed）和非索引值（non-indexed）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-huff&#34; data-lang=&#34;huff&#34;&gt;#define function testFunction(uint256, bytes32) view returns (bytes memory)
+
+#define event TestEvent(address indexed, uint256)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;testFunction&lt;/code&gt;：定义了一个接受 &lt;code&gt;uint256&lt;/code&gt; 和 &lt;code&gt;bytes32&lt;/code&gt; 参数的只读函数，返回 &lt;code&gt;bytes&lt;/code&gt; 类型&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TestEvent&lt;/code&gt;：定义了一个事件，包含一个索引地址和一个 &lt;code&gt;uint256&lt;/code&gt; 参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;常量-constants&#34;&gt;常量 (Constants)&lt;/h2&gt;
+&lt;p&gt;在 Huff 合约中，&lt;strong&gt;常量不会存储在合约的 storage 中&lt;/strong&gt;，而是在编译时即可在合约内调用&lt;/p&gt;
+&lt;p&gt;常量可以是以下两种类型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;字节（bytes）&lt;/strong&gt;：最大 32 字节&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FREE_STORAGE_POINTER&lt;/strong&gt;：表示合约中未使用的存储槽（storage slot）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>EIP-2612</title>
       <link>http://localhost:1313/web3/eip/eip-2612/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
@@ -2410,6 +2631,83 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;&lt;code&gt;v, r, s&lt;/code&gt; 必须构成来自 &lt;code&gt;owner&lt;/code&gt; 的有效 secp256k1 签名（签名的数据按 EIP-712 的 &lt;code&gt;DOMAIN_SEPARATOR&lt;/code&gt; 与 &lt;code&gt;Permit&lt;/code&gt; 类型哈希构造）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果以上任一不满足，&lt;code&gt;permit&lt;/code&gt; 必须 revert。成功时应执行：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yul 使用指南</title>
+      <link>http://localhost:1313/web3/codelanguage/yul/yul/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/yul/yul/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Yul&lt;/strong&gt;（早期称为 JULIA 或 IULIA）是一种中间语言，可编译到多种后端，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ethereum Virtual Machine (EVM) 1.0&lt;/li&gt;
+&lt;li&gt;EVM 1.5&lt;/li&gt;
+&lt;li&gt;计划支持的 eWASM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它旨在作为这些平台的通用标准。Yul 已经可以在 Solidity 中作为 &lt;strong&gt;内联汇编&lt;/strong&gt; 使用，未来 Solidity 编译器甚至可能将 Yul 用作默认的中间语言。Yul 的设计也使得为其构建高级优化器变得容易&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心特性&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;核心组件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数（function）&lt;/li&gt;
+&lt;li&gt;代码块（block）&lt;/li&gt;
+&lt;li&gt;变量（variable）&lt;/li&gt;
+&lt;li&gt;字面量（literal）&lt;/li&gt;
+&lt;li&gt;循环（for）&lt;/li&gt;
+&lt;li&gt;条件语句（if / switch）&lt;/li&gt;
+&lt;li&gt;表达式与变量赋值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;强类型系统&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量和字面量必须带类型前缀&lt;/li&gt;
+&lt;li&gt;支持类型：&lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;u8&lt;/code&gt;, &lt;code&gt;s8&lt;/code&gt;, &lt;code&gt;u32&lt;/code&gt;, &lt;code&gt;s32&lt;/code&gt;, &lt;code&gt;u64&lt;/code&gt;, &lt;code&gt;s64&lt;/code&gt;, &lt;code&gt;u128&lt;/code&gt;, &lt;code&gt;s128&lt;/code&gt;, &lt;code&gt;u256&lt;/code&gt;, &lt;code&gt;s256&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;操作符与内置函数&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yul 本身不提供操作符&lt;/li&gt;
+&lt;li&gt;对于 EVM，操作码（opcode）作为内置函数提供&lt;/li&gt;
+&lt;li&gt;如果后端平台不同，可以重新实现这些函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;递归实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-yul&#34; data-lang=&#34;yul&#34;&gt;{
+    function power(base:u256, exponent:u256) -&amp;gt; result:u256
+    {
+        switch exponent
+        case 0:u256 { result := 1:u256 }
+        case 1:u256 { result := base }
+        default:
+        {
+            result := power(mul(base, base), div(exponent, 2:u256))
+            switch mod(exponent, 2:u256)
+                case 1:u256 { result := mul(base, result) }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;循环实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-yul&#34; data-lang=&#34;yul&#34;&gt;{
+    function power(base:u256, exponent:u256) -&amp;gt; result:u256
+    {
+        result := 1:u256
+        for { let i := 0:u256 } lt(i, exponent) { i := add(i, 1:u256) }
+        {
+            result := mul(result, base)
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;注：循环实现依赖 EVM 的 &lt;code&gt;lt&lt;/code&gt; 和 &lt;code&gt;add&lt;/code&gt; 操作码。&lt;/p&gt;</description>
     </item>
     <item>
       <title>EIP-2718</title>

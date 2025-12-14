@@ -140,6 +140,27 @@
       <description></description>
     </item>
     <item>
+      <title>Huff</title>
+      <link>http://localhost:1313/tags/huff/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/huff/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lanuage</title>
+      <link>http://localhost:1313/tags/lanuage/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lanuage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yul</title>
+      <link>http://localhost:1313/tags/yul/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/yul/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>EVM</title>
       <link>http://localhost:1313/tags/evm/</link>
       <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>

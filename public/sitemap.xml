@@ -14,17 +14,20 @@
     <loc>http://localhost:1313/toolkits/intro/</loc>
     <lastmod>2024-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/web3/security/intro/</loc>
-    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/web3/evm/intro/</loc>
+    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/web3/eip/intro/</loc>
     <lastmod>2024-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/web3/evm/intro/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/web3/security/intro/</loc>
+    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/web3/framework/intro/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/codelanguage/intro/</loc>
+    <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/web3/defi/intro/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
@@ -149,8 +152,29 @@
     <loc>http://localhost:1313/web3/eip/eip-4337/</loc>
     <lastmod>2025-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/huff/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/codelanguage/huff/cli/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/codelanguage/huff/huff/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/codelanguage/huff/example/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/lanuage/</loc>
+    <lastmod>2025-05-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/web3/eip/eip-2612/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/yul/</loc>
+    <lastmod>2025-02-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/web3/codelanguage/yul/yul/</loc>
+    <lastmod>2025-02-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/evm/</loc>
     <lastmod>2025-01-11T00:00:00+00:00</lastmod>

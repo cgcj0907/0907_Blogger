@@ -22,6 +22,8 @@
 &lt;p&gt;Web3代表互联网下一个时代以区块链为核心实现去中心化用户掌控数据和资产通过智能合约自动化交互摆脱中心化平台控制&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/security/intro&#34;&gt;安全审计 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Web3安全聚焦预防黑客攻击和漏洞利用&lt;br&gt;
 采用多层防御策略包括智能合约审计访问控制实时监控&lt;br&gt;
 使用Slither Mythril检测重入攻击整数溢出权限问题&lt;br&gt;
@@ -54,6 +56,8 @@ EIP过程确保透明包容&lt;br&gt;
 EIP-4844引入blob数据大幅降低Layer2成本&lt;br&gt;
 未来EIP聚焦可扩展性隐私如Verkle树&lt;/p&gt;
 &lt;h2 id=&#34;codelanuage&#34;&gt;codeLanuage&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanguage/intro&#34;&gt;合约语言 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;智能合约语言最终编译为EVM字节码&lt;br&gt;
 Solidity主流类JavaScript支持继承修饰符库生态最丰富&lt;br&gt;
 Vyper Python风格故意去除继承无限循环提升可审计性安全性&lt;br&gt;
@@ -74,7 +78,9 @@ EVM负责状态转换更新账户余额存储&lt;br&gt;
 未来升级EOF引入容器化代码提升效率&lt;br&gt;
 EVM是整个以太坊生态的计算核心&lt;/p&gt;
 &lt;h2 id=&#34;framework&#34;&gt;framework&lt;/h2&gt;
-&lt;p&gt;Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/intro&#34;&gt;Web3 开发框架合集&lt;/a&gt;
+Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
 Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js&lt;br&gt;
 Truffle老牌套件自带Ganache本地链Mocha测试适合新手&lt;br&gt;
 Foundry Rust编写超快编译铸造Anvil分叉主网用Solidity写测试支持模糊测试&lt;br&gt;
@@ -83,6 +89,124 @@ Hardhat灵活度最高&lt;br&gt;
 Truffle最适合教学&lt;br&gt;
 Foundry性能极致适合高级开发者&lt;br&gt;
 搭配VS Code Solidity扩展开发体验最佳&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EVM 笔记合集</title>
+      <link>http://localhost:1313/web3/evm/intro/</link>
+      <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/evm/intro/</guid>
+      <description>&lt;hr&gt;
+&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;以太坊虚拟机（Ethereum Virtual Machine，EVM）是一个去中心化的、跨节点一致的执行环境，负责在所有以太坊节点上安全地执行智能合约代码。节点运行 EVM 来处理交易、执行合约逻辑，并通过消耗 &lt;strong&gt;Gas（燃料）&lt;/strong&gt; 来度量并限制计算资源，从而保障网络的效率与安全&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;前提知识&#34;&gt;前提知识&lt;/h2&gt;
+&lt;p&gt;要快速理解 EVM，建议具备以下基础：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算机科学常用术语：字节（byte）、内存（memory）、堆栈（stack）等&lt;/li&gt;
+&lt;li&gt;密码学与区块链基础：哈希函数（如 Keccak-256）、默克尔树（Merkle Tree / Patricia Trie）等概念&lt;/li&gt;
+&lt;li&gt;智能合约开发的基本流程（编译后生成字节码、部署到链上、通过交易触发执行）会帮助理解细节&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;从账本到状态机概念上的迁移&#34;&gt;从账本到状态机：概念上的迁移&lt;/h2&gt;
+&lt;p&gt;与比特币常被比作“分布式账本”不同，以太坊更适合被看作一个&lt;strong&gt;分布式状态机&lt;/strong&gt;。除了记录账号与余额之外，以太坊还维护一个可随交易变化的&lt;strong&gt;机器状态&lt;/strong&gt;，并能在状态变更时执行任意机器代码（即智能合约）。这些状态变更的规则由 EVM 明确定义&lt;/p&gt;
+&lt;p&gt;数学上可以把以太坊的状态转换描述为一个确定性的函数：&lt;/p&gt;
+
+
+
+&lt;div class=&#34;goat svg-container &#34;&gt;
+  
+    &lt;svg
+      xmlns=&#34;http://www.w3.org/2000/svg&#34;
+      font-family=&#34;Menlo,Lucida Console,monospace&#34;
+      
+        viewBox=&#34;0 0 104 25&#34;
+      &gt;
+      &lt;g transform=&#39;translate(8,16)&#39;&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;0&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;Y&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;8&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;(&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;16&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;S&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;24&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;,&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;40&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;T&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;48&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;)&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;64&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;=&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;80&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;S&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;88&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;&#39;&lt;/text&gt;
+&lt;/g&gt;
+
+    &lt;/svg&gt;
+  
+&lt;/div&gt;
+&lt;p&gt;给定旧的有效状态 &lt;code&gt;S&lt;/code&gt; 与一组新的有效交易 &lt;code&gt;T&lt;/code&gt;，状态转换函数 &lt;code&gt;Y(S, T)&lt;/code&gt; 产出新的有效状态 &lt;code&gt;S&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;状态state&#34;&gt;状态（State）&lt;/h2&gt;
+&lt;p&gt;以太坊的全局状态由一种称为 &lt;strong&gt;改进版 Merkle–Patricia Trie&lt;/strong&gt; 的巨大数据结构保存。该结构将所有账户（包括外部拥有账户和合约账户）及其关联的数据通过哈希组织起来，最终回溯到区块链上的单一根哈希（state root）。这种设计保证了状态可证明性与高效性（例如轻客户端验证）&lt;/p&gt;
+&lt;h2 id=&#34;交易transactions&#34;&gt;交易（Transactions）&lt;/h2&gt;
+&lt;p&gt;交易是由账户发起并经密码学签名的指令，分为两类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;消息调用交易（Message Call）&lt;/strong&gt;：调用现有合约或向外部账户发送 ETH&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合约创建交易（Contract Creation）&lt;/strong&gt;：将已编译的智能合约字节码部署为一个新的合约账户。部署后，合约字节码存储在该合约账户中；每当有交易/消息调用该合约时，EVM 会读取并执行这些字节码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;evm-的工作方式&#34;&gt;EVM 的工作方式&lt;/h2&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;堆栈机stack-machine&#34;&gt;堆栈机（Stack machine）&lt;/h3&gt;
+&lt;p&gt;EVM 是一个基于堆栈的虚拟机：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EIP 笔记合集</title>
+      <link>http://localhost:1313/web3/eip/intro/</link>
+      <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/eip/intro/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;EIP（Ethereum Improvement Proposal）是以太坊改进提案&lt;br&gt;
+任何人都能提交的标准化文档&lt;br&gt;
+驱动以太坊从创世区块到今天的唯一正式机制&lt;br&gt;
+ERC只是EIP的应用层子集&lt;br&gt;
+所有硬分叉升级Layer2变革账户抽象都源于EIP
+好的，下面是不含任何表情、&lt;strong&gt;按 EIP 状态与类型分类整理的中文笔记版&lt;/strong&gt;，适合课堂笔记、复习或写作使用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;eip-状态&#34;&gt;EIP 状态&lt;/h2&gt;
+&lt;p&gt;EIP（Ethereum Improvement Proposal，以太坊改进提案）在提出、讨论和落地过程中，会经历以下生命周期状态&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Idea&lt;/code&gt;&lt;/strong&gt;（想法阶段）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;处于预草案阶段，仅是初步构想&lt;/li&gt;
+&lt;li&gt;不会被记录在官方 EIP 仓库中&lt;/li&gt;
+&lt;li&gt;通常在论坛、Issue 或社区中进行非正式讨论&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Draft&lt;/code&gt;&lt;/strong&gt;（草案阶段）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正式进入 EIP 生命周期的第一个阶段&lt;/li&gt;
+&lt;li&gt;按 EIP 模板规范化后，由 EIP Editor 合并进仓库&lt;/li&gt;
+&lt;li&gt;处于持续开发和修改中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Review&lt;/code&gt;&lt;/strong&gt;（评审阶段）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作者认为提案已较为成熟&lt;/li&gt;
+&lt;li&gt;主动请求社区或同行进行技术评审&lt;/li&gt;
+&lt;li&gt;重点关注规范完整性、可行性与兼容性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Last Call&lt;/code&gt;&lt;/strong&gt;（最终审查阶段）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入最终审查窗口，通常为 14 天&lt;/li&gt;
+&lt;li&gt;由 EIP Editor 指定并设置 &lt;code&gt;last-call-deadline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;若发现需要进行规范性修改，将退回 Review 状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Final&lt;/code&gt;&lt;/strong&gt;（最终状态）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;成为正式标准&lt;/li&gt;
+&lt;li&gt;进入终态，不再进行实质性修改&lt;/li&gt;
+&lt;li&gt;仅允许修正勘误或补充非规范性说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Stagnant&lt;/code&gt;&lt;/strong&gt;（停滞状态）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Draft 或 Review 状态下，连续 6 个月无实质进展&lt;/li&gt;
+&lt;li&gt;会被标记为停滞&lt;/li&gt;
+&lt;li&gt;作者或 Editor 可重新激活并移回 Draft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Withdrawn&lt;/code&gt;&lt;/strong&gt;（撤回）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作者主动撤回提案&lt;/li&gt;
+&lt;li&gt;该状态具有终结性&lt;/li&gt;
+&lt;li&gt;EIP 编号不可再次使用，重新提出需新编号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Living&lt;/code&gt;&lt;/strong&gt;（持续更新）&lt;/p&gt;</description>
     </item>
     <item>
       <title>安全审计 笔记合集</title>
@@ -184,124 +308,6 @@ Foundry性能极致适合高级开发者&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;这不仅仅是一个步骤&lt;/strong&gt;，而是一个包含多个子阶段的综合过程（类似于传统软件开发生命周期&lt;a href=&#34;https://aws.amazon.com/what-is/sdlc/&#34;&gt;SDLC&lt;/a&gt;，但具有区块链特有的安全考量）：&lt;/p&gt;</description>
     </item>
     <item>
-      <title>EIP 笔记合集</title>
-      <link>http://localhost:1313/web3/eip/intro/</link>
-      <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/intro/</guid>
-      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;p&gt;EIP（Ethereum Improvement Proposal）是以太坊改进提案&lt;br&gt;
-任何人都能提交的标准化文档&lt;br&gt;
-驱动以太坊从创世区块到今天的唯一正式机制&lt;br&gt;
-ERC只是EIP的应用层子集&lt;br&gt;
-所有硬分叉升级Layer2变革账户抽象都源于EIP
-好的，下面是不含任何表情、&lt;strong&gt;按 EIP 状态与类型分类整理的中文笔记版&lt;/strong&gt;，适合课堂笔记、复习或写作使用。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;eip-状态&#34;&gt;EIP 状态&lt;/h2&gt;
-&lt;p&gt;EIP（Ethereum Improvement Proposal，以太坊改进提案）在提出、讨论和落地过程中，会经历以下生命周期状态&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Idea&lt;/code&gt;&lt;/strong&gt;（想法阶段）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;处于预草案阶段，仅是初步构想&lt;/li&gt;
-&lt;li&gt;不会被记录在官方 EIP 仓库中&lt;/li&gt;
-&lt;li&gt;通常在论坛、Issue 或社区中进行非正式讨论&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Draft&lt;/code&gt;&lt;/strong&gt;（草案阶段）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;正式进入 EIP 生命周期的第一个阶段&lt;/li&gt;
-&lt;li&gt;按 EIP 模板规范化后，由 EIP Editor 合并进仓库&lt;/li&gt;
-&lt;li&gt;处于持续开发和修改中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Review&lt;/code&gt;&lt;/strong&gt;（评审阶段）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;作者认为提案已较为成熟&lt;/li&gt;
-&lt;li&gt;主动请求社区或同行进行技术评审&lt;/li&gt;
-&lt;li&gt;重点关注规范完整性、可行性与兼容性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Last Call&lt;/code&gt;&lt;/strong&gt;（最终审查阶段）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;进入最终审查窗口，通常为 14 天&lt;/li&gt;
-&lt;li&gt;由 EIP Editor 指定并设置 &lt;code&gt;last-call-deadline&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;若发现需要进行规范性修改，将退回 Review 状态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Final&lt;/code&gt;&lt;/strong&gt;（最终状态）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;成为正式标准&lt;/li&gt;
-&lt;li&gt;进入终态，不再进行实质性修改&lt;/li&gt;
-&lt;li&gt;仅允许修正勘误或补充非规范性说明&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Stagnant&lt;/code&gt;&lt;/strong&gt;（停滞状态）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Draft 或 Review 状态下，连续 6 个月无实质进展&lt;/li&gt;
-&lt;li&gt;会被标记为停滞&lt;/li&gt;
-&lt;li&gt;作者或 Editor 可重新激活并移回 Draft&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Withdrawn&lt;/code&gt;&lt;/strong&gt;（撤回）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;作者主动撤回提案&lt;/li&gt;
-&lt;li&gt;该状态具有终结性&lt;/li&gt;
-&lt;li&gt;EIP 编号不可再次使用，重新提出需新编号&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;Living&lt;/code&gt;&lt;/strong&gt;（持续更新）&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EVM 笔记合集</title>
-      <link>http://localhost:1313/web3/evm/intro/</link>
-      <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/evm/intro/</guid>
-      <description>&lt;hr&gt;
-&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-&lt;p&gt;以太坊虚拟机（Ethereum Virtual Machine，EVM）是一个去中心化的、跨节点一致的执行环境，负责在所有以太坊节点上安全地执行智能合约代码。节点运行 EVM 来处理交易、执行合约逻辑，并通过消耗 &lt;strong&gt;Gas（燃料）&lt;/strong&gt; 来度量并限制计算资源，从而保障网络的效率与安全&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;前提知识&#34;&gt;前提知识&lt;/h2&gt;
-&lt;p&gt;要快速理解 EVM，建议具备以下基础：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;计算机科学常用术语：字节（byte）、内存（memory）、堆栈（stack）等&lt;/li&gt;
-&lt;li&gt;密码学与区块链基础：哈希函数（如 Keccak-256）、默克尔树（Merkle Tree / Patricia Trie）等概念&lt;/li&gt;
-&lt;li&gt;智能合约开发的基本流程（编译后生成字节码、部署到链上、通过交易触发执行）会帮助理解细节&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;从账本到状态机概念上的迁移&#34;&gt;从账本到状态机：概念上的迁移&lt;/h2&gt;
-&lt;p&gt;与比特币常被比作“分布式账本”不同，以太坊更适合被看作一个&lt;strong&gt;分布式状态机&lt;/strong&gt;。除了记录账号与余额之外，以太坊还维护一个可随交易变化的&lt;strong&gt;机器状态&lt;/strong&gt;，并能在状态变更时执行任意机器代码（即智能合约）。这些状态变更的规则由 EVM 明确定义&lt;/p&gt;
-&lt;p&gt;数学上可以把以太坊的状态转换描述为一个确定性的函数：&lt;/p&gt;
-
-
-
-&lt;div class=&#34;goat svg-container &#34;&gt;
-  
-    &lt;svg
-      xmlns=&#34;http://www.w3.org/2000/svg&#34;
-      font-family=&#34;Menlo,Lucida Console,monospace&#34;
-      
-        viewBox=&#34;0 0 104 25&#34;
-      &gt;
-      &lt;g transform=&#39;translate(8,16)&#39;&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;0&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;Y&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;8&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;(&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;16&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;S&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;24&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;,&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;40&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;T&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;48&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;)&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;64&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;=&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;80&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;S&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;88&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;&#39;&lt;/text&gt;
-&lt;/g&gt;
-
-    &lt;/svg&gt;
-  
-&lt;/div&gt;
-&lt;p&gt;给定旧的有效状态 &lt;code&gt;S&lt;/code&gt; 与一组新的有效交易 &lt;code&gt;T&lt;/code&gt;，状态转换函数 &lt;code&gt;Y(S, T)&lt;/code&gt; 产出新的有效状态 &lt;code&gt;S&#39;&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;状态state&#34;&gt;状态（State）&lt;/h2&gt;
-&lt;p&gt;以太坊的全局状态由一种称为 &lt;strong&gt;改进版 Merkle–Patricia Trie&lt;/strong&gt; 的巨大数据结构保存。该结构将所有账户（包括外部拥有账户和合约账户）及其关联的数据通过哈希组织起来，最终回溯到区块链上的单一根哈希（state root）。这种设计保证了状态可证明性与高效性（例如轻客户端验证）&lt;/p&gt;
-&lt;h2 id=&#34;交易transactions&#34;&gt;交易（Transactions）&lt;/h2&gt;
-&lt;p&gt;交易是由账户发起并经密码学签名的指令，分为两类：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;消息调用交易（Message Call）&lt;/strong&gt;：调用现有合约或向外部账户发送 ETH&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;合约创建交易（Contract Creation）&lt;/strong&gt;：将已编译的智能合约字节码部署为一个新的合约账户。部署后，合约字节码存储在该合约账户中；每当有交易/消息调用该合约时，EVM 会读取并执行这些字节码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;evm-的工作方式&#34;&gt;EVM 的工作方式&lt;/h2&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;堆栈机stack-machine&#34;&gt;堆栈机（Stack machine）&lt;/h3&gt;
-&lt;p&gt;EVM 是一个基于堆栈的虚拟机：&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Web3 开发框架合集</title>
       <link>http://localhost:1313/web3/framework/intro/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
@@ -312,6 +318,83 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;blockquote&gt;
 &lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;hardhat&#34;&gt;&lt;a href=&#34;https://hardhat.org/docs/getting-started&#34;&gt;hardhat&lt;/a&gt;&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>合约语言 笔记合集</title>
+      <link>http://localhost:1313/web3/codelanguage/intro/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/intro/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;本文件为 Code Language 的简要说明，面向 Web3 开发者与学习者，概述 Solana 与 Ethereum 两大生态中常见的合约语言及其基本用途与特点。内容以技术介绍为主，强调实际开发中的可理解性与参考价值，适合作为项目仓库或学习笔记中的快速查阅文档&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ethereum&#34;&gt;Ethereum&lt;/h2&gt;
+&lt;p&gt;以太坊生态的合约开发语言丰富，从高级语言到中间/低级语言都有对应工具链。下面按常见度与用途列出&lt;/p&gt;
+&lt;h3 id=&#34;solidity&#34;&gt;Solidity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：以太坊主流高级语言（类似 JS/Java 风格），最广泛使用的智能合约语言&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面向合约、支持继承、接口、事件、ABI 自动化&lt;/li&gt;
+&lt;li&gt;丰富生态（Truffle/Hardhat/Foundry 等工具链）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开发门槛低、资料与示例丰富、主网项目多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-solidity&#34; data-lang=&#34;solidity&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// SPDX-License-Identifier: MIT
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pragma solidity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;contract&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Counter&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;uint256&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;inc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vyper&#34;&gt;Vyper&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：以 Python 风格设计的以太坊合约语言，追求简洁与安全性（避免复杂特性）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法更接近 Python，但只用于合约开发（不是通用 Python）&lt;/li&gt;
+&lt;li&gt;有意减少语言特性以降低易错面（例如限制继承、复杂抽象）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更可预测、审计面更小，适合对安全性要求高的合约。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;示例（概念）&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uint256&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@external&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;inc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;yul&#34;&gt;Yul&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/yul/yul&#34;&gt; Yul 使用指南 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：EVM 的中间表示（IR），Solidity 等编译器可输出 Yul，用于更精细的优化与跨 EVM 后端（例如 EVM + ewasm）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：&lt;/p&gt;</description>
     </item>
     <item>
       <title>DeFi 笔记合集</title>
@@ -1604,6 +1687,142 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;上链时部分字段会被打包，转变成 &lt;code&gt;PackedUserOperation&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Huff CLI</title>
+      <link>http://localhost:1313/web3/codelanguage/huff/cli/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/huff/cli/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;虽然多数时候您会在Foundry项目中使用foundry-huff库来编译Huff合约，但编译器自带的CLI提供了一些额外的配置选项和有用的工具&lt;/p&gt;
+&lt;h2 id=&#34;选项&#34;&gt;选项&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;huffc 0.3.0&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;用纯Rust构建的Huff语言编译器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;使用格式：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;huffc &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;选项&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;路径&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;子命令&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;参数：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&amp;lt;路径&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 要编译的合约（一个或多个）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;选项：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-a&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--artifacts&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 是否生成产物文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-b&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--bytecode&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 生成并记录字节码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-c&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--constants &amp;lt;常量&amp;gt;...&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 为编译环境覆盖/设置常量
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-d&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--output-directory &amp;lt;输出目录&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 输出目录 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;默认: ./artifacts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-g&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--interface &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&amp;lt;接口&amp;gt;...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 为Huff产物文件生成Solidity接口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-h&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--help&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 打印帮助信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-i&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--inputs &amp;lt;输入参数&amp;gt;...&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 构造函数输入参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-n&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--interactive&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 交互式输入构造函数参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-o&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--output &amp;lt;输出&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 输出文件路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-r&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--bin-runtime&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 生成并记录运行时字节码
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-s&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--source-path &amp;lt;源路径&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 合约的源路径 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;默认: ./contracts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-v&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--verbose&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 详细输出
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-V&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--version&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 打印版本信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;-z&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;, &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;--optimize&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 优化编译 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;开发中&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;子命令：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 打印此信息或给定子命令的帮助信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; 测试子命令
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-a-生成产物文件&#34;&gt;&lt;code&gt;-a&lt;/code&gt; 生成产物文件&lt;/h3&gt;
+&lt;p&gt;传递 &lt;code&gt;-a&lt;/code&gt; 标志将在 &lt;code&gt;./artifacts&lt;/code&gt; 目录或 &lt;code&gt;-d&lt;/code&gt; 标志指定的位置生成产物JSON文件。该JSON文件包含以下信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File（文件名）&lt;/li&gt;
+&lt;li&gt;Path（路径）&lt;/li&gt;
+&lt;li&gt;Source（源代码）&lt;/li&gt;
+&lt;li&gt;Dependencies（依赖项）&lt;/li&gt;
+&lt;li&gt;Bytecode（字节码）&lt;/li&gt;
+&lt;li&gt;Runtime Bytecode（运行时字节码）&lt;/li&gt;
+&lt;li&gt;Contract ABI（合约ABI）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Huff 使用指南</title>
+      <link>http://localhost:1313/web3/codelanguage/huff/huff/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/huff/huff/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;Huff 是一种低级编程语言，专为在以太坊虚拟机（EVM）上开发高性能、优化程度极高的智能合约而设计。Huff 不隐藏 EVM 的内部机制，而是将其编程堆栈暴露给开发者，以便进行手动操作和精细控制&lt;/p&gt;
+&lt;p&gt;Huff 最初由 Aztec Protocol 团队创建，用于编写 Weierstrudel，这是一个链上椭圆曲线算术库，要求代码极度优化，而 Solidity 和 Yul 都无法满足这种性能需求&lt;/p&gt;
+&lt;p&gt;虽然 EVM 专家可以使用 Huff 编写适用于生产环境的高效智能合约，但它也可以作为初学者学习 EVM 工作原理的一种方式&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/huff/example&#34;&gt;Huff 详细使用示例&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;Huff 编译器是用 &lt;strong&gt;Rust&lt;/strong&gt; 开发的，旨在提供高性能的 Huff 代码编译体验&lt;/p&gt;
+&lt;p&gt;安装方式与 &lt;strong&gt;Foundry&lt;/strong&gt; 类似&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;运行命令安装 Huffup：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L get.huff.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;注意事项：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;该命令会安装 &lt;code&gt;huffup&lt;/code&gt; 可执行文件，但不一定会自动添加到系统路径&lt;/li&gt;
+&lt;li&gt;如果出现以下错误：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huffup: command not found
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;请执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc    &lt;span class=&#34;c1&#34;&gt;# 或者&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;或者直接打开一个新的终端窗口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装完成并在路径中可用后，运行：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;huffup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可安装最新稳定版本的 &lt;strong&gt;huffc&lt;/strong&gt;（Huff 编译器）&lt;/p&gt;
+&lt;h3 id=&#34;windows-用户从源码构建&#34;&gt;Windows 用户：从源码构建&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 Rust 工具链：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;下载并运行 &lt;a href=&#34;https://rustup.rs&#34;&gt;rustup-init&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;会在控制台启动安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;如果遇到错误，可能缺少 &lt;strong&gt;VS Build Tools&lt;/strong&gt;，请下载安装&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Huff 详细使用示例</title>
+      <link>http://localhost:1313/web3/codelanguage/huff/example/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/huff/example/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Huff by Example&lt;/strong&gt; 旨在详细解释 Huff 语言的各项特性，并通过代码示例说明每个特性的使用方法、使用时机、使用场景以及设计目的。文中的代码片段附有丰富注释，但本节假设读者对 &lt;strong&gt;EVM&lt;/strong&gt; 有一定基础&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;定义接口-defining-your-interface&#34;&gt;定义接口 (Defining your Interface)&lt;/h2&gt;
+&lt;p&gt;在 Huff 中定义接口不是必需的步骤，但可以为以下两个目的使用：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;作为 &lt;code&gt;__FUNC_SIG&lt;/code&gt; 和 &lt;code&gt;__EVENT_HASH&lt;/code&gt; 内置函数的参数&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生成 Solidity 接口 / 合约 ABI&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;函数类型&lt;/strong&gt;：可以是 &lt;code&gt;view&lt;/code&gt;、&lt;code&gt;pure&lt;/code&gt;、&lt;code&gt;payable&lt;/code&gt; 或 &lt;code&gt;nonpayable&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;函数接口&lt;/strong&gt;：仅建议为外部可调用函数定义&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件（Events）&lt;/strong&gt;：可以包含索引值（indexed）和非索引值（non-indexed）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-huff&#34; data-lang=&#34;huff&#34;&gt;#define function testFunction(uint256, bytes32) view returns (bytes memory)
+
+#define event TestEvent(address indexed, uint256)
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;testFunction&lt;/code&gt;：定义了一个接受 &lt;code&gt;uint256&lt;/code&gt; 和 &lt;code&gt;bytes32&lt;/code&gt; 参数的只读函数，返回 &lt;code&gt;bytes&lt;/code&gt; 类型&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TestEvent&lt;/code&gt;：定义了一个事件，包含一个索引地址和一个 &lt;code&gt;uint256&lt;/code&gt; 参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;常量-constants&#34;&gt;常量 (Constants)&lt;/h2&gt;
+&lt;p&gt;在 Huff 合约中，&lt;strong&gt;常量不会存储在合约的 storage 中&lt;/strong&gt;，而是在编译时即可在合约内调用&lt;/p&gt;
+&lt;p&gt;常量可以是以下两种类型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;字节（bytes）&lt;/strong&gt;：最大 32 字节&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FREE_STORAGE_POINTER&lt;/strong&gt;：表示合约中未使用的存储槽（storage slot）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>EIP-2612</title>
       <link>http://localhost:1313/web3/eip/eip-2612/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
@@ -1633,6 +1852,83 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;&lt;code&gt;v, r, s&lt;/code&gt; 必须构成来自 &lt;code&gt;owner&lt;/code&gt; 的有效 secp256k1 签名（签名的数据按 EIP-712 的 &lt;code&gt;DOMAIN_SEPARATOR&lt;/code&gt; 与 &lt;code&gt;Permit&lt;/code&gt; 类型哈希构造）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果以上任一不满足，&lt;code&gt;permit&lt;/code&gt; 必须 revert。成功时应执行：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yul 使用指南</title>
+      <link>http://localhost:1313/web3/codelanguage/yul/yul/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/web3/codelanguage/yul/yul/</guid>
+      <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Yul&lt;/strong&gt;（早期称为 JULIA 或 IULIA）是一种中间语言，可编译到多种后端，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ethereum Virtual Machine (EVM) 1.0&lt;/li&gt;
+&lt;li&gt;EVM 1.5&lt;/li&gt;
+&lt;li&gt;计划支持的 eWASM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;它旨在作为这些平台的通用标准。Yul 已经可以在 Solidity 中作为 &lt;strong&gt;内联汇编&lt;/strong&gt; 使用，未来 Solidity 编译器甚至可能将 Yul 用作默认的中间语言。Yul 的设计也使得为其构建高级优化器变得容易&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心特性&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;核心组件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数（function）&lt;/li&gt;
+&lt;li&gt;代码块（block）&lt;/li&gt;
+&lt;li&gt;变量（variable）&lt;/li&gt;
+&lt;li&gt;字面量（literal）&lt;/li&gt;
+&lt;li&gt;循环（for）&lt;/li&gt;
+&lt;li&gt;条件语句（if / switch）&lt;/li&gt;
+&lt;li&gt;表达式与变量赋值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;强类型系统&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量和字面量必须带类型前缀&lt;/li&gt;
+&lt;li&gt;支持类型：&lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;u8&lt;/code&gt;, &lt;code&gt;s8&lt;/code&gt;, &lt;code&gt;u32&lt;/code&gt;, &lt;code&gt;s32&lt;/code&gt;, &lt;code&gt;u64&lt;/code&gt;, &lt;code&gt;s64&lt;/code&gt;, &lt;code&gt;u128&lt;/code&gt;, &lt;code&gt;s128&lt;/code&gt;, &lt;code&gt;u256&lt;/code&gt;, &lt;code&gt;s256&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;操作符与内置函数&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Yul 本身不提供操作符&lt;/li&gt;
+&lt;li&gt;对于 EVM，操作码（opcode）作为内置函数提供&lt;/li&gt;
+&lt;li&gt;如果后端平台不同，可以重新实现这些函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;递归实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-yul&#34; data-lang=&#34;yul&#34;&gt;{
+    function power(base:u256, exponent:u256) -&amp;gt; result:u256
+    {
+        switch exponent
+        case 0:u256 { result := 1:u256 }
+        case 1:u256 { result := base }
+        default:
+        {
+            result := power(mul(base, base), div(exponent, 2:u256))
+            switch mod(exponent, 2:u256)
+                case 1:u256 { result := mul(base, result) }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;循环实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-yul&#34; data-lang=&#34;yul&#34;&gt;{
+    function power(base:u256, exponent:u256) -&amp;gt; result:u256
+    {
+        result := 1:u256
+        for { let i := 0:u256 } lt(i, exponent) { i := add(i, 1:u256) }
+        {
+            result := mul(result, base)
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;注：循环实现依赖 EVM 的 &lt;code&gt;lt&lt;/code&gt; 和 &lt;code&gt;add&lt;/code&gt; 操作码。&lt;/p&gt;</description>
     </item>
     <item>
       <title>EIP-2718</title>
@@ -1817,67 +2113,12 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;h3 id=&#34;不同类型消息的编码规则&#34;&gt;不同类型消息的编码规则&lt;/h3&gt;
 &lt;p&gt;为了便于哈希与签名，不同类型的消息在签名前会被编码为字节串。&lt;/p&gt;
 &lt;h4 id=&#34;1-交易𝕋&#34;&gt;1. 交易（𝕋）&lt;/h4&gt;
-
-
-
-&lt;div class=&#34;goat svg-container &#34;&gt;
-  
-    &lt;svg
-      xmlns=&#34;http://www.w3.org/2000/svg&#34;
-      font-family=&#34;Menlo,Lucida Console,monospace&#34;
-      
-        viewBox=&#34;0 0 368 25&#34;
-      &gt;
-      &lt;g transform=&#39;translate(8,16)&#39;&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;0&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;e&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;8&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;n&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;16&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;c&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;24&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;o&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;32&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;d&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;40&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;e&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;48&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;(&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;56&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;t&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;64&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;r&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;72&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;a&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;80&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;n&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;88&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;s&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;96&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;a&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;104&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;c&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;112&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;t&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;120&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;i&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;128&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;o&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;136&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;n&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;144&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;)&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;160&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;=&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;176&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;R&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;184&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;L&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;192&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;P&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;200&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;_&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;208&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;e&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;216&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;n&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;224&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;c&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;232&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;o&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;240&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;d&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;248&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;e&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;256&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;(&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;264&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;t&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;272&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;r&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;280&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;a&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;288&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;n&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;296&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;s&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;304&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;a&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;312&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;c&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;320&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;t&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;328&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;i&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;336&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;o&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;344&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;n&lt;/text&gt;
-&lt;text text-anchor=&#39;middle&#39; x=&#39;352&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;)&lt;/text&gt;
-&lt;/g&gt;
-
-    &lt;/svg&gt;
-  
-&lt;/div&gt;
-&lt;p&gt;交易签名直接对交易的 RLP 编码结果进行签名，这是以太坊最基础的交易签名方式，用于转账和合约调用。&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;transaction&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;RLP_encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;transaction&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;交易签名直接对交易的 RLP 编码结果进行签名，这是以太坊最基础的交易签名方式，用于转账和合约调用。&lt;/p&gt;
+&lt;h4 id=&#34;2-普通字节串消息𝔹ⁿ&#34;&gt;2. 普通字节串消息（𝔹⁸ⁿ）&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;encode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;\x19Ethereum Signed Message:\n&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;‖&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;‖&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;len(message)&lt;/code&gt; 是消息字节长度的非零填充 ASCII 十进制编码&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
