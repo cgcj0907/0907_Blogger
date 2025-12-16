@@ -5,6 +5,11 @@ draft: false
 tags: ["Toolkits", "Cache", "Redis"]
 ShowToc: true
 ---
+
+![](/Toolkits/cache/redis_use.webp)
+> 图片来源: https://bytebytego.com
+
+---
 ## 1. 会话管理（Session）
 
 * **用途**：在分布式系统中共享用户会话数据

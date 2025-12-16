@@ -5,6 +5,10 @@ draft: false
 tags: ["Toolkits", "Cache"]
 ShowToc: true
 ---
+![](/Toolkits/cache/cache.webp)
+> 图片来源: https://bytebytego.com
+
+---
 
 ## 1. 什么是缓存（What is a Cache）
 

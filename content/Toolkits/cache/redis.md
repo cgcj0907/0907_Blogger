@@ -5,7 +5,10 @@ draft: false
 tags: ["Toolkits", "Cache", "Redis"]
 ShowToc: true
 ---
+![](/Toolkits/cache/redis.webp)
+> 图片来源: https://bytebytego.com
 
+---
 ## 一、什么是 Redis
 
 * **Redis** = Remote Dictionary Server（远程字典服务）

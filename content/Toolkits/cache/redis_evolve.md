@@ -5,7 +5,10 @@ draft: false
 tags: ["Toolkits", "Cache", "Redis"]
 ShowToc: true
 ---
+![](/Toolkits/cache/redis_evolve.webp)
+> 图片来源: https://bytebytego.com
 
+---
 ## 2010 - 独立版 Redis（Standalone Redis）
 
 * **Redis 1.0 发布**，架构简单，通常用作业务应用的缓存

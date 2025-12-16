@@ -5,7 +5,10 @@ draft: false
 tags: ["Toolkits", "Cache", "Redis"]
 ShowToc: true
 ---
+![](/Toolkits/cache/redis_fast.webp)
+> 图片来源: https://bytebytego.com
 
+---
 ## 一、基于内存（RAM-based）
 
 ### 1. Redis 使用内存而非磁盘

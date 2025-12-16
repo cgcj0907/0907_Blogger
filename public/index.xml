@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>0907 WORLD</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:53175/</link>
     <description>Recent content on 0907 WORLD</description>
     <image>
       <title>0907 WORLD</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:53175/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UESTC 简介</title>
-      <link>http://localhost:1313/uestc/intro/</link>
+      <link>http://localhost:53175/uestc/intro/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/uestc/intro/</guid>
+      <guid>http://localhost:53175/uestc/intro/</guid>
       <description>&lt;h2 id=&#34;编程学习&#34;&gt;编程学习&lt;/h2&gt;
 &lt;p&gt;在大学期间，我主要学习了以下编程语言和技术：&lt;/p&gt;
 &lt;ul&gt;
@@ -48,15 +48,15 @@
     </item>
     <item>
       <title>Web3 简介</title>
-      <link>http://localhost:1313/web3/intro/</link>
+      <link>http://localhost:53175/web3/intro/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/intro/</guid>
+      <guid>http://localhost:53175/web3/intro/</guid>
       <description>&lt;h1 id=&#34;welcome-to-web3&#34;&gt;Welcome to Web3!&lt;/h1&gt;
 &lt;p&gt;Web3代表互联网下一个时代以区块链为核心实现去中心化用户掌控数据和资产通过智能合约自动化交互摆脱中心化平台控制&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/security/intro&#34;&gt;安全审计 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/security/intro&#34;&gt;安全审计 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Web3安全聚焦预防黑客攻击和漏洞利用&lt;br&gt;
 采用多层防御策略包括智能合约审计访问控制实时监控&lt;br&gt;
 使用Slither Mythril检测重入攻击整数溢出权限问题&lt;br&gt;
@@ -77,7 +77,7 @@ ERC-4337账户抽象提升用户体验支持社交恢复气体赞助&lt;br&gt;
 安全提示必须使用硬件签名绝不泄露种子短语定期备份&lt;/p&gt;
 &lt;h2 id=&#34;eip&#34;&gt;EIP&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/eip/intro&#34;&gt;EIP 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/eip/intro&#34;&gt;EIP 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;EIP是以太坊改进提案标准化平台变更&lt;br&gt;
 涵盖核心协议客户端API合约规范&lt;br&gt;
 任何人可提交草案经社区讨论编辑审查进入最终状态&lt;br&gt;
@@ -90,7 +90,7 @@ EIP-4844引入blob数据大幅降低Layer2成本&lt;br&gt;
 未来EIP聚焦可扩展性隐私如Verkle树&lt;/p&gt;
 &lt;h2 id=&#34;codelanuage&#34;&gt;codeLanuage&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanguage/intro&#34;&gt;合约语言 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/codelanguage/intro&#34;&gt;合约语言 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;智能合约语言最终编译为EVM字节码&lt;br&gt;
 Solidity主流类JavaScript支持继承修饰符库生态最丰富&lt;br&gt;
 Vyper Python风格故意去除继承无限循环提升可审计性安全性&lt;br&gt;
@@ -102,7 +102,7 @@ Vyper强调人类可读代码减少攻击面&lt;br&gt;
 选择语言取决于项目复杂度和安全优先级&lt;/p&gt;
 &lt;h2 id=&#34;evm&#34;&gt;EVM&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/evm/intro&#34;&gt;EVM 笔记合集&lt;/a&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/evm/intro&#34;&gt;EVM 笔记合集&lt;/a&gt;
 EVM是以太坊虚拟机去中心化计算引擎&lt;br&gt;
 执行智能合约字节码采用栈基架构深度1024&lt;br&gt;
 每操作码消耗气体防止滥用&lt;br&gt;
@@ -114,7 +114,7 @@ EVM负责状态转换更新账户余额存储&lt;br&gt;
 EVM是整个以太坊生态的计算核心&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;framework&#34;&gt;framework&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/intro&#34;&gt;Web3 开发框架合集&lt;/a&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/intro&#34;&gt;Web3 开发框架合集&lt;/a&gt;
 Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
 Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js&lt;br&gt;
 Truffle老牌套件自带Ganache本地链Mocha测试适合新手&lt;br&gt;
@@ -127,9 +127,9 @@ Foundry性能极致适合高级开发者&lt;br&gt;
     </item>
     <item>
       <title>0907 Wallet</title>
-      <link>http://localhost:1313/projects/0907wallet/</link>
+      <link>http://localhost:53175/projects/0907wallet/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/0907wallet/</guid>
+      <guid>http://localhost:53175/projects/0907wallet/</guid>
       <description>&lt;h1 id=&#34;项目简介&#34;&gt;项目简介&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -349,9 +349,9 @@ Foundry性能极致适合高级开发者&lt;br&gt;
     </item>
     <item>
       <title>Toolkits 简介</title>
-      <link>http://localhost:1313/toolkits/intro/</link>
+      <link>http://localhost:53175/toolkits/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/intro/</guid>
+      <guid>http://localhost:53175/toolkits/intro/</guid>
       <description>&lt;h2 id=&#34;ide&#34;&gt;IDE&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Integrated Development Environment（集成开发环境）&lt;br&gt;
@@ -392,7 +392,7 @@ Foundry性能极致适合高级开发者&lt;br&gt;
 &lt;h3 id=&#34;日志管理&#34;&gt;日志管理&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Loki&lt;/strong&gt;：分布式日志系统&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:1313/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:53175/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;LogstashEncoder&lt;/strong&gt;：结构化 JSON 日志&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;系统监控&#34;&gt;系统监控&lt;/h3&gt;
@@ -408,16 +408,16 @@ Foundry性能极致适合高级开发者&lt;br&gt;
 &lt;h3 id=&#34;数据存储&#34;&gt;数据存储&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;: 高性能列式数据库
-👉 &lt;a href=&#34;http://localhost:1313/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
+👉 &lt;a href=&#34;http://localhost:53175/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;学习与效率工具&#34;&gt;学习与效率工具&lt;/h2&gt;
 &lt;p&gt;帮助知识管理、项目整理与写作&lt;/p&gt;</description>
     </item>
     <item>
       <title>EVM 笔记合集</title>
-      <link>http://localhost:1313/web3/evm/intro/</link>
+      <link>http://localhost:53175/web3/evm/intro/</link>
       <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/evm/intro/</guid>
+      <guid>http://localhost:53175/web3/evm/intro/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;以太坊虚拟机（Ethereum Virtual Machine，EVM）是一个去中心化的、跨节点一致的执行环境，负责在所有以太坊节点上安全地执行智能合约代码。节点运行 EVM 来处理交易、执行合约逻辑，并通过消耗 &lt;strong&gt;Gas（燃料）&lt;/strong&gt; 来度量并限制计算资源，从而保障网络的效率与安全&lt;/p&gt;
@@ -468,15 +468,15 @@ Foundry性能极致适合高级开发者&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;合约创建交易（Contract Creation）&lt;/strong&gt;：将已编译的智能合约字节码部署为一个新的合约账户。部署后，合约字节码存储在该合约账户中；每当有交易/消息调用该合约时，EVM 会读取并执行这些字节码&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;evm-的工作方式&#34;&gt;EVM 的工作方式&lt;/h2&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;堆栈机stack-machine&#34;&gt;堆栈机（Stack machine）&lt;/h3&gt;
 &lt;p&gt;EVM 是一个基于堆栈的虚拟机：&lt;/p&gt;</description>
     </item>
     <item>
       <title>EIP 笔记合集</title>
-      <link>http://localhost:1313/web3/eip/intro/</link>
+      <link>http://localhost:53175/web3/eip/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/intro/</guid>
+      <guid>http://localhost:53175/web3/eip/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;EIP（Ethereum Improvement Proposal）是以太坊改进提案&lt;br&gt;
 任何人都能提交的标准化文档&lt;br&gt;
@@ -533,9 +533,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>安全审计 笔记合集</title>
-      <link>http://localhost:1313/web3/security/intro/</link>
+      <link>http://localhost:53175/web3/security/intro/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/intro/</guid>
+      <guid>http://localhost:53175/web3/security/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的&lt;/p&gt;
 &lt;p&gt;然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，&lt;strong&gt;“安全前置”&lt;/strong&gt; 的理念在这里被提升到了前所未有的高度&lt;/p&gt;
@@ -632,21 +632,21 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Web3 开发框架合集</title>
-      <link>http://localhost:1313/web3/framework/intro/</link>
+      <link>http://localhost:53175/web3/framework/intro/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/framework/intro/</guid>
+      <guid>http://localhost:53175/web3/framework/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;foundry&#34;&gt;&lt;a href=&#34;https://getfoundry.sh/introduction/getting-started/&#34;&gt;foundry&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;hardhat&#34;&gt;&lt;a href=&#34;https://hardhat.org/docs/getting-started&#34;&gt;hardhat&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     <item>
       <title>合约语言 笔记合集</title>
-      <link>http://localhost:1313/web3/codelanguage/intro/</link>
+      <link>http://localhost:53175/web3/codelanguage/intro/</link>
       <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/codelanguage/intro/</guid>
+      <guid>http://localhost:53175/web3/codelanguage/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;本文件为 Code Language 的简要说明，面向 Web3 开发者与学习者，概述 Solana 与 Ethereum 两大生态中常见的合约语言及其基本用途与特点。内容以技术介绍为主，强调实际开发中的可理解性与参考价值，适合作为项目仓库或学习笔记中的快速查阅文档&lt;/p&gt;
 &lt;hr&gt;
@@ -711,7 +711,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;yul&#34;&gt;Yul&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/yul/yul&#34;&gt; Yul 使用指南 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/codelanuage/yul/yul&#34;&gt; Yul 使用指南 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：EVM 的中间表示（IR），Solidity 等编译器可输出 Yul，用于更精细的优化与跨 EVM 后端（例如 EVM + ewasm）。&lt;/p&gt;
@@ -721,9 +721,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>DeFi 笔记合集</title>
-      <link>http://localhost:1313/web3/defi/intro/</link>
+      <link>http://localhost:53175/web3/defi/intro/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/defi/intro/</guid>
+      <guid>http://localhost:53175/web3/defi/intro/</guid>
       <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;去中心化金融旨在通过区块链与智能合约，构建一个开放、透明、可组合的金融服务生态系统。本合集从核心协议原理出发，系统梳理各赛道的运行机制、风险模型与演进趋势。&lt;/p&gt;
 &lt;hr&gt;
@@ -733,21 +733,21 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;Flash Loan&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/defi/lending/flashloan&#34;&gt; Flash Loan 闪电贷 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/defi/lending/flashloan&#34;&gt; Flash Loan 闪电贷 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;liquid-staking&#34;&gt;Liquid Staking&lt;/h2&gt;
 &lt;p&gt;流动性质押协议允许用户在参与区块链共识（如质押ETH）的同时，获得代表质押头寸的流动性衍生代币（如stETH），从而解决质押资产流动性锁定的问题&lt;/p&gt;
 &lt;h2 id=&#34;dex&#34;&gt;DEX&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/defi/dex/dex&#34;&gt; DEX 经典概念 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/defi/dex/dex&#34;&gt; DEX 经典概念 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;去中心化交易所（DEX）通过自动做市商机制，允许用户直接在链上交易加密资产。核心在于流动性池、恒定乘积等定价公式、手续费激励以及无常损失管理&lt;/p&gt;
 &lt;h2 id=&#34;rwa&#34;&gt;RWA&lt;/h2&gt;
 &lt;p&gt;现实世界资产旨在将传统金融资产（如国债、信贷、不动产）通过代币化引入区块链，为DeFi生态系统提供具有实际价值支撑的收益资产，并面临合规、托管与法律映射等独特挑战&lt;/p&gt;</description>
     </item>
     <item>
       <title>Promise 与 Event Loop 的联系与理解</title>
-      <link>http://localhost:1313/findings/promisetoeventloop/</link>
+      <link>http://localhost:53175/findings/promisetoeventloop/</link>
       <pubDate>Sat, 29 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/findings/promisetoeventloop/</guid>
+      <guid>http://localhost:53175/findings/promisetoeventloop/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;promise-与-event-loop分步深入指南&#34;&gt;Promise 与 Event Loop：分步深入指南&lt;/h1&gt;
 &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
@@ -806,9 +806,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>0907 Wallet 钱包管理模块设计</title>
-      <link>http://localhost:1313/projects/0907wallet/walletmanagement/</link>
+      <link>http://localhost:53175/projects/0907wallet/walletmanagement/</link>
       <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/0907wallet/walletmanagement/</guid>
+      <guid>http://localhost:53175/projects/0907wallet/walletmanagement/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;模块概览&#34;&gt;模块概览&lt;/h1&gt;
 &lt;p&gt;👉 &lt;a href=&#34;https://github.com/cgcj0907/0907-Wallet/tree/main/app/walletManagement&#34;&gt;模块代码仓库（walletManagement）&lt;/a&gt;&lt;/p&gt;
@@ -902,9 +902,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>SHA256、Base64 与 Uint8Array 的对比与理解</title>
-      <link>http://localhost:1313/findings/sha256-base64-uint8/</link>
+      <link>http://localhost:53175/findings/sha256-base64-uint8/</link>
       <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/findings/sha256-base64-uint8/</guid>
+      <guid>http://localhost:53175/findings/sha256-base64-uint8/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;在做密码存储的时候，我遇到了三种常见的数据表示方式：&lt;code&gt;SHA256&lt;/code&gt;、&lt;code&gt;Base64&lt;/code&gt; 和 &lt;code&gt;Uint8Array&lt;/code&gt;（简称 &lt;code&gt;Uint8&lt;/code&gt;）。它们各有用途和特点，于是写下这篇文章来总结一下。&lt;/p&gt;
 &lt;hr&gt;
@@ -1007,9 +1007,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>DEX 经典概念</title>
-      <link>http://localhost:1313/web3/defi/dex/dex/</link>
+      <link>http://localhost:53175/web3/defi/dex/dex/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/defi/dex/dex/</guid>
+      <guid>http://localhost:53175/web3/defi/dex/dex/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;AMM（Automated Market Maker，自动做市商）是一类无需订单簿、无需对手方撮合就能完成资产交换的机制。它通过一条&lt;strong&gt;数学定价曲线&lt;/strong&gt;（例如最经典的恒定乘积公式 &lt;code&gt;x * y = k&lt;/code&gt;）来确定池中两种资产的价格与兑换比例&lt;/p&gt;
 &lt;p&gt;交易者与 AMM 交互时，并不是与某个具体对手方进行买卖，而是与池子本身交易：&lt;/p&gt;
@@ -1089,9 +1089,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Flash Loan 闪电贷</title>
-      <link>http://localhost:1313/web3/defi/lending/flashloan/</link>
+      <link>http://localhost:53175/web3/defi/lending/flashloan/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/defi/lending/flashloan/</guid>
+      <guid>http://localhost:53175/web3/defi/lending/flashloan/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;闪电贷（Flash Loan）&lt;/strong&gt; 是一种在单笔区块链交易内借入资产、使用资产并在同一交易内归还借款（含手续费）的借贷模式。核心特点是 &lt;strong&gt;“原子性”&lt;/strong&gt;：借款、使用和还款必须在同一笔交易内完成，否则交易会回滚，借款不会生效。&lt;/p&gt;
 &lt;p&gt;这种机制使得借款人在不提供抵押的情况下临时动用大量资产，用于套利、清算、头寸迁移等操作；同时也被用于发动复杂的攻击（如操纵价格、闪电清算等）。&lt;/p&gt;
@@ -1313,9 +1313,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>foundry Forge 使用指南</title>
-      <link>http://localhost:1313/web3/framework/foundry/forge/</link>
+      <link>http://localhost:53175/web3/framework/foundry/forge/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/framework/foundry/forge/</guid>
+      <guid>http://localhost:53175/web3/framework/foundry/forge/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Forge 是 Foundry 的核心组件，用于编写、运行和调试 Solidity 智能合约测试，支持单元测试、模糊测试（fuzz testing）和不变量测试（invariant testing）。它允许开发者在 Solidity 中直接编写测试，而无需切换到其他语言。Forge 通过 &lt;code&gt;forge test&lt;/code&gt; 命令运行测试，并提供丰富的作弊码（cheatcodes）来模拟各种场景&lt;/p&gt;
 &lt;h2 id=&#34;测试类型&#34;&gt;测试类型&lt;/h2&gt;
@@ -1373,37 +1373,37 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>foundry 使用指南</title>
-      <link>http://localhost:1313/web3/framework/foundry/intro/</link>
+      <link>http://localhost:53175/web3/framework/foundry/intro/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/framework/foundry/intro/</guid>
+      <guid>http://localhost:53175/web3/framework/foundry/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;h2 id=&#34;入门指南&#34;&gt;入门指南&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/guides&#34;&gt;foundry 入门指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/guides&#34;&gt;foundry 入门指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;forge&#34;&gt;Forge&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/forge&#34;&gt;foundry Forge 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/forge&#34;&gt;foundry Forge 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;cast&#34;&gt;Cast&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/cast&#34;&gt;foundry Cast 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/cast&#34;&gt;foundry Cast 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;anvil&#34;&gt;Anvil&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/anvil&#34;&gt;foundry Anvil 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/anvil&#34;&gt;foundry Anvil 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;chisel&#34;&gt;Chisel&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/chisel&#34;&gt;foundry Chisel 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/chisel&#34;&gt;foundry Chisel 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/configuration&#34;&gt;foundry 配置指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/configuration&#34;&gt;foundry 配置指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;cheatcode&#34;&gt;Cheatcode&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/cheatcode&#34;&gt;foundry Cheatcode 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/cheatcode&#34;&gt;foundry Cheatcode 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>测试级漏洞合集</title>
-      <link>http://localhost:1313/web3/security/vulnerability/tlv/</link>
+      <link>http://localhost:53175/web3/security/vulnerability/tlv/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/vulnerability/tlv/</guid>
+      <guid>http://localhost:53175/web3/security/vulnerability/tlv/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;h2 id=&#34;拒绝服务--dos---denial-of-service-&#34;&gt;拒绝服务 ( Dos - Denial of Service )&lt;/h2&gt;
 &lt;h3 id=&#34;简要概述&#34;&gt;简要概述&lt;/h3&gt;
@@ -1450,9 +1450,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>静态分析漏洞合集</title>
-      <link>http://localhost:1313/web3/security/vulnerability/sav/</link>
+      <link>http://localhost:53175/web3/security/vulnerability/sav/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/vulnerability/sav/</guid>
+      <guid>http://localhost:53175/web3/security/vulnerability/sav/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;h2 id=&#34;整数溢出integer-overflow&#34;&gt;整数溢出（Integer Overflow）&lt;/h2&gt;
 &lt;h3 id=&#34;简要概述&#34;&gt;简要概述&lt;/h3&gt;
@@ -1512,9 +1512,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>0907 Wallet 用户管理模块设计</title>
-      <link>http://localhost:1313/projects/0907wallet/usermanagement/</link>
+      <link>http://localhost:53175/projects/0907wallet/usermanagement/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/0907wallet/usermanagement/</guid>
+      <guid>http://localhost:53175/projects/0907wallet/usermanagement/</guid>
       <description>&lt;h1 id=&#34;模块概览&#34;&gt;模块概览&lt;/h1&gt;
 &lt;p&gt;👉 &lt;a href=&#34;https://github.com/cgcj0907/0907-Wallet/tree/main/app/userManagement&#34;&gt;模块代码仓库&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -1601,9 +1601,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>0907 Wallet 系统公用层设计</title>
-      <link>http://localhost:1313/projects/0907wallet/public/</link>
+      <link>http://localhost:53175/projects/0907wallet/public/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/0907wallet/public/</guid>
+      <guid>http://localhost:53175/projects/0907wallet/public/</guid>
       <description>&lt;h1 id=&#34;模块概览&#34;&gt;模块概览&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;app
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── components
@@ -1702,13 +1702,13 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;hashPassword&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storagets&#34;&gt;storage.ts&lt;/h3&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/toolkits/indexedDB&#34;&gt;关于 IndexedDB 的使用方法请见：IndexedDB 浏览器数据库&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/toolkits/indexedDB&#34;&gt;关于 IndexedDB 的使用方法请见：IndexedDB 浏览器数据库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>EIP-7702</title>
-      <link>http://localhost:1313/web3/eip/eip-7702/</link>
+      <link>http://localhost:53175/web3/eip/eip-7702/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-7702/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-7702/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;引入一种新的EIP-2718交易类型，允许外部拥有账户（EOA）为其账户设置代码。这是通过在交易中附加授权元组列表来实现的，每个元组的格式为&lt;code&gt;[chain_id, address, nonce, y_parity, r, s]&lt;/code&gt;。对于每个元组，授权账户的代码将被写入委托指示符&lt;code&gt;0xef0100 || address&lt;/code&gt;。所有代码执行操作都必须加载并执行委托指向的代码&lt;/p&gt;
 &lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
@@ -1947,9 +1947,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>低级漏洞合集</title>
-      <link>http://localhost:1313/web3/security/vulnerability/simple/</link>
+      <link>http://localhost:53175/web3/security/vulnerability/simple/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/vulnerability/simple/</guid>
+      <guid>http://localhost:53175/web3/security/vulnerability/simple/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;此章节主要整理一些智能合约开发中的低级漏洞，适合初学者了解和防范。这些漏洞虽然&amp;quot;低级&amp;quot;，但在实际项目中仍然频繁出现，可能导致严重的安全问题&lt;/p&gt;
 &lt;hr&gt;
@@ -1995,9 +1995,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>审计辅助工具</title>
-      <link>http://localhost:1313/web3/security/tool/auxiliarytools/</link>
+      <link>http://localhost:53175/web3/security/tool/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/tool/auxiliarytools/</guid>
+      <guid>http://localhost:53175/web3/security/tool/auxiliarytools/</guid>
       <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
 &lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
 在审计过程中可用于：&lt;/p&gt;
@@ -2041,9 +2041,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>漏洞等级划分标准</title>
-      <link>http://localhost:1313/web3/security/vulnerability/severity/</link>
+      <link>http://localhost:53175/web3/security/vulnerability/severity/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/vulnerability/severity/</guid>
+      <guid>http://localhost:53175/web3/security/vulnerability/severity/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;在识别代码库中的漏洞时，评估其潜在影响与风险至关重要。漏洞（finding）通常分为三类：&lt;/p&gt;
 &lt;ul&gt;
@@ -2107,9 +2107,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>静态分析工具</title>
-      <link>http://localhost:1313/web3/security/tool/staticanalysistools/</link>
+      <link>http://localhost:53175/web3/security/tool/staticanalysistools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/tool/staticanalysistools/</guid>
+      <guid>http://localhost:53175/web3/security/tool/staticanalysistools/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率&lt;/p&gt;
 &lt;hr&gt;
@@ -2183,16 +2183,16 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-1967</title>
-      <link>http://localhost:1313/web3/eip/eip-1967/</link>
+      <link>http://localhost:53175/web3/eip/eip-1967/</link>
       <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-1967/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-1967/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;委托代理合约被广泛用于可升级性和节省 Gas。这些代理合约依赖于一个逻辑合约（也称为实现合约或主拷贝），通过 &lt;code&gt;delegatecall&lt;/code&gt; 进行调用。这使得代理可以保持持久状态（存储和余额），同时将代码执行委托给逻辑合约&lt;/p&gt;
 &lt;p&gt;为避免代理和逻辑合约之间的存储使用冲突，逻辑合约的地址通常保存在一个特定的存储槽中（例如，OpenZeppelin 合约中的 &lt;code&gt;0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc&lt;/code&gt;），该槽位保证永远不会被编译器分配。本 EIP 提议一组标准存储槽来保存代理信息。这使得区块浏览器等客户端能够正确提取并向最终用户展示此信息，同时也允许逻辑合约据此执行操作&lt;/p&gt;
 &lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
 &lt;p&gt;委托代理被广泛使用，作为支持升级和降低部署 Gas 成本的手段。这类代理的例子可见于 OpenZeppelin Contracts、Gnosis、AragonOS、Melonport、Limechain、WindingTree、Decentraland 等众多项目&lt;/p&gt;
 &lt;p&gt;一个典型的例子是区块浏览器。最终用户希望与底层逻辑合约交互，而不是代理本身。拥有从代理检索逻辑合约地址的通用方法，允许区块浏览器展示逻辑合约的 ABI 而非代理的 ABI。浏览器通过检查合约在特定存储槽的内容来判断它是否是一个代理，如果是，则同时展示代理和逻辑合约的信息。例如，Etherscan 上对地址 &lt;code&gt;0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&lt;/code&gt; 的展示就是如此
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-1967/Sample-proxy-on-etherscan.webp&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EIP/EIP-1967/Sample-proxy-on-etherscan.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;另一个例子是那些明确知晓自身正被代理的逻辑合约。这使得它们可以基于此事实，在其逻辑中触发代码更新。一个通用的存储槽使得这些用例可以独立于所使用的具体代理实现&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
@@ -2268,9 +2268,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-4337</title>
-      <link>http://localhost:1313/web3/eip/eip-4337/</link>
+      <link>http://localhost:53175/web3/eip/eip-4337/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-4337/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -2467,9 +2467,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Huff CLI</title>
-      <link>http://localhost:1313/web3/codelanguage/huff/cli/</link>
+      <link>http://localhost:53175/web3/codelanguage/huff/cli/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/codelanguage/huff/cli/</guid>
+      <guid>http://localhost:53175/web3/codelanguage/huff/cli/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;虽然多数时候您会在Foundry项目中使用foundry-huff库来编译Huff合约，但编译器自带的CLI提供了一些额外的配置选项和有用的工具&lt;/p&gt;
 &lt;h2 id=&#34;选项&#34;&gt;选项&lt;/h2&gt;
@@ -2516,15 +2516,15 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Huff 使用指南</title>
-      <link>http://localhost:1313/web3/codelanguage/huff/huff/</link>
+      <link>http://localhost:53175/web3/codelanguage/huff/huff/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/codelanguage/huff/huff/</guid>
+      <guid>http://localhost:53175/web3/codelanguage/huff/huff/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Huff 是一种低级编程语言，专为在以太坊虚拟机（EVM）上开发高性能、优化程度极高的智能合约而设计。Huff 不隐藏 EVM 的内部机制，而是将其编程堆栈暴露给开发者，以便进行手动操作和精细控制&lt;/p&gt;
 &lt;p&gt;Huff 最初由 Aztec Protocol 团队创建，用于编写 Weierstrudel，这是一个链上椭圆曲线算术库，要求代码极度优化，而 Solidity 和 Yul 都无法满足这种性能需求&lt;/p&gt;
 &lt;p&gt;虽然 EVM 专家可以使用 Huff 编写适用于生产环境的高效智能合约，但它也可以作为初学者学习 EVM 工作原理的一种方式&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/huff/example&#34;&gt;Huff 详细使用示例&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/codelanuage/huff/example&#34;&gt;Huff 详细使用示例&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;Huff 编译器是用 &lt;strong&gt;Rust&lt;/strong&gt; 开发的，旨在提供高性能的 Huff 代码编译体验&lt;/p&gt;
 &lt;p&gt;安装方式与 &lt;strong&gt;Foundry&lt;/strong&gt; 类似&lt;/p&gt;
@@ -2565,9 +2565,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Huff 详细使用示例</title>
-      <link>http://localhost:1313/web3/codelanguage/huff/example/</link>
+      <link>http://localhost:53175/web3/codelanguage/huff/example/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/codelanguage/huff/example/</guid>
+      <guid>http://localhost:53175/web3/codelanguage/huff/example/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Huff by Example&lt;/strong&gt; 旨在详细解释 Huff 语言的各项特性，并通过代码示例说明每个特性的使用方法、使用时机、使用场景以及设计目的。文中的代码片段附有丰富注释，但本节假设读者对 &lt;strong&gt;EVM&lt;/strong&gt; 有一定基础&lt;/p&gt;
 &lt;hr&gt;
@@ -2603,9 +2603,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-2612</title>
-      <link>http://localhost:1313/web3/eip/eip-2612/</link>
+      <link>http://localhost:53175/web3/eip/eip-2612/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-2612/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-2612/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;EIP-2612&lt;/code&gt;（又称 &lt;code&gt;ERC-2612&lt;/code&gt; / &lt;em&gt;Permit extension for EIP-20&lt;/em&gt;）在 EIP-20 基础上新增 &lt;code&gt;permit&lt;/code&gt; 接口，允许通过 &lt;strong&gt;EIP-712 typed signatures&lt;/strong&gt;（secp256k1）来更改 &lt;code&gt;allowance&lt;/code&gt;，从而无需由 &lt;code&gt;msg.sender&lt;/code&gt; 发起 &lt;code&gt;approve&lt;/code&gt; 交易
 该扩展目的是最小化对现有 ERC-20 生态的入侵，同时解决用户必须持有 ETH 并且需发两笔交易（approve + action）的体验问题&lt;/p&gt;
@@ -2634,9 +2634,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Yul 使用指南</title>
-      <link>http://localhost:1313/web3/codelanguage/yul/yul/</link>
+      <link>http://localhost:53175/web3/codelanguage/yul/yul/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/codelanguage/yul/yul/</guid>
+      <guid>http://localhost:53175/web3/codelanguage/yul/yul/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Yul&lt;/strong&gt;（早期称为 JULIA 或 IULIA）是一种中间语言，可编译到多种后端，包括：&lt;/p&gt;
 &lt;ul&gt;
@@ -2711,9 +2711,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-2718</title>
-      <link>http://localhost:1313/web3/eip/eip-2718/</link>
+      <link>http://localhost:53175/web3/eip/eip-2718/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-2718/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-2718/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;TransactionType || TransactionPayload&lt;/code&gt; 是一个有效的交易格式，&lt;code&gt;TransactionType || ReceiptPayload&lt;/code&gt; 是一个有效的交易收据格式，其中：&lt;/p&gt;
 &lt;ul&gt;
@@ -2769,9 +2769,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-20</title>
-      <link>http://localhost:1313/web3/eip/eip-20/</link>
+      <link>http://localhost:53175/web3/eip/eip-20/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-20/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-20/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;本标准允许在智能合约中实现一个标准化的代币API。它提供了转账代币的基本功能，并允许批准代币以便可以被其他链上第三方花费。&lt;/p&gt;
 &lt;hr&gt;
@@ -2830,9 +2830,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-712</title>
-      <link>http://localhost:1313/web3/eip/eip-712/</link>
+      <link>http://localhost:53175/web3/eip/eip-712/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-712/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-712/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;这是一个用于对&lt;strong&gt;类型化结构化数据&lt;/strong&gt;（而不仅仅是字节串）进行哈希和签名的标准。它包括：&lt;/p&gt;
 &lt;ul&gt;
@@ -2852,9 +2852,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;本 EIP 旨在提高&lt;strong&gt;链下消息签名&lt;/strong&gt;在链上使用的可用性。链下消息签名因其节省 Gas 和减少链上交易数量而被广泛采用。目前，已签名的消息对用户来说是一个不透明的十六进制字符串，几乎没有关于消息的上下文信息&lt;/p&gt;
 &lt;p&gt;本提案概述了一种&lt;strong&gt;编码数据及其结构&lt;/strong&gt;的方案，允许在签名时向用户显示信息以供验证&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;本协议提出前的签名样式&lt;/strong&gt;:
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-712/eth_sign.webp&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EIP/EIP-712/eth_sign.webp&#34;&gt;
 &lt;strong&gt;本协议提出后的签名样式&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-712/eth_signTypedData.webp&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EIP/EIP-712/eth_signTypedData.webp&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
 &lt;p&gt;明白，你是&lt;strong&gt;要 Markdown 语法的笔记&lt;/strong&gt;，但内容保持学术/规范风格，不要花里胡哨。下面是 &lt;strong&gt;纯 Markdown、可直接粘到笔记里的版本&lt;/strong&gt;。&lt;/p&gt;
@@ -2901,9 +2901,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Vector 日志采集与处理</title>
-      <link>http://localhost:1313/toolkits/vector/</link>
+      <link>http://localhost:53175/toolkits/vector/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/vector/</guid>
+      <guid>http://localhost:53175/toolkits/vector/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Vector 是一个高性能日志与指标采集代理，它从各种 source 收集数据，经过 transform 处理后发送到 sink（如 Loki、ClickHouse、Kafka、Elasticsearch 等）&lt;br&gt;
 它的特点是高吞吐、低延迟、无需依赖 JVM、轻量好部署，非常适合边缘节点和容器环境
@@ -2922,7 +2922,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;sinks&lt;/strong&gt;：输出目标&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-data-modelevents&#34;&gt;2. Data model(events)&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;log-events&#34;&gt;Log events&lt;/h3&gt;
 &lt;p&gt;Here’s an example representation of a log event (as JSON):&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;{
@@ -2942,9 +2942,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>ClickHouse 高性能数据库</title>
-      <link>http://localhost:1313/toolkits/clickhouse/</link>
+      <link>http://localhost:53175/toolkits/clickhouse/</link>
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/clickhouse/</guid>
+      <guid>http://localhost:53175/toolkits/clickhouse/</guid>
       <description>&lt;h1 id=&#34;clickhouse-高性能数据库&#34;&gt;ClickHouse 高性能数据库&lt;/h1&gt;
 &lt;p&gt;ClickHouse 是一款 &lt;strong&gt;开源、高性能的列式数据库&lt;/strong&gt;，主要用于 &lt;strong&gt;大规模数据分析 (OLAP)&lt;/strong&gt; 和 &lt;strong&gt;实时查询&lt;/strong&gt;。它的特点是：&lt;/p&gt;
 &lt;ul&gt;
@@ -3004,9 +3004,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>QR Scanner 使用指南</title>
-      <link>http://localhost:1313/toolkits/qr-scanner/</link>
+      <link>http://localhost:53175/toolkits/qr-scanner/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/qr-scanner/</guid>
+      <guid>http://localhost:53175/toolkits/qr-scanner/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;qr-scanner&lt;/code&gt; 是一款纯前端、零依赖的 JavaScript 二维码扫描库，完全在浏览器端运行，无需后端配合。它同时支持：&lt;/p&gt;
 &lt;ul&gt;
@@ -3082,19 +3082,568 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;支持所有图片源：File、Blob、HTMLImageElement、HTMLCanvasElement、URL 等&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Redis 迭代历程</title>
+      <link>http://localhost:53175/toolkits/cache/redis_evolve/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_evolve/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_evolve.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2010---独立版-redisstandalone-redis&#34;&gt;2010 - 独立版 Redis（Standalone Redis）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Redis 1.0 发布&lt;/strong&gt;，架构简单，通常用作业务应用的缓存&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：数据完全存储在内存中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：重启 Redis 会丢失所有数据，所有流量直接打到数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2013---持久化persistence&#34;&gt;2013 - 持久化（Persistence）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Redis 2.8 发布&lt;/strong&gt;，引入持久化机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RDB&lt;/strong&gt;：内存数据快照，定期保存数据状态到磁盘&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AOF（Append-Only File）&lt;/strong&gt;：记录每条写命令，保证数据在重启后恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2013---主从复制replication&#34;&gt;2013 - 主从复制（Replication）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 2.8 增加复制功能，提高可用性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主节点&lt;/strong&gt;：处理实时读写请求&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;从节点&lt;/strong&gt;：同步主节点数据，实现高可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2013---sentinel&#34;&gt;2013 - Sentinel&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Redis 2.8 引入 &lt;strong&gt;Sentinel&lt;/strong&gt;，用于监控 Redis 实例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;功能&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;监控实例状态&lt;/li&gt;
+&lt;li&gt;事件通知&lt;/li&gt;
+&lt;li&gt;自动故障转移（failover）&lt;/li&gt;
+&lt;li&gt;配置提供者（配置管理）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2015---集群cluster&#34;&gt;2015 - 集群（Cluster）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 3.0 发布，增加 Redis 集群功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redis Cluster&lt;/strong&gt;：分布式数据库解决方案，通过分片管理数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据分片机制&lt;/strong&gt;：将数据分为 16384 个槽位，每个节点负责部分槽位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;后续发展&#34;&gt;后续发展&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;2017 - Redis 5.0&lt;/strong&gt;：增加 Stream 数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;2020 - Redis 6.0&lt;/strong&gt;：引入网络模块多线程 I/O&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis 如何持久化数据</title>
+      <link>http://localhost:53175/toolkits/cache/redis_persist/</link>
+      <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_persist/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_persist.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一aofappend-only-file&#34;&gt;一、AOF（Append-Only File）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：写后日志（Write-after log），记录执行过的命令而不是数据本身&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Redis 先在内存中执行命令修改数据&lt;/li&gt;
+&lt;li&gt;然后将命令写入 AOF 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于事件的设计，数据恢复简单&lt;/li&gt;
+&lt;li&gt;不阻塞当前写操作，性能高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：AOF 是命令日志，恢复时需要重放日志，日志大时恢复较慢&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二rdbredis-database&#34;&gt;二、RDB（Redis Database）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：数据快照，在特定时间点记录整个数据集&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;主线程 fork 出 &lt;code&gt;bgsave&lt;/code&gt; 子进程，共享内存数据&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bgsave&lt;/code&gt; 读取数据并写入 RDB 文件&lt;/li&gt;
+&lt;li&gt;主线程修改数据时，创建数据副本（Copy-on-write）&lt;/li&gt;
+&lt;li&gt;主线程对副本操作，&lt;code&gt;bgsave&lt;/code&gt; 继续写入 RDB 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据恢复快速，只需加载快照即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;限制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;快照频率低时可能丢失最近修改的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;三混合策略mixed-approach&#34;&gt;三、混合策略（Mixed Approach）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;生产环境常用策略&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 RDB 定时生成数据快照&lt;/li&gt;
+&lt;li&gt;使用 AOF 记录快照之后的命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结合 RDB 快速恢复和 AOF 高可靠性，兼顾性能与安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Redis 为什么这么快</title>
+      <link>http://localhost:53175/toolkits/cache/redis_fast/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_fast/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_fast.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一基于内存ram-based&#34;&gt;一、基于内存（RAM-based）&lt;/h2&gt;
+&lt;h3 id=&#34;1-redis-使用内存而非磁盘&#34;&gt;1. Redis 使用内存而非磁盘&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 的数据主要存储在 &lt;strong&gt;RAM（内存）&lt;/strong&gt; 中&lt;/li&gt;
+&lt;li&gt;避免了磁盘 IO 带来的巨大延迟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-不同存储介质的延迟对比近似值&#34;&gt;2. 不同存储介质的延迟对比（近似值）&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;存储层级&lt;/th&gt;
+          &lt;th&gt;延迟&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CPU Register&lt;/td&gt;
+          &lt;td&gt;~0.3 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L1 Cache&lt;/td&gt;
+          &lt;td&gt;~0.9 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L2 Cache&lt;/td&gt;
+          &lt;td&gt;~2.8 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L3 Cache&lt;/td&gt;
+          &lt;td&gt;~12.9 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;RAM&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;~120 ns&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SSD&lt;/td&gt;
+          &lt;td&gt;50–150 μs&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;HDD&lt;/td&gt;
+          &lt;td&gt;1–10 ms&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内存访问速度比 SSD 快 &lt;strong&gt;数百倍&lt;/strong&gt;，比 HDD 快 &lt;strong&gt;数万倍&lt;/strong&gt;，这是 Redis 高性能的根本原因&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二io-多路复用--单线程模型&#34;&gt;二、IO 多路复用 + 单线程模型&lt;/h2&gt;
+&lt;h3 id=&#34;1-io-多路复用io-multiplexing&#34;&gt;1. IO 多路复用（IO Multiplexing）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 使用 IO 多路复用机制（如 &lt;code&gt;epoll / kqueue / select&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;一个线程即可同时监听 &lt;strong&gt;大量 Socket 连接&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示意：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis 应用场景</title>
+      <link>http://localhost:53175/toolkits/cache/redis_use/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_use/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_use.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-会话管理session&#34;&gt;1. 会话管理（Session）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：在分布式系统中共享用户会话数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING 或 HASH 存储 session 信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-缓存cache&#34;&gt;2. 缓存（Cache）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：缓存对象、页面或热点数据，减少数据库压力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING / HASH / ZSET&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-分布式锁distributed-lock&#34;&gt;3. 分布式锁（Distributed Lock）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：保证多个分布式服务间的资源互斥访问&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING + 设置过期时间 + 原子操作（SETNX / Lua 脚本）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-计数器counter&#34;&gt;4. 计数器（Counter）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：统计文章点赞数、阅读量等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis INCR / INCRBY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-限流器rate-limiter&#34;&gt;5. 限流器（Rate Limiter）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：限制特定用户或 IP 的请求频率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING / HASH + TTL 或令牌桶算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6-全局-id-生成器global-id-generator&#34;&gt;6. 全局 ID 生成器（Global ID Generator）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：生成分布式系统全局唯一 ID&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis INCR / INCRBY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7-购物车shopping-cart&#34;&gt;7. 购物车（Shopping Cart）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：存储用户购物车中的商品及数量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis HASH（key=用户ID，field=商品ID，value=数量）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8-用户留存计算user-retention&#34;&gt;8. 用户留存计算（User Retention）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：统计用户每日登录情况，计算留存率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis BITMAP 或 HyperLogLog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9-消息队列message-queue&#34;&gt;9. 消息队列（Message Queue）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：实现简单的队列消息传递机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis LIST（LPUSH / RPOP）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10-排行榜ranking&#34;&gt;10. 排行榜（Ranking）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：对文章、用户或商品进行排名展示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis ZSET（有序集合，按分数排序）&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>全方位理解 Cache</title>
+      <link>http://localhost:53175/toolkits/cache/cache/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/cache/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/cache.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-什么是缓存what-is-a-cache&#34;&gt;1. 什么是缓存（What is a Cache）&lt;/h2&gt;
+&lt;h3 id=&#34;内存存储in-memory-storage&#34;&gt;内存存储（In-Memory Storage）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存是一种将数据存储在 &lt;strong&gt;更快的介质（通常是内存）&lt;/strong&gt; 中的技术&lt;/li&gt;
+&lt;li&gt;本质是 &lt;strong&gt;用空间换时间&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;缓存中的数据通常不是权威数据源，权威数据仍在数据库或磁盘中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存命中--未命中cache-hit--miss&#34;&gt;缓存命中 / 未命中（Cache Hit &amp;amp; Miss）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;缓存命中（Hit）&lt;/strong&gt;：请求的数据存在于缓存中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缓存未命中（Miss）&lt;/strong&gt;：缓存中没有数据，需要访问下层存储&lt;/li&gt;
+&lt;li&gt;命中率（Hit Ratio）是衡量缓存效果的核心指标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-缓存的应用场景where-is-caching-used&#34;&gt;2. 缓存的应用场景（Where Is Caching Used）&lt;/h2&gt;
+&lt;h3 id=&#34;cpu-缓存l1--l2--l3&#34;&gt;CPU 缓存（L1 / L2 / L3）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;位于 CPU 内部或附近的硬件缓存&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;利用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时间局部性&lt;/li&gt;
+&lt;li&gt;空间局部性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;页面缓存page-cache&#34;&gt;页面缓存（Page Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统级缓存&lt;/li&gt;
+&lt;li&gt;文件读写会优先命中内存中的 Page Cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cdn&#34;&gt;CDN&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存静态或半静态资源（HTML / CSS / JS / 图片）&lt;/li&gt;
+&lt;li&gt;减少源站压力，降低网络延迟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓冲区缓存buffer-cache&#34;&gt;缓冲区缓存（Buffer Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对磁盘 IO 进行缓冲&lt;/li&gt;
+&lt;li&gt;减少频繁的小 IO 操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;轻量级内存 KV 缓存&lt;/li&gt;
+&lt;li&gt;不支持复杂数据结构和持久化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redis&#34;&gt;Redis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;功能丰富的内存数据存储系统&lt;/li&gt;
+&lt;li&gt;支持多种数据结构、持久化、复制和集群&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-缓存部署方式cache-deployment&#34;&gt;3. 缓存部署方式（Cache Deployment）&lt;/h2&gt;
+&lt;h3 id=&#34;进程内缓存in-process-cache&#34;&gt;进程内缓存（In-Process Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存存在于应用进程内部&lt;/li&gt;
+&lt;li&gt;优点：访问速度最快&lt;/li&gt;
+&lt;li&gt;缺点：无法共享、数据不一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进程间缓存inter-process-cache&#34;&gt;进程间缓存（Inter-Process Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;多进程共享同一缓存实例（同一台机器）&lt;/li&gt;
+&lt;li&gt;需要 IPC 或共享内存机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;远程缓存remote-cache&#34;&gt;远程缓存（Remote Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;通过网络访问缓存（如 Redis）&lt;/li&gt;
+&lt;li&gt;支持多服务共享和水平扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-为什么需要缓存why-do-we-need-to-cache&#34;&gt;4. 为什么需要缓存（Why Do We Need to Cache）&lt;/h2&gt;
+&lt;h3 id=&#34;提升性能improve-performance&#34;&gt;提升性能（Improve Performance）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;减少数据库和后端服务压力&lt;/li&gt;
+&lt;li&gt;避免重复计算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;降低延迟reduce-latency&#34;&gt;降低延迟（Reduce Latency）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内存访问速度远快于磁盘和网络 IO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;阿姆达尔定律amdahls-law&#34;&gt;阿姆达尔定律（Amdahl&amp;rsquo;s Law）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统整体性能提升受限于不可优化部分&lt;/li&gt;
+&lt;li&gt;缓存应优先优化系统中的关键耗时路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;帕累托分布pareto-distribution&#34;&gt;帕累托分布（Pareto Distribution）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;20% 的数据产生 80% 的访问量&lt;/li&gt;
+&lt;li&gt;缓存非常适合热点数据场景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-分布式缓存distributed-cache&#34;&gt;5. 分布式缓存（Distributed Cache）&lt;/h2&gt;
+&lt;h3 id=&#34;取模分片modulus-sharding&#34;&gt;取模分片（Modulus Sharding）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 &lt;code&gt;hash(key) % N&lt;/code&gt; 分片&lt;/li&gt;
+&lt;li&gt;节点变化会导致大量缓存失效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;范围分片range-based-sharding&#34;&gt;范围分片（Range-Based Sharding）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;按 Key 范围进行分片&lt;/li&gt;
+&lt;li&gt;容易产生数据倾斜和热点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一致性哈希consistent-hashing&#34;&gt;一致性哈希（Consistent Hashing）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;节点变化只影响少量 Key&lt;/li&gt;
+&lt;li&gt;常用于 Redis Cluster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-缓存替换与失效cache-replacement--invalidation&#34;&gt;6. 缓存替换与失效（Cache Replacement &amp;amp; Invalidation）&lt;/h2&gt;
+&lt;h3 id=&#34;缓存替换策略&#34;&gt;缓存替换策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LRU（最近最少使用）&lt;/strong&gt;：淘汰最近最少被访问的数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LFU（最不经常使用）&lt;/strong&gt;：淘汰访问频率最低的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存失效策略&#34;&gt;缓存失效策略&lt;/h3&gt;
+&lt;h4 id=&#34;白名单策略allowlist-policy&#34;&gt;白名单策略（Allowlist Policy）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;仅允许指定 Key 进入缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;写时主动失效&#34;&gt;写时主动失效&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;数据更新时先写数据库，再删除或更新缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;读时主动失效&#34;&gt;读时主动失效&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;读数据时发现不一致，主动使缓存失效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ttl过期时间&#34;&gt;TTL（过期时间）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;为缓存设置存活时间，自动过期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-缓存策略cache-strategies&#34;&gt;7. 缓存策略（Cache Strategies）&lt;/h2&gt;
+&lt;h3 id=&#34;cache-aside旁路缓存&#34;&gt;Cache-Aside（旁路缓存）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;应用程序显式控制缓存&lt;/li&gt;
+&lt;li&gt;读：缓存 → 数据库 → 写缓存&lt;/li&gt;
+&lt;li&gt;写：写数据库 → 删除缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;read-through&#34;&gt;Read-Through&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存层负责从数据库加载数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;write-around&#34;&gt;Write-Around&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;写操作绕过缓存，直接写数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;write-through&#34;&gt;Write-Through&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;同时写缓存和数据库，保证一致性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;write-back&#34;&gt;Write-Back&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;先写缓存，异步写数据库&lt;/li&gt;
+&lt;li&gt;性能高，但有数据丢失风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-缓存面临的挑战caching-challenges&#34;&gt;8. 缓存面临的挑战（Caching Challenges）&lt;/h2&gt;
+&lt;h3 id=&#34;惊群效应thundering-herd&#34;&gt;惊群效应（Thundering Herd）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;大量请求同时发生缓存未命中&lt;/li&gt;
+&lt;li&gt;解决方式：加锁、请求合并&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存穿透cache-penetration&#34;&gt;缓存穿透（Cache Penetration）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;请求不存在的数据，绕过缓存直达数据库&lt;/li&gt;
+&lt;li&gt;解决方式：布隆过滤器、缓存空值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;大-keybig-key&#34;&gt;大 Key（Big Key）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;单个 Key 占用大量内存&lt;/li&gt;
+&lt;li&gt;可能导致阻塞和延迟抖动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;热-keyhot-key&#34;&gt;热 Key（Hot Key）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;某些 Key 被高频访问&lt;/li&gt;
+&lt;li&gt;解决方式：本地缓存、Key 拆分、多副本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据一致性data-consistency&#34;&gt;数据一致性（Data Consistency）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存通常只能保证最终一致性&lt;/li&gt;
+&lt;li&gt;需要合理的失效和过期策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-其他others&#34;&gt;9. 其他（Others）&lt;/h2&gt;
+&lt;h3 id=&#34;监控与告警monitoring--alerts&#34;&gt;监控与告警（Monitoring &amp;amp; Alerts）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存命中率&lt;/li&gt;
+&lt;li&gt;QPS 与延迟&lt;/li&gt;
+&lt;li&gt;内存使用率&lt;/li&gt;
+&lt;li&gt;热 Key 监控&lt;/li&gt;
+&lt;li&gt;异常告警机制&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>全方位理解 Redis</title>
+      <link>http://localhost:53175/toolkits/cache/redis/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一什么是-redis&#34;&gt;一、什么是 Redis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Redis&lt;/strong&gt; = Remote Dictionary Server（远程字典服务）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：多模型数据库，延迟低至毫秒以下&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;角色&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二redis-的应用&#34;&gt;二、Redis 的应用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;被众多知名公司采用：X, Pinterest, Airbnb, Uber, Slack, Instagram 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三redis-如何改变数据库格局&#34;&gt;三、Redis 如何改变数据库格局&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 &lt;strong&gt;内存读写 + 全量持久化&lt;/strong&gt;（AOF / Snapshot）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高可用性&lt;/strong&gt;：当实例失败时，可以通过 AOF 或 Snapshot 恢复数据 → &lt;strong&gt;无数据丢失&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;四redis-数据结构&#34;&gt;四、Redis 数据结构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Redis 是 &lt;strong&gt;KV 数据模型&lt;/strong&gt;，但支持多种数据类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;STRING&lt;/strong&gt;：&amp;ldquo;Bytebytego&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BITMAP&lt;/strong&gt;：0100001 01101101 0110100&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LIST&lt;/strong&gt;：A → B → C → E&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SET&lt;/strong&gt;：{A, B, C}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HASH&lt;/strong&gt;：{ &amp;ldquo;e&amp;rdquo;: &amp;ldquo;bytebyte&amp;rdquo;, &amp;ldquo;b&amp;rdquo;: &amp;ldquo;go&amp;rdquo; }&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;五基本命令&#34;&gt;五、基本命令&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;设置&lt;/td&gt;
+          &lt;td&gt;SET&lt;/td&gt;
+          &lt;td&gt;SET username &amp;ldquo;adam smith&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;获取&lt;/td&gt;
+          &lt;td&gt;GET&lt;/td&gt;
+          &lt;td&gt;GET username&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+          &lt;td&gt;DEL&lt;/td&gt;
+          &lt;td&gt;DEL username&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;自增&lt;/td&gt;
+          &lt;td&gt;INCR&lt;/td&gt;
+          &lt;td&gt;INCR visitor_count&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hash 设置&lt;/td&gt;
+          &lt;td&gt;HSET&lt;/td&gt;
+          &lt;td&gt;HSET user:1000 name &amp;ldquo;Alice&amp;rdquo; age 30&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;六redis-模块&#34;&gt;六、Redis 模块&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Redis 扩展模块：&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Hugo-PaperMod 自定义博客模板</title>
-      <link>http://localhost:1313/toolkits/hugo_papermod/</link>
+      <link>http://localhost:53175/toolkits/hugo_papermod/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/hugo_papermod/</guid>
+      <guid>http://localhost:53175/toolkits/hugo_papermod/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;本文档总结了在 &lt;strong&gt;Hugo + PaperMod 主题&lt;/strong&gt; 下自定义博客模板的配置方法，包括静态资源优化、Nginx 部署、缓存策略和图片加速技巧&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/web3/eip/eip-721/</link>
+      <link>http://localhost:53175/web3/eip/eip-721/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/eip/eip-721/</guid>
+      <guid>http://localhost:53175/web3/eip/eip-721/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;本标准允许在智能合约中实现非同质化代币（NFT）的标准API。该标准提供了追踪和转移NFT的基本功能&lt;/p&gt;
 &lt;p&gt;考虑了NFT由个人拥有和交易的情况，以及委托给第三方经纪人/钱包/拍卖商（&amp;ldquo;操作者&amp;rdquo;）的情况。NFT可以代表数字或物理资产的所有权。我们考虑了多样化的资产类型，并且相信您将设想出更多应用场景：&lt;/p&gt;
@@ -3218,9 +3767,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>IndexedDB 浏览器数据库</title>
-      <link>http://localhost:1313/toolkits/indexeddb/</link>
+      <link>http://localhost:53175/toolkits/indexeddb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/indexeddb/</guid>
+      <guid>http://localhost:53175/toolkits/indexeddb/</guid>
       <description></description>
     </item>
   </channel>

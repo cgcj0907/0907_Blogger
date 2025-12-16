@@ -5,7 +5,10 @@ draft: false
 tags: ["Toolkits", "Cache", "Redis"]
 ShowToc: true
 ---
+![](/Toolkits/cache/redis_persist.webp)
+> 图片来源: https://bytebytego.com
 
+---
 ## 一、AOF（Append-Only File）
 
 * **特点**：写后日志（Write-after log），记录执行过的命令而不是数据本身

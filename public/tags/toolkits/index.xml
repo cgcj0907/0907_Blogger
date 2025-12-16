@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Toolkits on 0907 WORLD</title>
-    <link>http://localhost:1313/tags/toolkits/</link>
+    <link>http://localhost:53175/tags/toolkits/</link>
     <description>Recent content in Toolkits on 0907 WORLD</description>
     <image>
       <title>0907 WORLD</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/toolkits/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:53175/tags/toolkits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>审计辅助工具</title>
-      <link>http://localhost:1313/web3/security/tool/auxiliarytools/</link>
+      <link>http://localhost:53175/web3/security/tool/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/tool/auxiliarytools/</guid>
+      <guid>http://localhost:53175/web3/security/tool/auxiliarytools/</guid>
       <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
 &lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
 在审计过程中可用于：&lt;/p&gt;
@@ -61,9 +61,9 @@
     </item>
     <item>
       <title>静态分析工具</title>
-      <link>http://localhost:1313/web3/security/tool/staticanalysistools/</link>
+      <link>http://localhost:53175/web3/security/tool/staticanalysistools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/web3/security/tool/staticanalysistools/</guid>
+      <guid>http://localhost:53175/web3/security/tool/staticanalysistools/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率&lt;/p&gt;
 &lt;hr&gt;
@@ -137,9 +137,9 @@
     </item>
     <item>
       <title>Vector 日志采集与处理</title>
-      <link>http://localhost:1313/toolkits/vector/</link>
+      <link>http://localhost:53175/toolkits/vector/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/vector/</guid>
+      <guid>http://localhost:53175/toolkits/vector/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Vector 是一个高性能日志与指标采集代理，它从各种 source 收集数据，经过 transform 处理后发送到 sink（如 Loki、ClickHouse、Kafka、Elasticsearch 等）&lt;br&gt;
 它的特点是高吞吐、低延迟、无需依赖 JVM、轻量好部署，非常适合边缘节点和容器环境
@@ -158,7 +158,7 @@
 &lt;li&gt;&lt;strong&gt;sinks&lt;/strong&gt;：输出目标&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-data-modelevents&#34;&gt;2. Data model(events)&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;log-events&#34;&gt;Log events&lt;/h3&gt;
 &lt;p&gt;Here’s an example representation of a log event (as JSON):&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;{
@@ -178,9 +178,9 @@
     </item>
     <item>
       <title>ClickHouse 高性能数据库</title>
-      <link>http://localhost:1313/toolkits/clickhouse/</link>
+      <link>http://localhost:53175/toolkits/clickhouse/</link>
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/clickhouse/</guid>
+      <guid>http://localhost:53175/toolkits/clickhouse/</guid>
       <description>&lt;h1 id=&#34;clickhouse-高性能数据库&#34;&gt;ClickHouse 高性能数据库&lt;/h1&gt;
 &lt;p&gt;ClickHouse 是一款 &lt;strong&gt;开源、高性能的列式数据库&lt;/strong&gt;，主要用于 &lt;strong&gt;大规模数据分析 (OLAP)&lt;/strong&gt; 和 &lt;strong&gt;实时查询&lt;/strong&gt;。它的特点是：&lt;/p&gt;
 &lt;ul&gt;
@@ -240,9 +240,9 @@
     </item>
     <item>
       <title>QR Scanner 使用指南</title>
-      <link>http://localhost:1313/toolkits/qr-scanner/</link>
+      <link>http://localhost:53175/toolkits/qr-scanner/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/qr-scanner/</guid>
+      <guid>http://localhost:53175/toolkits/qr-scanner/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;qr-scanner&lt;/code&gt; 是一款纯前端、零依赖的 JavaScript 二维码扫描库，完全在浏览器端运行，无需后端配合。它同时支持：&lt;/p&gt;
 &lt;ul&gt;
@@ -316,6 +316,541 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;二维码内容:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;支持所有图片源：File、Blob、HTMLImageElement、HTMLCanvasElement、URL 等&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis 迭代历程</title>
+      <link>http://localhost:53175/toolkits/cache/redis_evolve/</link>
+      <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_evolve/</guid>
+      <description>&lt;h2 id=&#34;2010---独立版-redisstandalone-redis&#34;&gt;2010 - 独立版 Redis（Standalone Redis）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Redis 1.0 发布&lt;/strong&gt;，架构简单，通常用作业务应用的缓存&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：数据完全存储在内存中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：重启 Redis 会丢失所有数据，所有流量直接打到数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2013---持久化persistence&#34;&gt;2013 - 持久化（Persistence）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Redis 2.8 发布&lt;/strong&gt;，引入持久化机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RDB&lt;/strong&gt;：内存数据快照，定期保存数据状态到磁盘&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AOF（Append-Only File）&lt;/strong&gt;：记录每条写命令，保证数据在重启后恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2013---主从复制replication&#34;&gt;2013 - 主从复制（Replication）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 2.8 增加复制功能，提高可用性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主节点&lt;/strong&gt;：处理实时读写请求&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;从节点&lt;/strong&gt;：同步主节点数据，实现高可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2013---sentinel&#34;&gt;2013 - Sentinel&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Redis 2.8 引入 &lt;strong&gt;Sentinel&lt;/strong&gt;，用于监控 Redis 实例&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;功能&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;监控实例状态&lt;/li&gt;
+&lt;li&gt;事件通知&lt;/li&gt;
+&lt;li&gt;自动故障转移（failover）&lt;/li&gt;
+&lt;li&gt;配置提供者（配置管理）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2015---集群cluster&#34;&gt;2015 - 集群（Cluster）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 3.0 发布，增加 Redis 集群功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redis Cluster&lt;/strong&gt;：分布式数据库解决方案，通过分片管理数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据分片机制&lt;/strong&gt;：将数据分为 16384 个槽位，每个节点负责部分槽位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;后续发展&#34;&gt;后续发展&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;2017 - Redis 5.0&lt;/strong&gt;：增加 Stream 数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;2020 - Redis 6.0&lt;/strong&gt;：引入网络模块多线程 I/O&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 架构分为 &lt;strong&gt;网络模块&lt;/strong&gt; 和 &lt;strong&gt;主处理模块&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;网络模块曾成为系统瓶颈，多线程 I/O 提升性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Redis 如何持久化数据</title>
+      <link>http://localhost:53175/toolkits/cache/redis_persist/</link>
+      <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_persist/</guid>
+      <description>&lt;h2 id=&#34;一aofappend-only-file&#34;&gt;一、AOF（Append-Only File）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：写后日志（Write-after log），记录执行过的命令而不是数据本身&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Redis 先在内存中执行命令修改数据&lt;/li&gt;
+&lt;li&gt;然后将命令写入 AOF 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于事件的设计，数据恢复简单&lt;/li&gt;
+&lt;li&gt;不阻塞当前写操作，性能高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：AOF 是命令日志，恢复时需要重放日志，日志大时恢复较慢&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二rdbredis-database&#34;&gt;二、RDB（Redis Database）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特点&lt;/strong&gt;：数据快照，在特定时间点记录整个数据集&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;主线程 fork 出 &lt;code&gt;bgsave&lt;/code&gt; 子进程，共享内存数据&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bgsave&lt;/code&gt; 读取数据并写入 RDB 文件&lt;/li&gt;
+&lt;li&gt;主线程修改数据时，创建数据副本（Copy-on-write）&lt;/li&gt;
+&lt;li&gt;主线程对副本操作，&lt;code&gt;bgsave&lt;/code&gt; 继续写入 RDB 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据恢复快速，只需加载快照即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;限制&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;快照频率低时可能丢失最近修改的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;三混合策略mixed-approach&#34;&gt;三、混合策略（Mixed Approach）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;生产环境常用策略&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 RDB 定时生成数据快照&lt;/li&gt;
+&lt;li&gt;使用 AOF 记录快照之后的命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;优势&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结合 RDB 快速恢复和 AOF 高可靠性，兼顾性能与安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Redis 为什么这么快</title>
+      <link>http://localhost:53175/toolkits/cache/redis_fast/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_fast/</guid>
+      <description>&lt;h2 id=&#34;一基于内存ram-based&#34;&gt;一、基于内存（RAM-based）&lt;/h2&gt;
+&lt;h3 id=&#34;1-redis-使用内存而非磁盘&#34;&gt;1. Redis 使用内存而非磁盘&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 的数据主要存储在 &lt;strong&gt;RAM（内存）&lt;/strong&gt; 中&lt;/li&gt;
+&lt;li&gt;避免了磁盘 IO 带来的巨大延迟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-不同存储介质的延迟对比近似值&#34;&gt;2. 不同存储介质的延迟对比（近似值）&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;存储层级&lt;/th&gt;
+          &lt;th&gt;延迟&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;CPU Register&lt;/td&gt;
+          &lt;td&gt;~0.3 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L1 Cache&lt;/td&gt;
+          &lt;td&gt;~0.9 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L2 Cache&lt;/td&gt;
+          &lt;td&gt;~2.8 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;L3 Cache&lt;/td&gt;
+          &lt;td&gt;~12.9 ns&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;RAM&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;~120 ns&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;SSD&lt;/td&gt;
+          &lt;td&gt;50–150 μs&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;HDD&lt;/td&gt;
+          &lt;td&gt;1–10 ms&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内存访问速度比 SSD 快 &lt;strong&gt;数百倍&lt;/strong&gt;，比 HDD 快 &lt;strong&gt;数万倍&lt;/strong&gt;，这是 Redis 高性能的根本原因&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二io-多路复用--单线程模型&#34;&gt;二、IO 多路复用 + 单线程模型&lt;/h2&gt;
+&lt;h3 id=&#34;1-io-多路复用io-multiplexing&#34;&gt;1. IO 多路复用（IO Multiplexing）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis 使用 IO 多路复用机制（如 &lt;code&gt;epoll / kqueue / select&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;一个线程即可同时监听 &lt;strong&gt;大量 Socket 连接&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示意：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis 应用场景</title>
+      <link>http://localhost:53175/toolkits/cache/redis_use/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis_use/</guid>
+      <description>&lt;h2 id=&#34;1-会话管理session&#34;&gt;1. 会话管理（Session）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：在分布式系统中共享用户会话数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING 或 HASH 存储 session 信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-缓存cache&#34;&gt;2. 缓存（Cache）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：缓存对象、页面或热点数据，减少数据库压力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING / HASH / ZSET&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-分布式锁distributed-lock&#34;&gt;3. 分布式锁（Distributed Lock）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：保证多个分布式服务间的资源互斥访问&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING + 设置过期时间 + 原子操作（SETNX / Lua 脚本）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-计数器counter&#34;&gt;4. 计数器（Counter）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：统计文章点赞数、阅读量等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis INCR / INCRBY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-限流器rate-limiter&#34;&gt;5. 限流器（Rate Limiter）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：限制特定用户或 IP 的请求频率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis STRING / HASH + TTL 或令牌桶算法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6-全局-id-生成器global-id-generator&#34;&gt;6. 全局 ID 生成器（Global ID Generator）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：生成分布式系统全局唯一 ID&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis INCR / INCRBY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7-购物车shopping-cart&#34;&gt;7. 购物车（Shopping Cart）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：存储用户购物车中的商品及数量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis HASH（key=用户ID，field=商品ID，value=数量）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8-用户留存计算user-retention&#34;&gt;8. 用户留存计算（User Retention）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：统计用户每日登录情况，计算留存率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis BITMAP 或 HyperLogLog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9-消息队列message-queue&#34;&gt;9. 消息队列（Message Queue）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：实现简单的队列消息传递机制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis LIST（LPUSH / RPOP）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10-排行榜ranking&#34;&gt;10. 排行榜（Ranking）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：对文章、用户或商品进行排名展示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实现方式&lt;/strong&gt;：Redis ZSET（有序集合，按分数排序）&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>全方位理解 Cache</title>
+      <link>http://localhost:53175/toolkits/cache/cache/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/cache/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/cache.webp&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-什么是缓存what-is-a-cache&#34;&gt;1. 什么是缓存（What is a Cache）&lt;/h2&gt;
+&lt;h3 id=&#34;内存存储in-memory-storage&#34;&gt;内存存储（In-Memory Storage）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存是一种将数据存储在 &lt;strong&gt;更快的介质（通常是内存）&lt;/strong&gt; 中的技术&lt;/li&gt;
+&lt;li&gt;本质是 &lt;strong&gt;用空间换时间&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;缓存中的数据通常不是权威数据源，权威数据仍在数据库或磁盘中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存命中--未命中cache-hit--miss&#34;&gt;缓存命中 / 未命中（Cache Hit &amp;amp; Miss）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;缓存命中（Hit）&lt;/strong&gt;：请求的数据存在于缓存中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缓存未命中（Miss）&lt;/strong&gt;：缓存中没有数据，需要访问下层存储&lt;/li&gt;
+&lt;li&gt;命中率（Hit Ratio）是衡量缓存效果的核心指标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-缓存的应用场景where-is-caching-used&#34;&gt;2. 缓存的应用场景（Where Is Caching Used）&lt;/h2&gt;
+&lt;h3 id=&#34;cpu-缓存l1--l2--l3&#34;&gt;CPU 缓存（L1 / L2 / L3）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;位于 CPU 内部或附近的硬件缓存&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;利用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时间局部性&lt;/li&gt;
+&lt;li&gt;空间局部性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;页面缓存page-cache&#34;&gt;页面缓存（Page Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统级缓存&lt;/li&gt;
+&lt;li&gt;文件读写会优先命中内存中的 Page Cache&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cdn&#34;&gt;CDN&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存静态或半静态资源（HTML / CSS / JS / 图片）&lt;/li&gt;
+&lt;li&gt;减少源站压力，降低网络延迟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓冲区缓存buffer-cache&#34;&gt;缓冲区缓存（Buffer Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对磁盘 IO 进行缓冲&lt;/li&gt;
+&lt;li&gt;减少频繁的小 IO 操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;memcached&#34;&gt;Memcached&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;轻量级内存 KV 缓存&lt;/li&gt;
+&lt;li&gt;不支持复杂数据结构和持久化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;redis&#34;&gt;Redis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;功能丰富的内存数据存储系统&lt;/li&gt;
+&lt;li&gt;支持多种数据结构、持久化、复制和集群&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-缓存部署方式cache-deployment&#34;&gt;3. 缓存部署方式（Cache Deployment）&lt;/h2&gt;
+&lt;h3 id=&#34;进程内缓存in-process-cache&#34;&gt;进程内缓存（In-Process Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存存在于应用进程内部&lt;/li&gt;
+&lt;li&gt;优点：访问速度最快&lt;/li&gt;
+&lt;li&gt;缺点：无法共享、数据不一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;进程间缓存inter-process-cache&#34;&gt;进程间缓存（Inter-Process Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;多进程共享同一缓存实例（同一台机器）&lt;/li&gt;
+&lt;li&gt;需要 IPC 或共享内存机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;远程缓存remote-cache&#34;&gt;远程缓存（Remote Cache）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;通过网络访问缓存（如 Redis）&lt;/li&gt;
+&lt;li&gt;支持多服务共享和水平扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-为什么需要缓存why-do-we-need-to-cache&#34;&gt;4. 为什么需要缓存（Why Do We Need to Cache）&lt;/h2&gt;
+&lt;h3 id=&#34;提升性能improve-performance&#34;&gt;提升性能（Improve Performance）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;减少数据库和后端服务压力&lt;/li&gt;
+&lt;li&gt;避免重复计算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;降低延迟reduce-latency&#34;&gt;降低延迟（Reduce Latency）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内存访问速度远快于磁盘和网络 IO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;阿姆达尔定律amdahls-law&#34;&gt;阿姆达尔定律（Amdahl&amp;rsquo;s Law）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;系统整体性能提升受限于不可优化部分&lt;/li&gt;
+&lt;li&gt;缓存应优先优化系统中的关键耗时路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;帕累托分布pareto-distribution&#34;&gt;帕累托分布（Pareto Distribution）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;20% 的数据产生 80% 的访问量&lt;/li&gt;
+&lt;li&gt;缓存非常适合热点数据场景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-分布式缓存distributed-cache&#34;&gt;5. 分布式缓存（Distributed Cache）&lt;/h2&gt;
+&lt;h3 id=&#34;取模分片modulus-sharding&#34;&gt;取模分片（Modulus Sharding）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;根据 &lt;code&gt;hash(key) % N&lt;/code&gt; 分片&lt;/li&gt;
+&lt;li&gt;节点变化会导致大量缓存失效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;范围分片range-based-sharding&#34;&gt;范围分片（Range-Based Sharding）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;按 Key 范围进行分片&lt;/li&gt;
+&lt;li&gt;容易产生数据倾斜和热点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一致性哈希consistent-hashing&#34;&gt;一致性哈希（Consistent Hashing）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;节点变化只影响少量 Key&lt;/li&gt;
+&lt;li&gt;常用于 Redis Cluster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-缓存替换与失效cache-replacement--invalidation&#34;&gt;6. 缓存替换与失效（Cache Replacement &amp;amp; Invalidation）&lt;/h2&gt;
+&lt;h3 id=&#34;缓存替换策略&#34;&gt;缓存替换策略&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LRU（最近最少使用）&lt;/strong&gt;：淘汰最近最少被访问的数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LFU（最不经常使用）&lt;/strong&gt;：淘汰访问频率最低的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存失效策略&#34;&gt;缓存失效策略&lt;/h3&gt;
+&lt;h4 id=&#34;白名单策略allowlist-policy&#34;&gt;白名单策略（Allowlist Policy）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;仅允许指定 Key 进入缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;写时主动失效&#34;&gt;写时主动失效&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;数据更新时先写数据库，再删除或更新缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;读时主动失效&#34;&gt;读时主动失效&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;读数据时发现不一致，主动使缓存失效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ttl过期时间&#34;&gt;TTL（过期时间）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;为缓存设置存活时间，自动过期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-缓存策略cache-strategies&#34;&gt;7. 缓存策略（Cache Strategies）&lt;/h2&gt;
+&lt;h3 id=&#34;cache-aside旁路缓存&#34;&gt;Cache-Aside（旁路缓存）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;应用程序显式控制缓存&lt;/li&gt;
+&lt;li&gt;读：缓存 → 数据库 → 写缓存&lt;/li&gt;
+&lt;li&gt;写：写数据库 → 删除缓存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;read-through&#34;&gt;Read-Through&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存层负责从数据库加载数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;write-around&#34;&gt;Write-Around&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;写操作绕过缓存，直接写数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;write-through&#34;&gt;Write-Through&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;同时写缓存和数据库，保证一致性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;write-back&#34;&gt;Write-Back&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;先写缓存，异步写数据库&lt;/li&gt;
+&lt;li&gt;性能高，但有数据丢失风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-缓存面临的挑战caching-challenges&#34;&gt;8. 缓存面临的挑战（Caching Challenges）&lt;/h2&gt;
+&lt;h3 id=&#34;惊群效应thundering-herd&#34;&gt;惊群效应（Thundering Herd）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;大量请求同时发生缓存未命中&lt;/li&gt;
+&lt;li&gt;解决方式：加锁、请求合并&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缓存穿透cache-penetration&#34;&gt;缓存穿透（Cache Penetration）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;请求不存在的数据，绕过缓存直达数据库&lt;/li&gt;
+&lt;li&gt;解决方式：布隆过滤器、缓存空值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;大-keybig-key&#34;&gt;大 Key（Big Key）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;单个 Key 占用大量内存&lt;/li&gt;
+&lt;li&gt;可能导致阻塞和延迟抖动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;热-keyhot-key&#34;&gt;热 Key（Hot Key）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;某些 Key 被高频访问&lt;/li&gt;
+&lt;li&gt;解决方式：本地缓存、Key 拆分、多副本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据一致性data-consistency&#34;&gt;数据一致性（Data Consistency）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存通常只能保证最终一致性&lt;/li&gt;
+&lt;li&gt;需要合理的失效和过期策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-其他others&#34;&gt;9. 其他（Others）&lt;/h2&gt;
+&lt;h3 id=&#34;监控与告警monitoring--alerts&#34;&gt;监控与告警（Monitoring &amp;amp; Alerts）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存命中率&lt;/li&gt;
+&lt;li&gt;QPS 与延迟&lt;/li&gt;
+&lt;li&gt;内存使用率&lt;/li&gt;
+&lt;li&gt;热 Key 监控&lt;/li&gt;
+&lt;li&gt;异常告警机制&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>全方位理解 Redis</title>
+      <link>http://localhost:53175/toolkits/cache/redis/</link>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53175/toolkits/cache/redis/</guid>
+      <description>&lt;h2 id=&#34;一什么是-redis&#34;&gt;一、什么是 Redis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Redis&lt;/strong&gt; = Remote Dictionary Server（远程字典服务）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：多模型数据库，延迟低至毫秒以下&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;角色&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二redis-的应用&#34;&gt;二、Redis 的应用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;被众多知名公司采用：X, Pinterest, Airbnb, Uber, Slack, Instagram 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三redis-如何改变数据库格局&#34;&gt;三、Redis 如何改变数据库格局&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 &lt;strong&gt;内存读写 + 全量持久化&lt;/strong&gt;（AOF / Snapshot）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高可用性&lt;/strong&gt;：当实例失败时，可以通过 AOF 或 Snapshot 恢复数据 → &lt;strong&gt;无数据丢失&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;四redis-数据结构&#34;&gt;四、Redis 数据结构&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Redis 是 &lt;strong&gt;KV 数据模型&lt;/strong&gt;，但支持多种数据类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;STRING&lt;/strong&gt;：&amp;ldquo;Bytebytego&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BITMAP&lt;/strong&gt;：0100001 01101101 0110100&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LIST&lt;/strong&gt;：A → B → C → E&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SET&lt;/strong&gt;：{A, B, C}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HASH&lt;/strong&gt;：{ &amp;ldquo;e&amp;rdquo;: &amp;ldquo;bytebyte&amp;rdquo;, &amp;ldquo;b&amp;rdquo;: &amp;ldquo;go&amp;rdquo; }&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;五基本命令&#34;&gt;五、基本命令&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;类型&lt;/th&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;设置&lt;/td&gt;
+          &lt;td&gt;SET&lt;/td&gt;
+          &lt;td&gt;SET username &amp;ldquo;adam smith&amp;rdquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;获取&lt;/td&gt;
+          &lt;td&gt;GET&lt;/td&gt;
+          &lt;td&gt;GET username&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;删除&lt;/td&gt;
+          &lt;td&gt;DEL&lt;/td&gt;
+          &lt;td&gt;DEL username&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;自增&lt;/td&gt;
+          &lt;td&gt;INCR&lt;/td&gt;
+          &lt;td&gt;INCR visitor_count&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Hash 设置&lt;/td&gt;
+          &lt;td&gt;HSET&lt;/td&gt;
+          &lt;td&gt;HSET user:1000 name &amp;ldquo;Alice&amp;rdquo; age 30&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;六redis-模块&#34;&gt;六、Redis 模块&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Redis 扩展模块：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

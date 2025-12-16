@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>简介 on 0907 WORLD</title>
-    <link>http://localhost:1313/tags/%E7%AE%80%E4%BB%8B/</link>
+    <link>http://localhost:53175/tags/%E7%AE%80%E4%BB%8B/</link>
     <description>Recent content in 简介 on 0907 WORLD</description>
     <image>
       <title>0907 WORLD</title>
-      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E7%AE%80%E4%BB%8B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:53175/tags/%E7%AE%80%E4%BB%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Toolkits 简介</title>
-      <link>http://localhost:1313/toolkits/intro/</link>
+      <link>http://localhost:53175/toolkits/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/toolkits/intro/</guid>
+      <guid>http://localhost:53175/toolkits/intro/</guid>
       <description>&lt;h2 id=&#34;ide&#34;&gt;IDE&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Integrated Development Environment（集成开发环境）&lt;br&gt;
@@ -58,7 +58,7 @@
 &lt;h3 id=&#34;日志管理&#34;&gt;日志管理&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Loki&lt;/strong&gt;：分布式日志系统&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:1313/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:53175/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;LogstashEncoder&lt;/strong&gt;：结构化 JSON 日志&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;系统监控&#34;&gt;系统监控&lt;/h3&gt;
@@ -74,7 +74,7 @@
 &lt;h3 id=&#34;数据存储&#34;&gt;数据存储&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;: 高性能列式数据库
-👉 &lt;a href=&#34;http://localhost:1313/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
+👉 &lt;a href=&#34;http://localhost:53175/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;学习与效率工具&#34;&gt;学习与效率工具&lt;/h2&gt;
 &lt;p&gt;帮助知识管理、项目整理与写作&lt;/p&gt;</description>
