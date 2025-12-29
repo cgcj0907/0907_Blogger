@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>开发工具分享 on 0907 WORLD</title>
-    <link>http://localhost:53175/toolkits/</link>
+    <link>http://localhost:1313/toolkits/</link>
     <description>Recent content in 开发工具分享 on 0907 WORLD</description>
     <image>
       <title>0907 WORLD</title>
-      <url>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:53175/toolkits/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/toolkits/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Toolkits 简介</title>
-      <link>http://localhost:53175/toolkits/intro/</link>
+      <link>http://localhost:1313/toolkits/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/intro/</guid>
+      <guid>http://localhost:1313/toolkits/intro/</guid>
       <description>&lt;h2 id=&#34;ide&#34;&gt;IDE&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Integrated Development Environment（集成开发环境）&lt;br&gt;
@@ -58,7 +58,7 @@
 &lt;h3 id=&#34;日志管理&#34;&gt;日志管理&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Loki&lt;/strong&gt;：分布式日志系统&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:53175/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vector&lt;/strong&gt;：日志采集与处理  👉 &lt;a href=&#34;http://localhost:1313/toolkits/vector&#34;&gt;相关笔记：Vector 日志采集与处理&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;LogstashEncoder&lt;/strong&gt;：结构化 JSON 日志&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;系统监控&#34;&gt;系统监控&lt;/h3&gt;
@@ -74,16 +74,16 @@
 &lt;h3 id=&#34;数据存储&#34;&gt;数据存储&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;ClickHouse&lt;/strong&gt;: 高性能列式数据库
-👉 &lt;a href=&#34;http://localhost:53175/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
+👉 &lt;a href=&#34;http://localhost:1313/toolkits/clickhouse&#34;&gt;相关笔记：ClickHouse 高性能数据库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;学习与效率工具&#34;&gt;学习与效率工具&lt;/h2&gt;
 &lt;p&gt;帮助知识管理、项目整理与写作&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vector 日志采集与处理</title>
-      <link>http://localhost:53175/toolkits/vector/</link>
+      <link>http://localhost:1313/toolkits/vector/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/vector/</guid>
+      <guid>http://localhost:1313/toolkits/vector/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Vector 是一个高性能日志与指标采集代理，它从各种 source 收集数据，经过 transform 处理后发送到 sink（如 Loki、ClickHouse、Kafka、Elasticsearch 等）&lt;br&gt;
 它的特点是高吞吐、低延迟、无需依赖 JVM、轻量好部署，非常适合边缘节点和容器环境
@@ -102,7 +102,7 @@
 &lt;li&gt;&lt;strong&gt;sinks&lt;/strong&gt;：输出目标&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2-data-modelevents&#34;&gt;2. Data model(events)&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Data model&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/vector/Data_model.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;log-events&#34;&gt;Log events&lt;/h3&gt;
 &lt;p&gt;Here’s an example representation of a log event (as JSON):&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-log&#34; data-lang=&#34;log&#34;&gt;{
@@ -122,9 +122,9 @@
     </item>
     <item>
       <title>ClickHouse 高性能数据库</title>
-      <link>http://localhost:53175/toolkits/clickhouse/</link>
+      <link>http://localhost:1313/toolkits/clickhouse/</link>
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/clickhouse/</guid>
+      <guid>http://localhost:1313/toolkits/clickhouse/</guid>
       <description>&lt;h1 id=&#34;clickhouse-高性能数据库&#34;&gt;ClickHouse 高性能数据库&lt;/h1&gt;
 &lt;p&gt;ClickHouse 是一款 &lt;strong&gt;开源、高性能的列式数据库&lt;/strong&gt;，主要用于 &lt;strong&gt;大规模数据分析 (OLAP)&lt;/strong&gt; 和 &lt;strong&gt;实时查询&lt;/strong&gt;。它的特点是：&lt;/p&gt;
 &lt;ul&gt;
@@ -184,9 +184,9 @@
     </item>
     <item>
       <title>QR Scanner 使用指南</title>
-      <link>http://localhost:53175/toolkits/qr-scanner/</link>
+      <link>http://localhost:1313/toolkits/qr-scanner/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/qr-scanner/</guid>
+      <guid>http://localhost:1313/toolkits/qr-scanner/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;qr-scanner&lt;/code&gt; 是一款纯前端、零依赖的 JavaScript 二维码扫描库，完全在浏览器端运行，无需后端配合。它同时支持：&lt;/p&gt;
 &lt;ul&gt;
@@ -263,10 +263,10 @@
     </item>
     <item>
       <title>Redis 迭代历程</title>
-      <link>http://localhost:53175/toolkits/cache/redis_evolve/</link>
+      <link>http://localhost:1313/toolkits/cache/redis_evolve/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/cache/redis_evolve/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_evolve.webp&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/toolkits/cache/redis_evolve/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_evolve.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
@@ -322,10 +322,10 @@
     </item>
     <item>
       <title>Redis 如何持久化数据</title>
-      <link>http://localhost:53175/toolkits/cache/redis_persist/</link>
+      <link>http://localhost:1313/toolkits/cache/redis_persist/</link>
       <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/cache/redis_persist/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_persist.webp&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/toolkits/cache/redis_persist/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_persist.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
@@ -398,10 +398,10 @@
     </item>
     <item>
       <title>Redis 为什么这么快</title>
-      <link>http://localhost:53175/toolkits/cache/redis_fast/</link>
+      <link>http://localhost:1313/toolkits/cache/redis_fast/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/cache/redis_fast/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_fast.webp&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/toolkits/cache/redis_fast/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_fast.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
@@ -463,10 +463,10 @@
     </item>
     <item>
       <title>Redis 应用场景</title>
-      <link>http://localhost:53175/toolkits/cache/redis_use/</link>
+      <link>http://localhost:1313/toolkits/cache/redis_use/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/cache/redis_use/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis_use.webp&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/toolkits/cache/redis_use/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_use.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
@@ -523,10 +523,10 @@
     </item>
     <item>
       <title>全方位理解 Cache</title>
-      <link>http://localhost:53175/toolkits/cache/cache/</link>
+      <link>http://localhost:1313/toolkits/cache/cache/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/cache/cache/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/cache.webp&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/toolkits/cache/cache/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/cache.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
@@ -728,10 +728,10 @@
     </item>
     <item>
       <title>全方位理解 Redis</title>
-      <link>http://localhost:53175/toolkits/cache/redis/</link>
+      <link>http://localhost:1313/toolkits/cache/redis/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/cache/redis/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Toolkits/cache/redis.webp&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/toolkits/cache/redis/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
@@ -811,19 +811,565 @@
 &lt;p&gt;Redis 扩展模块：&lt;/p&gt;</description>
     </item>
     <item>
+      <title>API 学习路线</title>
+      <link>http://localhost:1313/toolkits/api/api/</link>
+      <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/api/api/</guid>
+      <description>&lt;h2 id=&#34;一api-介绍&#34;&gt;一、API 介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：API 是构建应用程序的一组协议和工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;类型&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公共 API（Public API）&lt;/li&gt;
+&lt;li&gt;私有 API（Private API）&lt;/li&gt;
+&lt;li&gt;合作伙伴 API（Partner API）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二api-术语&#34;&gt;二、API 术语&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;需要理解的术语&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 版本（1.1、2、3）&lt;/li&gt;
+&lt;li&gt;Cookies&lt;/li&gt;
+&lt;li&gt;缓存（Caching）&lt;/li&gt;
+&lt;li&gt;状态码&lt;/li&gt;
+&lt;li&gt;请求方法（GET、POST、PUT、DELETE 等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三api-风格&#34;&gt;三、API 风格&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;常见风格&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;REST&lt;/li&gt;
+&lt;li&gt;SOAP&lt;/li&gt;
+&lt;li&gt;GraphQL&lt;/li&gt;
+&lt;li&gt;gRPC&lt;/li&gt;
+&lt;li&gt;WebSockets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;四api-认证&#34;&gt;四、API 认证&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;常用认证方式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic Auth&lt;/li&gt;
+&lt;li&gt;Token&lt;/li&gt;
+&lt;li&gt;JWT（JSON Web Token）&lt;/li&gt;
+&lt;li&gt;OAuth&lt;/li&gt;
+&lt;li&gt;Session Auth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;五api-文档&#34;&gt;五、API 文档&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重要性&lt;/strong&gt;：好的 API 必须易于理解&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：Swagger, Postman, Redoc, DapperDox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;六api-功能特性&#34;&gt;六、API 功能特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;分页（Pagination）&lt;/li&gt;
+&lt;li&gt;请求参数（Parameters）&lt;/li&gt;
+&lt;li&gt;幂等性（Idempotency）&lt;/li&gt;
+&lt;li&gt;API 版本控制（Versioning）&lt;/li&gt;
+&lt;li&gt;HATEOAS（Hypermedia as the Engine of Application State）&lt;/li&gt;
+&lt;li&gt;内容协商（Content Negotiation）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;七api-性能优化技术&#34;&gt;七、API 性能优化技术&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存（Caching）&lt;/li&gt;
+&lt;li&gt;限流（Rate Limiting）&lt;/li&gt;
+&lt;li&gt;负载均衡（Load Balancing）&lt;/li&gt;
+&lt;li&gt;分页（Pagination）&lt;/li&gt;
+&lt;li&gt;数据库索引（DB Indexing）&lt;/li&gt;
+&lt;li&gt;水平/垂直扩展（Scaling）&lt;/li&gt;
+&lt;li&gt;性能测试（Performance Testing）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;八api-网关&#34;&gt;八、API 网关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;用途&lt;/strong&gt;：统一管理 API、路由、认证、监控等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常见网关&lt;/strong&gt;：Amazon API Gateway, Azure API Services, Kong, Nginx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;九api-开发框架&#34;&gt;九、API 开发框架&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;Spring&lt;/li&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;Django&lt;/li&gt;
+&lt;li&gt;FastAPI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;十api-集成模式&#34;&gt;十、API 集成模式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;网关模式（Gateway）&lt;/li&gt;
+&lt;li&gt;事件驱动模式（Event-driven）&lt;/li&gt;
+&lt;li&gt;Webhook&lt;/li&gt;
+&lt;li&gt;轮询（Polling）&lt;/li&gt;
+&lt;li&gt;批处理（Batch Processing）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>数据库数据架构</title>
+      <link>http://localhost:1313/toolkits/storage/database_data_structure/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/storage/database_data_structure/</guid>
+      <description>&lt;h2 id=&#34;一常见索引数据结构&#34;&gt;一、常见索引数据结构&lt;/h2&gt;
+&lt;h3 id=&#34;1跳表skiplist&#34;&gt;1、跳表（Skiplist）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;内存中常用索引类型&lt;/li&gt;
+&lt;li&gt;典型应用：Redis&lt;/li&gt;
+&lt;li&gt;特点：快速搜索、插入、删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2哈希索引hash-index&#34;&gt;2、哈希索引（Hash Index）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Map 或 Collection 的常见实现&lt;/li&gt;
+&lt;li&gt;特点：查找速度快，但不适合范围查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3sstable&#34;&gt;3、SSTable&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;不可变的磁盘 Map 实现&lt;/li&gt;
+&lt;li&gt;特点：高顺序写入效率，适合持久化存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4lsm-树log-structured-merge-tree&#34;&gt;4、LSM 树（Log-Structured Merge Tree）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;结合 Skiplist 和 SSTable&lt;/li&gt;
+&lt;li&gt;特点：高写入吞吐量，适合写密集型系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5b-树b-tree&#34;&gt;5、B 树（B-Tree）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;基于磁盘的索引方案&lt;/li&gt;
+&lt;li&gt;特点：读写性能稳定，支持范围查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6倒排索引inverted-index&#34;&gt;6、倒排索引（Inverted Index）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于文档索引&lt;/li&gt;
+&lt;li&gt;典型应用：Lucene 搜索引擎&lt;/li&gt;
+&lt;li&gt;特点：快速全文搜索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7后缀树suffix-tree&#34;&gt;7、后缀树（Suffix Tree）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于字符串模式匹配&lt;/li&gt;
+&lt;li&gt;特点：支持快速子串查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8r-树r-tree&#34;&gt;8、R 树（R-Tree）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;多维数据索引，如空间数据（地理坐标）&lt;/li&gt;
+&lt;li&gt;特点：支持最近邻查询和范围查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>数据库锁类型</title>
+      <link>http://localhost:1313/toolkits/storage/database_lock/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/storage/database_lock/</guid>
+      <description>&lt;h2 id=&#34;一常见锁类型&#34;&gt;一、常见锁类型&lt;/h2&gt;
+&lt;h3 id=&#34;1共享锁shared-lock-s-lock&#34;&gt;1、共享锁（Shared Lock, S Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;允许多个事务同时读取资源，但不允许修改&lt;/li&gt;
+&lt;li&gt;其他事务也可以对同一资源加共享锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2排他锁exclusive-lock-x-lock&#34;&gt;2、排他锁（Exclusive Lock, X Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;允许事务读取和修改资源&lt;/li&gt;
+&lt;li&gt;其他事务不能对该资源加任何锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3更新锁update-lock-u-lock&#34;&gt;3、更新锁（Update Lock, U Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于事务准备更新资源时，防止死锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4模式锁schema-lock&#34;&gt;4、模式锁（Schema Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于保护数据库对象的结构（如表结构）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5大批量更新锁bulk-update-lock-bu-lock&#34;&gt;5、大批量更新锁（Bulk Update Lock, BU Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于批量插入操作，通过减少锁数量提升性能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6键范围锁key-range-lock&#34;&gt;6、键范围锁（Key-Range Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于索引数据，防止幻读（事务已读范围内有新行插入）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7行级锁row-level-lock&#34;&gt;7、行级锁（Row-Level Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;锁定表中的特定行，其他行仍可并发访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8页级锁page-level-lock&#34;&gt;8、页级锁（Page-Level Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;锁定数据库中的特定页（固定大小的数据块）&lt;/li&gt;
+&lt;li&gt;MySQL InnoDB 默认不使用页锁，而是使用行锁；MyISAM 使用页级锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9表级锁table-level-lock&#34;&gt;9、表级锁（Table-Level Lock）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;锁定整张表&lt;/li&gt;
+&lt;li&gt;实现简单，但可能显著降低并发性能&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>B-Tree vs LSM-Tress</title>
+      <link>http://localhost:1313/toolkits/storage/tree_compare/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/storage/tree_compare/</guid>
+      <description>&lt;h2 id=&#34;b-tree平衡树&#34;&gt;B-Tree（平衡树）&lt;/h2&gt;
+&lt;h3 id=&#34;核心特性&#34;&gt;核心特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主要应用&lt;/strong&gt;：几乎所有关系型数据库使用的索引数据结构&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储单元&lt;/strong&gt;：基本存储单元通常称为&amp;quot;页&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工作原理&lt;/strong&gt;：通过向下追踪键的范围直到找到实际值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优势特点&#34;&gt;优势特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;读取性能优秀&lt;/strong&gt;：实现更快的读取速度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;范围查询高效&lt;/strong&gt;：支持顺序扫描&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事务友好&lt;/strong&gt;：天然支持ACID事务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;典型应用&#34;&gt;典型应用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL InnoDB、PostgreSQL、Oracle、SQL Server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;lsm-tree日志结构合并树&#34;&gt;LSM-Tree（日志结构合并树）&lt;/h2&gt;
+&lt;h3 id=&#34;核心特性-1&#34;&gt;核心特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主要应用&lt;/strong&gt;：许多NoSQL数据库使用，如Cassandra、LevelDB、RocksDB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据结构&lt;/strong&gt;：维护键值对，使用排序字符串表持久化到磁盘&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;键排序&lt;/strong&gt;：SSTable中的键保持排序状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;核心机制合并&#34;&gt;核心机制：合并&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;合并过程&lt;/strong&gt;：Level 0段定期合并到Level 1段&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目的&lt;/strong&gt;：减少文件数量，优化存储和读取&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优势特点-1&#34;&gt;优势特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;写入性能极佳&lt;/strong&gt;：实现快速写入&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高吞吐量&lt;/strong&gt;：适合写密集型场景&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;顺序写入&lt;/strong&gt;：追加写入模式避免随机写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;典型应用-1&#34;&gt;典型应用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cassandra、LevelDB、RocksDB、HBase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;核心差异对比&#34;&gt;核心差异对比&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;维度&lt;/th&gt;
+          &lt;th&gt;B-Tree&lt;/th&gt;
+          &lt;th&gt;LSM-Tree&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;主要优势&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;读取更快&lt;/td&gt;
+          &lt;td&gt;写入更快&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;读取速度&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;快速&lt;/td&gt;
+          &lt;td&gt;较慢&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;写入速度&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;较慢&lt;/td&gt;
+          &lt;td&gt;快速&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;存储模式&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;原地更新&lt;/td&gt;
+          &lt;td&gt;追加写后合并&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;设计哲学&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;读优化&lt;/td&gt;
+          &lt;td&gt;写优化&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>数据库 类型大全</title>
+      <link>http://localhost:1313/toolkits/storage/database/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/storage/database/</guid>
+      <description>&lt;h2 id=&#34;一关系型数据库relational-db&#34;&gt;一、关系型数据库（Relational DB）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;数据以表格形式组织（Rows &amp;amp; Columns）&lt;/li&gt;
+&lt;li&gt;遵循严格的模式（Schema）&lt;/li&gt;
+&lt;li&gt;适合事务处理和结构化数据&lt;/li&gt;
+&lt;li&gt;例子：MySQL, PostgreSQL, Oracle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二联机分析处理数据库olap-db&#34;&gt;二、联机分析处理数据库（OLAP DB）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;OLAP（Online Analytical Processing）：用于数据分析和报表&lt;/li&gt;
+&lt;li&gt;优化复杂查询和多维分析&lt;/li&gt;
+&lt;li&gt;适合商业智能（BI）场景&lt;/li&gt;
+&lt;li&gt;例子：ClickHouse, Amazon Redshift, Google BigQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三nosql-数据库&#34;&gt;三、NoSQL 数据库&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;不使用传统 SQL 或严格模式&lt;/li&gt;
+&lt;li&gt;适合非结构化或半结构化数据&lt;/li&gt;
+&lt;li&gt;四种主要类型：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;1图数据库graph-db&#34;&gt;1、图数据库（Graph DB）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;强调数据之间的关系&lt;/li&gt;
+&lt;li&gt;常用于社交网络、推荐系统&lt;/li&gt;
+&lt;li&gt;例子：Neo4j, ArangoDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2键值存储key-value-store-db&#34;&gt;2、键值存储（Key-Value Store DB）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;每个数据都有唯一键（Key）和对应的值（Value）&lt;/li&gt;
+&lt;li&gt;访问快速，适合缓存、会话存储&lt;/li&gt;
+&lt;li&gt;例子：Redis, Memcached&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3文档数据库document-db&#34;&gt;3、文档数据库（Document DB）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数据以文档形式存储，类似 JSON 或 BSON&lt;/li&gt;
+&lt;li&gt;每个文档可有不同结构，灵活存储半结构化数据&lt;/li&gt;
+&lt;li&gt;例子：MongoDB, CouchDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4列式数据库column-db&#34;&gt;4、列式数据库（Column DB）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;数据按列而不是按行存储&lt;/li&gt;
+&lt;li&gt;适合分析型查询，减少 I/O，提高查询速度&lt;/li&gt;
+&lt;li&gt;例子：HBase, Cassandra, ClickHouse&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title>SQL 执行流程</title>
+      <link>http://localhost:1313/toolkits/storage/sql_execute/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/storage/sql_execute/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;⚠️ 说明：不同数据库的具体实现架构不同，下图与流程展示的是&lt;strong&gt;数据库系统中常见的通用设计思想&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-1传输层transport-layer&#34;&gt;Step 1：传输层（Transport Layer）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;客户端通过传输层协议（如 &lt;strong&gt;TCP&lt;/strong&gt;）向数据库发送 &lt;strong&gt;SQL 语句&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;负责：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络通信&lt;/li&gt;
+&lt;li&gt;请求数据的接收与响应返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-2命令解析器command-parser&#34;&gt;Step 2：命令解析器（Command Parser）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;接收 SQL 语句并进行：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;语法分析（Syntax Analysis）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;语义分析（Semantic Analysis）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分析完成后，生成 &lt;strong&gt;查询树（Query Tree）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询树是 SQL 语句的结构化表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-3优化器optimizer&#34;&gt;Step 3：优化器（Optimizer）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;接收查询树&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据统计信息和代价模型进行优化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生成 &lt;strong&gt;执行计划（Execution Plan）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;决定：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用哪个索引&lt;/li&gt;
+&lt;li&gt;表的访问顺序&lt;/li&gt;
+&lt;li&gt;连接方式（如 Nested Loop、Hash Join 等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-4执行器executor&#34;&gt;Step 4：执行器（Executor）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;接收执行计划&lt;/li&gt;
+&lt;li&gt;按照执行计划逐步执行 SQL&lt;/li&gt;
+&lt;li&gt;不直接访问磁盘，而是通过下层模块获取数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-5访问方法access-methods&#34;&gt;Step 5：访问方法（Access Methods）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提供 &lt;strong&gt;具体的数据访问逻辑&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据执行计划：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;决定如何访问数据（全表扫描、索引扫描等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从存储引擎中 &lt;strong&gt;读取或修改数据&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-6缓冲区管理器buffer-manager读操作&#34;&gt;Step 6：缓冲区管理器（Buffer Manager，读操作）&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;适用于 &lt;strong&gt;只读查询（如 SELECT）&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;访问方法判断 SQL 是否为 &lt;strong&gt;只读语句&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>内存与存储</title>
+      <link>http://localhost:1313/toolkits/storage/memory_storage/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/storage/memory_storage/</guid>
+      <description>&lt;h2 id=&#34;一ram-和-rom&#34;&gt;一、RAM 和 ROM&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;RAM（Random Access Memory）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;易失性内存，断电数据丢失&lt;/li&gt;
+&lt;li&gt;用于存储 CPU 正在使用的数据和程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ROM（Read-Only Memory）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;非易失性内存，断电数据不丢失&lt;/li&gt;
+&lt;li&gt;存储固件、启动程序等不可修改或少修改的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二ddr4-与-ddr5&#34;&gt;二、DDR4 与 DDR5&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DDR4&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第四代双倍数据速率内存&lt;/li&gt;
+&lt;li&gt;主流 PC 和服务器使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DDR5&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第五代双倍数据速率内存&lt;/li&gt;
+&lt;li&gt;更高带宽，更低功耗，支持更大容量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;三固件与-bios&#34;&gt;三、固件与 BIOS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;固件（Firmware）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储在非易失性存储器中的软件&lt;/li&gt;
+&lt;li&gt;控制硬件的低级操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BIOS（Basic Input/Output System）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一种固件，初始化硬件，启动操作系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四sram-与-dram&#34;&gt;四、SRAM 与 DRAM&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SRAM（Static RAM）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;静态 RAM，速度快，不需刷新，但成本高，容量小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DRAM（Dynamic RAM）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态 RAM，需要定期刷新，成本低，容量大，是主流 RAM 类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;五常见存储设备&#34;&gt;五、常见存储设备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;HDD（Hard Disk Drive）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;机械硬盘，容量大，速度慢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SSD（Solid State Drive）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;固态硬盘，速度快，无机械部件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;USB Drive&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可移动闪存驱动器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SD Card&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储卡，常用于相机、手机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>Hugo-PaperMod 自定义博客模板</title>
-      <link>http://localhost:53175/toolkits/hugo_papermod/</link>
+      <link>http://localhost:1313/toolkits/hugo_papermod/</link>
       <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/hugo_papermod/</guid>
+      <guid>http://localhost:1313/toolkits/hugo_papermod/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;本文档总结了在 &lt;strong&gt;Hugo + PaperMod 主题&lt;/strong&gt; 下自定义博客模板的配置方法，包括静态资源优化、Nginx 部署、缓存策略和图片加速技巧&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     <item>
-      <title>IndexedDB 浏览器数据库</title>
-      <link>http://localhost:53175/toolkits/indexeddb/</link>
+      <title></title>
+      <link>http://localhost:1313/toolkits/storage/b-tree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/toolkits/indexeddb/</guid>
+      <guid>http://localhost:1313/toolkits/storage/b-tree/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=aZjYr87r1b8&#34;&gt;https://www.youtube.com/watch?v=aZjYr87r1b8&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IndexedDB 浏览器数据库</title>
+      <link>http://localhost:1313/toolkits/indexeddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/toolkits/indexeddb/</guid>
       <description></description>
     </item>
   </channel>

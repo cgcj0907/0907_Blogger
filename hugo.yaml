@@ -140,10 +140,14 @@ menu:
       name: Toolkits
       url: /Toolkits/  
       weight: 6
+    - identifier: Languages
+      name: Languages
+      url: /Languages/  
+      weight: 7
     - identifier: 0907world
       name: World
       url: http://uestc.0907world.cn:3000
-      weight: 7
+      weight: 8
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

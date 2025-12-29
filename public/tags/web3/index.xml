@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Web3 on 0907 WORLD</title>
-    <link>http://localhost:53175/tags/web3/</link>
+    <link>http://localhost:1313/tags/web3/</link>
     <description>Recent content in Web3 on 0907 WORLD</description>
     <image>
       <title>0907 WORLD</title>
-      <url>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:53175/tags/web3/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/web3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web3 简介</title>
-      <link>http://localhost:53175/web3/intro/</link>
+      <link>http://localhost:1313/web3/intro/</link>
       <pubDate>Thu, 20 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/intro/</guid>
+      <guid>http://localhost:1313/web3/intro/</guid>
       <description>&lt;h1 id=&#34;welcome-to-web3&#34;&gt;Welcome to Web3!&lt;/h1&gt;
 &lt;p&gt;Web3代表互联网下一个时代以区块链为核心实现去中心化用户掌控数据和资产通过智能合约自动化交互摆脱中心化平台控制&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;security&#34;&gt;security&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/security/intro&#34;&gt;安全审计 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/security/intro&#34;&gt;安全审计 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Web3安全聚焦预防黑客攻击和漏洞利用&lt;br&gt;
 采用多层防御策略包括智能合约审计访问控制实时监控&lt;br&gt;
 使用Slither Mythril检测重入攻击整数溢出权限问题&lt;br&gt;
@@ -44,7 +44,7 @@ ERC-4337账户抽象提升用户体验支持社交恢复气体赞助&lt;br&gt;
 安全提示必须使用硬件签名绝不泄露种子短语定期备份&lt;/p&gt;
 &lt;h2 id=&#34;eip&#34;&gt;EIP&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/eip/intro&#34;&gt;EIP 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/eip/intro&#34;&gt;EIP 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;EIP是以太坊改进提案标准化平台变更&lt;br&gt;
 涵盖核心协议客户端API合约规范&lt;br&gt;
 任何人可提交草案经社区讨论编辑审查进入最终状态&lt;br&gt;
@@ -57,7 +57,7 @@ EIP-4844引入blob数据大幅降低Layer2成本&lt;br&gt;
 未来EIP聚焦可扩展性隐私如Verkle树&lt;/p&gt;
 &lt;h2 id=&#34;codelanuage&#34;&gt;codeLanuage&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/codelanguage/intro&#34;&gt;合约语言 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanguage/intro&#34;&gt;合约语言 笔记合集&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;智能合约语言最终编译为EVM字节码&lt;br&gt;
 Solidity主流类JavaScript支持继承修饰符库生态最丰富&lt;br&gt;
 Vyper Python风格故意去除继承无限循环提升可审计性安全性&lt;br&gt;
@@ -69,7 +69,7 @@ Vyper强调人类可读代码减少攻击面&lt;br&gt;
 选择语言取决于项目复杂度和安全优先级&lt;/p&gt;
 &lt;h2 id=&#34;evm&#34;&gt;EVM&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/evm/intro&#34;&gt;EVM 笔记合集&lt;/a&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/evm/intro&#34;&gt;EVM 笔记合集&lt;/a&gt;
 EVM是以太坊虚拟机去中心化计算引擎&lt;br&gt;
 执行智能合约字节码采用栈基架构深度1024&lt;br&gt;
 每操作码消耗气体防止滥用&lt;br&gt;
@@ -81,7 +81,7 @@ EVM负责状态转换更新账户余额存储&lt;br&gt;
 EVM是整个以太坊生态的计算核心&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;framework&#34;&gt;framework&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/intro&#34;&gt;Web3 开发框架合集&lt;/a&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/intro&#34;&gt;Web3 开发框架合集&lt;/a&gt;
 Web3开发框架大幅简化合约构建测试部署&lt;br&gt;
 Hardhat JavaScript基础插件化支持控制台日志自定义任务深度集成Ethers.js&lt;br&gt;
 Truffle老牌套件自带Ganache本地链Mocha测试适合新手&lt;br&gt;
@@ -94,9 +94,9 @@ Foundry性能极致适合高级开发者&lt;br&gt;
     </item>
     <item>
       <title>EVM 笔记合集</title>
-      <link>http://localhost:53175/web3/evm/intro/</link>
+      <link>http://localhost:1313/web3/evm/intro/</link>
       <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/evm/intro/</guid>
+      <guid>http://localhost:1313/web3/evm/intro/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;以太坊虚拟机（Ethereum Virtual Machine，EVM）是一个去中心化的、跨节点一致的执行环境，负责在所有以太坊节点上安全地执行智能合约代码。节点运行 EVM 来处理交易、执行合约逻辑，并通过消耗 &lt;strong&gt;Gas（燃料）&lt;/strong&gt; 来度量并限制计算资源，从而保障网络的效率与安全&lt;/p&gt;
@@ -147,15 +147,15 @@ Foundry性能极致适合高级开发者&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;合约创建交易（Contract Creation）&lt;/strong&gt;：将已编译的智能合约字节码部署为一个新的合约账户。部署后，合约字节码存储在该合约账户中；每当有交易/消息调用该合约时，EVM 会读取并执行这些字节码&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;evm-的工作方式&#34;&gt;EVM 的工作方式&lt;/h2&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EVM/gas.webp&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;堆栈机stack-machine&#34;&gt;堆栈机（Stack machine）&lt;/h3&gt;
 &lt;p&gt;EVM 是一个基于堆栈的虚拟机：&lt;/p&gt;</description>
     </item>
     <item>
       <title>EIP 笔记合集</title>
-      <link>http://localhost:53175/web3/eip/intro/</link>
+      <link>http://localhost:1313/web3/eip/intro/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/intro/</guid>
+      <guid>http://localhost:1313/web3/eip/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;EIP（Ethereum Improvement Proposal）是以太坊改进提案&lt;br&gt;
 任何人都能提交的标准化文档&lt;br&gt;
@@ -212,9 +212,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>安全审计 笔记合集</title>
-      <link>http://localhost:53175/web3/security/intro/</link>
+      <link>http://localhost:1313/web3/security/intro/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/intro/</guid>
+      <guid>http://localhost:1313/web3/security/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Web3，作为一个以去中心化为核心理念的新一代互联网范式，其基石建立在区块链技术——一个不可篡改、透明公开的分布式账本之上。这个账本通过精密的共识机制确保网络参与者能够在无需相互信任的情况下达成一致，这无疑是革命性的&lt;/p&gt;
 &lt;p&gt;然而，这种“不可篡改”的特性是一把双刃剑。一旦智能合约部署上链，其代码逻辑便永久固化，任何潜在的错误、漏洞或设计缺陷都将被永恒记录，并可能被恶意利用，造成无法挽回的资产损失。在传统互联网中，一个漏洞可以通过“打补丁”快速修复；在区块链世界，修复往往意味着复杂的迁移、昂贵的社区沟通，乃至彻底的失败。因此，&lt;strong&gt;“安全前置”&lt;/strong&gt; 的理念在这里被提升到了前所未有的高度&lt;/p&gt;
@@ -311,21 +311,21 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Web3 开发框架合集</title>
-      <link>http://localhost:53175/web3/framework/intro/</link>
+      <link>http://localhost:1313/web3/framework/intro/</link>
       <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/framework/intro/</guid>
+      <guid>http://localhost:1313/web3/framework/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;foundry&#34;&gt;&lt;a href=&#34;https://getfoundry.sh/introduction/getting-started/&#34;&gt;foundry&lt;/a&gt;&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/intro&#34;&gt;foundry 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;hardhat&#34;&gt;&lt;a href=&#34;https://hardhat.org/docs/getting-started&#34;&gt;hardhat&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     <item>
       <title>合约语言 笔记合集</title>
-      <link>http://localhost:53175/web3/codelanguage/intro/</link>
+      <link>http://localhost:1313/web3/codelanguage/intro/</link>
       <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/codelanguage/intro/</guid>
+      <guid>http://localhost:1313/web3/codelanguage/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;本文件为 Code Language 的简要说明，面向 Web3 开发者与学习者，概述 Solana 与 Ethereum 两大生态中常见的合约语言及其基本用途与特点。内容以技术介绍为主，强调实际开发中的可理解性与参考价值，适合作为项目仓库或学习笔记中的快速查阅文档&lt;/p&gt;
 &lt;hr&gt;
@@ -390,7 +390,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;yul&#34;&gt;Yul&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/codelanuage/yul/yul&#34;&gt; Yul 使用指南 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/yul/yul&#34;&gt; Yul 使用指南 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;定位&lt;/strong&gt;：EVM 的中间表示（IR），Solidity 等编译器可输出 Yul，用于更精细的优化与跨 EVM 后端（例如 EVM + ewasm）。&lt;/p&gt;
@@ -400,9 +400,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>DeFi 笔记合集</title>
-      <link>http://localhost:53175/web3/defi/intro/</link>
+      <link>http://localhost:1313/web3/defi/intro/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/defi/intro/</guid>
+      <guid>http://localhost:1313/web3/defi/intro/</guid>
       <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;去中心化金融旨在通过区块链与智能合约，构建一个开放、透明、可组合的金融服务生态系统。本合集从核心协议原理出发，系统梳理各赛道的运行机制、风险模型与演进趋势。&lt;/p&gt;
 &lt;hr&gt;
@@ -412,21 +412,21 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;Flash Loan&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/defi/lending/flashloan&#34;&gt; Flash Loan 闪电贷 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/defi/lending/flashloan&#34;&gt; Flash Loan 闪电贷 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;liquid-staking&#34;&gt;Liquid Staking&lt;/h2&gt;
 &lt;p&gt;流动性质押协议允许用户在参与区块链共识（如质押ETH）的同时，获得代表质押头寸的流动性衍生代币（如stETH），从而解决质押资产流动性锁定的问题&lt;/p&gt;
 &lt;h2 id=&#34;dex&#34;&gt;DEX&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/defi/dex/dex&#34;&gt; DEX 经典概念 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/defi/dex/dex&#34;&gt; DEX 经典概念 &lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;去中心化交易所（DEX）通过自动做市商机制，允许用户直接在链上交易加密资产。核心在于流动性池、恒定乘积等定价公式、手续费激励以及无常损失管理&lt;/p&gt;
 &lt;h2 id=&#34;rwa&#34;&gt;RWA&lt;/h2&gt;
 &lt;p&gt;现实世界资产旨在将传统金融资产（如国债、信贷、不动产）通过代币化引入区块链，为DeFi生态系统提供具有实际价值支撑的收益资产，并面临合规、托管与法律映射等独特挑战&lt;/p&gt;</description>
     </item>
     <item>
       <title>DEX 经典概念</title>
-      <link>http://localhost:53175/web3/defi/dex/dex/</link>
+      <link>http://localhost:1313/web3/defi/dex/dex/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/defi/dex/dex/</guid>
+      <guid>http://localhost:1313/web3/defi/dex/dex/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;AMM（Automated Market Maker，自动做市商）是一类无需订单簿、无需对手方撮合就能完成资产交换的机制。它通过一条&lt;strong&gt;数学定价曲线&lt;/strong&gt;（例如最经典的恒定乘积公式 &lt;code&gt;x * y = k&lt;/code&gt;）来确定池中两种资产的价格与兑换比例&lt;/p&gt;
 &lt;p&gt;交易者与 AMM 交互时，并不是与某个具体对手方进行买卖，而是与池子本身交易：&lt;/p&gt;
@@ -506,9 +506,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Flash Loan 闪电贷</title>
-      <link>http://localhost:53175/web3/defi/lending/flashloan/</link>
+      <link>http://localhost:1313/web3/defi/lending/flashloan/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/defi/lending/flashloan/</guid>
+      <guid>http://localhost:1313/web3/defi/lending/flashloan/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;闪电贷（Flash Loan）&lt;/strong&gt; 是一种在单笔区块链交易内借入资产、使用资产并在同一交易内归还借款（含手续费）的借贷模式。核心特点是 &lt;strong&gt;“原子性”&lt;/strong&gt;：借款、使用和还款必须在同一笔交易内完成，否则交易会回滚，借款不会生效。&lt;/p&gt;
 &lt;p&gt;这种机制使得借款人在不提供抵押的情况下临时动用大量资产，用于套利、清算、头寸迁移等操作；同时也被用于发动复杂的攻击（如操纵价格、闪电清算等）。&lt;/p&gt;
@@ -730,9 +730,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>foundry Forge 使用指南</title>
-      <link>http://localhost:53175/web3/framework/foundry/forge/</link>
+      <link>http://localhost:1313/web3/framework/foundry/forge/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/framework/foundry/forge/</guid>
+      <guid>http://localhost:1313/web3/framework/foundry/forge/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Forge 是 Foundry 的核心组件，用于编写、运行和调试 Solidity 智能合约测试，支持单元测试、模糊测试（fuzz testing）和不变量测试（invariant testing）。它允许开发者在 Solidity 中直接编写测试，而无需切换到其他语言。Forge 通过 &lt;code&gt;forge test&lt;/code&gt; 命令运行测试，并提供丰富的作弊码（cheatcodes）来模拟各种场景&lt;/p&gt;
 &lt;h2 id=&#34;测试类型&#34;&gt;测试类型&lt;/h2&gt;
@@ -790,37 +790,37 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>foundry 使用指南</title>
-      <link>http://localhost:53175/web3/framework/foundry/intro/</link>
+      <link>http://localhost:1313/web3/framework/foundry/intro/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/framework/foundry/intro/</guid>
+      <guid>http://localhost:1313/web3/framework/foundry/intro/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;h2 id=&#34;入门指南&#34;&gt;入门指南&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/guides&#34;&gt;foundry 入门指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/guides&#34;&gt;foundry 入门指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;forge&#34;&gt;Forge&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/forge&#34;&gt;foundry Forge 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/forge&#34;&gt;foundry Forge 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;cast&#34;&gt;Cast&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/cast&#34;&gt;foundry Cast 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/cast&#34;&gt;foundry Cast 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;anvil&#34;&gt;Anvil&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/anvil&#34;&gt;foundry Anvil 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/anvil&#34;&gt;foundry Anvil 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;chisel&#34;&gt;Chisel&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/chisel&#34;&gt;foundry Chisel 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/chisel&#34;&gt;foundry Chisel 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/configuration&#34;&gt;foundry 配置指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/configuration&#34;&gt;foundry 配置指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;cheatcode&#34;&gt;Cheatcode&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/framework/foundry/cheatcode&#34;&gt;foundry Cheatcode 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/framework/foundry/cheatcode&#34;&gt;foundry Cheatcode 使用指南&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>测试级漏洞合集</title>
-      <link>http://localhost:53175/web3/security/vulnerability/tlv/</link>
+      <link>http://localhost:1313/web3/security/vulnerability/tlv/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/vulnerability/tlv/</guid>
+      <guid>http://localhost:1313/web3/security/vulnerability/tlv/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;h2 id=&#34;拒绝服务--dos---denial-of-service-&#34;&gt;拒绝服务 ( Dos - Denial of Service )&lt;/h2&gt;
 &lt;h3 id=&#34;简要概述&#34;&gt;简要概述&lt;/h3&gt;
@@ -867,9 +867,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>静态分析漏洞合集</title>
-      <link>http://localhost:53175/web3/security/vulnerability/sav/</link>
+      <link>http://localhost:1313/web3/security/vulnerability/sav/</link>
       <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/vulnerability/sav/</guid>
+      <guid>http://localhost:1313/web3/security/vulnerability/sav/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;h2 id=&#34;整数溢出integer-overflow&#34;&gt;整数溢出（Integer Overflow）&lt;/h2&gt;
 &lt;h3 id=&#34;简要概述&#34;&gt;简要概述&lt;/h3&gt;
@@ -929,9 +929,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-7702</title>
-      <link>http://localhost:53175/web3/eip/eip-7702/</link>
+      <link>http://localhost:1313/web3/eip/eip-7702/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-7702/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-7702/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;引入一种新的EIP-2718交易类型，允许外部拥有账户（EOA）为其账户设置代码。这是通过在交易中附加授权元组列表来实现的，每个元组的格式为&lt;code&gt;[chain_id, address, nonce, y_parity, r, s]&lt;/code&gt;。对于每个元组，授权账户的代码将被写入委托指示符&lt;code&gt;0xef0100 || address&lt;/code&gt;。所有代码执行操作都必须加载并执行委托指向的代码&lt;/p&gt;
 &lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
@@ -1170,9 +1170,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>低级漏洞合集</title>
-      <link>http://localhost:53175/web3/security/vulnerability/simple/</link>
+      <link>http://localhost:1313/web3/security/vulnerability/simple/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/vulnerability/simple/</guid>
+      <guid>http://localhost:1313/web3/security/vulnerability/simple/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;此章节主要整理一些智能合约开发中的低级漏洞，适合初学者了解和防范。这些漏洞虽然&amp;quot;低级&amp;quot;，但在实际项目中仍然频繁出现，可能导致严重的安全问题&lt;/p&gt;
 &lt;hr&gt;
@@ -1218,9 +1218,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>审计辅助工具</title>
-      <link>http://localhost:53175/web3/security/tool/auxiliarytools/</link>
+      <link>http://localhost:1313/web3/security/tool/auxiliarytools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/tool/auxiliarytools/</guid>
+      <guid>http://localhost:1313/web3/security/tool/auxiliarytools/</guid>
       <description>&lt;h2 id=&#34;etherscan&#34;&gt;EtherScan&lt;/h2&gt;
 &lt;p&gt;Etherscan 是以太坊区块链浏览器，用于查询交易、合约和账户信息。&lt;br&gt;
 在审计过程中可用于：&lt;/p&gt;
@@ -1264,9 +1264,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>漏洞等级划分标准</title>
-      <link>http://localhost:53175/web3/security/vulnerability/severity/</link>
+      <link>http://localhost:1313/web3/security/vulnerability/severity/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/vulnerability/severity/</guid>
+      <guid>http://localhost:1313/web3/security/vulnerability/severity/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;在识别代码库中的漏洞时，评估其潜在影响与风险至关重要。漏洞（finding）通常分为三类：&lt;/p&gt;
 &lt;ul&gt;
@@ -1330,9 +1330,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>静态分析工具</title>
-      <link>http://localhost:53175/web3/security/tool/staticanalysistools/</link>
+      <link>http://localhost:1313/web3/security/tool/staticanalysistools/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/security/tool/staticanalysistools/</guid>
+      <guid>http://localhost:1313/web3/security/tool/staticanalysistools/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;静态分析工具是智能合约安全审计的重要辅助手段，能够在代码执行前自动检测潜在的安全漏洞、编码问题和最佳实践违规。这些工具通过分析源代码或字节码的模式来识别风险，极大提高了审计效率和漏洞发现率&lt;/p&gt;
 &lt;hr&gt;
@@ -1406,16 +1406,16 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-1967</title>
-      <link>http://localhost:53175/web3/eip/eip-1967/</link>
+      <link>http://localhost:1313/web3/eip/eip-1967/</link>
       <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-1967/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-1967/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;委托代理合约被广泛用于可升级性和节省 Gas。这些代理合约依赖于一个逻辑合约（也称为实现合约或主拷贝），通过 &lt;code&gt;delegatecall&lt;/code&gt; 进行调用。这使得代理可以保持持久状态（存储和余额），同时将代码执行委托给逻辑合约&lt;/p&gt;
 &lt;p&gt;为避免代理和逻辑合约之间的存储使用冲突，逻辑合约的地址通常保存在一个特定的存储槽中（例如，OpenZeppelin 合约中的 &lt;code&gt;0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc&lt;/code&gt;），该槽位保证永远不会被编译器分配。本 EIP 提议一组标准存储槽来保存代理信息。这使得区块浏览器等客户端能够正确提取并向最终用户展示此信息，同时也允许逻辑合约据此执行操作&lt;/p&gt;
 &lt;h1 id=&#34;动机&#34;&gt;动机&lt;/h1&gt;
 &lt;p&gt;委托代理被广泛使用，作为支持升级和降低部署 Gas 成本的手段。这类代理的例子可见于 OpenZeppelin Contracts、Gnosis、AragonOS、Melonport、Limechain、WindingTree、Decentraland 等众多项目&lt;/p&gt;
 &lt;p&gt;一个典型的例子是区块浏览器。最终用户希望与底层逻辑合约交互，而不是代理本身。拥有从代理检索逻辑合约地址的通用方法，允许区块浏览器展示逻辑合约的 ABI 而非代理的 ABI。浏览器通过检查合约在特定存储槽的内容来判断它是否是一个代理，如果是，则同时展示代理和逻辑合约的信息。例如，Etherscan 上对地址 &lt;code&gt;0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&lt;/code&gt; 的展示就是如此
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EIP/EIP-1967/Sample-proxy-on-etherscan.webp&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-1967/Sample-proxy-on-etherscan.webp&#34;&gt;&lt;/p&gt;
 &lt;p&gt;另一个例子是那些明确知晓自身正被代理的逻辑合约。这使得它们可以基于此事实，在其逻辑中触发代码更新。一个通用的存储槽使得这些用例可以独立于所使用的具体代理实现&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
@@ -1491,9 +1491,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-4337</title>
-      <link>http://localhost:53175/web3/eip/eip-4337/</link>
+      <link>http://localhost:1313/web3/eip/eip-4337/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-4337/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-4337/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1690,9 +1690,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Huff CLI</title>
-      <link>http://localhost:53175/web3/codelanguage/huff/cli/</link>
+      <link>http://localhost:1313/web3/codelanguage/huff/cli/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/codelanguage/huff/cli/</guid>
+      <guid>http://localhost:1313/web3/codelanguage/huff/cli/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;虽然多数时候您会在Foundry项目中使用foundry-huff库来编译Huff合约，但编译器自带的CLI提供了一些额外的配置选项和有用的工具&lt;/p&gt;
 &lt;h2 id=&#34;选项&#34;&gt;选项&lt;/h2&gt;
@@ -1739,15 +1739,15 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Huff 使用指南</title>
-      <link>http://localhost:53175/web3/codelanguage/huff/huff/</link>
+      <link>http://localhost:1313/web3/codelanguage/huff/huff/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/codelanguage/huff/huff/</guid>
+      <guid>http://localhost:1313/web3/codelanguage/huff/huff/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;Huff 是一种低级编程语言，专为在以太坊虚拟机（EVM）上开发高性能、优化程度极高的智能合约而设计。Huff 不隐藏 EVM 的内部机制，而是将其编程堆栈暴露给开发者，以便进行手动操作和精细控制&lt;/p&gt;
 &lt;p&gt;Huff 最初由 Aztec Protocol 团队创建，用于编写 Weierstrudel，这是一个链上椭圆曲线算术库，要求代码极度优化，而 Solidity 和 Yul 都无法满足这种性能需求&lt;/p&gt;
 &lt;p&gt;虽然 EVM 专家可以使用 Huff 编写适用于生产环境的高效智能合约，但它也可以作为初学者学习 EVM 工作原理的一种方式&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/web3/codelanuage/huff/example&#34;&gt;Huff 详细使用示例&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/web3/codelanuage/huff/example&#34;&gt;Huff 详细使用示例&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;p&gt;Huff 编译器是用 &lt;strong&gt;Rust&lt;/strong&gt; 开发的，旨在提供高性能的 Huff 代码编译体验&lt;/p&gt;
 &lt;p&gt;安装方式与 &lt;strong&gt;Foundry&lt;/strong&gt; 类似&lt;/p&gt;
@@ -1788,9 +1788,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Huff 详细使用示例</title>
-      <link>http://localhost:53175/web3/codelanguage/huff/example/</link>
+      <link>http://localhost:1313/web3/codelanguage/huff/example/</link>
       <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/codelanguage/huff/example/</guid>
+      <guid>http://localhost:1313/web3/codelanguage/huff/example/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Huff by Example&lt;/strong&gt; 旨在详细解释 Huff 语言的各项特性，并通过代码示例说明每个特性的使用方法、使用时机、使用场景以及设计目的。文中的代码片段附有丰富注释，但本节假设读者对 &lt;strong&gt;EVM&lt;/strong&gt; 有一定基础&lt;/p&gt;
 &lt;hr&gt;
@@ -1826,9 +1826,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-2612</title>
-      <link>http://localhost:53175/web3/eip/eip-2612/</link>
+      <link>http://localhost:1313/web3/eip/eip-2612/</link>
       <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-2612/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-2612/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;EIP-2612&lt;/code&gt;（又称 &lt;code&gt;ERC-2612&lt;/code&gt; / &lt;em&gt;Permit extension for EIP-20&lt;/em&gt;）在 EIP-20 基础上新增 &lt;code&gt;permit&lt;/code&gt; 接口，允许通过 &lt;strong&gt;EIP-712 typed signatures&lt;/strong&gt;（secp256k1）来更改 &lt;code&gt;allowance&lt;/code&gt;，从而无需由 &lt;code&gt;msg.sender&lt;/code&gt; 发起 &lt;code&gt;approve&lt;/code&gt; 交易
 该扩展目的是最小化对现有 ERC-20 生态的入侵，同时解决用户必须持有 ETH 并且需发两笔交易（approve + action）的体验问题&lt;/p&gt;
@@ -1857,9 +1857,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>Yul 使用指南</title>
-      <link>http://localhost:53175/web3/codelanguage/yul/yul/</link>
+      <link>http://localhost:1313/web3/codelanguage/yul/yul/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/codelanguage/yul/yul/</guid>
+      <guid>http://localhost:1313/web3/codelanguage/yul/yul/</guid>
       <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Yul&lt;/strong&gt;（早期称为 JULIA 或 IULIA）是一种中间语言，可编译到多种后端，包括：&lt;/p&gt;
 &lt;ul&gt;
@@ -1934,9 +1934,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-2718</title>
-      <link>http://localhost:53175/web3/eip/eip-2718/</link>
+      <link>http://localhost:1313/web3/eip/eip-2718/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-2718/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-2718/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;TransactionType || TransactionPayload&lt;/code&gt; 是一个有效的交易格式，&lt;code&gt;TransactionType || ReceiptPayload&lt;/code&gt; 是一个有效的交易收据格式，其中：&lt;/p&gt;
 &lt;ul&gt;
@@ -1992,9 +1992,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-20</title>
-      <link>http://localhost:53175/web3/eip/eip-20/</link>
+      <link>http://localhost:1313/web3/eip/eip-20/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-20/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-20/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;本标准允许在智能合约中实现一个标准化的代币API。它提供了转账代币的基本功能，并允许批准代币以便可以被其他链上第三方花费。&lt;/p&gt;
 &lt;hr&gt;
@@ -2053,9 +2053,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
     </item>
     <item>
       <title>EIP-712</title>
-      <link>http://localhost:53175/web3/eip/eip-712/</link>
+      <link>http://localhost:1313/web3/eip/eip-712/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/web3/eip/eip-712/</guid>
+      <guid>http://localhost:1313/web3/eip/eip-712/</guid>
       <description>&lt;h1 id=&#34;摘要&#34;&gt;摘要&lt;/h1&gt;
 &lt;p&gt;这是一个用于对&lt;strong&gt;类型化结构化数据&lt;/strong&gt;（而不仅仅是字节串）进行哈希和签名的标准。它包括：&lt;/p&gt;
 &lt;ul&gt;
@@ -2075,9 +2075,9 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;本 EIP 旨在提高&lt;strong&gt;链下消息签名&lt;/strong&gt;在链上使用的可用性。链下消息签名因其节省 Gas 和减少链上交易数量而被广泛采用。目前，已签名的消息对用户来说是一个不透明的十六进制字符串，几乎没有关于消息的上下文信息&lt;/p&gt;
 &lt;p&gt;本提案概述了一种&lt;strong&gt;编码数据及其结构&lt;/strong&gt;的方案，允许在签名时向用户显示信息以供验证&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;本协议提出前的签名样式&lt;/strong&gt;:
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EIP/EIP-712/eth_sign.webp&#34;&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-712/eth_sign.webp&#34;&gt;
 &lt;strong&gt;本协议提出后的签名样式&lt;/strong&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:53175/Web3/EIP/EIP-712/eth_signTypedData.webp&#34;&gt;&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Web3/EIP/EIP-712/eth_signTypedData.webp&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
 &lt;p&gt;明白，你是&lt;strong&gt;要 Markdown 语法的笔记&lt;/strong&gt;，但内容保持学术/规范风格，不要花里胡哨。下面是 &lt;strong&gt;纯 Markdown、可直接粘到笔记里的版本&lt;/strong&gt;。&lt;/p&gt;

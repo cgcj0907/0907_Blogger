@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>项目与实践工程 on 0907 WORLD</title>
-    <link>http://localhost:53175/projects/</link>
+    <link>http://localhost:1313/projects/</link>
     <description>Recent content in 项目与实践工程 on 0907 WORLD</description>
     <image>
       <title>0907 WORLD</title>
-      <url>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://localhost:53175/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:53175/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>0907 Wallet</title>
-      <link>http://localhost:53175/projects/0907wallet/</link>
+      <link>http://localhost:1313/projects/0907wallet/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/projects/0907wallet/</guid>
+      <guid>http://localhost:1313/projects/0907wallet/</guid>
       <description>&lt;h1 id=&#34;项目简介&#34;&gt;项目简介&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -237,9 +237,9 @@
     </item>
     <item>
       <title>0907 Wallet 钱包管理模块设计</title>
-      <link>http://localhost:53175/projects/0907wallet/walletmanagement/</link>
+      <link>http://localhost:1313/projects/0907wallet/walletmanagement/</link>
       <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/projects/0907wallet/walletmanagement/</guid>
+      <guid>http://localhost:1313/projects/0907wallet/walletmanagement/</guid>
       <description>&lt;hr&gt;
 &lt;h1 id=&#34;模块概览&#34;&gt;模块概览&lt;/h1&gt;
 &lt;p&gt;👉 &lt;a href=&#34;https://github.com/cgcj0907/0907-Wallet/tree/main/app/walletManagement&#34;&gt;模块代码仓库（walletManagement）&lt;/a&gt;&lt;/p&gt;
@@ -333,9 +333,9 @@
     </item>
     <item>
       <title>0907 Wallet 用户管理模块设计</title>
-      <link>http://localhost:53175/projects/0907wallet/usermanagement/</link>
+      <link>http://localhost:1313/projects/0907wallet/usermanagement/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/projects/0907wallet/usermanagement/</guid>
+      <guid>http://localhost:1313/projects/0907wallet/usermanagement/</guid>
       <description>&lt;h1 id=&#34;模块概览&#34;&gt;模块概览&lt;/h1&gt;
 &lt;p&gt;👉 &lt;a href=&#34;https://github.com/cgcj0907/0907-Wallet/tree/main/app/userManagement&#34;&gt;模块代码仓库&lt;/a&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -422,9 +422,9 @@
     </item>
     <item>
       <title>0907 Wallet 系统公用层设计</title>
-      <link>http://localhost:53175/projects/0907wallet/public/</link>
+      <link>http://localhost:1313/projects/0907wallet/public/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53175/projects/0907wallet/public/</guid>
+      <guid>http://localhost:1313/projects/0907wallet/public/</guid>
       <description>&lt;h1 id=&#34;模块概览&#34;&gt;模块概览&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;app
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── components
@@ -523,7 +523,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;hashPassword&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;password&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Promise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storagets&#34;&gt;storage.ts&lt;/h3&gt;
-&lt;p&gt;👉 &lt;a href=&#34;http://localhost:53175/toolkits/indexedDB&#34;&gt;关于 IndexedDB 的使用方法请见：IndexedDB 浏览器数据库&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;👉 &lt;a href=&#34;http://localhost:1313/toolkits/indexedDB&#34;&gt;关于 IndexedDB 的使用方法请见：IndexedDB 浏览器数据库&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
