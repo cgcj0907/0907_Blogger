@@ -117,14 +117,14 @@ type itab struct {
     * 执行 readelf -St -W main.bin 可查看当前 ELF 文件的 section headers
 * 执行以下命令分别获取 `.rodata` 的真实文件偏移地址和虚拟地址`
 ```bash
-readelf -St -W main.bin | \
+$ readelf -St -W main.bin | \
   grep -A 1 .rodata | \
   tail -n +2 | \
   awk '{print "ibase=16;"toupper($3)}' | \
   bc
 458752 //真实地址
 
-readelf -St -W main.bin | \
+$ readelf -St -W main.bin | \
   grep -A 1 .rodata | \
   tail -n +2 | \
   awk '{print "ibase=16;"toupper($2)}' | \
@@ -133,7 +133,7 @@ readelf -St -W main.bin | \
 ```
 * 执行下面命令得到 itab 的虚拟地址
 ```bash
-objdump -t -j .rodata main.bin | \
+$ objdump -t -j .rodata main.bin | \
   grep "go.itab.main.Adder,main.Mather" | \
   awk '{print "ibase=16;"toupper($1)}' | \
   bc
@@ -156,7 +156,7 @@ itab size: 0x24 = 40
 ```
 * 查询数据
 ```bash
-dd if=main.bin of=/dev/stdout bs=1 count=40 skip=667032 2>/dev/null | hexdump -C
+$ dd if=main.bin of=/dev/stdout bs=1 count=40 skip=667032 2>/dev/null | hexdump -C
 
 00000000  00 90 47 00 00 00 00 00  20 bd 47 00 00 00 00 00  |..G..... .G.....|
 00000010  ae 2f 32 ab 00 00 00 00  80 ff 40 00 00 00 00 00  |./2.......@.....|
@@ -173,7 +173,7 @@ dd if=main.bin of=/dev/stdout bs=1 count=40 skip=667032 2>/dev/null | hexdump -C
 
 3. 创建  data
 
-在编译指令中就是将第一步创建的接收者实体地址放入栈中
+在编译指令中，就是将第一步创建的接收者实体地址放入栈中
 ```
         0x001a 00026 (/home/w/go-test/main.go:15)       LEAQ    main..stmp_0(SB), DX
         0x0021 00033 (/home/w/go-test/main.go:15)       MOVQ    DX, main.m+32(SP)
