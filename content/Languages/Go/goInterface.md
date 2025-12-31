@@ -65,15 +65,19 @@ type itab struct {
 ```
 
 ## 从汇编看 Interface 创建过程
-> 再了解完 Interface 的基本结构 iface 后, 读者先自行执行编译命令得到编译产物
+> 在了解完 Interface 的基本结构 iface 后, 读者先自行执行编译命令得到编译产物
+
 > 编译命令 go tool compile -N -S main.go (会出现 unlinkable 字段) 或者 go build -gcflags='-N -S' main.go 
+
 > 下面我不会列举完整的编译产物
+
 > 细心的读者可能会发现编译产物中 main 函数没有 add 函数的调用, 这是因为编译器优化问题, 如果读者想体现 add 函数的调用, 则需自行增加函数返回结果的使用逻辑来防止编译器优化
 
 总体步骤分为 3 步
 1. 创建接收者(receiver) m
 > 该步骤无法直接看出, 因为接收者 m 此时并不在栈中创建
-> go tool compile -N -S main.go | grep -A 2 '^main..stmp_0'
+
+> 执行命令 go tool compile -N -S main.go | grep -A 2 '^main..stmp_0'
 ```
 main..stmp_0 SRODATA static size=4
         0x0000 62 1a 00 00                                      b...
