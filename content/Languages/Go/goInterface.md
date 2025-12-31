@@ -172,6 +172,7 @@ dd if=main.bin of=/dev/stdout bs=1 count=40 skip=667032 2>/dev/null | hexdump -C
 ```
 
 3. 创建  data
+
 在编译指令中就是将第一步创建的接收者实体地址放入栈中
 ```
         0x001a 00026 (/home/w/go-test/main.go:15)       LEAQ    main..stmp_0(SB), DX
