@@ -33,7 +33,7 @@ func main() { add(10, 32) }
 ![](/Languages/Go/inline_noinline.webp)
 
 编译示例
-> 以 WSL Ubuntu 64位 为例
+> 运行环境 WSL Ubuntu 24.04 LTS 64位
 ```txt
 # -S 打印汇编指令信息 -N 关闭编译器优化
 # 读者也可以不使用 -N 自行观察两种模式下编译的产物差异
@@ -92,6 +92,7 @@ main.main STEXT size=42 args=0x0 locals=0x10 funcid=0x0 align=0x0
 ```bash
 TEXT    main.add(SB), NOSPLIT|ABIInternal, $16-8
 ```
+* main: 代表包名, 并不是 main 函数
 * NOSPLIT: 表示不用进行栈溢出检测, 通常存在于没有本地变量的函数, 无需额外栈帧分配
 * $16-8: `16` 表示分配 16 字节大小的栈帧(之后会解释 16 从哪里来), `8` 表示参数大小位 8 字节(两个 `int32`)
 
