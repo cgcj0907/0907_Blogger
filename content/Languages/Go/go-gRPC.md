@@ -1,6 +1,6 @@
 ---
 title: "Go gRPC 开发实战笔记"
-date: 2025-1-5
+date: 2025-01-5
 draft: false
 tags: ["Languages", "Golang", "gRPC"]
 ShowToc: true
