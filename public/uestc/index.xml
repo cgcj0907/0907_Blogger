@@ -54,17 +54,134 @@
       <description>&lt;h2 id=&#34;基本概念和术语&#34;&gt;基本概念和术语&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;数据&lt;/strong&gt;: 是对客观事物的符号表示, 在计算机科学中是指所有能输入到计算机中并被计算机程序处理的符号的总称&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数据元素&lt;/strong&gt;: 是数据的基本单位, 在计算机程序中通常作为一个整体进行考虑和处理,(&lt;strong&gt;一个数据元素可由若干个数据项组成&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据元素&lt;/strong&gt;: 是数据的基本单位, 在计算机程序中通常作为一个整体进行考虑和处理(&lt;strong&gt;一个数据元素可由若干个数据项组成&lt;/strong&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;数据对象&lt;/strong&gt;: 是性质相同的数据元素的集合, 是数据的一个子集&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数据结构&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;&lt;strong&gt;数据结构&lt;/strong&gt;: 是相互之间存在的一种或多种特定关系的数据元素的集合. 包括三方面的内容: &lt;strong&gt;逻辑结构&lt;/strong&gt;, &lt;strong&gt;存储结构&lt;/strong&gt;和数据的运算
+&lt;ul&gt;
+&lt;li&gt;线性结构&lt;/li&gt;
+&lt;li&gt;非线性结构: 集合, 树形结构, 图状结构或网状结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储结构&lt;/strong&gt;(物理结构): 数据结构在计算机中的表示(又称映像)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据元素在计算机中的映像称为&lt;strong&gt;元素或结点&lt;/strong&gt;, 例如通常用一个字长的位串表示一个整数, 通常称这个位串为元素或节点. 当数据元素由若干数据项组成时,位串中对应于各个数据项的子位串称为&lt;strong&gt;数据域&lt;/strong&gt;
+* 顺序存储结构(顺序映像)
+* 链式存储结构(非顺序映像)
+* 索引存储
+* 散列存储(哈希存储)
+算法的设计取决于选定的数据逻辑结构, 而算法的实现依赖于采用的存储结构&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据类型&lt;/strong&gt;: 和数据结构密切相关的一个概念, 最早出现在高级程序语言中, 用以刻画(程序)操作对象的特性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原子类型&lt;/li&gt;
+&lt;li&gt;结构类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;抽象数据类型&lt;/strong&gt;(ADT): 是指一个数学模型以及定义在该模型上的一组操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原子类型&lt;/li&gt;
+&lt;li&gt;固定聚合类型&lt;/li&gt;
+&lt;li&gt;可变聚合类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;后两种可统称为结构类型&lt;/p&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;多形数据类型&lt;/strong&gt;: 指其值的成分不确定的数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;算法和算法分析&#34;&gt;算法和算法分析&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;5 个重要特性:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;有穷性&lt;/li&gt;
+&lt;li&gt;确定性&lt;/li&gt;
+&lt;li&gt;可行性&lt;/li&gt;
+&lt;li&gt;输入&lt;/li&gt;
+&lt;li&gt;输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;算法的设计要求&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性&lt;/li&gt;
+&lt;li&gt;可读性&lt;/li&gt;
+&lt;li&gt;健壮性&lt;/li&gt;
+&lt;li&gt;效率与低存储量需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;算法效率的度量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;事后统计的方法&lt;/li&gt;
+&lt;li&gt;事前分析估算的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;算法的存储空间需求&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果一个问题所占的输入数据空间是固定的、和算法无关的，
+那我们在分析空间复杂度时，只需要关注算法额外使用的空间（也叫辅助空间）&lt;/p&gt;</description>
     </item>
     <item>
       <title>第 1 章 计算机系统概述</title>
       <link>http://localhost:1313/uestc/co/charpter1/</link>
       <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/uestc/co/charpter1/</guid>
-      <description>&lt;h2 id=&#34;概念解释&#34;&gt;概念解释&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;计算机系统的基本组成&#34;&gt;计算机系统的基本组成&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个完整的计算机系统由&lt;strong&gt;软件&lt;/strong&gt;和&lt;strong&gt;硬件&lt;/strong&gt;组成&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;冯诺依曼结构的基本思想&#34;&gt;冯.诺依曼结构的基本思想&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;采用&amp;quot;存储程序&amp;quot;的工作方式&lt;/li&gt;
+&lt;li&gt;计算机由运算器, 控制器, 存储器, 输入设备和输出设备 5 个基本部件组成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;现代计算机结构&#34;&gt;现代计算机结构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;中央处理器&lt;/li&gt;
+&lt;li&gt;存储器&lt;/li&gt;
+&lt;li&gt;外部设备和设备控制器&lt;/li&gt;
+&lt;li&gt;总线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计算机系统层次结构&#34;&gt;计算机系统层次结构&lt;/h2&gt;
+&lt;p&gt;包含:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;算法和程序&lt;/li&gt;
+&lt;li&gt;编程语言&lt;/li&gt;
+&lt;li&gt;语言处理系统&lt;/li&gt;
+&lt;li&gt;操作系统&lt;/li&gt;
+&lt;li&gt;指令集体系结构&lt;/li&gt;
+&lt;li&gt;微体系结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编程语言&#34;&gt;编程语言&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;高级语言&lt;/li&gt;
+&lt;li&gt;低级语言&lt;/li&gt;
+&lt;li&gt;机器级语言
+&lt;ul&gt;
+&lt;li&gt;机器语言(计算机唯一能&lt;strong&gt;直接&lt;/strong&gt;识别和执行的语言)&lt;/li&gt;
+&lt;li&gt;汇编语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;翻译程序&#34;&gt;翻译程序&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;汇编程序(汇编语言 -&amp;gt; 机器语言)&lt;/li&gt;
+&lt;li&gt;解释程序(高级语言 &amp;ndash;逐条&amp;ndash;&amp;gt; 机器语言)&lt;/li&gt;
+&lt;li&gt;编译程序(高级语言 &amp;ndash;整体&amp;ndash;&amp;gt; 机器语言)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;程序开发与执行过程&#34;&gt;程序开发与执行过程&lt;/h2&gt;
+&lt;h3 id=&#34;从源程序到可执行程序&#34;&gt;从源程序到可执行程序&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Program Flow&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/UESTC/CO/Chapter1_Program_Flow.webp&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;预处理阶段: 预处理器 (cpp) 处理源文件中以 # 开头的预处理指令, 生成预处理后的 C 文件 hello.i&lt;/li&gt;
+&lt;li&gt;编译阶段: 编译器 (ccl) 将 hello.i 翻译为汇编程序 hello.s&lt;/li&gt;
+&lt;li&gt;汇编&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;概念解释&#34;&gt;概念解释&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;吞吐率 : 在单位时间内所完成的工作量&lt;/li&gt;
 &lt;li&gt;响应时间 : 指从作业提交开始到作业完成所用的时间&lt;/li&gt;
