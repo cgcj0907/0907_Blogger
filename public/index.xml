@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.146.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UESTC 简介</title>
@@ -744,6 +744,39 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;现实世界资产旨在将传统金融资产（如国债、信贷、不动产）通过代币化引入区块链，为DeFi生态系统提供具有实际价值支撑的收益资产，并面临合规、托管与法律映射等独特挑战&lt;/p&gt;</description>
     </item>
     <item>
+      <title>微分方程</title>
+      <link>http://localhost:1313/uestc/math/differential_equations/</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uestc/math/differential_equations/</guid>
+      <description>&lt;p&gt;以下是根据考研数学（张宇）体系整理的微分方程内容，补充了术语解释及各类型方程的定义、解法、特解与通解形式。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;术语解释&#34;&gt;术语解释&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;n 阶&lt;/strong&gt;: 微分方程中出现的未知函数 (y) 的最高阶导数的阶数称为方程的阶。若方程中含有 (y^{(n)})，则称为 n 阶微分方程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;齐次&lt;/strong&gt;: 对于线性微分方程，若方程右端项（非齐次项）恒为零，即方程形式为 (a_n(x)y^{(n)}+\cdots+a_1(x)y&amp;rsquo;+a_0(x)y=0)，则称为齐次线性微分方程。对于一阶方程 (\frac{dy}{dx}=f(x,y))，若 (f(x,y)) 可写成 (\varphi\left(\frac{y}{x}\right)) 的形式，也称为齐次型方程（注意区分）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线性&lt;/strong&gt;: 线性微分方程指未知函数 (y) 及其各阶导数都以一次幂出现，且不存在乘积项 (y\cdot y&amp;rsquo;) 或 (\sin y) 等非线性项。一般形式为 (a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\cdots+a_1(x)y&amp;rsquo;+a_0(x)y=f(x))。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常系数&lt;/strong&gt;: 若线性微分方程中未知函数及其导数的系数均为常数（与自变量 (x) 无关），则称为常系数线性微分方程。例如 (ay&amp;rsquo;&amp;rsquo;+by&amp;rsquo;+cy=f(x))。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特解&lt;/strong&gt;: 满足微分方程的一个具体解，通常含有确定常数（无任意常数）。在初值问题中，通过初始条件确定通解中的常数后得到特解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通解&lt;/strong&gt;: 含有与方程阶数相同个数的独立任意常数的解。对于线性方程，通解结构为齐次通解加上一个非齐次特解。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;一阶&#34;&gt;一阶&lt;/h2&gt;
+&lt;h3 id=&#34;一阶线性微分方程&#34;&gt;一阶线性微分方程&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;标准形式&lt;/strong&gt;: (\frac{dy}{dx}+P(x)y=Q(x))&lt;br&gt;
+&lt;strong&gt;解法&lt;/strong&gt;: 常数变易法或公式法。&lt;br&gt;
+&lt;strong&gt;通解公式&lt;/strong&gt;:&lt;br&gt;
+[
+y = e^{-\int P(x),dx}\left(\int Q(x)e^{\int P(x),dx},dx + C\right)
+]&lt;br&gt;
+&lt;strong&gt;特解&lt;/strong&gt;: 给定初始条件 (y(x_0)=y_0) 时，代入通解确定 (C) 即得特解。&lt;/p&gt;
+&lt;h3 id=&#34;二阶可降阶微分方程&#34;&gt;二阶可降阶微分方程&lt;/h3&gt;
+&lt;p&gt;三种可降阶类型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;(y&amp;rsquo;&amp;rsquo; = f(x, y&amp;rsquo;))&lt;/strong&gt;（不显含 (y)）&lt;br&gt;
+令 (p = y&amp;rsquo;)，则 (y&amp;rsquo;&amp;rsquo; = p&amp;rsquo;)，原方程化为 (p&amp;rsquo; = f(x, p))，为一阶方程。求出 (p = \varphi(x, C_1))，再积分得 (y = \int \varphi(x, C_1),dx + C_2)。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>第 1 章 绪论</title>
       <link>http://localhost:1313/uestc/ds/charpter1/</link>
       <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
@@ -790,6 +823,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;多形数据类型&lt;/strong&gt;: 指其值的成分不确定的数据类型&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;算法和算法分析&#34;&gt;算法和算法分析&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;5 个重要特性:&lt;/li&gt;
@@ -837,12 +871,24 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;li&gt;计算机由运算器, 控制器, 存储器, 输入设备和输出设备 5 个基本部件组成&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;现代计算机结构&#34;&gt;现代计算机结构&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Computer Structure&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/UESTC/CO/Chapter1_Computer_Structure.webp&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;中央处理器&lt;/li&gt;
+&lt;li&gt;中央处理器
+&lt;ul&gt;
+&lt;li&gt;数据通路
+&lt;ul&gt;
+&lt;li&gt;算术逻辑单元(ALU)&lt;/li&gt;
+&lt;li&gt;通用寄存器组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;控制器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;存储器&lt;/li&gt;
 &lt;li&gt;外部设备和设备控制器&lt;/li&gt;
 &lt;li&gt;总线&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;计算机系统层次结构&#34;&gt;计算机系统层次结构&lt;/h2&gt;
 &lt;p&gt;包含:&lt;/p&gt;
 &lt;ul&gt;
@@ -864,6 +910,7 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;翻译程序&#34;&gt;翻译程序&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;汇编程序(汇编语言 -&amp;gt; 机器语言)&lt;/li&gt;
@@ -876,16 +923,35 @@ ERC只是EIP的应用层子集&lt;br&gt;
 &lt;ol&gt;
 &lt;li&gt;预处理阶段: 预处理器 (cpp) 处理源文件中以 # 开头的预处理指令, 生成预处理后的 C 文件 hello.i&lt;/li&gt;
 &lt;li&gt;编译阶段: 编译器 (ccl) 将 hello.i 翻译为汇编程序 hello.s&lt;/li&gt;
-&lt;li&gt;汇编&lt;/li&gt;
+&lt;li&gt;汇编阶段: 汇编器 (as) 将 hello.s 转化为机器语言指令, 生成可重定位目标文件 hello.o&lt;/li&gt;
+&lt;li&gt;链接程序: 连接器 (ld) 将 hello.o 与标准 C 库中所需的函数 (例如 printf) 进行链接, 解析外部符号引用, 最终生成完整的可执行文件 hello, 并保存至磁盘&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;概念解释&#34;&gt;概念解释&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;计算机主要性能指标&#34;&gt;计算机主要性能指标&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;基本基本&lt;/li&gt;
+&lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;吞吐率 : 在单位时间内所完成的工作量&lt;/li&gt;
 &lt;li&gt;响应时间 : 指从作业提交开始到作业完成所用的时间&lt;/li&gt;
-&lt;li&gt;时钟周期 :&lt;/li&gt;
-&lt;li&gt;时钟频率 :&lt;/li&gt;
-&lt;li&gt;CPI&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;时钟周期 : 机器内部主时钟脉冲的宽度&lt;/li&gt;
+&lt;li&gt;时钟频率 : 机器内部主时钟的频率, 即时钟周期的倒数&lt;/li&gt;
+&lt;li&gt;CPI: 执行一条指令所需的时钟周期数&lt;/li&gt;
+&lt;li&gt;MIPS: 每秒执行多少百万条指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;计算能力相关指标&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;MFLOPS : 百万次浮点运算/秒&lt;/li&gt;
+&lt;li&gt;GFLOPS : 十亿次浮点运算/秒&lt;/li&gt;
+&lt;li&gt;TFLOPS : 万亿次浮点运算/秒&lt;/li&gt;
+&lt;li&gt;PFLOPS : 千万亿次浮点运算/秒&lt;/li&gt;
+&lt;li&gt;EFLOPS : 百亿亿次浮点运算/秒&lt;/li&gt;
+&lt;li&gt;ZFLOPS : 十万亿亿次浮点运算/秒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1s = 1000 ms = 1000000 μs = 1000000000 ns&lt;/p&gt;</description>
     </item>
     <item>
       <title>Effective Go III</title>
