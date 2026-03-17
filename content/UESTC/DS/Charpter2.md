@@ -1,5 +1,5 @@
 ---
-title: "第 2 章 绪论"
+title: "第 2 章 线性表"
 date: 2026-03-14
 draft: false         
 tags: ["UESTC", "数据结构"]
