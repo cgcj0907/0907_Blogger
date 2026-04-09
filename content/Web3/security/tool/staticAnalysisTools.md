@@ -12,7 +12,7 @@ showToc: true
 
 ---
 
-# 主要静态分析工具对比
+## 主要静态分析工具对比
 
 | 工具名称 | 语言支持 | 分析类型 | 特点 | 适用场景 |
 |---------|---------|---------|------|----------|
@@ -21,62 +21,62 @@ showToc: true
 | **Aderyn** | Solidity | 源代码分析 | 专注于Rust实现、速度快 | Rust开发者、性能敏感场景 |
 | **Semgrep** | 多语言 | 模式匹配 | 简单规则、学习曲线低 | 团队编码规范检查 |
 
-# [Slither](https://github.com/crytic/slither)
+## [Slither](https://github.com/crytic/slither)
 
-## 概述
+### 概述
 Slither 是由 Trail of Bits 开发的 Solidity 静态分析框架，速度快、检测能力强，支持自定义检测规则。
 
-## 安装
+### 安装
 ```console
 python3 -m pip install slither-analyzer
 ```
 
-## 升级
+### 升级
 ```console
 python3 -m pip install --upgrade slither-analyzer
 ```
 
-## 基本使用
-### 扫描当前目录
+### 基本使用
+#### 扫描当前目录
 ```console
 slither .
 ```
-### 扫描特定文件
+#### 扫描特定文件
 ```console
 slither tests/uninitialized.sol
 ```
 
-## 检测器选择
+### 检测器选择
 Slither 默认会运行 所有内置检测器
-### 指定检测器
+#### 指定检测器
 ```console
 slither file.sol --detect arbitrary-send,pragma
 ```
-### 排除指定检测器
+#### 排除指定检测器
 ```console
 slither file.sol --exclude naming-convention,unused-state,suicidal
 ```
-## 排除全部 informational / low 级别的检测器
+### 排除全部 informational / low 级别的检测器
 ```console
 slither file.sol --exclude-informational
 slither file.sol --exclude-low
 ```
-## 查看所有可用检测器
+### 查看所有可用检测器
 ```console
 slither --list-detectors
 ```
-## 打印器
+### 打印器
 默认情况下，所有 printers 都不会运行
-### 打印器选择
+#### 打印器选择
 ```console
 slither file.sol --print inheritance-graph
 ```
-### 列出所有可用打印器
+#### 列出所有可用打印器
 ```console
 slither --list-printers
 
 ```
-## 路劲过滤
+### 路劲过滤
 --filter-paths 用于排除 只与某些路径相关的结果
 
 可使用路径、文件名、字符串匹配或正则表达式
@@ -90,7 +90,7 @@ slither . --filter-paths "openzepellin"
 ```console
 slither . --filter-paths "Migrations.sol|ConvertLib.sol"
 ```
-## 分诊模式
+### 分诊模式
 Slither 提供两种方式排除结果：
 
 1. 在代码上添加注释（禁用某个检测器）
@@ -110,7 +110,7 @@ Slither 提供两种方式排除结果：
 @custom:security non-reentrant
 uint256 target;
 ```
-## 交互式分诊模式
+### 交互式分诊模式
 * 使用 --triage-mode：
 ```console
 slither . --triage-mode
@@ -142,62 +142,62 @@ Results to hide during next runs: "0,1,..." or "All" (enter to not hide results)
 删除该文件即可：
 rm slither.db.json
 
-## 配置文件
+### 配置文件
 默认情况下, 配置文件为 `slither.config.json`
 可通过以下命令更改:
 ```console
 slither . --config-file file.config.json
 ```
-### 常用配置项
+#### 常用配置项
 ```json
 {
     "detectors_to_exclude": "conformance-to-solidity-naming-conventions,incorrect-versions-of-solidity", //example
-    "exclude_informational": False,
-    "exclude_low": False,
-    "exclude_medium": False,
-    "exclude_high": False,
-    "disable_color": False,
+    "exclude_informational": false,
+    "exclude_low": false,
+    "exclude_medium": false,
+    "exclude_high": false,
+    "disable_color": false,
     "filter_paths": "(mocks/|test/|script/|upgradedProtocol/)", // example
-    "legacy_ast": False,
-    "exclude_dependencies": True
+    "legacy_ast": false,
+    "exclude_dependencies": true
 }
 ```
 
-### 详细配置选项
+#### 详细配置选项
 ```json
 {
     "detectors_to_run": "all",
     "printers_to_run": None,
     "detectors_to_exclude": None,
     "detectors_to_include": None,
-    "exclude_dependencies": False,
-    "exclude_informational": False,
-    "exclude_optimization": False,
-    "exclude_low": False,
-    "exclude_medium": False,
-    "exclude_high": False,
+    "exclude_dependencies": false,
+    "exclude_informational": false,
+    "exclude_optimization": false,
+    "exclude_low": false,
+    "exclude_medium": false,
+    "exclude_high": false,
     "fail_on": FailOnLevel.PEDANTIC,
     "json": None,
     "sarif": None,
-    "disable_color": False,
+    "disable_color": false,
     "filter_paths": None,
     "include_paths": None,
-    "generate_patches": False,
-    "skip_assembly": False,
-    "legacy_ast": False,
+    "generate_patches": false,
+    "skip_assembly": false,
+    "legacy_ast": false,
     "zip": None,
     "zip_type": "lzma",
-    "show_ignored_findings": False,
+    "show_ignored_findings": false,
     "sarif_input": "export.sarif",
     "sarif_triage": "export.sarif.sarifexplorer",
     "triage_database": "slither.db.json",
     # codex
-    "codex": False,
+    "codex": false,
     "codex_contracts": "all",
     "codex_model": "text-davinci-003",
     "codex_temperature": 0,
     "codex_max_tokens": 300,
-    "codex_log": False,
+    "codex_log": false,
 }
 ```
 

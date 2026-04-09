@@ -9,7 +9,7 @@
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.146.0</generator>
+    <generator>Hugo -- 0.159.1</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 16 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E7%AE%80%E4%BB%8B/index.xml" rel="self" type="application/rss+xml" />
@@ -21,7 +21,8 @@
       <description>&lt;h2 id=&#34;ide&#34;&gt;IDE&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Integrated Development Environment（集成开发环境）&lt;br&gt;
-常用的开发与调试工具&lt;/p&gt;&lt;/blockquote&gt;
+常用的开发与调试工具&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt;：轻量级通用编辑器&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;IntelliJ IDEA&lt;/strong&gt;：Java 项目开发&lt;/li&gt;

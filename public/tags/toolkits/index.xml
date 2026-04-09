@@ -9,7 +9,7 @@
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.146.0</generator>
+    <generator>Hugo -- 0.159.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/toolkits/index.xml" rel="self" type="application/rss+xml" />
@@ -192,7 +192,8 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;1-安装与快速开始&#34;&gt;1️. 安装与快速开始&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;可以参考官方文档或社区教程 👉&lt;a href=&#34;https://clickhouse.com/docs/&#34;&gt;ClickHouse 官方文档&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;可以参考官方文档或社区教程 👉&lt;a href=&#34;https://clickhouse.com/docs/&#34;&gt;ClickHouse 官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;11-安装&#34;&gt;1.1 安装&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://clickhouse.com/ &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./clickhouse install
@@ -257,7 +258,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或使用 yarn：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yarn add qr-scanner
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;注意：已不再推荐直接用 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; 标签引入，现代项目请通过包管理器安装&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;注意：已不再推荐直接用 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; 标签引入，现代项目请通过包管理器安装&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2-基本引入方式&#34;&gt;2. 基本引入方式&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ts&#34; data-lang=&#34;ts&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;QrScanner&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;qr-scanner&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -271,19 +273,19 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;扫码成功:&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;// result.cornerPoints 可用来做边框动画
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;returnDetailedScanResult&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 返回完整对象而非仅字符串
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;highlightScanRegion&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// 显示扫描区域遮罩
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nx&#34;&gt;highlightCodeOutline&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;// 高亮二维码轮廓
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;highlightScanRegion&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;// 显示扫描区域遮罩
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;highlightCodeOutline&lt;/span&gt;: &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;     &lt;span class=&#34;c1&#34;&gt;// 高亮二维码轮廓
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 启动摄像头
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;await&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 停止扫描
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;scanner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;常用配置项&#34;&gt;常用配置项&lt;/h4&gt;
 &lt;table&gt;
   &lt;thead&gt;
@@ -324,7 +326,8 @@
       <guid>http://localhost:1313/toolkits/cache/redis_evolve/</guid>
       <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_evolve.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2010---独立版-redisstandalone-redis&#34;&gt;2010 - 独立版 Redis（Standalone Redis）&lt;/h2&gt;
 &lt;ul&gt;
@@ -383,7 +386,8 @@
       <guid>http://localhost:1313/toolkits/cache/redis_persist/</guid>
       <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_persist.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;一aofappend-only-file&#34;&gt;一、AOF（Append-Only File）&lt;/h2&gt;
 &lt;ul&gt;
@@ -459,7 +463,8 @@
       <guid>http://localhost:1313/toolkits/cache/redis_fast/</guid>
       <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_fast.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;一基于内存ram-based&#34;&gt;一、基于内存（RAM-based）&lt;/h2&gt;
 &lt;h3 id=&#34;1-redis-使用内存而非磁盘&#34;&gt;1. Redis 使用内存而非磁盘&lt;/h3&gt;
@@ -507,7 +512,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;blockquote&gt;
-&lt;p&gt;内存访问速度比 SSD 快 &lt;strong&gt;数百倍&lt;/strong&gt;，比 HDD 快 &lt;strong&gt;数万倍&lt;/strong&gt;，这是 Redis 高性能的根本原因&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;内存访问速度比 SSD 快 &lt;strong&gt;数百倍&lt;/strong&gt;，比 HDD 快 &lt;strong&gt;数万倍&lt;/strong&gt;，这是 Redis 高性能的根本原因&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;二io-多路复用--单线程模型&#34;&gt;二、IO 多路复用 + 单线程模型&lt;/h2&gt;
 &lt;h3 id=&#34;1-io-多路复用io-multiplexing&#34;&gt;1. IO 多路复用（IO Multiplexing）&lt;/h3&gt;
@@ -524,7 +530,8 @@
       <guid>http://localhost:1313/toolkits/cache/redis_use/</guid>
       <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis_use.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-会话管理session&#34;&gt;1. 会话管理（Session）&lt;/h2&gt;
 &lt;ul&gt;
@@ -584,7 +591,8 @@
       <guid>http://localhost:1313/toolkits/cache/cache/</guid>
       <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/cache.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-什么是缓存what-is-a-cache&#34;&gt;1. 什么是缓存（What is a Cache）&lt;/h2&gt;
 &lt;h3 id=&#34;内存存储in-memory-storage&#34;&gt;内存存储（In-Memory Storage）&lt;/h3&gt;
@@ -789,7 +797,8 @@
       <guid>http://localhost:1313/toolkits/cache/redis/</guid>
       <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/Toolkits/cache/redis.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;图片来源: &lt;a href=&#34;https://bytebytego.com&#34;&gt;https://bytebytego.com&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;一什么是-redis&#34;&gt;一、什么是 Redis&lt;/h2&gt;
 &lt;ul&gt;
@@ -1221,7 +1230,8 @@
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/toolkits/storage/sql_execute/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;⚠️ 说明：不同数据库的具体实现架构不同，下图与流程展示的是&lt;strong&gt;数据库系统中常见的通用设计思想&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;⚠️ 说明：不同数据库的具体实现架构不同，下图与流程展示的是&lt;strong&gt;数据库系统中常见的通用设计思想&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;step-1传输层transport-layer&#34;&gt;Step 1：传输层（Transport Layer）&lt;/h2&gt;
 &lt;ul&gt;
@@ -1302,10 +1312,14 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;step-6缓冲区管理器buffer-manager读操作&#34;&gt;Step 6：缓冲区管理器（Buffer Manager，读操作）&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;适用于 &lt;strong&gt;只读查询（如 SELECT）&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;适用于 &lt;strong&gt;只读查询（如 SELECT）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;访问方法判断 SQL 是否为 &lt;strong&gt;只读语句&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;p&gt;访问方法判断 SQL 是否为 &lt;strong&gt;只读语句&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若是 SELECT：&lt;/p&gt;</description>
     </item>
     <item>
       <title>内存与存储</title>
