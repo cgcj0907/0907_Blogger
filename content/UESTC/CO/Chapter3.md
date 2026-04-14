@@ -42,40 +42,38 @@ ShowToc: true
 
 #### 布斯（Booth）乘法推导（补码乘法的核心思想）
 
-布斯乘法的目标：把乘数中连续的 <code>1</code>（一段“1 串”）改写成“加一次 + 减一次”的形式，从而减少加法次数。
+A. D. Booth 提出了一种**补码相乘算法**：符号位与数值位合在一起参与运算，正数与负数同等对待，直接得到补码形式的乘积，称为布斯（Booth）乘法。下面以 <code>n</code> 位补码定点整数来说明其推导思路。
 
-- “1 串”恒等式（把连续求和化为差）：
-  <p><code>&Sigma;<sub>i=k</sub><sup>m</sup> 2<sup>i</sup> = 2<sup>m+1</sup> - 2<sup>k</sup></code></p>
-  因此若乘数 <code>Y</code> 的二进制中在 <code>[k, m]</code> 出现一段连续的 <code>1</code>，则对应部分乘积为：
-  <p><code>X &times; (&Sigma;<sub>i=k</sub><sup>m</sup> 2<sup>i</sup>) = (X &lt;&lt; (m+1)) - (X &lt;&lt; k)</code></p>
-  即“在 1 串的起点减一次，在 1 串的终点后加一次”（或等价的加/减顺序约定）。
+- 设两个 <code>n</code> 位补码定点整数：
+  <code>[x]<sub>补</sub> = X<sub>n-1</sub> X<sub>n-2</sub> ... X<sub>1</sub> X<sub>0</sub></code><br>
+  <code>[y]<sub>补</sub> = Y<sub>n-1</sub> Y<sub>n-2</sub> ... Y<sub>1</sub> Y<sub>0</sub></code><br>
+  根据补码定义，乘数 <code>y</code> 的真值可写成：<br>
+  <code>y = -Y<sub>n-1</sub> &middot; 2<sup>n-1</sup> + &Sigma;<sub>i=0</sub><sup>n-2</sup> Y<sub>i</sub> &middot; 2<sup>i</sup></code>
 
-- 用“相邻位变化”统一表达（Booth 重编码）：
-  - 设乘数为 <code>Y = (y<sub>n-1</sub> ... y<sub>1</sub> y<sub>0</sub>)</code>，并在最低位右侧附加一位 <code>y<sub>-1</sub> = 0</code>（等价于引入 <code>Q<sub>-1</sub></code>）。
-  - 定义重编码系数：
-    <p><code>d<sub>i</sub> = y<sub>i-1</sub> - y<sub>i</sub>, &nbsp; d<sub>i</sub> &in; { -1, 0, 1 }</code></p>
-  - 对于无符号表示（或对补码先做符号扩展后同理处理），可以把乘数写成：
-    <p><code>Y = &Sigma;<sub>i=0</sub><sup>n</sup> d<sub>i</sub> &middot; 2<sup>i</sup></code></p>
-    直观解释：<code>y<sub>i</sub></code> 与 <code>y<sub>i-1</sub></code> 相同（00/11）表示“1 串内部或 0 区间”，系数为 0；发生 <code>01</code> / <code>10</code> 跳变时就对应“1 串边界”，系数为 ±1。
-  - 因而乘积可写为：
-    <p><code>X &times; Y = &Sigma;<sub>i=0</sub><sup>n</sup> d<sub>i</sub> &middot; (X &lt;&lt; i)</code></p>
+- 将 <code>y</code> 改写为“相邻两位之差”的形式（这是 Booth 算法的关键）：
+  利用 <code>Y<sub>i</sub> &middot; 2<sup>i</sup> = Y<sub>i</sub> &middot; 2<sup>i+1</sup> - Y<sub>i</sub> &middot; 2<sup>i</sup></code>，并令 <code>Y<sub>-1</sub> = 0</code>（在最低位右侧附加一位 0），可推得：<br>
+  <code>y = &Sigma;<sub>i=0</sub><sup>n-1</sup> (Y<sub>i-1</sub> - Y<sub>i</sub>) &middot; 2<sup>i</sup></code><br>
+  直观含义：当 <code>Y<sub>i</sub></code> 与 <code>Y<sub>i-1</sub></code> 相同（00 或 11）时，该位对系数为 0；当出现跳变时，系数为 +1（01 跳变）或 -1（10 跳变）。
 
-- 与常用 Booth 判别规则的对应关系（看两位：<code>(y<sub>i</sub>, y<sub>i-1</sub>)</code>）：
-  <table>
-    <thead>
-      <tr><th>(y<sub>i</sub>, y<sub>i-1</sub>)</th><th>d<sub>i</sub> = y<sub>i-1</sub> - y<sub>i</sub></th><th>对部分积的动作</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>00</td><td>0</td><td>不加不减</td></tr>
-      <tr><td>01</td><td>+1</td><td>加 <code>+ (X &lt;&lt; i)</code></td></tr>
-      <tr><td>10</td><td>-1</td><td>减 <code>- (X &lt;&lt; i)</code></td></tr>
-      <tr><td>11</td><td>0</td><td>不加不减</td></tr>
-    </tbody>
-  </table>
+- 因而乘积可写成：
+  <code>x &times; y = &Sigma;<sub>i=0</sub><sup>n-1</sup> (Y<sub>i-1</sub> - Y<sub>i</sub>) &middot; x &middot; 2<sup>i</sup></code><br>
+  这说明：只要判断乘数中每一位 <code>Y<sub>i</sub></code> 与其低一位 <code>Y<sub>i-1</sub></code> 的关系，就能决定在第 <code>i</code> 步对部分积是“加 <code>x</code>”、“减 <code>x</code>”还是“加 0”，再配合移位完成累加。
 
-- 为什么适用于补码乘法（要点）：
-  - 补码是带符号表示，实际实现中对乘数会做**符号扩展**，并对（部分积/乘数/附加位）做**算术右移**；
-  - Booth 的“看相邻两位决定加/减”的规则本质上只依赖于 <code>0/1</code> 跳变位置，因此对补码（含负数）同样成立。
+- 递推规则与 Booth 判别式：
+  由 <code>(Y<sub>i</sub>, Y<sub>i-1</sub>)</code> 决定本步加/减操作：
+  | <code>(Y<sub>i</sub>, Y<sub>i-1</sub>)</code> | <code>Y<sub>i-1</sub> - Y<sub>i</sub></code> | 操作 | 含义 |
+  | :---: | :---: | :---: | :--- |
+  | 01 | +1 | <code>+[x]<sub>补</sub></code> | 遇到 0&rarr;1 跳变（连续 1 串开始） |
+  | 10 | -1 | <code>+[-x]<sub>补</sub></code> | 遇到 1&rarr;0 跳变（连续 1 串结束） |
+  | 00 | 0 | <code>+0</code> | 仍在 0 区间 |
+  | 11 | 0 | <code>+0</code> | 仍在连续 1 串内部 |
+
+- 实现层面的操作步骤：
+  设初始部分积 <code>[P<sub>0</sub>]<sub>补</sub> = 0</code>，附加位 <code>Y<sub>-1</sub> = 0</code>。循环 <code>n</code> 次（<code>i = 0, 1, ..., n-1</code>）：
+  1. **判断与加减**：根据 <code>(Y<sub>i</sub>, Y<sub>i-1</sub>)</code> 的状态，部分积加上 <code>[x]<sub>补</sub></code>、加上 <code>[-x]<sub>补</sub></code> 或加 0。
+  2. **移位**：将（部分积、乘数 <code>y</code>、附加位 <code>Y<sub>-1</sub></code>）作为一个整体，进行**算术右移 1 位**。
+
+以上推导展示了 Booth 乘法“把连续的 1 串压缩为两次边界操作（加 <code>x</code> 与减 <code>x</code>）”的本质，不仅减少了实际的加法次数，且天然适配补码的符号扩展与算术移位运算。
 ### 原码除法运算
 >符号位单独运算
 >定点整数，被除数扩展高位添加 0；定点小数，被除数扩展低位添加 0
