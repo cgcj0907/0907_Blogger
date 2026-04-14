@@ -234,20 +234,22 @@
 &lt;h3 id=&#34;无符号数和补码加减法运算&#34;&gt;无符号数和补码加减法运算&lt;/h3&gt;
 &lt;p&gt;&lt;img alt=&#34;Compound addition&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/UESTC/CO/Chapter3_Compound_1.webp&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;text-decoration:overline;&#34;&gt;Y&lt;/span&gt; 即 Y 各位取反
-==注意==：&lt;code&gt;CF = C&lt;sub&gt;in&lt;/sub&gt; ⊕ C&lt;sub&gt;out&lt;/sub&gt;&lt;/code&gt;，CF 对于补码加减法运算无实际意义&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;text-decoration:overline;&#34;&gt;Y&lt;/span&gt; 即 Y 各位取反&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;CF = C&lt;sub&gt;in&lt;/sub&gt; ⊕ C&lt;sub&gt;out&lt;/sub&gt;&lt;/code&gt;，CF 对于补码加减法运算无实际意义&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;无符号数(X 和 Y 就是 x 和 y 的二进制表示)
 &lt;ul&gt;
 &lt;li&gt;加法 : &lt;code&gt;X + Y, C&lt;sub&gt;in&lt;/sub&gt; = 0&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;减法 : &lt;code&gt;X + &lt;/code&gt;&lt;span style=&#34;text-decoration:overline;&#34;&gt;Y&lt;/span&gt;&lt;code&gt; + 1, C&lt;sub&gt;in&lt;/sub&gt; = 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;减法 : &lt;code&gt;X + &lt;span style=&#34;text-decoration:overline;&#34;&gt;Y&lt;/span&gt; + 1, C&lt;sub&gt;in&lt;/sub&gt; = 1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;补码(X 和 Y 就是 x 和 y 的补码表示)
 &lt;ul&gt;
 &lt;li&gt;加法 : &lt;code&gt;X + Y, C&lt;sub&gt;in&lt;/sub&gt; = 0&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;减法 : &lt;code&gt;X + &lt;/code&gt;&lt;span style=&#34;text-decoration:overline;&#34;&gt;Y&lt;/span&gt;&lt;code&gt; + 1, C&lt;sub&gt;in&lt;/sub&gt; = 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;减法 : &lt;code&gt;X + &lt;span style=&#34;text-decoration:overline;&#34;&gt;Y&lt;/span&gt; + 1, C&lt;sub&gt;in&lt;/sub&gt; = 1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

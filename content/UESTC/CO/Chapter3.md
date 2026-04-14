@@ -39,6 +39,43 @@ ShowToc: true
 ### 补码乘法运算
 ![Two's complement multiplication](/UESTC/CO/Chapter3_TwoC_1.webp)
 ![Two's complement multiplication](/UESTC/CO/Chapter3_TwoC_2.webp)
+
+#### 布斯（Booth）乘法推导（补码乘法的核心思想）
+
+布斯乘法的目标：把乘数中连续的 <code>1</code>（一段“1 串”）改写成“加一次 + 减一次”的形式，从而减少加法次数。
+
+- “1 串”恒等式（把连续求和化为差）：
+  <p><code>&Sigma;<sub>i=k</sub><sup>m</sup> 2<sup>i</sup> = 2<sup>m+1</sup> - 2<sup>k</sup></code></p>
+  因此若乘数 <code>Y</code> 的二进制中在 <code>[k, m]</code> 出现一段连续的 <code>1</code>，则对应部分乘积为：
+  <p><code>X &times; (&Sigma;<sub>i=k</sub><sup>m</sup> 2<sup>i</sup>) = (X &lt;&lt; (m+1)) - (X &lt;&lt; k)</code></p>
+  即“在 1 串的起点减一次，在 1 串的终点后加一次”（或等价的加/减顺序约定）。
+
+- 用“相邻位变化”统一表达（Booth 重编码）：
+  - 设乘数为 <code>Y = (y<sub>n-1</sub> ... y<sub>1</sub> y<sub>0</sub>)</code>，并在最低位右侧附加一位 <code>y<sub>-1</sub> = 0</code>（等价于引入 <code>Q<sub>-1</sub></code>）。
+  - 定义重编码系数：
+    <p><code>d<sub>i</sub> = y<sub>i-1</sub> - y<sub>i</sub>, &nbsp; d<sub>i</sub> &in; { -1, 0, 1 }</code></p>
+  - 对于无符号表示（或对补码先做符号扩展后同理处理），可以把乘数写成：
+    <p><code>Y = &Sigma;<sub>i=0</sub><sup>n</sup> d<sub>i</sub> &middot; 2<sup>i</sup></code></p>
+    直观解释：<code>y<sub>i</sub></code> 与 <code>y<sub>i-1</sub></code> 相同（00/11）表示“1 串内部或 0 区间”，系数为 0；发生 <code>01</code> / <code>10</code> 跳变时就对应“1 串边界”，系数为 ±1。
+  - 因而乘积可写为：
+    <p><code>X &times; Y = &Sigma;<sub>i=0</sub><sup>n</sup> d<sub>i</sub> &middot; (X &lt;&lt; i)</code></p>
+
+- 与常用 Booth 判别规则的对应关系（看两位：<code>(y<sub>i</sub>, y<sub>i-1</sub>)</code>）：
+  <table>
+    <thead>
+      <tr><th>(y<sub>i</sub>, y<sub>i-1</sub>)</th><th>d<sub>i</sub> = y<sub>i-1</sub> - y<sub>i</sub></th><th>对部分积的动作</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>00</td><td>0</td><td>不加不减</td></tr>
+      <tr><td>01</td><td>+1</td><td>加 <code>+ (X &lt;&lt; i)</code></td></tr>
+      <tr><td>10</td><td>-1</td><td>减 <code>- (X &lt;&lt; i)</code></td></tr>
+      <tr><td>11</td><td>0</td><td>不加不减</td></tr>
+    </tbody>
+  </table>
+
+- 为什么适用于补码乘法（要点）：
+  - 补码是带符号表示，实际实现中对乘数会做**符号扩展**，并对（部分积/乘数/附加位）做**算术右移**；
+  - Booth 的“看相邻两位决定加/减”的规则本质上只依赖于 <code>0/1</code> 跳变位置，因此对补码（含负数）同样成立。
 ### 原码除法运算
 >符号位单独运算
 >定点整数，被除数扩展高位添加 0；定点小数，被除数扩展低位添加 0
