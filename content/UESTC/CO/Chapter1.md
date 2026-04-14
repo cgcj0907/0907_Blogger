@@ -14,7 +14,7 @@ ShowToc: true
 * 计算机由运算器, 控制器, 存储器, 输入设备和输出设备 5 个基本部件组成
 
 ### 现代计算机结构
-![Computer Structure](/UESTC/CO/Charpter1_Computer_Structure.webp)
+![Computer Structure](/UESTC/CO/Chapter1_Computer_Structure.webp)
 * 中央处理器
     * 数据通路
         * 算术逻辑单元(ALU)
@@ -51,7 +51,7 @@ ShowToc: true
 
 ## 程序开发与执行过程
 ### 从源程序到可执行程序
-![Program Flow](/UESTC/CO/Charpter1_Program_Flow.webp)
+![Program Flow](/UESTC/CO/Chapter1_Program_Flow.webp)
 1. 预处理阶段: 预处理器 (cpp) 处理源文件中以 # 开头的预处理指令, 生成预处理后的 C 文件 hello.i
 2. 编译阶段: 编译器 (ccl) 将 hello.i 翻译为汇编程序 hello.s
 3. 汇编阶段: 汇编器 (as) 将 hello.s 转化为机器语言指令, 生成可重定位目标文件 hello.o
