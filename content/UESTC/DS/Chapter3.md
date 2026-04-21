@@ -6,9 +6,71 @@ tags: ["UESTC", "数据结构"]
 ShowToc: true
 ---
 
+<style>
+  /* Chapter3 栈/队列结构示意图样式（内嵌 HTML 使用） */
+  .ds-diagram { margin: 10px 0 18px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  .ds-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .ds-row.ds-col { flex-direction: column; align-items: flex-start; }
+  .ds-label { font-size: 12px; color: #555; margin-bottom: 6px; }
+  .ds-box { min-width: 34px; height: 30px; border: 1px solid #333; display:flex; align-items:center; justify-content:center; font-size: 12px; background: #fff; border-radius: 6px; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+  .ds-box.dim { color: #999; border-style: dashed; }
+  .ds-box.head { background: #f4f7ff; }
+  .ds-box.ptr  { background: #fff7e6; min-width: 44px; }
+  .ds-arrow { font-size: 14px; color: #333; padding: 0 2px; }
+  .ds-note { font-size: 12px; color: #666; margin-top: 6px; line-height: 1.4; }
+  .ds-sub { font-size: 11px; color: #666; }
+  .ds-pre { margin: 6px 0 0; padding: 6px 8px; border: 1px dashed #999; color: #333; background: #fcfcfc; white-space: pre; overflow-x: auto; }
+  .ds-big-arrow { font-size: 20px; font-weight: 700; color: #333; }
+  .ds-pill { display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px; border: 1px dashed #999; border-radius: 999px; background: #fcfcfc; }
+
+  /* 节点：data | next */
+  .ds-node {
+    display: inline-flex;
+    align-items: stretch;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0,0,0,.06);
+  }
+  .ds-node .data {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 12px;
+    min-width: 34px;
+  }
+  .ds-node .next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 11px;
+    min-width: 54px;
+    border-left: 1px solid #333;
+    background: #fff7e6;
+    color: #333;
+  }
+</style>
+
 ## 栈
 
 ### 顺序栈（顺序存储结构）
+
+<div class="ds-diagram">
+  <div class="ds-label">示意：顺序栈（数组 + top 指针）</div>
+  <div class="ds-row ds-col" aria-label="array-stack-vertical">
+    <div class="ds-row"><div class="ds-box dim">∅</div></div>
+    <div class="ds-row"><div class="ds-box dim">∅</div></div>
+    <div class="ds-row"><div class="ds-box dim">∅</div></div>
+    <div class="ds-row"><div class="ds-box">c</div><span class="ds-arrow">←</span><div class="ds-box head">top</div></div>
+    <div class="ds-row"><div class="ds-box">b</div></div>
+    <div class="ds-row"><div class="ds-box">a</div></div>
+  </div>
+  <div class="ds-note">栈顶在数组一端增长；入栈/出栈只移动 <span class="ds-sub">top</span> 并读写对应单元</div>
+</div>
 
 - **存储结构**：用一段连续存储单元（数组）存放栈元素
 - **关键指针**：
@@ -19,13 +81,45 @@ ShowToc: true
 - **时间复杂度**：入栈/出栈/取栈顶均为 `O(1)`
 - **空间特性**：需要预先分配容量 `MaxSize`，可能产生空间浪费或容量不足
 
+
 #### 共享栈
+
+<div class="ds-diagram">
+  <div class="ds-label">示意：共享栈（top1 从左向右，top2 从右向左）</div>
+  <div class="ds-row" aria-label="shared-stack">
+    <div class="ds-box head">top1</div>
+    <span class="ds-arrow">→</span>
+    <div class="ds-box">S1</div>
+    <div class="ds-box">S1</div>
+    <div class="ds-box dim">∅</div>
+    <div class="ds-box dim">∅</div>
+    <div class="ds-box">S2</div>
+    <div class="ds-box">S2</div>
+    <span class="ds-arrow">←</span>
+    <div class="ds-box head">top2</div>
+  </div>
+  <div class="ds-note">满栈常见判定：<span class="ds-sub">top1 + 1 == top2</span>（依实现约定）</div>
+</div>
 
 - 两个栈共享同一数组空间，分别从两端向中间增长
 - 优点：在总空间固定时，能更充分利用存储空间；当一个栈空而另一个栈满的情况减少
 - 满栈判定：两栈顶指针相遇（或满足相邻条件，依约定而定）
 
+
 ### 链栈（链式存储结构）
+
+<div class="ds-diagram">
+  <div class="ds-label">示意：链栈（表头为栈顶）</div>
+  <div class="ds-row" aria-label="linked-stack">
+    <div class="ds-box head">top</div>
+    <span class="ds-arrow">→</span>
+    <div class="ds-node"><span class="data">c</span><span class="next">next</span></div>
+    <span class="ds-arrow">→</span>
+    <div class="ds-node"><span class="data">b</span><span class="next">next</span></div>
+    <span class="ds-arrow">→</span>
+    <div class="ds-node"><span class="data">a</span><span class="next">NULL</span></div>
+  </div>
+</div>
 
 - **存储结构**：用单链表实现，通常把**表头作为栈顶**以便 `Push/Pop` 在表头进行
 - **栈顶指针**：指向栈顶结点
@@ -143,7 +237,7 @@ ShowToc: true
 - 用链表实现队列，通常设置：
   - `front` 指向队头结点（或头结点/哨兵结点）
   - `rear` 指向队尾结点
-- 若采用**带头结点（哨兵）**的链队列：
+- 若采用 **带头结点（哨兵）** 的链队列：
   - 判空常为 `front == rear`（都指向头结点）。
 - **优点**：
   - 不需要预设容量，适合元素个数变化较大场景；

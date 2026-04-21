@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.159.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/uestc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UESTC 简介</title>
@@ -47,11 +47,169 @@
 &lt;/ul&gt;</description>
     </item>
     <item>
+      <title>第 4 章 串</title>
+      <link>http://localhost:1313/uestc/ds/chapter4/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/uestc/ds/chapter4/</guid>
+      <description>&lt;h2 id=&#34;串的存储结构&#34;&gt;串的存储结构&lt;/h2&gt;
+&lt;style&gt;
+  /* Chapter4 串结构示意图样式（内嵌 HTML 使用） */
+  .ds-diagram { margin: 10px 0 18px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &#34;Liberation Mono&#34;, &#34;Courier New&#34;, monospace; }
+  .ds-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .ds-label { font-size: 12px; color: #555; margin-bottom: 6px; }
+  .ds-box { min-width: 34px; height: 28px; border: 1px solid #333; display:flex; align-items:center; justify-content:center; font-size: 12px; background: #fff; }
+  .ds-box.dim { color: #999; border-style: dashed; }
+  .ds-box.head { background: #f4f7ff; }
+  .ds-box.ptr  { background: #fff7e6; min-width: 44px; }
+  .ds-ellipsis { padding: 0 4px; color: #666; }
+  .ds-arrow { font-size: 14px; color: #333; padding: 0 2px; }
+  .ds-note { font-size: 12px; color: #666; margin-top: 6px; line-height: 1.4; }
+  .ds-sub { font-size: 11px; color: #666; }
+&lt;/style&gt;
+&lt;h3 id=&#34;定长顺序存储静态数组&#34;&gt;定长顺序存储（静态数组）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;存储方式&lt;/strong&gt;：用连续存储单元（数组）依次存放字符&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;随机访问方便：可 &lt;code&gt;O(1)&lt;/code&gt; 取第 &lt;code&gt;i&lt;/code&gt; 个字符&lt;/li&gt;
+&lt;li&gt;需要预先给出 &lt;code&gt;MaxSize&lt;/code&gt;，可能出现空间浪费或溢出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常见实现&lt;/strong&gt;：额外记录 &lt;code&gt;length&lt;/code&gt;（串长），便于快速求长度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：定长顺序存储（MaxSize 固定，未用单元可能浪费）&lt;/div&gt;
+  &lt;div class=&#34;ds-row&#34; aria-label=&#34;fixed-array-string&#34;&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;b&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;c&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+    &lt;span class=&#34;ds-ellipsis&#34;&gt;...&lt;/span&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;ds-note&#34;&gt;
+    &lt;span class=&#34;ds-sub&#34;&gt;length=4&lt;/span&gt;，其余为预留空间（MaxSize-length）
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;堆分配顺序存储动态数组&#34;&gt;堆分配顺序存储（动态数组）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;存储方式&lt;/strong&gt;：按需动态申请连续空间（如 &lt;code&gt;malloc/new&lt;/code&gt;），串增长时可扩容&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;空间利用率更高，适合长度变化较大场景&lt;/li&gt;
+&lt;li&gt;扩容可能带来拷贝开销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：堆分配顺序存储（capacity 可扩容）&lt;/div&gt;
+  &lt;div class=&#34;ds-row&#34; aria-label=&#34;heap-array-string&#34;&gt;
+    &lt;div class=&#34;ds-box head&#34;&gt;base&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;b&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;c&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;ds-note&#34;&gt;
+    &lt;span class=&#34;ds-sub&#34;&gt;length=4&lt;/span&gt;，&lt;span class=&#34;ds-sub&#34;&gt;capacity=6&lt;/span&gt;（增长时可申请更大块并拷贝）
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;链式存储链串&#34;&gt;链式存储（链串）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;存储方式&lt;/strong&gt;：用链表结点存放字符并用指针连接&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;插入/删除在局部位置更灵活（不必整体移动）&lt;/li&gt;
+&lt;li&gt;存储密度低（指针域开销），随机访问不便（取第 &lt;code&gt;i&lt;/code&gt; 个字符需 &lt;code&gt;O(i)&lt;/code&gt; 遍历）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：链串（每个结点 1 个字符 + 1 个指针域）&lt;/div&gt;
+  &lt;div class=&#34;ds-row&#34; aria-label=&#34;linked-string&#34;&gt;
+    &lt;div class=&#34;ds-box head&#34;&gt;head&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;next&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;b&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;next&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;next&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;c&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;NULL&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;ds-note&#34;&gt;优点：插入/删除不必整体移动；缺点：指针域带来额外开销、随机访问差&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;块链存储块链串&#34;&gt;块链存储（块链串）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心思想&lt;/strong&gt;：一个结点存放多个字符（一个“块”），再用指针把块串起来&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;相比链串：减少指针数量，提高存储密度&lt;/li&gt;
+&lt;li&gt;相比顺序存储：仍保留一定插入/删除灵活性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结点结构要点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;结点内字符数组大小 &lt;code&gt;k&lt;/code&gt;（块大小）是性能折中：&lt;code&gt;k&lt;/code&gt; 越大越接近顺序存储，&lt;code&gt;k&lt;/code&gt; 越小越接近链式存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：块链串（每结点存 k 个字符，末尾可能有空位）&lt;/div&gt;
+  &lt;div class=&#34;ds-row&#34; aria-label=&#34;block-linked-string&#34;&gt;
+    &lt;div class=&#34;ds-box head&#34;&gt;head&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;&lt;div class=&#34;ds-box&#34;&gt;b&lt;/div&gt;&lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;next&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;c&lt;/div&gt;&lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;&lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;NULL&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;ds-note&#34;&gt;
+    例：块大小 &lt;span class=&#34;ds-sub&#34;&gt;k=3&lt;/span&gt;。相比链串减少指针数；相比顺序串允许分块扩展
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;模式匹配&#34;&gt;模式匹配&lt;/h2&gt;
+&lt;h3 id=&#34;朴素匹配bf--暴力匹配&#34;&gt;朴素匹配（BF / 暴力匹配）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;思想&lt;/strong&gt;：从主串某一位置开始，逐字符与模式串比较；一旦失配，主串起始位置后移一位，模式串从头再比&lt;/li&gt;
+&lt;li&gt;设主串长度 &lt;code&gt;n&lt;/code&gt;，模式串长度 &lt;code&gt;m&lt;/code&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;最好情况&lt;/strong&gt;：一次就匹配成功，约 &lt;code&gt;O(m)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最坏情况&lt;/strong&gt;：大量“前缀相同、末尾失配”，时间复杂度约 &lt;code&gt;O(nm)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BF 的价值：实现简单，是理解 KMP 的参照物&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kmp-算法&#34;&gt;KMP 算法&lt;/h3&gt;
+&lt;h4 id=&#34;kmp-在省什么&#34;&gt;KMP 在“省”什么？&lt;/h4&gt;
+&lt;p&gt;设主串 &lt;code&gt;S&lt;/code&gt;、模式串 &lt;code&gt;T&lt;/code&gt;，当比较到 &lt;code&gt;S[i]&lt;/code&gt; 与 &lt;code&gt;T[j]&lt;/code&gt; 时失配：&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>第 3 章 栈和队列</title>
       <link>http://localhost:1313/uestc/ds/chapter3/</link>
       <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/uestc/ds/chapter3/</guid>
-      <description>&lt;h2 id=&#34;栈&#34;&gt;栈&lt;/h2&gt;
+      <description>&lt;style&gt;
+  /* Chapter3 栈/队列结构示意图样式（内嵌 HTML 使用） */
+  .ds-diagram { margin: 10px 0 18px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &#34;Liberation Mono&#34;, &#34;Courier New&#34;, monospace; }
+  .ds-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .ds-row.ds-col { flex-direction: column; align-items: flex-start; }
+  .ds-label { font-size: 12px; color: #555; margin-bottom: 6px; }
+  .ds-box { min-width: 34px; height: 28px; border: 1px solid #333; display:flex; align-items:center; justify-content:center; font-size: 12px; background: #fff; }
+  .ds-box.dim { color: #999; border-style: dashed; }
+  .ds-box.head { background: #f4f7ff; }
+  .ds-box.ptr  { background: #fff7e6; min-width: 44px; }
+  .ds-arrow { font-size: 14px; color: #333; padding: 0 2px; }
+  .ds-note { font-size: 12px; color: #666; margin-top: 6px; line-height: 1.4; }
+  .ds-sub { font-size: 11px; color: #666; }
+  .ds-pre { margin: 6px 0 0; padding: 6px 8px; border: 1px dashed #999; color: #333; background: #fcfcfc; white-space: pre; overflow-x: auto; }
+&lt;/style&gt;
+&lt;h2 id=&#34;栈&#34;&gt;栈&lt;/h2&gt;
 &lt;h3 id=&#34;顺序栈顺序存储结构&#34;&gt;顺序栈（顺序存储结构）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;存储结构&lt;/strong&gt;：用一段连续存储单元（数组）存放栈元素&lt;/li&gt;
@@ -69,12 +227,40 @@
 &lt;li&gt;&lt;strong&gt;时间复杂度&lt;/strong&gt;：入栈/出栈/取栈顶均为 &lt;code&gt;O(1)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;空间特性&lt;/strong&gt;：需要预先分配容量 &lt;code&gt;MaxSize&lt;/code&gt;，可能产生空间浪费或容量不足&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：顺序栈（数组 + top 指针）&lt;/div&gt;
+  &lt;div class=&#34;ds-row ds-col&#34; aria-label=&#34;array-stack-vertical&#34;&gt;
+    &lt;div class=&#34;ds-row&#34;&gt;&lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;ds-row&#34;&gt;&lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;ds-row&#34;&gt;&lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;ds-row&#34;&gt;&lt;div class=&#34;ds-box&#34;&gt;c&lt;/div&gt;&lt;span class=&#34;ds-arrow&#34;&gt;←&lt;/span&gt;&lt;div class=&#34;ds-box head&#34;&gt;top&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;ds-row&#34;&gt;&lt;div class=&#34;ds-box&#34;&gt;b&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&#34;ds-row&#34;&gt;&lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;ds-note&#34;&gt;栈顶在数组一端增长；入栈/出栈只移动 &lt;span class=&#34;ds-sub&#34;&gt;top&lt;/span&gt; 并读写对应单元。&lt;/div&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;共享栈&#34;&gt;共享栈&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;两个栈共享同一数组空间，分别从两端向中间增长&lt;/li&gt;
 &lt;li&gt;优点：在总空间固定时，能更充分利用存储空间；当一个栈空而另一个栈满的情况减少&lt;/li&gt;
 &lt;li&gt;满栈判定：两栈顶指针相遇（或满足相邻条件，依约定而定）&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：共享栈（top1 从左向右，top2 从右向左）&lt;/div&gt;
+  &lt;div class=&#34;ds-row&#34; aria-label=&#34;shared-stack&#34;&gt;
+    &lt;div class=&#34;ds-box head&#34;&gt;top1&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;S1&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;S1&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+    &lt;div class=&#34;ds-box dim&#34;&gt;∅&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;S2&lt;/div&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;S2&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;←&lt;/span&gt;
+    &lt;div class=&#34;ds-box head&#34;&gt;top2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;ds-note&#34;&gt;满栈常见判定：&lt;span class=&#34;ds-sub&#34;&gt;top1 + 1 == top2&lt;/span&gt;（依实现约定）。&lt;/div&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;链栈链式存储结构&#34;&gt;链栈（链式存储结构）&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;存储结构&lt;/strong&gt;：用单链表实现，通常把&lt;strong&gt;表头作为栈顶&lt;/strong&gt;以便 &lt;code&gt;Push/Pop&lt;/code&gt; 在表头进行&lt;/li&gt;
@@ -87,6 +273,18 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;时间复杂度&lt;/strong&gt;：入栈/出栈/取栈顶均为 &lt;code&gt;O(1)&lt;/code&gt;；额外指针域带来一定存储开销&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class=&#34;ds-diagram&#34;&gt;
+  &lt;div class=&#34;ds-label&#34;&gt;示意：链栈（表头为栈顶）&lt;/div&gt;
+  &lt;div class=&#34;ds-row&#34; aria-label=&#34;linked-stack&#34;&gt;
+    &lt;div class=&#34;ds-box head&#34;&gt;top&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;c&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;next&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;b&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;next&lt;/div&gt;
+    &lt;span class=&#34;ds-arrow&#34;&gt;→&lt;/span&gt;
+    &lt;div class=&#34;ds-box&#34;&gt;a&lt;/div&gt;&lt;div class=&#34;ds-box ptr&#34;&gt;NULL&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;栈的典型应用与要点&#34;&gt;栈的典型应用与要点&lt;/h3&gt;
 &lt;h4 id=&#34;括号匹配&#34;&gt;括号匹配&lt;/h4&gt;
 &lt;ul&gt;
@@ -263,88 +461,24 @@
       <link>http://localhost:1313/uestc/ds/chapter2/</link>
       <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/uestc/ds/chapter2/</guid>
-      <description>&lt;h2 id=&#34;线性表的定义&#34;&gt;线性表的定义&lt;/h2&gt;
+      <description>&lt;style&gt;
+  /* Chapter2 线性表结构示意图样式（内嵌 HTML 使用） */
+  .ds-diagram { margin: 10px 0 18px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &#34;Liberation Mono&#34;, &#34;Courier New&#34;, monospace; }
+  .ds-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .ds-row.ds-col { flex-direction: column; align-items: flex-start; }
+  .ds-label { font-size: 12px; color: #555; margin-bottom: 6px; }
+  .ds-box { min-width: 34px; height: 28px; border: 1px solid #333; display:flex; align-items:center; justify-content:center; font-size: 12px; background: #fff; }
+  .ds-box.dim { color: #999; border-style: dashed; }
+  .ds-box.head { background: #f4f7ff; }
+  .ds-box.ptr  { background: #fff7e6; min-width: 44px; }
+  .ds-arrow { font-size: 14px; color: #333; padding: 0 2px; }
+  .ds-note { font-size: 12px; color: #666; margin-top: 6px; line-height: 1.4; }
+  .ds-sub { font-size: 11px; color: #666; }
+  .ds-pre { margin: 6px 0 0; padding: 6px 8px; border: 1px dashed #999; color: #333; background: #fcfcfc; white-space: pre; overflow-x: auto; }
+&lt;/style&gt;
+&lt;h2 id=&#34;线性表的定义&#34;&gt;线性表的定义&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;在稍微复杂的线性表中, 一个数据元素可以有若干个数据项组成, 常把数据元素称为记录, 含有大量记录的线性表又称为文件&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;表中元素的个数有限&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;表中元素具有逻辑上的顺序性, 均为数据元素, 数据类型都相同, 具有抽象性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注意: 线性表是一种逻辑结构&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;线性表的表示&#34;&gt;线性表的表示&lt;/h2&gt;
-&lt;h3 id=&#34;顺序表&#34;&gt;顺序表&lt;/h3&gt;
-&lt;h4 id=&#34;定义&#34;&gt;定义&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;逻辑顺序与其物理存储顺序完全一致&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;主要优点&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;可进行随机访问&lt;/li&gt;
-&lt;li&gt;存储密度高&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;主要缺点&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;插入和删除操作效率较低, 需要移动大量元素&lt;/li&gt;
-&lt;li&gt;要求分配连续的存储空间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;基本操作的实现&#34;&gt;基本操作的实现&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;顺序表的初始化&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;静态分配&lt;/li&gt;
-&lt;li&gt;动态分配&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;插入操作&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;时间复杂度&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;最好情况: 在尾标插入, O(1)&lt;/li&gt;
-&lt;li&gt;最坏情况: 在表头插入, O(n)&lt;/li&gt;
-&lt;li&gt;平均情况: O(n)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;删除操作&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;时间复杂度&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;最好情况: 删除表尾元素, O(1)&lt;/li&gt;
-&lt;li&gt;最坏情况: 删除表头元素, O(n)&lt;/li&gt;
-&lt;li&gt;平均情况: O(n)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;查找操作&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;时间复杂度&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;按值查找, O(n)&lt;/li&gt;
-&lt;li&gt;按索引查找, O(1)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;常见算法&#34;&gt;常见算法&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;双指针
-王道 P20 05.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;倒置
-王道 P20 07. 10.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Boyer–Moore 投票算法
-王道 P20 12.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;空间换时间
-王道 p21 13.&lt;/p&gt;</description>
+&lt;p&gt;在稍微复杂的线性表中, 一个数据元素可以有若干个数据项组成, 常把数据元素称为记录, 含有大量记录的线性表又称为文件&lt;/p&gt;</description>
     </item>
     <item>
       <title>第 1 章 绪论</title>
